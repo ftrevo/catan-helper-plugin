@@ -1,0 +1,9 @@
+.game {
+  text-align: center;
+  display: block;
+  margin: auto;
+
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: 400px;
+}

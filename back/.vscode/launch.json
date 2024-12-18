@@ -1,0 +1,23 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Service Run",
+      "type": "node",
+      "request": "launch",
+      "env": {
+        "TS_NODE_FILES": "true",
+      },
+      "args": ["${workspaceFolder}/src/index.ts"],
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register",
+      ],
+      "sourceMaps": true,
+      "outputCapture": "std",
+    },
+  ]
+}

@@ -1,0 +1,65 @@
+.hexagon {
+  width: 73px;
+  height: 43px;
+  position: relative;
+  display: inline-block;
+  margin-top: 17px;
+  border-right: 1px solid black;
+}
+
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 73px;
+  height: 43px;
+  background: inherit;
+  transform: rotate(60deg);
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 73px;
+  height: 43px;
+  background: inherit;
+  transform: rotate(-60deg);
+  border-right: 1px solid black;
+}
+
+.borderLeftAfter:after {
+  border-left: 1px solid blueviolet !important
+}
+
+.borderLeft {
+  border-left: 1px solid red;
+}
+
+.desert {
+  background-color: NavajoWhite;
+}
+
+.stone {
+  background-color: DarkGrey;
+}
+
+.brick {
+  background-color: FireBrick;
+}
+
+.wool {
+  background-color: LimeGreen;
+}
+
+.lumber {
+  background: Darkgreen;
+}
+
+.grain {
+  background-color: Goldenrod;
+}
