@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@govtechsg/sgds": "^2.1.1",
-    "@govtechsg/sgds-react": "^2.2.2",
-    "react": "^18.2.0",
-    "react-bootstrap-icons": "^1.10.3",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.1",
+    "@govtechsg/sgds": "^2.3.6",
+    "@govtechsg/sgds-react": "^2.7.7",
+    "react": "^18.3.1",
+    "react-bootstrap-icons": "^1.11.6",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "generate:api:types": "swagger-typescript-api --silent --no-client --responses --route-types --extract-request-params --extract-request-body --extract-response-body --extract-response-error --union-enums --path http://localhost:3000/api-docs/swagger.json -o ./typings -n api.d.ts",
+    "generate:api:types": "swagger-typescript-api --silent --no-client --responses --route-types --extract-request-params --extract-request-body --extract-response-body --extract-response-error --union-enums --path http://localhost:3300/api-docs/swagger.json -o ./typings -n api.d.ts",
     "start": "PORT=3001 react-app-rewired start",
     "build": "react-app-rewired build && node copyManifest.js",
     "test": "react-app-rewired test",
@@ -45,10 +45,10 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/chrome": "^0.0.256",
     "@types/jest": "^27.5.2",
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
     "react-app-rewired": "^2.2.1",
-    "swagger-typescript-api": "^13.0.3"
+    "swagger-typescript-api": "^13.2.7"
   },
   "volta": {
     "node": "20.10.0"
