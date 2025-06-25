@@ -16,7 +16,6 @@
   height: 43px;
   background: inherit;
   transform: rotate(60deg);
-  border-right: 1px solid black;
   border-left: 1px solid black;
 }
 
@@ -33,11 +32,15 @@
 }
 
 .borderLeftAfter:after {
-  border-left: 1px solid blueviolet !important
+  border-left: 1px solid black
+}
+
+.borderRightBefore:before {
+  border-right: 1px solid black
 }
 
 .borderLeft {
-  border-left: 1px solid red;
+  border-left: 1px solid black;
 }
 
 .desert {

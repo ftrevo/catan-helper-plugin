@@ -1,11 +1,11 @@
-import { Hexagon } from '../../infra/board'
-import { Hexagona } from '../Hexagon/Hexagon'
+import type { Hexagon as HexagonBoard } from '../../infra/board'
+import { Hexagon } from '../Hexagon/Hexagon'
 
-export const Line = ({ lineNumber, hexagons }: { lineNumber: string; hexagons: Array<Hexagon> }) => {
+export const Line = ({ lineNumber, hexagons }: { lineNumber: string; hexagons: Array<HexagonBoard> }) => {
   return (
     <div id={`div-line-${lineNumber}`} className="tile-row">
       {hexagons.map((hex, tileIndex) => (
-        <Hexagona key={`hexagon-${tileIndex}`} hexagonNumber={tileIndex} hexagon={hex} />
+        <Hexagon key={`hexagon-${tileIndex}`} hexagonNumber={tileIndex} hexagon={hex} />
       ))}
     </div>
   )
