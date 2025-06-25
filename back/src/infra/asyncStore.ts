@@ -7,10 +7,18 @@ type Store = {
   correlationId: string
 }
 
-const asyncLocalStorage = new AsyncLocalStorage()
+const asyncLocalStorage = new AsyncLocalStorage<Store>()
 
 export const getStore = () => {
-  return asyncLocalStorage.getStore() as Store
+  const store = asyncLocalStorage.getStore()
+
+  if (!store) {
+    throw new Error(
+      'AsyncLocalStorage store is not initialized. Ensure createStore is called before accessing the store.'
+    )
+  }
+
+  return store
 }
 
 export const createStore = (store: Store, next: NextFunction | ((err?: Error) => void)) => {
