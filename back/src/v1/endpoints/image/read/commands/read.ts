@@ -144,19 +144,19 @@ export const readImageCommand = () => async (params: ReadImageRequestParams) => 
   const [resources, numbers] = await Promise.all([getResources(image), getNumbers(image)])
 
   const predictedResources = resources.map(async (resource, index) => {
-    // fs.writeFileSync(`output/resource-${index}.png`, resource)
-    // const prediction = await predictResource(resource)
+    // await sharp(num, { raw: { width: 64, height: 80, channels: 3 } }).toFile(`output/resource-${index}.png`)
+    // const prediction = await predictResource(num, index)
     // console.log(index, prediction)
     // return prediction
-    return predictResource(resource)
+    return predictResource(resource, index)
   })
 
   const predictedNumbers = numbers.map(async (num, index) => {
-    // fs.writeFileSync(`output/number-${index}.png`, num)
-    // const prediction = await predictNumber(num)
+    // await sharp(num, { raw: { width: 70, height: 64, channels: 3 } }).toFile(`output/number-${index}.jpg`)
+    // const prediction = await predictNumber(num, index)
     // console.log(index, prediction)
     // return prediction
-    return predictNumber(num)
+    return predictNumber(num, index)
   })
 
   const predictedResourcesResolved = await Promise.all(predictedResources)

@@ -1,6 +1,6 @@
 import { loadLayersModel, tensor, scalar } from '@tensorflow/tfjs-node'
 
-export const predictResource = async (imageBuffer: Buffer) => {
+export const predictResource = async (imageBuffer: Buffer, index: number) => {
   // Constants from training
   const IMAGE_WIDTH = 64
   const IMAGE_HEIGHT = 80
@@ -26,12 +26,16 @@ export const predictResource = async (imageBuffer: Buffer) => {
   const max = Math.max(...probabilities)
   const probabilitiesIndexOfMax = probabilities.indexOf(max)
 
+  console.log(
+    `Predicted resource for image index ${index}: ${classes[probabilitiesIndexOfMax]} with probability ${max}`
+  )
+
   return {
     [classes[probabilitiesIndexOfMax]]: max,
   }
 }
 
-export const predictNumber = async (imageBuffer: Buffer) => {
+export const predictNumber = async (imageBuffer: Buffer, imageIndex: number) => {
   // Constants from training
   const IMAGE_WIDTH = 70
   const IMAGE_HEIGHT = 64
@@ -57,6 +61,10 @@ export const predictNumber = async (imageBuffer: Buffer) => {
 
   const max = Math.max(...probabilities)
   const probabilitiesIndexOfMax = probabilities.indexOf(max)
+
+  console.log(
+    `Predicted number for image index ${imageIndex}: ${classes[probabilitiesIndexOfMax]} with probability ${max}`
+  )
 
   return {
     [classes[probabilitiesIndexOfMax]]: max,
