@@ -44,25 +44,25 @@
 }
 
 .desert {
-  background-color: NavajoWhite;
+  background-color: #e7d2a7;
 }
 
 .stone {
-  background-color: DarkGrey;
+  background-color: #7e7e7e;
 }
 
 .brick {
-  background-color: FireBrick;
+  background-color: #8f2e26;
 }
 
 .wool {
-  background-color: LimeGreen;
+  background-color: #7f9f49;
 }
 
 .lumber {
-  background: Darkgreen;
+  background: #3b6e47;
 }
-
+  
 .grain {
-  background-color: Goldenrod;
+  background-color: #d4a037;
 }
