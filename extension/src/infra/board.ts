@@ -224,7 +224,7 @@ const getVerticesValues = (position: number, allHexagons: Array<Hexagon>) => {
 }
 
 export class Board {
-  hexagons: Hexagon[]
+  hexagons: Array<Hexagon>
 
   constructor(resources: Array<string>, numbers: Array<string>) {
     this.hexagons = resources.map((resource, index) => {

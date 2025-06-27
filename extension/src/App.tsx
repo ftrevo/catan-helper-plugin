@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { readImageCb } from './infra/repository'
 import { Board } from './infra/board'
 import { Game } from './components/Game/Game'
+import { TabHeader, type Tab } from './components/TabHeader/TabHeader'
+import { readImageCb } from './infra/repository'
 
 const mockData = {
   numbers: ['8', '10', '5', '4', '3', '9', '2', '11', '7', '11', '4', '6', '12', '6', '5', '3', '9', '10', '8'],
@@ -30,9 +31,13 @@ const mockData = {
 }
 
 export const App = () => {
-  const [board, setBoard] = React.useState<Board | null>(null)
+  const [board, setBoard] = React.useState<Board | undefined>()
+  const [activeTab, setActiveTab] = useState<Tab>('game')
 
   const takeScreenshot = () => {
+    setBoard(new Board(mockData.resources, mockData.numbers))
+    return
+
     if (window.location.href.includes('colonist.io')) {
       alert('This extension only work in a colonist.io game')
       return
@@ -48,7 +53,6 @@ export const App = () => {
         .then((response) => response.json())
         .then((result) => {
           console.log('Success:', result)
-
           setBoard(new Board(result.resources, result.numbers))
         })
         .catch((error) => {
@@ -59,8 +63,18 @@ export const App = () => {
 
   return (
     <div className="App">
-      <button onClick={takeScreenshot}>Capture Screenshot</button>
-      {board && board.hexagons && board.hexagons.length > 0 && <Game key="game" board={board} />}
+      <TabHeader onClickScreenshot={takeScreenshot} activeTab={activeTab} setActiveTab={setActiveTab} />
+
+      <div className="tab-content">
+        {activeTab === 'game' && <Game key="game" board={board} />}
+
+        {activeTab === 'statistics' && (
+          <div>
+            <h3>Statistics</h3>
+            <p>TBD</p>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

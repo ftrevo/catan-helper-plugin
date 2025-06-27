@@ -3,7 +3,8 @@ import { Line } from '../Line/Line'
 
 import './Game.css'
 
-export const Game = ({ board }: { board: Board }) => {
+export const Game = ({ board }: { board?: Board }) => {
+  if (!board || !board.hexagons || board.hexagons.length === 0) return null
   return (
     <div key="game" id="game" className="game">
       <Line key="line0" hexagons={board.hexagons.slice(0, 3)} lineNumber="0" />
