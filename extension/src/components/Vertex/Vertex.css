@@ -2,7 +2,7 @@
   width: 15px;
   height: 15px;
   line-height: 15px;
-  color: white;
+  color: inherit;
   position: absolute;
   z-index: 5;
   border-radius: 50%;
@@ -40,67 +40,31 @@
 }
 
 .best {
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
 }
 
 .good {
-  background-color: rgb(75, 75, 75);
+  background-color: #4B4B4B
 }
 
 .medium {
-  background-color: rgb(125, 125, 125);
+  background-color: #9E9E9E;
 }
 
 .bad {
-  background-color: rgb(200, 200, 200);
+  background-color: #D2D2D2;
 }
 
-.black {
-  background-color: black;
+.best, .good {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
 }
 
-.green {
-  background-color: lightgreen;
-  color: black;
-}
-
-.red {
-  background-color: red;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.orange {
-  background-color: orange;
-}
-
-.gold {
-  background-color: gold;
-  color: black
-}
-
-.mysticblue {
-  background-color: rgb(0, 195, 255);
-  color: black
-}
-
-.purple {
-  background-color: purple;
-}
-
-.pink {
-  background-color: pink;
-  color: black
-}
-
-.silver {
-  background-color: silver;
-  color: black
-}
-
-.white {
-  background-color: rgb(234, 234, 234);
-  color: black
+.medium, .bad {
+  color: #000;
+  text-shadow:
+    1px  1px 1px rgba(255,255,255,0.8),
+    -1px  1px 1px rgba(255,255,255,0.8),
+    1px -1px 1px rgba(255,255,255,0.8),
+    -1px -1px 1px rgba(255,255,255,0.8);
 }
