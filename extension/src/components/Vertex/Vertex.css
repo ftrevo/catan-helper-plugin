@@ -6,35 +6,36 @@
   position: absolute;
   z-index: 5;
   border-radius: 50%;
+  border: 1px solid black;
 }
 
 .vertex0 {
   top: -65%;
-  left: calc(50% - 7.5px);
+  left: calc(50% - 8.5px);
 }
 
 .vertex1 {
-  top: -15%;
+  top: -17%;
   left: -11%;
 }
 
 .vertex2 {
-  top: -15%;
-  right: -11%;
+  top: -17%;
+  right: -14%;
 }
 
 .vertex3 {
-  bottom: -15%;
-  left: -11%;
+  bottom: -21%;
+  left: -12%;
 }
 
 .vertex4 {
-  bottom: -15%;
-  right: -11%;
+  bottom: -21%;
+  right: -12%;
 }
 
 .vertex5 {
-  bottom: -65%;
+  bottom: -68%;
   left: calc(50% - 7.5px);
 }
 
