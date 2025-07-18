@@ -1,11 +1,29 @@
-import type { Hexagon as HexagonBoard } from '../../infra/board'
+import type { Hexagons } from '../../utils/hexagons'
 import { Hexagon } from '../Hexagon/Hexagon'
 
-export const Line = ({ lineNumber, hexagons }: { lineNumber: string; hexagons: Array<HexagonBoard> }) => {
+const hexagonsPerLine = [3, 4, 5, 4, 3]
+
+export const Line = ({
+  hexagons,
+  lineNumber,
+  scarcityFactors,
+}: {
+  hexagons: Hexagons
+  lineNumber: number
+  scarcityFactors?: Map<string, number>
+}) => {
+  const length = hexagonsPerLine[lineNumber]
+
   return (
     <div id={`div-line-${lineNumber}`} className="tile-row">
-      {hexagons.map((hex, tileIndex) => (
-        <Hexagon key={`hexagon-${tileIndex}`} hexagonNumber={tileIndex} hexagon={hex} />
+      {Array.from({ length }).map((_, hexagonLinePosition) => (
+        <Hexagon
+          key={`hexagon-${hexagonLinePosition}`}
+          hexagonLinePosition={hexagonLinePosition}
+          hexagons={hexagons}
+          lineNumber={lineNumber}
+          scarcityFactors={scarcityFactors}
+        />
       ))}
     </div>
   )

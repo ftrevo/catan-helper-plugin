@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
-import { Board } from './infra/board'
 import { Game } from './components/Game/Game'
-import { TabHeader, type Tab } from './components/TabHeader/TabHeader'
-import { readImageCb } from './infra/repository'
 import { ReadCreateData } from '../typings/api'
 import { Statistics } from './components/Statistics/Statistics'
+import { TabHeader, type Tab } from './components/TabHeader/TabHeader'
+import { buildHexagons } from './utils/hexagons'
+import { getScarcityFactors } from './utils/statistics'
+import { readImageCb, captureAndProcessScreenshot } from './infra/repository'
 
 const mockData = {
   numbers: ['8', '10', '5', '4', '3', '9', '2', '11', '7', '11', '5', '6', '12', '10', '4', '3', '9', '6', '8'],
@@ -32,55 +33,64 @@ const mockData = {
   ],
 }
 
+const useMock = true
+
 export const App = () => {
-  const [board, setBoard] = React.useState<Board | undefined>()
-  const [data, setData] = React.useState<ReadCreateData | undefined>()
   const [activeTab, setActiveTab] = useState<Tab>('game')
+  const [data, setData] = React.useState<ReadCreateData | undefined>()
   const [rarity, setRarity] = useState<boolean>(false)
 
-  const takeScreenshot = () => {
-    setData(mockData)
-    setBoard(new Board(mockData, rarity))
-    return
-
-    if (window.location.href.includes('colonist.io')) {
-      alert('This extension only work in a colonist.io game')
-      return
+  const takeScreenshot = async () => {
+    if (useMock) {
+      return setData(mockData)
     }
 
-    chrome.runtime.sendMessage({ action: 'capturePage' }, async function (params: { error: any; data: string }) {
-      if (params.error) {
-        console.error(params.error)
-        return
-      }
+    if (!window.location.href.includes('colonist.io')) {
+      return alert('This extension only work in a colonist.io game')
+    }
 
-      readImageCb(params.data)
-        .then((response) => response.json())
-        .then((result) => {
-          console.log('Success:', result)
-          // setBoard(new Board(result.resources, result.numbers))
-          setData(result)
-        })
-        .catch((error) => {
-          console.error('Error:', error)
-        })
-    })
+    const result = await captureAndProcessScreenshot()
+
+    if (result.error) return // TODO: Handle error appropriately
+
+    setData(result.data)
+
+    // TODO: Left this here for reference, since captureAndProcessScreenshot is not tested yet
+    // chrome.runtime.sendMessage({ action: 'capturePage' }, async function (params: { error: any; data: string }) {
+    //   if (params.error) {
+    //     console.error(params.error)
+    //     return
+    //   }
+    //   readImageCb(params.data)
+    //     .then((response) => response.json())
+    //     .then((result) => {
+    //       setData(result)
+    //       setScarcityFactors(getScarcityFactors(result))
+    //     })
+    // })
   }
 
   return (
     <div className="App">
       <TabHeader
-        onClickScreenshot={takeScreenshot}
+        key="tab-header"
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        onClickScreenshot={takeScreenshot}
         rarity={rarity}
+        setActiveTab={setActiveTab}
         setRarity={setRarity}
       />
 
       <div className="tab-content">
-        {activeTab === 'game' && <Game key="game" board={board} />}
+        {activeTab === 'game' && data && (
+          <Game
+            key="game"
+            hexagons={buildHexagons(data)}
+            scarcityFactors={rarity ? getScarcityFactors(data) : undefined}
+          />
+        )}
 
-        {activeTab === 'statistics' && <Statistics data={data} />}
+        {activeTab === 'statistics' && data && <Statistics data={data} />}
       </div>
     </div>
   )

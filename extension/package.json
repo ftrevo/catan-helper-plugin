@@ -12,7 +12,7 @@
   "scripts": {
     "generate:api:types": "swagger-typescript-api --silent --no-client --responses --route-types --extract-request-params --extract-request-body --extract-response-body --extract-response-error --union-enums --path http://localhost:3300/api-docs/swagger.json -o ./typings -n api.d.ts",
     "start": "PORT=3301 react-app-rewired start",
-    "build": "react-app-rewired build && node copyManifest.js",
+    "build": "react-app-rewired build --prod && node copyManifest.js",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -42,7 +42,17 @@
     "@types/jest": "^27.5.2",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
     "react-app-rewired": "^2.2.1",
-    "swagger-typescript-api": "^13.2.7"
+    "swagger-typescript-api": "^13.2.7",
+    "ts-jest": "^29.4.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ]
   }
 }

@@ -10,7 +10,7 @@ const getVertexCssColor = (value: number) => {
 export const Vertex = ({ number, value }: { number: number; value: number }) => {
   return (
     <span id={`span-vertex-${number}`} className={`vertex vertex${number} ${getVertexCssColor(value)}`}>
-      {value}
+      {value | 0}
     </span>
   )
 }

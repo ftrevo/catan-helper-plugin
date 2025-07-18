@@ -1,5 +1,6 @@
 import type { ReadCreateData } from '../../../typings/api'
-import { getDisplayPercentage, getStatisticsData } from '../../infra/utils'
+import { getDisplayPercentage } from '../../utils/calculations'
+import { getStatisticsData } from '../../utils/statistics'
 import './Statistics.css'
 
 const totalPips = 58
@@ -12,11 +13,7 @@ const emojiMap: Record<string, string> = {
   wool: '🐑',
 }
 
-export const Statistics = ({ data }: { data?: ReadCreateData }) => {
-  if (!data || !data.resources || !data.numbers) {
-    return <div className="statistics-error">No data available</div>
-  }
-
+export const Statistics = ({ data }: { data: ReadCreateData }) => {
   const resources = getStatisticsData(data)
 
   const entries = Array.from(resources.entries())

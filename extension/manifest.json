@@ -2,9 +2,10 @@
   "manifest_version": 3,
   "name": "Catan Helper",
   "version": "1.0.0",
+  "description": "A helper tool for Catan games on colonist.io",
   "action": {
     "default_popup": "index.html",
-    "default_title": "Open the popup"
+    "default_title": "Catan Helper"
   },
   "permissions": ["activeTab", "clipboardWrite", "clipboardRead", "scripting"],
   "background": {

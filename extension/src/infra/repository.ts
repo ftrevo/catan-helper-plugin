@@ -1,26 +1,61 @@
 import type { ReadCreateData } from '../../typings/api'
-import { HOST } from './utils'
+
+const HOST = 'http://localhost:3300'
 
 const readImage = async (image: string) => {
-  const response = await fetch(`${HOST}/image/read`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ image }),
-  })
+  try {
+    const response = await fetch(`${HOST}/image/read`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ image }),
+    })
 
-  console.log('response', response)
+    if (!response.ok) {
+      const errorData = await response.json()
+      return {
+        error: {
+          message: errorData?.message || `An error has occurred: ${response.status}`,
+          status: response.status,
+        },
+      }
+    }
 
-  if (!response.ok) {
-    const body = await response.json()
-    throw new Error(body?.message ?? `An error has occured: ${response.status}`)
+    const data = (await response.json()) as ReadCreateData
+    return { data }
+  } catch (error) {
+    console.error('Error reading image:', error)
+    return {
+      error: {
+        message: error instanceof Error ? error.message : 'Unknown error occurred',
+        status: 500,
+      },
+    }
   }
-
-  return response.json() as Promise<ReadCreateData>
 }
 
-const readImageCb = async (image: string) => {
+// TODO: Not tested yet
+export const captureAndProcessScreenshot = (): ReturnType<typeof readImage> => {
+  return new Promise((resolve) => {
+    chrome.runtime.sendMessage({ action: 'capturePage' }, async (params: { error: any; data: string }) => {
+      if (params.error) {
+        console.error('Error capturing image', params.error)
+        return resolve({
+          error: {
+            message: (params.error as string) || 'Failed to capture screenshot',
+            status: 500,
+          },
+        })
+      }
+
+      const result = await readImage(params.data)
+      return resolve(result)
+    })
+  })
+}
+
+export const readImageCb = async (image: string) => {
   return fetch(`${HOST}/image/read`, {
     method: 'POST',
     headers: {
@@ -29,5 +64,3 @@ const readImageCb = async (image: string) => {
     body: JSON.stringify({ image }),
   })
 }
-
-export { readImage, readImageCb }
