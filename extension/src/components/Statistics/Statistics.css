@@ -1,0 +1,34 @@
+.resource-dashboard {
+  display: flex;
+  width: 412px;
+  justify-content: space-evenly;
+}
+
+.resource-card {
+  flex: 1;
+  max-width: 47px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.65rem;
+  text-align: center;
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.1);
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.resource-card .icon {
+  font-size: 2rem;
+}
+
+.resource-card .name {
+  font-weight: 800;
+}
+
+.resource-card .value {
+  font-weight: 550;
+}
+
+.resource-card .scarcity {
+  font-size: 0.75rem;
+}

@@ -10,8 +10,6 @@ const leftBorderAfterNeeded = [7, 12, 16, 17, 18]
 const rightBorderBeforeNeeded = [11, 15, 16, 17, 18]
 
 export const Hexagon = ({ hexagon, hexagonNumber }: { hexagon: HexagonBoard; hexagonNumber: number }) => {
-  console.log(hexagonNumber, hexagon.position, hexagon.resource, hexagon.num)
-
   const leftBorder = leftBorderNeeded.includes(hexagon.position) ? 'borderLeft' : ''
   const leftBorderAfter = leftBorderAfterNeeded.includes(hexagon.position) ? 'borderLeftAfter' : ''
   const rightBorderBefore = rightBorderBeforeNeeded.includes(hexagon.position) ? 'borderRightBefore' : ''

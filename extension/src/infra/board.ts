@@ -1,3 +1,6 @@
+import { ReadCreateData } from '../../typings/api'
+import { getDisplayPercentage, getPipForStatistics, getPipFromHexagonValue, getScarcityFactors } from './utils'
+
 type HexResource = 'brick' | 'desert' | 'grain' | 'lumber' | 'stone' | 'wool'
 const isHexResource = (resource: string): resource is HexResource => {
   return ['brick', 'desert', 'grain', 'lumber', 'stone', 'wool'].includes(resource)
@@ -15,11 +18,11 @@ const isHexPosition = (position: number): position is HexPosition => {
 
 const getProbability = (hexagonValue: string) => {
   // Number of ways to roll `sum` with two d6:
-  const count = 6 - Math.abs(7 - parseInt(hexagonValue))
+  const pip = getPipFromHexagonValue(hexagonValue)
 
-  const percentage = (count / 36) * 100
+  const rawProbability = (pip / 36) * 100
 
-  return parseFloat(percentage.toFixed(1))
+  return getDisplayPercentage(rawProbability)
 }
 
 export class Hexagon {
@@ -53,7 +56,7 @@ export class Hexagon {
       throw new Error('Invalid vertices length ' + vertices.length)
     }
 
-    this.vertices = vertices
+    this.vertices = vertices.map((value) => value | 0)
   }
 
   getValue = () => {
@@ -174,20 +177,6 @@ const vertexNeighboardTiles = [
   [18],
 ]
 
-const points = {
-  2: 1,
-  3: 2,
-  4: 3,
-  5: 4,
-  6: 5,
-  7: 0,
-  8: 5,
-  9: 4,
-  10: 3,
-  11: 2,
-  12: 1,
-} as const
-
 const vertexPerHexagon = [
   [0, 3, 4, 7, 8, 12],
   [1, 4, 5, 8, 9, 13],
@@ -210,7 +199,11 @@ const vertexPerHexagon = [
   [41, 45, 46, 49, 50, 53],
 ] as const
 
-const getVerticesValues = (position: number, allHexagons: Array<Hexagon>) => {
+const getVerticesValues = (
+  position: number,
+  allHexagons: Array<Hexagon>,
+  scarcityFactors?: ReturnType<typeof getScarcityFactors>
+) => {
   if (!isHexPosition(position)) {
     throw new Error('Invalid position ' + position)
   }
@@ -224,7 +217,13 @@ const getVerticesValues = (position: number, allHexagons: Array<Hexagon>) => {
       const hexagon = allHexagons[hexNumber]
 
       if (hexagon) {
-        return acc + points[hexagon.num]
+        const pipValue = getPipForStatistics(hexagon.num)
+        if (scarcityFactors) {
+          const resourceScarcity = scarcityFactors.get(hexagon.resource)
+
+          return acc + pipValue * (resourceScarcity ?? 1)
+        }
+        return acc + pipValue
       }
 
       return acc
@@ -235,34 +234,22 @@ const getVerticesValues = (position: number, allHexagons: Array<Hexagon>) => {
 }
 
 export class Board {
-  hexagons: Array<Hexagon>
+  hexagons: Array<Hexagon> = []
 
-  constructor(resources: Array<string>, numbers: Array<string>) {
-    this.hexagons = resources.map((resource, index) => {
-      return new Hexagon(index, resource, numbers[index])
+  constructor(data?: ReadCreateData, rarity: boolean = false) {
+    if (!data || !data.resources || !data.numbers) {
+      return
+    }
+
+    this.hexagons = data.resources.map((resource, index) => {
+      return new Hexagon(index, resource, data.numbers[index])
     })
+
+    const scarcityFactors = getScarcityFactors(data)
 
     this.hexagons.forEach((hexagon, index) => {
-      const vertices = getVerticesValues(index, this.hexagons)
+      const vertices = getVerticesValues(index, this.hexagons, rarity ? scarcityFactors : undefined)
       hexagon.setVertices(vertices)
     })
-  }
-
-  getHexagon(position: number) {
-    return this.hexagons[position]
-  }
-
-  getVertexValue(vertex: number) {
-    const tiles = vertexNeighboardTiles[vertex]
-
-    return tiles.reduce((acc, hexNumber) => {
-      const hexagon = this.getHexagon(hexNumber)
-
-      if (hexagon) {
-        return acc + points[hexagon.num]
-      }
-
-      return acc
-    }, 0)
   }
 }

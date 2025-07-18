@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Board } from './infra/board'
 import { Game } from './components/Game/Game'
 import { TabHeader, type Tab } from './components/TabHeader/TabHeader'
 import { readImageCb } from './infra/repository'
+import { ReadCreateData } from '../typings/api'
+import { Statistics } from './components/Statistics/Statistics'
 
 const mockData = {
   numbers: ['8', '10', '5', '4', '3', '9', '2', '11', '7', '11', '5', '6', '12', '10', '4', '3', '9', '6', '8'],
@@ -32,10 +34,13 @@ const mockData = {
 
 export const App = () => {
   const [board, setBoard] = React.useState<Board | undefined>()
+  const [data, setData] = React.useState<ReadCreateData | undefined>()
   const [activeTab, setActiveTab] = useState<Tab>('game')
+  const [rarity, setRarity] = useState<boolean>(false)
 
   const takeScreenshot = () => {
-    setBoard(new Board(mockData.resources, mockData.numbers))
+    setData(mockData)
+    setBoard(new Board(mockData, rarity))
     return
 
     if (window.location.href.includes('colonist.io')) {
@@ -53,7 +58,8 @@ export const App = () => {
         .then((response) => response.json())
         .then((result) => {
           console.log('Success:', result)
-          setBoard(new Board(result.resources, result.numbers))
+          // setBoard(new Board(result.resources, result.numbers))
+          setData(result)
         })
         .catch((error) => {
           console.error('Error:', error)
@@ -63,17 +69,18 @@ export const App = () => {
 
   return (
     <div className="App">
-      <TabHeader onClickScreenshot={takeScreenshot} activeTab={activeTab} setActiveTab={setActiveTab} />
+      <TabHeader
+        onClickScreenshot={takeScreenshot}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        rarity={rarity}
+        setRarity={setRarity}
+      />
 
       <div className="tab-content">
         {activeTab === 'game' && <Game key="game" board={board} />}
 
-        {activeTab === 'statistics' && (
-          <div>
-            <h3>Statistics</h3>
-            <p>TBD</p>
-          </div>
-        )}
+        {activeTab === 'statistics' && <Statistics data={data} />}
       </div>
     </div>
   )
