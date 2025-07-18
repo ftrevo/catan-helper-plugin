@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener((request, sender, callback) => {
+chrome.runtime?.onMessage.addListener((request, sender, callback) => {
   if (request.action === 'capturePage') {
     chrome.tabs.captureVisibleTab(null as any, { format: 'png' }, (dataUrl: string) => {
       if (chrome.runtime.lastError) {

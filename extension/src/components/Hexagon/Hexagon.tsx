@@ -21,7 +21,7 @@ export const Hexagon = ({ hexagon, hexagonNumber }: { hexagon: HexagonBoard; hex
       id={`div-hexagon-${hexagonNumber}`}
       className={`hexagon ${hexagon.resource} ${leftBorder} ${leftBorderAfter} ${rightBorderBefore}`}
     >
-      <DiceNumber key={'dice-number'} displayNumber={hexagon.num} />
+      <DiceNumber key={'dice-number'} displayNumber={hexagon.num} probability={hexagon.probability} />
 
       {hexagon.vertices.map((vertex, vertexNumber) => (
         <Vertex key={vertexNumber} number={vertexNumber} value={vertex} />

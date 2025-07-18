@@ -13,11 +13,21 @@ const isHexPosition = (position: number): position is HexPosition => {
   return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].includes(position)
 }
 
+const getProbability = (hexagonValue: string) => {
+  // Number of ways to roll `sum` with two d6:
+  const count = 6 - Math.abs(7 - parseInt(hexagonValue))
+
+  const percentage = (count / 36) * 100
+
+  return parseFloat(percentage.toFixed(1))
+}
+
 export class Hexagon {
   position: HexPosition
   resource: HexResource
   num: HexNumber
   vertices: Array<number> = []
+  probability: number
 
   constructor(position: number, resource: string, num: string) {
     if (!isHexPosition(position)) {
@@ -32,9 +42,10 @@ export class Hexagon {
       throw new Error('Invalid resource ' + resource)
     }
 
-    this.resource = resource as HexResource
-    this.num = num as HexNumber
-    this.position = position as HexPosition
+    this.resource = resource
+    this.num = num
+    this.position = position
+    this.probability = getProbability(num)
   }
 
   setVertices = (vertices: Array<number>) => {

@@ -11,7 +11,7 @@
   },
   "scripts": {
     "generate:api:types": "swagger-typescript-api --silent --no-client --responses --route-types --extract-request-params --extract-request-body --extract-response-body --extract-response-error --union-enums --path http://localhost:3300/api-docs/swagger.json -o ./typings -n api.d.ts",
-    "start": "PORT=3001 react-app-rewired start",
+    "start": "PORT=3301 react-app-rewired start",
     "build": "react-app-rewired build && node copyManifest.js",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"

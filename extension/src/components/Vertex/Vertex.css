@@ -4,9 +4,10 @@
   line-height: 15px;
   color: inherit;
   position: absolute;
-  z-index: 5;
+  z-index: 1;
   border-radius: 50%;
   border: 1px solid black;
+  cursor: default;
 }
 
 .vertex0 {
