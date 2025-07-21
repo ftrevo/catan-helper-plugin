@@ -1,9 +1,7 @@
 import type { ReadCreateData } from '../../../typings/api'
-import { getDisplayPercentage } from '../../utils/calculations'
+import { getDisplayPercentage, TOTAL_PIPS } from '../../utils/calculations'
 import { getStatisticsData } from '../../utils/statistics'
 import './Statistics.css'
-
-const totalPips = 58
 
 const emojiMap: Record<string, string> = {
   brick: '🧱',
@@ -13,7 +11,11 @@ const emojiMap: Record<string, string> = {
   wool: '🐑',
 }
 
-export const Statistics = ({ data }: { data: ReadCreateData }) => {
+type StatisticsProps = {
+  data: ReadCreateData
+}
+
+export const Statistics = ({ data }: StatisticsProps) => {
   const resources = getStatisticsData(data)
 
   const entries = Array.from(resources.entries())
@@ -28,7 +30,7 @@ export const Statistics = ({ data }: { data: ReadCreateData }) => {
         <div className="resource-card" key={resource}>
           <div className="icon">{emojiMap[resource]}</div>
           <div className="name">{resource.charAt(0).toUpperCase() + resource.slice(1)}</div>
-          <div className="value">{getDisplayPercentage((pipSum / totalPips) * 100)}%</div>
+          <div className="value">{getDisplayPercentage((pipSum / TOTAL_PIPS) * 100)}%</div>
           <div className="scarcity">Scarcity ×{(pipSum / rarestResource[1].pipSum).toFixed(2)}</div>
           <div className="pipSum">Pip {pipSum}</div>
           <div className="numberSet">

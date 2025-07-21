@@ -1,6 +1,10 @@
 import './NoData.css'
 
-export const NoData = ({ onCapture }: { onCapture: () => void }) => (
+type NoDataProps = {
+  onCapture: () => void
+}
+
+export const NoData = ({ onCapture }: NoDataProps) => (
   <div className="no-data-container">
     <h2 className="no-data-title">👋 Hello!</h2>
     <p className="no-data-description">

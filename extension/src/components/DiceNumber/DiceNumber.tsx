@@ -1,6 +1,11 @@
 import './DiceNumber.css'
 
-export const DiceNumber = ({ displayNumber, probability }: { displayNumber: string; probability: number }) => {
+type DiceNumberProps = {
+  displayNumber: string
+  probability: number
+}
+
+export const DiceNumber = ({ displayNumber, probability }: DiceNumberProps) => {
   return (
     <div id="div-dice-number" className="diceNumber">
       {displayNumber}

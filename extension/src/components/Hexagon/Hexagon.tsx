@@ -13,17 +13,14 @@ const leftBorderAfterNeeded = [7, 12, 16, 17, 18]
 const leftBorderNeeded = [0, 3, 7, 12, 16]
 const rightBorderBeforeNeeded = [11, 15, 16, 17, 18]
 
-export const Hexagon = ({
-  hexagonLinePosition,
-  hexagons,
-  lineNumber,
-  scarcityFactors,
-}: {
+type HexagonProps = {
   hexagonLinePosition: number
   hexagons: Hexagons
   lineNumber: number
   scarcityFactors?: Map<string, number>
-}) => {
+}
+
+export const Hexagon = ({ hexagonLinePosition, hexagons, lineNumber, scarcityFactors }: HexagonProps) => {
   const hexagon = hexagons[getHexNumber(lineNumber, hexagonLinePosition)]
   const verticesValues = getVerticesValues(hexagon.position, hexagons, scarcityFactors)
 

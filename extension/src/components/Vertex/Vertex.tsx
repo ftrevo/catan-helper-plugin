@@ -20,7 +20,12 @@ const getVertexCssColor = (value: number) => {
   return 'bad'
 }
 
-export const Vertex = ({ number, value }: { number: number; value: number }) => {
+type VertexProps = {
+  number: number
+  value: number
+}
+
+export const Vertex = ({ number, value }: VertexProps) => {
   return (
     <span id={`span-vertex-${number}`} className={`vertex position-${number} quality-${getVertexCssColor(value)}`}>
       {value | 0}
