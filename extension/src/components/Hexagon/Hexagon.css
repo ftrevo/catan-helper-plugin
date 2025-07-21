@@ -31,15 +31,15 @@
   border-right: 1px solid black;
 }
 
-.borderLeftAfter:after {
+.border-left-after:after {
   border-left: 1px solid black
 }
 
-.borderRightBefore:before {
+.border-right-before:before {
   border-right: 1px solid black
 }
 
-.borderLeft {
+.border-left {
   border-left: 1px solid black;
 }
 

@@ -1,4 +1,4 @@
-.diceNumber {
+.dice-number {
   position: absolute;
   height: 22px;
   width: 22px;
@@ -13,7 +13,7 @@
   cursor: default;
 }
 
-.diceNumber .tooltiptext {
+.dice-number .tooltiptext {
   position: absolute;
   transform: translateX(-50%) translateY(-100%);
   font-size: 0.8rem;
@@ -30,7 +30,7 @@
   cursor: default;
 }
 
-.diceNumber:hover .tooltiptext {
+.dice-number:hover .tooltiptext {
   visibility: visible;
   animation: tooltipFade 0.2s ease-in;
   cursor: default;

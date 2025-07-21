@@ -24,9 +24,9 @@ export const Hexagon = ({ hexagonLinePosition, hexagons, lineNumber, scarcityFac
   const hexagon = hexagons[getHexNumber(lineNumber, hexagonLinePosition)]
   const verticesValues = getVerticesValues(hexagon.position, hexagons, scarcityFactors)
 
-  const leftBorder = leftBorderNeeded.includes(hexagon.position) ? 'borderLeft' : ''
-  const leftBorderAfter = leftBorderAfterNeeded.includes(hexagon.position) ? 'borderLeftAfter' : ''
-  const rightBorderBefore = rightBorderBeforeNeeded.includes(hexagon.position) ? 'borderRightBefore' : ''
+  const leftBorder = leftBorderNeeded.includes(hexagon.position) ? 'border-left' : ''
+  const leftBorderAfter = leftBorderAfterNeeded.includes(hexagon.position) ? 'border-left-after' : ''
+  const rightBorderBefore = rightBorderBeforeNeeded.includes(hexagon.position) ? 'border-right-before' : ''
 
   return (
     <div
