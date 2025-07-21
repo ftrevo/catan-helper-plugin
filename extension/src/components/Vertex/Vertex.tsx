@@ -1,15 +1,28 @@
 import './Vertex.css'
 
+/**
+ * Classification thresholds for vertex values based on pip probability.
+ * - 13+ pips: Best settlement locations
+ * - 10-12 pips: Good locations
+ * - 7-9 pips: Medium value locations
+ * - <7 pips: Low value locations
+ */
+const VERTEX_VALUE_THRESHOLDS = {
+  BEST: 13,
+  GOOD: 10,
+  MEDIUM: 7,
+}
+
 const getVertexCssColor = (value: number) => {
-  if (value >= 13) return 'best'
-  if (value >= 10) return 'good'
-  if (value >= 7) return 'medium'
+  if (value >= VERTEX_VALUE_THRESHOLDS.BEST) return 'best'
+  if (value >= VERTEX_VALUE_THRESHOLDS.GOOD) return 'good'
+  if (value >= VERTEX_VALUE_THRESHOLDS.MEDIUM) return 'medium'
   return 'bad'
 }
 
 export const Vertex = ({ number, value }: { number: number; value: number }) => {
   return (
-    <span id={`span-vertex-${number}`} className={`vertex vertex${number} ${getVertexCssColor(value)}`}>
+    <span id={`span-vertex-${number}`} className={`vertex position-${number} quality-${getVertexCssColor(value)}`}>
       {value | 0}
     </span>
   )

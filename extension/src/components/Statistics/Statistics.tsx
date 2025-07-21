@@ -23,24 +23,21 @@ export const Statistics = ({ data }: { data: ReadCreateData }) => {
   })
 
   return (
-    <span className="statistics-header">
-      <div className="resource-dashboard">
-        {entries.map(([resource, { pipSum, occurences, numberSet }]) => (
-          <div className="resource-card" key={resource}>
-            <div className="icon">{emojiMap[resource]}</div>
-            <div className="name">{resource.charAt(0).toUpperCase() + resource.slice(1)}</div>
-            <div className="value">{getDisplayPercentage((pipSum / totalPips) * 100)}%</div>
-            <div className="scarcity">Scarcity ×{(pipSum / rarestResource[1].pipSum).toFixed(2)}</div>
-            <div className="pipSum">Pip {pipSum}</div>
-            <div className="numberSet">
-              {Array.from(numberSet)
-                .sort((a, b) => parseInt(a) - parseInt(b))
-                .join(', ')}
-            </div>
+    <div className="resource-dashboard">
+      {entries.map(([resource, { pipSum, occurences, numberSet }]) => (
+        <div className="resource-card" key={resource}>
+          <div className="icon">{emojiMap[resource]}</div>
+          <div className="name">{resource.charAt(0).toUpperCase() + resource.slice(1)}</div>
+          <div className="value">{getDisplayPercentage((pipSum / totalPips) * 100)}%</div>
+          <div className="scarcity">Scarcity ×{(pipSum / rarestResource[1].pipSum).toFixed(2)}</div>
+          <div className="pipSum">Pip {pipSum}</div>
+          <div className="numberSet">
+            {Array.from(numberSet)
+              .sort((a, b) => parseInt(a) - parseInt(b))
+              .join(', ')}
           </div>
-        ))}
-      </div>
-      <div className="statistics"></div>
-    </span>
+        </div>
+      ))}
+    </div>
   )
 }

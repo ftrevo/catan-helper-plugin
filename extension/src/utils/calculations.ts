@@ -1,3 +1,7 @@
+/**
+ * Average dots (pips) per resource in a standard Catan game.
+ * Calculated as: Total pips (58) divided by number of resources (5).
+ */
 export const AVG_DOTS = 58 / 5
 
 const getPipFromHexagonValue = (hexagonValue: string) => {

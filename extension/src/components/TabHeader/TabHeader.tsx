@@ -10,32 +10,53 @@ type TabHeaderProps = {
   setActiveTab: (tab: Tab) => void
   rarity: boolean
   setRarity: (value: boolean) => void
+  hideRefreshButton?: boolean
 }
 
-export const TabHeader = ({ onClickScreenshot, activeTab, setActiveTab, rarity, setRarity }: TabHeaderProps) => {
+export const TabHeader = ({
+  onClickScreenshot,
+  activeTab,
+  setActiveTab,
+  rarity,
+  setRarity,
+  hideRefreshButton,
+}: TabHeaderProps) => {
   return (
     <div className="tab-bar">
-      <div className={`tab ${activeTab === 'game' ? 'tabSelected' : ''}`} onClick={() => setActiveTab('game')}>
+      <div className={`tab ${activeTab === 'game' ? 'tab-selected' : ''}`} onClick={() => setActiveTab('game')}>
         Game
       </div>
       <div
-        className={`tab ${activeTab === 'statistics' ? 'tabSelected' : ''}`}
+        className={`tab ${activeTab === 'statistics' ? 'tab-selected' : ''}`}
         onClick={() => setActiveTab('statistics')}
       >
         Statistics
       </div>
-      Rarity
-      <label className="switch">
-        <input
-          type="checkbox"
-          key="building-toggle"
-          checked={rarity}
-          onChange={() => setRarity(!rarity)}
-          className="toggle"
-        />
-        <span className="slider round"></span>
-      </label>
-      <button onClick={onClickScreenshot}>Capture image</button>
+      {!hideRefreshButton && (
+        <span className="switch-text">
+          Rarity
+          <label className="switch">
+            <input
+              type="checkbox"
+              key="building-toggle"
+              checked={rarity}
+              onChange={() => setRarity(!rarity)}
+              className="toggle"
+            />
+            <span className="slider round"></span>
+          </label>
+        </span>
+      )}
+      {!hideRefreshButton && (
+        <button className="refresh-btn" onClick={onClickScreenshot}>
+          <svg className="refresh-icon" viewBox="0 0 512 512">
+            <path
+              fill="white"
+              d="M386.3 160L336 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z"
+            />
+          </svg>
+        </button>
+      )}
     </div>
   )
 }

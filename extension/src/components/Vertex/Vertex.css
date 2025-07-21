@@ -10,59 +10,59 @@
   cursor: default;
 }
 
-.vertex0 {
+.position-0 {
   top: -65%;
   left: calc(50% - 8.5px);
 }
 
-.vertex1 {
+.position-1 {
   top: -17%;
   left: -11%;
 }
 
-.vertex2 {
+.position-2 {
   top: -17%;
   right: -14%;
 }
 
-.vertex3 {
+.position-3 {
   bottom: -21%;
   left: -12%;
 }
 
-.vertex4 {
+.position-4 {
   bottom: -21%;
   right: -12%;
 }
 
-.vertex5 {
+.position-5 {
   bottom: -68%;
   left: calc(50% - 7.5px);
 }
 
-.best {
+.quality-best {
   background-color: #000000;
   font-weight: bold;
 }
 
-.good {
-  background-color: #4B4B4B
+.quality-good {
+  background-color: #4B4B4B;
 }
 
-.medium {
+.quality-medium {
   background-color: #9E9E9E;
 }
 
-.bad {
+.quality-bad {
   background-color: #D2D2D2;
 }
 
-.best, .good {
+.quality-best, .quality-good {
   color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.6);
 }
 
-.medium, .bad {
+.quality-medium, .quality-bad {
   color: #000;
   text-shadow:
     1px  1px 1px rgba(255,255,255,0.8),

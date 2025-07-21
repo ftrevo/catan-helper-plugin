@@ -7,6 +7,7 @@ import { TabHeader, type Tab } from './components/TabHeader/TabHeader'
 import { buildHexagons } from './utils/hexagons'
 import { getScarcityFactors } from './utils/statistics'
 import { readImageCb, captureAndProcessScreenshot } from './infra/repository'
+import { NoData } from './components/NoData/NoData'
 
 const mockData = {
   numbers: ['8', '10', '5', '4', '3', '9', '2', '11', '7', '11', '5', '6', '12', '10', '4', '3', '9', '6', '8'],
@@ -79,9 +80,11 @@ export const App = () => {
         rarity={rarity}
         setActiveTab={setActiveTab}
         setRarity={setRarity}
+        hideRefreshButton={!data}
       />
 
       <div className="tab-content">
+        {!data && <NoData onCapture={takeScreenshot} />}
         {activeTab === 'game' && data && (
           <Game
             key="game"

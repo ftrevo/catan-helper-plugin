@@ -1,7 +1,8 @@
-.tabSelected {
-  border-bottom: 2px solid #007bff;
+.tab-selected {
+  border-bottom: 3px solid #3374c2;
   font-weight: bold;
-} 
+  color: #3374c2;
+}
 
 .tab-bar {
   align-items: center;
@@ -21,19 +22,33 @@
   color: #fff;
 }
 
-button {
-  background: #3374C2;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 2px;
-  padding: 8px 16px;
+.tab:hover:not(.tab-selected) {
+  background: #3374c2;
+  color: #fff;
 }
 
-button:hover {
-  background: #5750e2;
+.refresh-btn {
+  background: linear-gradient(90deg, #3374c2 0%, #2196f3 100%);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(51, 116, 194, 0.08);
+  margin-left: 2px;
+}
+
+.refresh-icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+  color: inherit;
+  stroke: currentColor;
+}
+
+.switch-text {
+  margin-left: auto;
+  margin-right: 2px;
 }
 
 .switch {
@@ -88,3 +103,4 @@ input:checked + .slider:before {
   -ms-transform: translateX(20px);
   transform: translateX(20px);
 }
+
