@@ -6,7 +6,7 @@ import { Statistics } from './components/Statistics/Statistics'
 import { TabHeader, type Tab } from './components/TabHeader/TabHeader'
 import { buildHexagons } from './utils/hexagons'
 import { getScarcityFactors } from './utils/statistics'
-import { readImageCb, captureAndProcessScreenshot } from './infra/repository'
+import { captureAndProcessScreenshot } from './infra/repository'
 import { NoData } from './components/NoData/NoData'
 
 const mockData = {

@@ -1,5 +1,6 @@
 {
-  "name": "front-ts",
+  "name": "catan-helper-extension",
+  "description": "Chrome extension helper for Catan games on colonist.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

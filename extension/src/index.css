@@ -5,3 +5,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 }
+
+.tab-content {
+  width: 412px;
+  height: 360px;
+  align-content: center;
+}
