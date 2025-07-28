@@ -17,29 +17,46 @@ type StatisticsProps = {
 
 export const Statistics = ({ data }: StatisticsProps) => {
   const resources = getStatisticsData(data)
-
   const entries = Array.from(resources.entries())
-
-  const rarestResource = entries.reduce((prev, current) => {
-    return prev[1].pipSum < current[1].pipSum ? prev : current
-  })
+  const rarestResource = entries.reduce((prev, current) => (prev[1].pipSum < current[1].pipSum ? prev : current))
 
   return (
-    <div className="resource-dashboard">
-      {entries.map(([resource, { pipSum, occurences, numberSet }]) => (
-        <div className="resource-card" key={resource}>
-          <div className="icon">{emojiMap[resource]}</div>
-          <div className="name">{resource.charAt(0).toUpperCase() + resource.slice(1)}</div>
-          <div className="value">{getDisplayPercentage((pipSum / TOTAL_PIPS) * 100)}%</div>
-          <div className="scarcity">Scarcity ×{(pipSum / rarestResource[1].pipSum).toFixed(2)}</div>
-          <div className="pipSum">Pip {pipSum}</div>
-          <div className="numberSet">
-            {Array.from(numberSet)
-              .sort((a, b) => parseInt(a) - parseInt(b))
-              .join(', ')}
-          </div>
-        </div>
-      ))}
+    <div className="dashboard">
+      {entries
+        .sort((a, b) => a[1].pipSum - b[1].pipSum)
+        .map(([resource, { pipSum, numberSet }]) => {
+          const percentage = getDisplayPercentage((pipSum / TOTAL_PIPS) * 100)
+          const multiplier = pipSum / rarestResource[1].pipSum
+
+          return (
+            <div className="resource-card" key={resource}>
+              <div className="header-line">
+                <span className="emoji">{emojiMap[resource]}</span>
+                <span className="name">{resource.charAt(0).toUpperCase() + resource.slice(1)}</span>
+                <span className="pip-sum">{pipSum}</span>
+              </div>
+
+              <div className="hex-list">
+                {Array.from(numberSet)
+                  .sort((a, b) => parseInt(a) - parseInt(b))
+                  .map((num) => (
+                    <div className="hex-badge" key={num}>
+                      {num}
+                    </div>
+                  ))}
+              </div>
+
+              <div className="stats">
+                <div className="scarcity-bar">
+                  {/* Adjusted the width with a *2 for better visibility */}
+                  <div className={`scarcity-fill ${resource}`} style={{ width: `${percentage * 2}%` }} />{' '}
+                </div>
+                <div className="percent">{percentage}%</div>
+                <div className="multiplier-pill">×{multiplier.toFixed(2)}</div>
+              </div>
+            </div>
+          )
+        })}
     </div>
   )
 }

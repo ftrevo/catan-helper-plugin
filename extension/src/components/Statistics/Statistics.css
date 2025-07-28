@@ -1,34 +1,114 @@
-.resource-dashboard {
-  display: flex;
-  width: 412px;
-  justify-content: space-evenly;
+.dashboard {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+}
+
+.dashboard > :last-child {
+  grid-column: 1 / 3;
+  margin: auto;
+  width: 191px;
 }
 
 .resource-card {
-  flex: 1;
-  max-width: 47px;
-  background: #ffffff;
-  border: 1px solid #ddd;
+  background: #fff;
   border-radius: 8px;
-  padding: 0.65rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.header-line {
+  align-items: center;
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.emoji {
+  font-size: 20px;
+  cursor: default;
+}
+
+.name {
+  flex: 1;
+  font-size: 20px;
   text-align: center;
-  box-shadow: 1px 3px 3px rgba(0,0,0,0.1);
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  cursor: default;
 }
 
-.resource-card .icon {
-  font-size: 2rem;
+.pip-sum {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: default;
 }
 
-.resource-card .name {
-  font-weight: 800;
+.hex-list {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  margin-bottom: 4px;
 }
 
-.resource-card .value {
-  font-weight: 550;
+.hex-badge {
+  align-items: center;
+  background: #f0e6d6;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  cursor: default;
+  display: flex;
+  font-size: 13px;
+  height: 22px;
+  justify-content: center;
+  width: 20px;
 }
 
-.resource-card .scarcity {
-  font-size: 0.75rem;
+.stats {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+}
+
+.percent {
+  font-size: 13px;
+}
+
+.multiplier-pill {
+  background: #f0f0f0;
+  border-radius: 3px;
+  color: #555;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.scarcity-bar {
+  background: #e0e0e0;
+  border-radius: 3px;
+  flex: 1;
+  height: 6px;
+}
+
+.scarcity-fill {
+  height: 100%;
+}
+
+.brick {
+ background-color: #8f2e26;
+}
+
+.stone { 
+  background-color: #7e7e7e;
+}
+
+.grain { 
+  background-color: #d4a037; 
+}
+
+.wool { 
+  background-color: #7f9f49;
+}
+
+.lumber {
+ background: #3b6e47;
 }
