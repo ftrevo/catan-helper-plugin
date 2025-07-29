@@ -13,16 +13,11 @@
 
 .tab {
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 16px;
   padding: 8px 16px;
 }
 
 .tab:hover {
-  background: #3374C2;
-  color: #fff;
-}
-
-.tab:hover:not(.tab-selected) {
   background: #3374c2;
   color: #fff;
 }
@@ -34,19 +29,18 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   color: #fff;
   cursor: pointer;
-  margin-right: 5px;
+  margin: 0px 5px;
   padding: 8px;
   transition: all 0.3s ease;
 }
 
-.refresh-btn:hover {
-  box-shadow: 0 2px 8px rgba(51, 116, 194, 0.2);
-  transform: translateY(-1px);
+.refresh-btn:hover, .toggle-button:hover {
+  box-shadow: 0 2px 6px rgba(51, 116, 194, 0.2);
 }
 
-.refresh-btn:active {
+.refresh-btn:active, .toggle-button:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
+  transform: translateY(1px);
 }
 
 .refresh-icon {
@@ -57,70 +51,43 @@
   width: 15px;
 }
 
-.switch-text {
-  align-items: center;
-  color: #333;
-  display: flex;
-  font-size: 0.9rem;
-  gap: 8px;
-  margin-left: auto;
-  margin-right: 8px;
-}
-
-.switch {
-  display: inline-block;
-  height: 24px;
-  position: relative;
-  width: 44px;
-}
-
-.switch input {
-  height: 0;
-  opacity: 0;
-  width: 0;
-}
-
-.slider {
-  -webkit-transition: all .3s ease;
-  background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
-  border-radius: 24px;
-  border: 1px solid #ddd;
-  bottom: 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.toggle-button {
+  width: 50px;
+  height: 31px;
+  border-radius: 8px;
+  overflow: hidden;
   cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all .3s ease;
+  border: 1px solid rgba(51, 116, 194, 0.3);
+  background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-left: auto;
 }
 
-.slider:before {
-  -webkit-transition: all .3s ease;
-  background: linear-gradient(135deg, #fff, #f8f8f8);
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  content: "";
-  height: 19px;
-  position: absolute;
-  transition: all .3s ease;
-  width: 19px;
+.toggle-inner {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.3s ease;
 }
 
-input:checked + .slider {
+.toggle-button.rarity .toggle-inner {
+  transform: translateX(-50%);
+}
+
+.toggle-option {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+}
+
+.toggle-sum {
+  background: linear-gradient(135deg, #6e7e91, #95a5b8);
+}
+
+.toggle-rarity {
   background: linear-gradient(135deg, #3374c2, #2196f3);
-  border-color: #3374c2;
 }
-
-input:focus + .slider {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(51, 116, 194, 0.2);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  border-color: #fff;
-  transform: translateX(20px);
-}
-

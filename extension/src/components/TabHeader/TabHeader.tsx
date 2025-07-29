@@ -33,19 +33,12 @@ export const TabHeader = ({
         Statistics
       </div>
       {!hideButtons && (
-        <span className="switch-text">
-          Rarity
-          <label className="switch">
-            <input
-              type="checkbox"
-              key="building-toggle"
-              checked={rarity}
-              onChange={() => setRarity(!rarity)}
-              className="toggle"
-            />
-            <span className="slider round"></span>
-          </label>
-        </span>
+        <div className={`toggle-button ${rarity ? 'rarity' : 'sum'}`} onClick={() => setRarity(!rarity)}>
+          <div className="toggle-inner">
+            <div className="toggle-option toggle-sum">Sum</div>
+            <div className="toggle-option toggle-rarity">Rarity</div>
+          </div>
+        </div>
       )}
       {!hideButtons && (
         <button className="refresh-btn" onClick={onClickScreenshot}>
