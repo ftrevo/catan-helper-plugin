@@ -10,7 +10,7 @@ type TabHeaderProps = {
   setActiveTab: (tab: Tab) => void
   rarity: boolean
   setRarity: (value: boolean) => void
-  hideRefreshButton?: boolean
+  hideButtons?: boolean
 }
 
 export const TabHeader = ({
@@ -19,7 +19,7 @@ export const TabHeader = ({
   setActiveTab,
   rarity,
   setRarity,
-  hideRefreshButton,
+  hideButtons,
 }: TabHeaderProps) => {
   return (
     <div className="tab-bar">
@@ -32,7 +32,7 @@ export const TabHeader = ({
       >
         Statistics
       </div>
-      {!hideRefreshButton && (
+      {!hideButtons && (
         <span className="switch-text">
           Rarity
           <label className="switch">
@@ -47,7 +47,7 @@ export const TabHeader = ({
           </label>
         </span>
       )}
-      {!hideRefreshButton && (
+      {!hideButtons && (
         <button className="refresh-btn" onClick={onClickScreenshot}>
           <svg className="refresh-icon" viewBox="0 0 512 512">
             <path

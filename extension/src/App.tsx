@@ -80,7 +80,7 @@ export const App = () => {
         rarity={rarity}
         setActiveTab={setActiveTab}
         setRarity={setRarity}
-        hideRefreshButton={!data}
+        hideButtons={!data}
       />
 
       <div className="tab-content">
