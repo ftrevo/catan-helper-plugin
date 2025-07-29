@@ -16,7 +16,6 @@
 .dice-number .tooltiptext {
   position: absolute;
   transform: translateX(-50%) translateY(-100%);
-  font-size: 0.8rem;
   padding: 6px 8px;
   border-radius: 4px;
   visibility: hidden;

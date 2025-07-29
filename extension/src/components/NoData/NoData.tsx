@@ -16,7 +16,7 @@ export const NoData = ({ onCapture }: NoDataProps) => (
     </button>
     <footer className="no-data-footer">
       Created by{' '}
-      <a href="https://github.com/ftrevo" target="_blank" rel="noopener noreferrer">
+      <a className="no-data-footer-link" href="https://github.com/ftrevo" target="_blank" rel="noopener noreferrer">
         @ftrevo
       </a>
     </footer>
