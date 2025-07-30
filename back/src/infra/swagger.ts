@@ -21,4 +21,4 @@ const options: ZodOpenApiObject = {
   },
 }
 
-export const swaggerSpecification = createDocument(options)
+export const swaggerSpecification: ReturnType<typeof createDocument> = createDocument(options)

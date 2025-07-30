@@ -6,9 +6,9 @@ import { swaggerSpecification } from './swagger'
 export const defineInfraRoutes = () => {
   const router = Router()
 
-  router.use('/api-docs', swaggerUi.serve)
-  router.get('/api-docs', swaggerUi.setup(swaggerSpecification))
-  router.get('/api-docs/swagger.json', (_req, res) => res.json(swaggerSpecification))
+  router.use('/docs', swaggerUi.serve)
+  router.get('/docs', swaggerUi.setup(swaggerSpecification))
+  router.get('/docs/swagger.json', (_req, res) => res.json(swaggerSpecification))
 
   return router
 }
