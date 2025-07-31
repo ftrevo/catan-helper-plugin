@@ -1,7 +1,7 @@
-import { pingOpenApiSpecs } from './ping'
+import { healthOpenApiSpecs } from './health'
 import { imageOpenApiSpecs } from './image'
 
 export const openApiAppV1Paths = {
-  ...pingOpenApiSpecs,
+  ...healthOpenApiSpecs,
   ...imageOpenApiSpecs,
 }

@@ -11,8 +11,10 @@ import { v1Routes } from './v1'
 export const createApp = async () => {
   const app = express()
 
-  app.use((req, res, next) => {
-    console.log(new Date().toISOString(), req.method, req.path)
+  app.use((req, _res, next) => {
+    if (!req.url?.startsWith('/health') && !req.url?.startsWith('/docs')) {
+      console.log(new Date().toISOString(), req.method, req.path)
+    }
     next()
   })
   app.use(createStoreRestMiddleware)

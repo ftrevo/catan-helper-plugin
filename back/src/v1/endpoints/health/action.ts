@@ -1,10 +1,10 @@
 import type { RequestHandler } from 'express'
-import { pingCommand } from './commands/ping'
+import { healthCommand } from './commands/health'
 import { validateResponseObject } from './validation/response'
 
-export const ping: RequestHandler = (_req, res, next) => {
+export const health: RequestHandler = (_req, res, next) => {
   try {
-    const result = pingCommand()
+    const result = healthCommand()
 
     const responseData = validateResponseObject(result)
 

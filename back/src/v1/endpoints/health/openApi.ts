@@ -1,7 +1,7 @@
-import { pingOptionsResponseSchema } from './validation/response'
+import { healthOptionsResponseSchema } from './validation/response'
 
-export const pingOpenApiSpecs = {
-  '/': {
+export const healthOpenApiSpecs = {
+  '/health': {
     get: {
       tags: ['Infra'],
       responses: {
@@ -9,7 +9,7 @@ export const pingOpenApiSpecs = {
           description: '200 OK',
           content: {
             'application/json': {
-              schema: pingOptionsResponseSchema,
+              schema: healthOptionsResponseSchema,
             },
           },
         },

@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { ping } from './endpoints'
+import { health } from './endpoints'
 import { setupImageActions } from './endpoints'
 
 export const v1Routes = () => {
@@ -7,7 +7,7 @@ export const v1Routes = () => {
 
   const actions = setupImageActions()
 
-  router.get('/', ping)
+  router.get('/health', health)
 
   router.post('/image/read', actions.readImage)
 
