@@ -1,4 +1,8 @@
 import { loadLayersModel, tensor, scalar } from '@tensorflow/tfjs-node'
+import { resolve } from 'node:path'
+
+const resourceModelPath = resolve(__dirname, '../../models/resources/model.json')
+const numberModelPath = resolve(__dirname, '../../models/numbers/model.json')
 
 export const predictResource = async (imageBuffer: Buffer, index: number) => {
   // Constants from training
@@ -7,9 +11,8 @@ export const predictResource = async (imageBuffer: Buffer, index: number) => {
   const IMAGE_CHANNELS = 3
 
   const classes = ['brick', 'desert', 'grain', 'lumber', 'stone', 'wool']
-  const modelPath = 'file://' + __dirname + '/models/resources/model.json'
 
-  const model = await loadLayersModel(modelPath)
+  const model = await loadLayersModel(`file://${resourceModelPath}`)
 
   const firstTensor = tensor(imageBuffer, [IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_CHANNELS], 'int32')
   const reshapedTensor = firstTensor.reshape([1, IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_CHANNELS])
@@ -43,9 +46,7 @@ export const predictNumber = async (imageBuffer: Buffer, imageIndex: number) => 
 
   const classes = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 
-  const modelPath = 'file://' + __dirname + '/models/numbers/model.json'
-
-  const model = await loadLayersModel(modelPath)
+  const model = await loadLayersModel(`file://${numberModelPath}`)
 
   const firstTensor = tensor(imageBuffer, [IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_CHANNELS], 'int32')
   const reshapedTensor = firstTensor.reshape([1, IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_CHANNELS])
