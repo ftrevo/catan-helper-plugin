@@ -4,6 +4,9 @@ import { resolve } from 'node:path'
 const resourceModelPath = resolve(__dirname, '../../models/resources/model.json')
 const numberModelPath = resolve(__dirname, '../../models/numbers/model.json')
 
+const resourceClasses = ['brick', 'desert', 'grain', 'lumber', 'stone', 'wool']
+const numberClasses = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+
 let resourceModel: LayersModel | null = null
 let numberModel: LayersModel | null = null
 
@@ -23,8 +26,6 @@ export const predictResource = async (imageBuffer: Buffer, index: number) => {
   const IMAGE_HEIGHT = 80
   const IMAGE_CHANNELS = 3
 
-  const classes = ['brick', 'desert', 'grain', 'lumber', 'stone', 'wool']
-
   if (!resourceModel) {
     throw new Error('Resource model not initialized. Call initializeModels() first.')
   }
@@ -35,21 +36,26 @@ export const predictResource = async (imageBuffer: Buffer, index: number) => {
 
   const predictionTensor = resourceModel.predict(dividedTensor)
 
+  firstTensor.dispose()
+  reshapedTensor.dispose()
+  dividedTensor.dispose()
+
   if ('length' in predictionTensor) {
     throw new Error('Prediction tensor is an array')
   }
 
   const probabilities = predictionTensor.dataSync()
+  predictionTensor.dispose()
 
   const max = Math.max(...probabilities)
   const probabilitiesIndexOfMax = probabilities.indexOf(max)
 
   // console.log(
-  //   `Predicted resource for image index ${index}: ${classes[probabilitiesIndexOfMax]} with probability ${max}`
+  //   `Predicted resource for image index ${index}: ${resourceClasses[probabilitiesIndexOfMax]} with probability ${max}`
   // )
 
   return {
-    [classes[probabilitiesIndexOfMax]]: max,
+    [resourceClasses[probabilitiesIndexOfMax]]: max,
   }
 }
 
@@ -58,8 +64,6 @@ export const predictNumber = async (imageBuffer: Buffer, imageIndex: number) => 
   const IMAGE_WIDTH = 70
   const IMAGE_HEIGHT = 64
   const IMAGE_CHANNELS = 3
-
-  const classes = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 
   if (!numberModel) {
     throw new Error('Number model not initialized. Call initializeModels() first.')
@@ -70,12 +74,16 @@ export const predictNumber = async (imageBuffer: Buffer, imageIndex: number) => 
   const dividedTensor = reshapedTensor.div(scalar(255.0))
 
   const predictionTensor = numberModel.predict(dividedTensor)
+  firstTensor.dispose()
+  reshapedTensor.dispose()
+  dividedTensor.dispose()
 
   if ('length' in predictionTensor) {
     throw new Error('Prediction tensor is an array')
   }
 
   const probabilities = predictionTensor.dataSync()
+  predictionTensor.dispose()
 
   const max = Math.max(...probabilities)
   const probabilitiesIndexOfMax = probabilities.indexOf(max)
@@ -85,6 +93,6 @@ export const predictNumber = async (imageBuffer: Buffer, imageIndex: number) => 
   // )
 
   return {
-    [classes[probabilitiesIndexOfMax]]: max,
+    [numberClasses[probabilitiesIndexOfMax]]: max,
   }
 }
