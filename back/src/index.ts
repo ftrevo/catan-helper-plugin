@@ -3,6 +3,8 @@ import { createServer } from 'http'
 import { createApp } from './app'
 import { loadConfigs } from './infra'
 
+const shutDownSignals = ['SIGINT', 'SIGTERM', 'SIGQUIT', 'uncaughtException'] as const
+
 const start = async () => {
   const config = loadConfigs()
 
@@ -19,8 +21,6 @@ const start = async () => {
 
 const main = async () => {
   const { server } = await start()
-
-  const shutDownSignals = ['SIGINT', 'SIGTERM', 'SIGQUIT', 'uncaughtException']
 
   shutDownSignals.forEach((signal) =>
     process.on(signal, async (err, origin) => {
