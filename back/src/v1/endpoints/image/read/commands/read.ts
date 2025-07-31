@@ -5,6 +5,7 @@ import { Board } from './board'
 
 import sharp from 'sharp'
 import fs from 'fs'
+import { getStore } from '../../../../../infra'
 
 const sliceImageFromBase64 = (base64Data: string, x: number, y: number, width: number, height: number) => {
   try {
@@ -139,7 +140,9 @@ const getNumbers = async (image: string) => {
 }
 
 export const readImageCommand = () => async (params: ReadImageRequestParams) => {
-  console.log('tabSize', params.tabSize) // Fixme: Add image resize logic for handling different screen resolutions
+  const { logger } = getStore()
+  logger.info('Tab size', { tabSize: params.tabSize })
+
   const [prefix, image] = params.image.split(',')
 
   const [resources, numbers] = await Promise.all([getResources(image), getNumbers(image)])

@@ -1,10 +1,10 @@
-import * as winston from 'winston'
+import { transports, format, createLogger } from 'winston'
 
-export const logger = winston.createLogger({
+export const logger = createLogger({
   transports: [
-    new winston.transports.Console({
+    new transports.Console({
       level: 'debug',
-      format: winston.format.combine(winston.format.colorize(), winston.format.timestamp()),
+      format: format.combine(format.timestamp(), format.json()),
     }),
   ],
 })

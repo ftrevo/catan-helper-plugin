@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
 
-import { createStoreRestMiddleware } from './middlewares'
+import { createLogRequestMiddleware, createStoreRestMiddleware } from './middlewares'
 
 import { defineInfraRoutes, errorHandlerRest } from './infra'
 
@@ -11,13 +11,8 @@ import { v1Routes } from './v1'
 export const createApp = async () => {
   const app = express()
 
-  app.use((req, _res, next) => {
-    if (!req.url?.startsWith('/health') && !req.url?.startsWith('/docs')) {
-      console.log(new Date().toISOString(), req.method, req.path)
-    }
-    next()
-  })
   app.use(createStoreRestMiddleware)
+  app.use(createLogRequestMiddleware)
 
   app.use(express.json({ limit: '5mb' }))
   app.use(

@@ -26,9 +26,9 @@ export const predictResource = async (imageBuffer: Buffer, index: number) => {
   const max = Math.max(...probabilities)
   const probabilitiesIndexOfMax = probabilities.indexOf(max)
 
-  console.log(
-    `Predicted resource for image index ${index}: ${classes[probabilitiesIndexOfMax]} with probability ${max}`
-  )
+  // console.log(
+  //   `Predicted resource for image index ${index}: ${classes[probabilitiesIndexOfMax]} with probability ${max}`
+  // )
 
   return {
     [classes[probabilitiesIndexOfMax]]: max,
@@ -62,9 +62,9 @@ export const predictNumber = async (imageBuffer: Buffer, imageIndex: number) => 
   const max = Math.max(...probabilities)
   const probabilitiesIndexOfMax = probabilities.indexOf(max)
 
-  console.log(
-    `Predicted number for image index ${imageIndex}: ${classes[probabilitiesIndexOfMax]} with probability ${max}`
-  )
+  // console.log(
+  //   `Predicted number for image index ${imageIndex}: ${classes[probabilitiesIndexOfMax]} with probability ${max}`
+  // )
 
   return {
     [classes[probabilitiesIndexOfMax]]: max,
