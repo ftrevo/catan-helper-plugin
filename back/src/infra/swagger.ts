@@ -12,7 +12,7 @@ const options: ZodOpenApiObject = {
     description: 'catan-helper',
   },
   components: {
-    responses: {
+    schemas: {
       ...errors,
     },
   },

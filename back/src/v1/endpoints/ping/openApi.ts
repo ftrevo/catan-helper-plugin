@@ -14,7 +14,7 @@ export const pingOpenApiSpecs = {
           },
         },
         '500': {
-          $ref: '#/components/responses/500InternalError',
+          $ref: '#/components/schemas/500InternalError',
         },
       },
     },

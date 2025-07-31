@@ -139,6 +139,7 @@ const getNumbers = async (image: string) => {
 }
 
 export const readImageCommand = () => async (params: ReadImageRequestParams) => {
+  console.log('tabSize', params.tabSize) // Fixme: Add image resize logic for handling different screen resolutions
   const [prefix, image] = params.image.split(',')
 
   const [resources, numbers] = await Promise.all([getResources(image), getNumbers(image)])

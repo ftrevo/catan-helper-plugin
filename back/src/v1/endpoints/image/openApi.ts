@@ -1,5 +1,5 @@
-import { createUserOpenApiSpecs } from './read'
+import { readImageOpenApiSpecs } from './read'
 
-export const userOpenApiSpecs = {
-  ...createUserOpenApiSpecs,
+export const imageOpenApiSpecs = {
+  ...readImageOpenApiSpecs,
 }

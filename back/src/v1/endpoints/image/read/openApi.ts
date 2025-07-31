@@ -1,6 +1,6 @@
 import { readImageRequestSchema, readImageResponseSchema } from './validation'
 
-export const createUserOpenApiSpecs = {
+export const readImageOpenApiSpecs = {
   '/image/read': {
     post: {
       tags: ['Image'],
@@ -21,10 +21,10 @@ export const createUserOpenApiSpecs = {
           },
         },
         '400': {
-          $ref: '#/components/responses/400BadRequest',
+          $ref: '#/components/schemas/400BadRequest',
         },
         '500': {
-          $ref: '#/components/responses/500InternalError',
+          $ref: '#/components/schemas/500InternalError',
         },
       },
     },
