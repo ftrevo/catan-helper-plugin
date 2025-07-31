@@ -11,17 +11,17 @@ import { v1Routes } from './v1'
 export const createApp = async () => {
   const app = express()
 
+  app.use(
+    cors({
+      origin: '*',
+      methods: ['GET', 'POST', 'PATCH', 'HEAD', 'OPTIONS', 'DELETE', 'PUT'],
+      allowedHeaders: ['Content-Type', 'Accept'],
+    })
+  )
   app.use(createStoreRestMiddleware)
   app.use(createLogRequestMiddleware)
 
   app.use(express.json({ limit: '5mb' }))
-  app.use(
-    cors({
-      credentials: true,
-      origin: '*',
-      methods: ['GET', 'POST', 'PATCH', 'HEAD', 'OPTIONS'],
-    })
-  )
   app.use(helmet())
 
   app.use(defineInfraRoutes())
