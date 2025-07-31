@@ -6,7 +6,7 @@ import { loadConfigs } from './infra'
 const start = async () => {
   const config = loadConfigs()
 
-  const app = await createApp()
+  const app = await createApp(config)
 
   const server = createServer(app)
 
