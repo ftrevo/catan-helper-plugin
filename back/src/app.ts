@@ -3,11 +3,12 @@ import helmet from 'helmet'
 
 import { createLogRequestMiddleware, createStoreRestMiddleware, createCorsMiddleware } from './middlewares'
 
-import { type Config, defineInfraRoutes, errorHandlerRest } from './infra'
+import { type Config, defineInfraRoutes, errorHandlerRest, initializeModels } from './infra'
 
 import { v1Routes } from './v1'
 
 export const createApp = async (config: Config) => {
+  await initializeModels()
   const app = express()
 
   app.use(createCorsMiddleware(config))
