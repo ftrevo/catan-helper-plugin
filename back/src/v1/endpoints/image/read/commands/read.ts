@@ -7,19 +7,21 @@ import sharp from 'sharp'
 import fs from 'fs'
 import { getStore } from '../../../../../infra'
 
-const sliceImageFromBase64 = (base64Data: string, x: number, y: number, width: number, height: number) => {
+const sliceImageFromBase64 = async (imageBuffer: Buffer, x: number, y: number, width: number, height: number) => {
   try {
-    const imageBuffer = Buffer.from(base64Data, 'base64')
+    const sharpInstance = sharp(imageBuffer)
+    const result = await sharpInstance.extract({ left: x, top: y, width: width, height: height }).raw().toBuffer()
 
-    // return sharp(imageBuffer).extract({ left: x, top: y, width: width, height: height }).toBuffer()
-    return sharp(imageBuffer).extract({ left: x, top: y, width: width, height: height }).raw().toBuffer()
+    sharpInstance.destroy()
+
+    return result
   } catch (err) {
     console.error(err)
     throw err
   }
 }
 
-const getResources = async (image: string) => {
+const getResources = async (imageBuffer: Buffer) => {
   const width = 80
   const height = 64
 
@@ -33,7 +35,7 @@ const getResources = async (image: string) => {
   for (let position = 0; position <= 2; position++) {
     const x = l1XStart + position * separation
 
-    resourcePromises.push(sliceImageFromBase64(image, x, l1YStart, width, height))
+    resourcePromises.push(sliceImageFromBase64(imageBuffer, x, l1YStart, width, height))
   }
 
   const l2XStart = 852
@@ -42,7 +44,7 @@ const getResources = async (image: string) => {
   for (let position = 0; position <= 3; position++) {
     const x = l2XStart + position * separation
 
-    resourcePromises.push(sliceImageFromBase64(image, x, l2YStart, width, height))
+    resourcePromises.push(sliceImageFromBase64(imageBuffer, x, l2YStart, width, height))
   }
 
   const l3XStart = 745
@@ -51,7 +53,7 @@ const getResources = async (image: string) => {
   for (let position = 0; position <= 4; position++) {
     const x = l3XStart + position * separation
 
-    resourcePromises.push(sliceImageFromBase64(image, x, l3YStart, width, height))
+    resourcePromises.push(sliceImageFromBase64(imageBuffer, x, l3YStart, width, height))
   }
 
   const l4XStart = 852
@@ -60,7 +62,7 @@ const getResources = async (image: string) => {
   for (let position = 0; position <= 3; position++) {
     const x = l4XStart + position * separation
 
-    resourcePromises.push(sliceImageFromBase64(image, x, l4YStart, width, height))
+    resourcePromises.push(sliceImageFromBase64(imageBuffer, x, l4YStart, width, height))
   }
 
   const l5XStart = 960
@@ -69,7 +71,7 @@ const getResources = async (image: string) => {
   for (let position = 0; position <= 2; position++) {
     const x = l5XStart + position * separation
 
-    resourcePromises.push(sliceImageFromBase64(image, x, l5YStart, width, height))
+    resourcePromises.push(sliceImageFromBase64(imageBuffer, x, l5YStart, width, height))
   }
 
   const resources = await Promise.all(resourcePromises)
@@ -77,7 +79,7 @@ const getResources = async (image: string) => {
   return resources
 }
 
-const getNumbers = async (image: string) => {
+const getNumbers = async (imageBuffer: Buffer) => {
   const width = 64
   const height = 70
 
@@ -91,7 +93,7 @@ const getNumbers = async (image: string) => {
   for (let position = 0; position <= 2; position++) {
     const x = l1XStart + position * separation
 
-    numberPromises.push(sliceImageFromBase64(image, x, l1YStart, width, height))
+    numberPromises.push(sliceImageFromBase64(imageBuffer, x, l1YStart, width, height))
   }
 
   const l2XStart = 857
@@ -102,7 +104,7 @@ const getNumbers = async (image: string) => {
   for (let position = 0; position <= 3; position++) {
     const x = l2XStart + position * separation
 
-    numberPromises.push(sliceImageFromBase64(image, x, l2YStart, width, height))
+    numberPromises.push(sliceImageFromBase64(imageBuffer, x, l2YStart, width, height))
   }
 
   const l3XStart = 750
@@ -113,7 +115,7 @@ const getNumbers = async (image: string) => {
   for (let position = 0; position <= 4; position++) {
     const x = l3XStart + position * separation
 
-    numberPromises.push(sliceImageFromBase64(image, x, l3YStart, width, height))
+    numberPromises.push(sliceImageFromBase64(imageBuffer, x, l3YStart, width, height))
   }
 
   const l4XStart = 857
@@ -122,7 +124,7 @@ const getNumbers = async (image: string) => {
   for (let position = 0; position <= 3; position++) {
     const x = l4XStart + position * separation
 
-    numberPromises.push(sliceImageFromBase64(image, x, l4YStart, width, height))
+    numberPromises.push(sliceImageFromBase64(imageBuffer, x, l4YStart, width, height))
   }
 
   const l5XStart = 965
@@ -131,7 +133,7 @@ const getNumbers = async (image: string) => {
   for (let position = 0; position <= 2; position++) {
     const x = l5XStart + position * separation
 
-    numberPromises.push(sliceImageFromBase64(image, x, l5YStart, width, height))
+    numberPromises.push(sliceImageFromBase64(imageBuffer, x, l5YStart, width, height))
   }
 
   const numbers = await Promise.all(numberPromises)
@@ -145,7 +147,9 @@ export const readImageCommand = () => async (params: ReadImageRequestParams) => 
 
   const [prefix, image] = params.image.split(',')
 
-  const [resources, numbers] = await Promise.all([getResources(image), getNumbers(image)])
+  const imageBuffer = Buffer.from(image, 'base64')
+
+  const [resources, numbers] = await Promise.all([getResources(imageBuffer), getNumbers(imageBuffer)])
 
   const predictedResources = resources.map(async (resource, index) => {
     // await sharp(num, { raw: { width: 64, height: 80, channels: 3 } }).toFile(`output/resource-${index}.png`)
