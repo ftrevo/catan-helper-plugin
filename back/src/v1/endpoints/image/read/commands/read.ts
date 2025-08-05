@@ -1,8 +1,6 @@
 import type { ReadImageRequestParams } from '../validation'
 import { predictResource, predictNumber } from '../../../../../infra/predictor'
 
-import { Board } from './board'
-
 import sharp from 'sharp'
 import fs from 'fs'
 import { getStore } from '../../../../../infra'
@@ -178,9 +176,6 @@ export const readImageCommand = () => async (params: ReadImageRequestParams) => 
   const numberList = predictedNumbersResolved.map((number) => {
     return Object.keys(number)[0]
   })
-
-  // Leftover code from the initial implementation that identified it on the screen itself localy.
-  // const board = new Board(resourceList, numberList)
 
   return {
     resources: resourceList,
