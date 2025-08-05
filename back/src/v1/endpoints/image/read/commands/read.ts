@@ -147,9 +147,11 @@ export const readImageCommand = () => async (params: ReadImageRequestParams) => 
 
   const [prefix, image] = params.image.split(',')
 
-  const imageBuffer = Buffer.from(image, 'base64')
+  let imageBuffer: Buffer | null = Buffer.from(image, 'base64')
 
   const [resources, numbers] = await Promise.all([getResources(imageBuffer), getNumbers(imageBuffer)])
+
+  imageBuffer = null // Free memory
 
   const predictedResources = resources.map(async (resource, index) => {
     // await sharp(num, { raw: { width: 64, height: 80, channels: 3 } }).toFile(`output/resource-${index}.png`)
