@@ -34,41 +34,39 @@ const mockData = {
   ],
 }
 
-const useMock = true
+const useMock = false
 
 export const App = () => {
   const [activeTab, setActiveTab] = useState<Tab>('game')
   const [data, setData] = React.useState<ReadCreateData | undefined>()
   const [rarity, setRarity] = useState<boolean>(false)
+  const [isLoading, setLoading] = useState(false)
 
   const takeScreenshot = async () => {
     if (useMock) {
       return setData(mockData)
     }
 
-    if (!window.location.href.includes('colonist.io')) {
+    const tabs = await chrome.tabs?.query({ active: true, currentWindow: true })
+
+    if (!tabs || !tabs[0]?.url?.includes('colonist.io')) {
       return alert('This extension only work in a colonist.io game')
     }
 
-    const result = await captureAndProcessScreenshot()
+    setLoading(true)
 
-    if (result.error) return // TODO: Handle error appropriately
+    const { height, url, width, windowId } = tabs && tabs[0] ? tabs[0] : { height: 0, url: '', width: 0, windowId: 0 }
+    const tabInfo = { height, url, width, windowId }
+
+    const result = await captureAndProcessScreenshot(tabInfo)
+
+    if (result.error) {
+      setLoading(false)
+      return null
+    }
 
     setData(result.data)
-
-    // TODO: Left this here for reference, since captureAndProcessScreenshot is not tested yet
-    // chrome.runtime.sendMessage({ action: 'capturePage' }, async function (params: { error: any; data: string }) {
-    //   if (params.error) {
-    //     console.error(params.error)
-    //     return
-    //   }
-    //   readImageCb(params.data)
-    //     .then((response) => response.json())
-    //     .then((result) => {
-    //       setData(result)
-    //       setScarcityFactors(getScarcityFactors(result))
-    //     })
-    // })
+    setLoading(false)
   }
 
   return (
@@ -81,6 +79,7 @@ export const App = () => {
         setActiveTab={setActiveTab}
         setRarity={setRarity}
         hideButtons={!data}
+        loading={isLoading}
       />
 
       <div className="tab-content">

@@ -7,7 +7,8 @@
     "default_popup": "index.html",
     "default_title": "Catan Helper"
   },
-  "permissions": ["activeTab", "clipboardWrite", "clipboardRead", "scripting"],
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["https://colonist.io/*", "http://colonist.io/*"],
   "background": {
     "service_worker": "static/js/background.js"
   },

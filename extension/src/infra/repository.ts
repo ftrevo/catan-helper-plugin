@@ -1,15 +1,17 @@
 import type { ReadCreateData } from '../../typings/api'
 
-const HOST = 'http://localhost:3300'
+const HOST = 'http://localhost:3500'
 
-const readImage = async (image: string) => {
+type TabSize = { height?: number; width?: number }
+
+const readImage = async (image: string, tabSize: TabSize) => {
   try {
     const response = await fetch(`${HOST}/image/read`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ image }),
+      body: JSON.stringify({ image, tabSize }),
     })
 
     if (!response.ok) {
@@ -35,23 +37,31 @@ const readImage = async (image: string) => {
   }
 }
 
-// TODO: Not tested yet
-export const captureAndProcessScreenshot = (): ReturnType<typeof readImage> => {
-  return new Promise((resolve) => {
-    chrome.runtime.sendMessage({ action: 'capturePage' }, async (params: { error: any; data: string }) => {
-      if (params.error) {
-        console.error('Error capturing image', params.error)
-        return resolve({
-          error: {
-            message: (params.error as string) || 'Failed to capture screenshot',
-            status: 500,
-          },
-        })
-      }
+type TabInfo = { height?: number; url?: string; width?: number; windowId: number }
 
-      const result = await readImage(params.data)
-      return resolve(result)
-    })
+export const captureAndProcessScreenshot = (tabInfo: TabInfo): ReturnType<typeof readImage> => {
+  return new Promise((resolve) => {
+    chrome.runtime?.sendMessage(
+      { action: 'captureBoardImage', tabInfo },
+      async (params: { error: any; data: string }) => {
+        if (params.error) {
+          console.error('Error capturing image', JSON.stringify(params.error))
+          return resolve({
+            error: {
+              message: (params.error as string) ?? 'Failed to capture screenshot',
+              status: 500,
+            },
+          })
+        }
+
+        const result = await readImage(params.data, {
+          height: tabInfo.height,
+          width: tabInfo.width,
+        })
+
+        return resolve(result)
+      }
+    )
   })
 }
 

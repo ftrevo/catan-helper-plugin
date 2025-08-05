@@ -10,7 +10,8 @@ type TabHeaderProps = {
   setActiveTab: (tab: Tab) => void
   rarity: boolean
   setRarity: (value: boolean) => void
-  hideButtons?: boolean
+  hideButtons: boolean
+  loading: boolean
 }
 
 export const TabHeader = ({
@@ -20,6 +21,7 @@ export const TabHeader = ({
   rarity,
   setRarity,
   hideButtons,
+  loading,
 }: TabHeaderProps) => {
   return (
     <div className="tab-bar">
@@ -41,7 +43,7 @@ export const TabHeader = ({
         </div>
       )}
       {!hideButtons && (
-        <button className="refresh-btn" onClick={onClickScreenshot}>
+        <button className="refresh-btn" onClick={onClickScreenshot} disabled={loading}>
           <svg className="refresh-icon" viewBox="0 0 512 512">
             <path
               fill="white"

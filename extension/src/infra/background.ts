@@ -1,13 +1,9 @@
-chrome.runtime?.onMessage.addListener((request, _sender, callback) => {
-  if (request.action === 'capturePage') {
-    chrome.tabs.captureVisibleTab(null as any, { format: 'png' }, (dataUrl: string) => {
-      if (chrome.runtime.lastError) {
-        callback({ error: chrome.runtime.lastError })
-        return
-      }
+type Request = { windowId: number; action: 'captureBoardImage' }
 
-      callback({ error: null, data: dataUrl })
-      return
+chrome.runtime?.onMessage.addListener((message: Request, _sender, callback) => {
+  if (message.action === 'captureBoardImage') {
+    chrome.tabs.captureVisibleTab(message.windowId, { format: 'png' }, (dataUrl: string) => {
+      callback({ error: chrome.runtime?.lastError, data: dataUrl })
     })
     return true // to allow async response
   }
