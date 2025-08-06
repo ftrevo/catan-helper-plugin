@@ -8,33 +8,9 @@ import { buildHexagons } from './utils/hexagons'
 import { getScarcityFactors } from './utils/statistics'
 import { captureAndProcessScreenshot } from './infra/repository'
 import { NoData } from './components/NoData/NoData'
+import { setMockData } from './utils/mockData'
 
-const mockData = {
-  numbers: ['8', '10', '5', '4', '3', '9', '2', '11', '7', '11', '5', '6', '12', '10', '4', '3', '9', '6', '8'],
-  resources: [
-    'wool',
-    'stone',
-    'wool',
-    'brick',
-    'brick',
-    'wool',
-    'stone',
-    'grain',
-    'desert',
-    'lumber',
-    'grain',
-    'stone',
-    'brick',
-    'wool',
-    'grain',
-    'lumber',
-    'lumber',
-    'grain',
-    'lumber',
-  ],
-}
-
-const useMock = false
+const USE_MOCK = process.env.NODE_ENV === 'development'
 
 export const App = () => {
   const [activeTab, setActiveTab] = useState<Tab>('game')
@@ -43,22 +19,23 @@ export const App = () => {
   const [isLoading, setLoading] = useState(false)
 
   const takeScreenshot = async () => {
-    if (useMock) {
-      return setData(mockData)
+    if (USE_MOCK) {
+      return setMockData(setData, setLoading)
     }
+
+    console.log('Taking screenshot...')
 
     const tabs = await chrome.tabs?.query({ active: true, currentWindow: true })
 
-    if (!tabs || !tabs[0]?.url?.includes('colonist.io')) {
+    if (!tabs?.[0]?.url?.includes('colonist.io')) {
       return alert('This extension only work in a colonist.io game')
     }
 
     setLoading(true)
 
-    const { height, url, width, windowId } = tabs && tabs[0] ? tabs[0] : { height: 0, url: '', width: 0, windowId: 0 }
-    const tabInfo = { height, url, width, windowId }
+    const { height, url, width, windowId } = tabs[0]
 
-    const result = await captureAndProcessScreenshot(tabInfo)
+    const result = await captureAndProcessScreenshot({ height, url, width, windowId })
 
     if (result.error) {
       setLoading(false)
@@ -74,16 +51,16 @@ export const App = () => {
       <TabHeader
         key="tab-header"
         activeTab={activeTab}
+        hideButtons={!data}
+        loading={isLoading}
         onClickScreenshot={takeScreenshot}
         rarity={rarity}
         setActiveTab={setActiveTab}
         setRarity={setRarity}
-        hideButtons={!data}
-        loading={isLoading}
       />
 
       <div className="tab-content">
-        {!data && <NoData onCapture={takeScreenshot} />}
+        {!data && <NoData onCapture={takeScreenshot} loading={isLoading} />}
         {activeTab === 'game' && data && (
           <Game
             key="game"
