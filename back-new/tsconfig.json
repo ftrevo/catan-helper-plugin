@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "sourceMap": true,
+    "outDir": "${configDir}/dist",
+    "baseUrl": "${configDir}",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true
+  }
+}
