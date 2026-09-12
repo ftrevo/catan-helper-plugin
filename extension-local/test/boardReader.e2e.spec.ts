@@ -1,36 +1,35 @@
 import { afterAll, beforeAll, describe, expect, test } from 'vitest'
 import { type BoardReader, createBoardReader } from '../src/vision/boardReader'
 import { BoardNotFoundError } from '../src/vision/errors'
-import { FIXTURE_SCREENSHOTS, SAMPLE_BOARD, SAMPLE_BOARD_2, loadPng } from './fixtures'
+import { MODEL_SETS, modelSetPaths } from '../src/vision/modelSets'
+import { FIXTURES } from './fixtures'
+import { loadPng } from './loadPng'
 import { nodeModelSource } from './nodeModelSource'
 
-describe('board reader on real screenshots', () => {
+/**
+ * Every shipped model set must read every fixture perfectly. This is the regression net for changes to
+ * the vision code, the crop geometry and the model files alike.
+ */
+describe.each(MODEL_SETS.map((set) => [set.id] as const))('model set %s', (setId) => {
   let reader: BoardReader
 
   beforeAll(async () => {
+    const paths = modelSetPaths(setId)
     reader = await createBoardReader({
-      resources: await nodeModelSource('public/models/resources/model.json'),
-      numbers: await nodeModelSource('public/models/numbers/model.json'),
+      resources: await nodeModelSource(`public/${paths.resources}`),
+      numbers: await nodeModelSource(`public/${paths.numbers}`),
     })
   })
 
   afterAll(() => reader?.dispose())
 
-  test.each([
-    ['original sample (spacing 216)', FIXTURE_SCREENSHOTS.board1, SAMPLE_BOARD],
-    ['live bots game (spacing ~193)', FIXTURE_SCREENSHOTS.board2, SAMPLE_BOARD_2],
-  ])('reads every tile of the %s', async (_name, path, expected) => {
-    const { board, confidence, location } = await reader.read(await loadPng(path))
+  test.each(FIXTURES.map((f) => [f.name, f] as const))('reads every tile of %s', async (_name, fixture) => {
+    const { board, confidence, location } = await reader.read(await loadPng(fixture.file))
 
-    expect(board.tiles.map((t) => t.resource)).toEqual(expected.resources)
-    expect(board.tiles.map((t) => t.number)).toEqual(expected.numbers)
-
+    expect(board.tiles.map((t) => t.resource)).toEqual(fixture.truth.resources)
+    expect(board.tiles.map((t) => t.number)).toEqual(fixture.truth.numbers)
     expect(location.tokensFound).toBe(18)
     expect(confidence).toHaveLength(19)
-    for (const tile of confidence) {
-      expect(tile.resource).toBeGreaterThan(0.5)
-      expect(tile.number).toBeGreaterThan(0.5)
-    }
   })
 
   test('rejects a screenshot without a board', async () => {

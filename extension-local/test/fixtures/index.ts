@@ -1,18 +1,29 @@
-import { readFile } from 'node:fs/promises'
-import { PNG } from 'pngjs'
-import { type RgbaImage } from '../../src/vision/pixels'
+/**
+ * Real colonist.io captures with hand-read ground truth. Pure data so the training package can import
+ * it too; decoding lives in `../loadPng.ts`.
+ */
+import { SAMPLE_BOARD } from './sample-board'
+import { SAMPLE_BOARD_2 } from './sample-board-2'
+import { SAMPLE_BOARD_3 } from './sample-board-3'
 
-export { SAMPLE_BOARD } from './sample-board'
-export { SAMPLE_BOARD_2 } from './sample-board-2'
+export { SAMPLE_BOARD, SAMPLE_BOARD_2, SAMPLE_BOARD_3 }
 
-export const FIXTURE_SCREENSHOTS = {
-  /** Original sample the backend was built against. Tile spacing 216 px. */
-  board1: 'test/fixtures/colonist-board.png',
-  /** Live bots game, smaller board. Tile spacing about 193 px. */
-  board2: 'test/fixtures/colonist-board-2.png',
-} as const
+export type BoardTruth = { readonly resources: readonly string[]; readonly numbers: readonly string[] }
 
-export const loadPng = async (path: string): Promise<RgbaImage> => {
-  const png = PNG.sync.read(await readFile(path))
-  return { width: png.width, height: png.height, data: new Uint8ClampedArray(png.data) }
+export type Fixture = {
+  readonly name: string
+  /** Path relative to the extension folder. */
+  readonly file: string
+  readonly truth: BoardTruth
+  /** Approximate tile spacing in the capture, for documentation and sanity checks. */
+  readonly spacing: number
 }
+
+export const FIXTURES: readonly Fixture[] = [
+  { name: 'original sample, 1512x758 @2x (2025 token style)', file: 'test/fixtures/colonist-board.png', truth: SAMPLE_BOARD, spacing: 216 },
+  { name: 'bots game, 1512x758 @2x', file: 'test/fixtures/colonist-board-2.png', truth: SAMPLE_BOARD_2, spacing: 193 },
+  { name: 'bots game 3, 1280x720 @1x', file: 'test/fixtures/colonist-board-3-1280x720.png', truth: SAMPLE_BOARD_3, spacing: 86 },
+  { name: 'bots game 3, 1366x768 @1x', file: 'test/fixtures/colonist-board-3-1366x768.png', truth: SAMPLE_BOARD_3, spacing: 94 },
+  { name: 'bots game 3, 1920x1080 @1x', file: 'test/fixtures/colonist-board-3-1920x1080.png', truth: SAMPLE_BOARD_3, spacing: 126 },
+  { name: 'bots game 3, 1512x758 @2x', file: 'test/fixtures/colonist-board-3-1512x758@2x.png', truth: SAMPLE_BOARD_3, spacing: 193 },
+]

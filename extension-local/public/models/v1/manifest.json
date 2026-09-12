@@ -1,0 +1,10 @@
+{
+  "name": "v1",
+  "trainedAt": "2025-07",
+  "architecture": "compact",
+  "source": "train-model/ scripts on screenshots of colonist.io games",
+  "labels": {
+    "resources": ["brick", "desert", "grain", "lumber", "stone", "wool"],
+    "numbers": ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+  }
+}

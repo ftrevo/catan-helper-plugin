@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest'
 import { createBoard } from './board'
 import { scarcityFactors } from './statistics'
 import { TILE_VERTICES, VERTEX_TILES, tileVertexValues } from './vertices'
-import { SAMPLE_BOARD } from '../../test/fixtures/sample-board'
+import { SAMPLE_BOARD } from '../../test/fixtures'
 
 const board = createBoard(SAMPLE_BOARD.resources, SAMPLE_BOARD.numbers)
 

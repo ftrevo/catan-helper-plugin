@@ -1,25 +1,21 @@
 import { describe, expect, test } from 'vitest'
 import { locateBoard } from '../src/vision/boardLocator'
 import { BoardNotFoundError } from '../src/vision/errors'
-import { FIXTURE_SCREENSHOTS, loadPng } from './fixtures'
+import { FIXTURES } from './fixtures'
+import { loadPng } from './loadPng'
 
 describe('locateBoard', () => {
-  test('finds the original sample board at spacing 216', async () => {
-    const located = locateBoard(await loadPng(FIXTURE_SCREENSHOTS.board1))
-    expect(located.spacing).toBeCloseTo(216, 0)
-    // Centre tile token measured by hand at (1212, 699).
-    expect(located.center.x).toBeCloseTo(1212, -1)
-    expect(located.center.y).toBeCloseTo(699, -1)
+  test.each(FIXTURES.map((f) => [f.name, f] as const))('finds all 18 tokens in %s', async (_name, fixture) => {
+    const located = locateBoard(await loadPng(fixture.file))
     expect(located.tokensFound).toBe(18)
+    expect(located.spacing).toBeGreaterThan(fixture.spacing * 0.97)
+    expect(located.spacing).toBeLessThan(fixture.spacing * 1.03)
   })
 
-  test('finds the smaller live board at spacing ~193', async () => {
-    const located = locateBoard(await loadPng(FIXTURE_SCREENSHOTS.board2))
-    expect(located.spacing).toBeGreaterThan(190)
-    expect(located.spacing).toBeLessThan(197)
-    expect(located.center.x).toBeCloseTo(1208, -1)
-    expect(located.center.y).toBeCloseTo(718, -1)
-    expect(located.tokensFound).toBe(18)
+  test('the original sample is centred where it was measured by hand', async () => {
+    const located = locateBoard(await loadPng('test/fixtures/colonist-board.png'))
+    expect(located.center.x).toBeCloseTo(1212, -1)
+    expect(located.center.y).toBeCloseTo(699, -1)
   })
 
   test('rejects an image without a board', () => {

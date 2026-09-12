@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { boardWarnings, createBoard } from './board'
-import { SAMPLE_BOARD } from '../../test/fixtures/sample-board'
+import { SAMPLE_BOARD } from '../../test/fixtures'
 
 describe('createBoard', () => {
   test('builds 19 typed tiles', () => {

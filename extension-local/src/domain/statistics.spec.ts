@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { createBoard } from './board'
 import { resourceStatistics, scarcityFactors } from './statistics'
-import { SAMPLE_BOARD } from '../../test/fixtures/sample-board'
+import { SAMPLE_BOARD } from '../../test/fixtures'
 
 const board = createBoard(SAMPLE_BOARD.resources, SAMPLE_BOARD.numbers)
 
