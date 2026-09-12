@@ -127,6 +127,24 @@ const looksLikeToken = (blob: Blob): boolean => {
 
 const distance = (a: Point, b: Point): number => Math.hypot(a.x - b.x, a.y - b.y)
 
+/** Sea and shallow water are distinctly blue; every tile colour has at least as much red or green as blue. */
+const isSea = (r: number, g: number, b: number): boolean => b > r + 40 && b > g + 10
+
+/** Share of sample points on a circle around `center` that show sea. */
+const seaFraction = (image: RgbaImage, center: Point, radius: number): number => {
+  const samples = 16
+  let sea = 0
+  for (let i = 0; i < samples; i++) {
+    const angle = (i / samples) * 2 * Math.PI
+    const x = Math.round(center.x + Math.cos(angle) * radius)
+    const y = Math.round(center.y + Math.sin(angle) * radius)
+    if (x < 0 || y < 0 || x >= image.width || y >= image.height) continue
+    const o = (y * image.width + x) * 4
+    if (isSea(image.data[o] ?? 0, image.data[o + 1] ?? 0, image.data[o + 2] ?? 0)) sea++
+  }
+  return sea / samples
+}
+
 /**
  * Adjacent tokens are exactly one spacing apart, so the spacing is a typical nearest-neighbour distance.
  * Other white discs (Cities & Knights knight badges, harbour labels) sit closer to a token than a spacing
@@ -229,12 +247,14 @@ export const locateBoard = (image: RgbaImage): LocatedBoard => {
   const finalFit = matchLattice(best.tokens, refined)
   const geometry = refine(finalFit)
 
+  // Stray discs: token-sized, not on a slot, near the board and standing on land. Harbour ships are
+  // token-sized too, but they float on the sea and are ignored this way.
   const matched = new Set(finalFit.matches.map((m) => m.token))
   const extraTokens = best.tokens.filter(
     (t) =>
       !matched.has(t) &&
       distance(t, geometry.center) < geometry.spacing * 4 &&
-      distance(t, geometry.center) > geometry.spacing * 0.5
+      seaFraction(image, t, geometry.spacing * 0.3) < 0.5
   ).length
 
   return { ...geometry, tokensFound: Math.min(finalFit.matches.length, MAX_TOKENS), extraTokens }
