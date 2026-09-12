@@ -22,13 +22,30 @@ if (!input || !output) {
 
 const tiles = modelSetPaths(DEFAULT_MODEL_SET)
 const pieces = pieceModelPaths()
+
+// Piece models are optional: while they are being retrained the board can still be read.
+let pieceSources:
+  | {
+      buildings: Awaited<ReturnType<typeof nodeModelSource>>
+      colours: Awaited<ReturnType<typeof nodeModelSource>>
+      roads: Awaited<ReturnType<typeof nodeModelSource>>
+    }
+  | undefined
+let piecesUnavailable: string | undefined
+try {
+  pieceSources = {
+    buildings: await nodeModelSource(`public/${pieces.buildings}`),
+    colours: await nodeModelSource(`public/${pieces.colours}`),
+    roads: await nodeModelSource(`public/${pieces.roads}`),
+  }
+} catch (error) {
+  piecesUnavailable = error instanceof Error ? error.message : String(error)
+}
+
 const reader = await createBoardReader({
   resources: await nodeModelSource(`public/${tiles.resources}`),
   numbers: await nodeModelSource(`public/${tiles.numbers}`),
-  pieces: {
-    buildings: await nodeModelSource(`public/${pieces.buildings}`),
-    roads: await nodeModelSource(`public/${pieces.roads}`),
-  },
+  ...(pieceSources ? { pieces: pieceSources } : {}),
 })
 
 const image = await loadPng(input)
@@ -43,6 +60,7 @@ try {
     location: reading.location,
     board: reading.board.tiles.map((tile, i) => ({ ...tile, confidence: reading.confidence[i] })),
     pieces: reading.pieces,
+    ...(piecesUnavailable ? { piecesUnavailable } : {}),
     players: playerStatistics(reading.board, reading.pieces).map((p) => ({
       ...p,
       production: Object.fromEntries(p.production),
