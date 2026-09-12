@@ -29,7 +29,8 @@ export type Claim = {
 }
 
 export type Registry = {
-  target: number
+  /** Games to collect before workers stop on their own; null means keep going until STOP is created. */
+  target: number | null
   claims: Record<string, Claim>
 }
 
@@ -58,7 +59,7 @@ const withLock = <T>(fn: () => T): T => {
 }
 
 export const readRegistry = (): Registry => {
-  if (!existsSync(REGISTRY_FILE)) return { target: 100, claims: {} }
+  if (!existsSync(REGISTRY_FILE)) return { target: null, claims: {} }
   return JSON.parse(readFileSync(REGISTRY_FILE, 'utf8')) as Registry
 }
 
@@ -71,7 +72,11 @@ const isStale = (claim: Claim) =>
 export const doneCount = (registry: Registry = readRegistry()): number =>
   Object.values(registry.claims).filter((c) => c.status === 'done').length
 
-export const shouldStop = (): boolean => existsSync(STOP_FILE) || doneCount() >= readRegistry().target
+export const shouldStop = (): boolean => {
+  if (existsSync(STOP_FILE)) return true
+  const { target } = readRegistry()
+  return target !== null && doneCount() >= target
+}
 
 /** Returns true when this agent now holds the room. A room that is done or rejected can never be claimed again. */
 export const claim = (roomCode: string, agent: string): boolean =>

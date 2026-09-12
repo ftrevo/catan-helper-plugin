@@ -35,7 +35,12 @@ console.log(
 if (rejected.length) console.log('rejection reasons:', [...new Set(rejected.map((c) => c.reason))].join(' | '))
 if (stale.length) console.log('stale claims:', stale.map((c) => `${c.roomCode} (${c.agent})`).join(', '))
 
-if (process.argv.includes('--stop-at-target') && done >= registry.target && !existsSync(STOP_FILE)) {
+if (
+  process.argv.includes('--stop-at-target') &&
+  registry.target !== null &&
+  done >= registry.target &&
+  !existsSync(STOP_FILE)
+) {
   writeFileSync(STOP_FILE, `target ${registry.target} reached at ${new Date().toISOString()}\n`)
   console.log('STOP file written')
 }

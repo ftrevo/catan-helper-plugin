@@ -35,7 +35,7 @@ examples/
 
 A worker watches one game at a time and takes up to three captures roughly five minutes apart, or sooner
 if the game ends, so that later captures contain cities and long roads. A game counts once, however many
-captures it has. Captures whose reading is not `ok`, or where fewer than 15 of the 18 tokens were located (mid-game boards
+captures it has. The registry's `target` is `null`: collection runs until `examples/STOP` exists. Captures whose reading is not `ok`, or where fewer than 15 of the 18 tokens were located (mid-game boards
 hide a few: the robber sits on one), are not counted. A game whose first capture never becomes readable is
 moved to `examples/rejected/` for inspection and marked `rejected` in the registry.
 

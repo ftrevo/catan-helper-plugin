@@ -1,5 +1,5 @@
 {
-  "target": 100,
+  "target": null,
   "claims": {
     "256411788": {
       "roomCode": "256411788",
@@ -147,9 +147,91 @@
     "ore9621": {
       "roomCode": "ore9621",
       "agent": "w1",
-      "status": "watching",
+      "status": "done",
       "claimedAt": "2026-09-12T04:36:13.165Z",
-      "heartbeatAt": "2026-09-12T04:37:33.072Z"
+      "heartbeatAt": "2026-09-12T04:39:03.072Z",
+      "captures": 2,
+      "colours": [
+        "green",
+        "red",
+        "black",
+        "blue"
+      ],
+      "buildings": 21,
+      "roads": 26,
+      "finishedAt": "2026-09-12T04:39:06.920Z"
+    },
+    "dice9886": {
+      "roomCode": "dice9886",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:39:15.498Z",
+      "heartbeatAt": "2026-09-12T04:42:05.133Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "red"
+      ],
+      "buildings": 9,
+      "roads": 9,
+      "finishedAt": "2026-09-12T04:42:09.093Z"
+    },
+    "luck3207": {
+      "roomCode": "luck3207",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:42:17.409Z",
+      "heartbeatAt": "2026-09-12T04:45:07.073Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ],
+      "buildings": 17,
+      "roads": 21,
+      "finishedAt": "2026-09-12T04:45:10.894Z"
+    },
+    "edge6873": {
+      "roomCode": "edge6873",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:45:19.552Z",
+      "heartbeatAt": "2026-09-12T04:48:09.427Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "black"
+      ],
+      "buildings": 7,
+      "roads": 9,
+      "finishedAt": "2026-09-12T04:48:13.204Z"
+    },
+    "hand5728": {
+      "roomCode": "hand5728",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:48:21.296Z",
+      "heartbeatAt": "2026-09-12T04:51:10.908Z",
+      "captures": 2,
+      "colours": [
+        "green",
+        "black",
+        "red",
+        "blue"
+      ],
+      "buildings": 13,
+      "roads": 14,
+      "finishedAt": "2026-09-12T04:51:14.701Z"
+    },
+    "pack2962": {
+      "roomCode": "pack2962",
+      "agent": "w1",
+      "status": "watching",
+      "claimedAt": "2026-09-12T04:51:23.040Z",
+      "heartbeatAt": "2026-09-12T04:52:12.671Z"
     }
   }
 }
