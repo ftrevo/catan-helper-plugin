@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { type BoardAnalyzer } from './app/boardAnalyzer'
 import { useBoardAnalysis } from './app/useBoardAnalysis'
 import { BoardView } from './components/Board/BoardView'
-import { Header } from './components/Header/Header'
+import { CameraIcon } from './components/Icons/Icons'
 import { Legend } from './components/Legend/Legend'
 import { Notice } from './components/Notice/Notice'
 import { Segmented } from './components/Segmented/Segmented'
@@ -44,8 +44,6 @@ export const App = ({ analyzer, analysisStore }: AppProps) => {
 
   return (
     <div className="app">
-      <Header onRefresh={board ? analyze : undefined} refreshing={isAnalyzing} />
-
       <main className="app-main">
         {error && <Notice tone="error">{error}</Notice>}
         {warnings.map((warning) => (
@@ -61,6 +59,7 @@ export const App = ({ analyzer, analysisStore }: AppProps) => {
             <div className="toolbar">
               <Segmented
                 ariaLabel="View"
+                size="sm"
                 value={tab}
                 onChange={setTab}
                 options={[
@@ -90,6 +89,16 @@ export const App = ({ analyzer, analysisStore }: AppProps) => {
                   ]}
                 />
               )}
+              <button
+                type="button"
+                className={`icon-button ${isAnalyzing ? 'is-busy' : ''}`}
+                onClick={analyze}
+                disabled={isAnalyzing}
+                title="Capture the board again (⌘⇧Y)"
+                aria-label="Capture the board again"
+              >
+                <CameraIcon />
+              </button>
             </div>
             {tab === 'board' && (
               <>

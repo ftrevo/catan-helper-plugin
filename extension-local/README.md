@@ -74,8 +74,9 @@ src/
 │   ├── analysisStore.ts   last reading in chrome.storage.session (memory fallback in dev).
 │   └── runtime.ts         extension vs dev-server detection, asset URLs.
 ├── components/         Presentational React components, one folder each with its CSS.
-│   ├── Header, StatusBar  Frame of the popup: brand + capture button, model picker + capture time.
-│   ├── Segmented          Radio group styled as a segmented control (Board/Statistics, Sum/Rarity).
+│   ├── StatusBar          Footer with the capture time.
+│   ├── Segmented          Radio group styled as a segmented control (Board/Statistics, Sum/Rarity/Strategy);
+│                          the capture button shares its row.
 │   ├── Board, Hexagon     Absolutely positioned hex grid; the board draws each of the 54 vertices once.
 │   ├── Legend             Vertex value bands.
 │   ├── Statistics         Resources ranked rarest first with pips, numbers and share bars.
