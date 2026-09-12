@@ -1,12 +1,12 @@
 {
-  "roomCode": "trade3688",
-  "url": "https://colonist.io/#trade3688",
+  "roomCode": "fort9960",
+  "url": "https://colonist.io/#fort9960",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T09:31:16.100Z",
-  "finishedAt": "2026-09-12T09:34:09.600Z",
+  "claimedAt": "2026-09-12T09:40:33.001Z",
+  "finishedAt": "2026-09-12T09:43:26.665Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,28 +14,28 @@
   },
   "captures": [
     {
-      "file": "01-093131.png",
-      "takenAt": "2026-09-12T09:31:35.799Z",
+      "file": "01-094048.png",
+      "takenAt": "2026-09-12T09:40:52.803Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 10,
-      "roads": 8,
+      "buildings": 14,
+      "roads": 18,
       "colours": [
-        "green",
+        "orange",
         "blue",
         "red",
         "black"
       ]
     },
     {
-      "file": "02-093405.png",
-      "takenAt": "2026-09-12T09:34:09.600Z",
+      "file": "02-094322.png",
+      "takenAt": "2026-09-12T09:43:26.664Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 10,
-      "roads": 10,
+      "buildings": 17,
+      "roads": 18,
       "colours": [
-        "green",
+        "orange",
         "blue",
         "red",
         "black"

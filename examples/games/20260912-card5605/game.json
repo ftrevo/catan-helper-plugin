@@ -1,12 +1,12 @@
 {
-  "roomCode": "trade3688",
-  "url": "https://colonist.io/#trade3688",
+  "roomCode": "card5605",
+  "url": "https://colonist.io/#card5605",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T09:31:16.100Z",
-  "finishedAt": "2026-09-12T09:34:09.600Z",
+  "claimedAt": "2026-09-12T10:35:34.953Z",
+  "finishedAt": "2026-09-12T10:38:28.336Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,30 +14,29 @@
   },
   "captures": [
     {
-      "file": "01-093131.png",
-      "takenAt": "2026-09-12T09:31:35.799Z",
+      "file": "01-103550.png",
+      "takenAt": "2026-09-12T10:35:54.538Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 10,
-      "roads": 8,
+      "buildings": 3,
+      "roads": 3,
       "colours": [
-        "green",
-        "blue",
         "red",
+        "orange",
         "black"
       ]
     },
     {
-      "file": "02-093405.png",
-      "takenAt": "2026-09-12T09:34:09.600Z",
+      "file": "02-103824.png",
+      "takenAt": "2026-09-12T10:38:28.336Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 10,
-      "roads": 10,
+      "buildings": 7,
+      "roads": 9,
       "colours": [
-        "green",
         "blue",
         "red",
+        "orange",
         "black"
       ]
     }

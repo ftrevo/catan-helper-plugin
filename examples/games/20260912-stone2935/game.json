@@ -1,0 +1,46 @@
+{
+  "roomCode": "stone2935",
+  "url": "https://colonist.io/#stone2935",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:05:31.317Z",
+  "finishedAt": "2026-09-12T11:08:24.618Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-110547.png",
+      "takenAt": "2026-09-12T11:05:50.875Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-110820.png",
+      "takenAt": "2026-09-12T11:08:24.618Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 5,
+      "roads": 8,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

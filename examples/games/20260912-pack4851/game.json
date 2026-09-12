@@ -1,0 +1,46 @@
+{
+  "roomCode": "pack4851",
+  "url": "https://colonist.io/#pack4851",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:31:49.388Z",
+  "finishedAt": "2026-09-12T10:34:42.816Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-103205.png",
+      "takenAt": "2026-09-12T10:32:08.990Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-103438.png",
+      "takenAt": "2026-09-12T10:34:42.816Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

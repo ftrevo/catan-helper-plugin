@@ -1,12 +1,12 @@
 {
-  "roomCode": "trade3688",
-  "url": "https://colonist.io/#trade3688",
+  "roomCode": "port1083",
+  "url": "https://colonist.io/#port1083",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T09:31:16.100Z",
-  "finishedAt": "2026-09-12T09:34:09.600Z",
+  "claimedAt": "2026-09-12T09:46:41.978Z",
+  "finishedAt": "2026-09-12T09:49:35.337Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,29 +14,29 @@
   },
   "captures": [
     {
-      "file": "01-093131.png",
-      "takenAt": "2026-09-12T09:31:35.799Z",
-      "ok": true,
-      "tokens": 18,
-      "buildings": 10,
-      "roads": 8,
-      "colours": [
-        "green",
-        "blue",
-        "red",
-        "black"
-      ]
-    },
-    {
-      "file": "02-093405.png",
-      "takenAt": "2026-09-12T09:34:09.600Z",
+      "file": "01-094657.png",
+      "takenAt": "2026-09-12T09:47:01.572Z",
       "ok": true,
       "tokens": 18,
       "buildings": 10,
       "roads": 10,
       "colours": [
-        "green",
         "blue",
+        "orange",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-094931.png",
+      "takenAt": "2026-09-12T09:49:35.337Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "orange",
         "red",
         "black"
       ]

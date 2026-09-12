@@ -1,0 +1,48 @@
+{
+  "roomCode": "hill6424",
+  "url": "https://colonist.io/#hill6424",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:49:20.308Z",
+  "finishedAt": "2026-09-12T10:52:13.776Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-104936.png",
+      "takenAt": "2026-09-12T10:49:39.932Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 18,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-105209.png",
+      "takenAt": "2026-09-12T10:52:13.776Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 20,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black",
+        "silver"
+      ]
+    }
+  ],
+  "notes": []
+}

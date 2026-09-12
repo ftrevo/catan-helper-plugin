@@ -1,0 +1,46 @@
+{
+  "roomCode": "deal2553",
+  "url": "https://colonist.io/#deal2553",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:30:18.408Z",
+  "finishedAt": "2026-09-12T11:33:11.824Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-113034.png",
+      "takenAt": "2026-09-12T11:30:38.008Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 16,
+      "colours": [
+        "red",
+        "green",
+        "blue",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-113308.png",
+      "takenAt": "2026-09-12T11:33:11.823Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 17,
+      "colours": [
+        "red",
+        "green",
+        "blue",
+        "silver"
+      ]
+    }
+  ],
+  "notes": []
+}

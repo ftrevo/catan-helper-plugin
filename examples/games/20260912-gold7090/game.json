@@ -1,0 +1,31 @@
+{
+  "roomCode": "gold7090",
+  "url": "https://colonist.io/#gold7090",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:08:22.317Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-120838.png",
+      "takenAt": "2026-09-12T12:08:42.011Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 25,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

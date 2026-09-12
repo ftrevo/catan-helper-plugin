@@ -1,0 +1,46 @@
+{
+  "roomCode": "town2147",
+  "url": "https://colonist.io/#town2147",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:02:13.076Z",
+  "finishedAt": "2026-09-12T12:05:06.591Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-120228.png",
+      "takenAt": "2026-09-12T12:02:32.713Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 26,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-120502.png",
+      "takenAt": "2026-09-12T12:05:06.591Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 29,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

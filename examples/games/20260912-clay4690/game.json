@@ -1,0 +1,51 @@
+{
+  "roomCode": "clay4690",
+  "url": "https://colonist.io/#clay4690",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:07:10.269Z",
+  "finishedAt": "2026-09-12T10:10:03.727Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-100726.png",
+      "takenAt": "2026-09-12T10:07:29.839Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 9,
+      "roads": 12,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-100959.png",
+      "takenAt": "2026-09-12T10:10:03.727Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 10,
+      "roads": 20,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "pink",
+        "green",
+        "white",
+        "silver",
+        "mysticblue"
+      ]
+    }
+  ],
+  "notes": []
+}

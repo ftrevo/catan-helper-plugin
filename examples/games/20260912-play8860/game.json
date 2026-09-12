@@ -1,0 +1,45 @@
+{
+  "roomCode": "play8860",
+  "url": "https://colonist.io/#play8860",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:27:11.160Z",
+  "finishedAt": "2026-09-12T11:30:04.546Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-112726.png",
+      "takenAt": "2026-09-12T11:27:30.752Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 13,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-113000.png",
+      "takenAt": "2026-09-12T11:30:04.546Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 15,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

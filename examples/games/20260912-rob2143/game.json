@@ -1,12 +1,12 @@
 {
-  "roomCode": "trade3688",
-  "url": "https://colonist.io/#trade3688",
+  "roomCode": "rob2143",
+  "url": "https://colonist.io/#rob2143",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T09:31:16.100Z",
-  "finishedAt": "2026-09-12T09:34:09.600Z",
+  "claimedAt": "2026-09-12T09:37:25.430Z",
+  "finishedAt": "2026-09-12T09:40:18.884Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,31 +14,29 @@
   },
   "captures": [
     {
-      "file": "01-093131.png",
-      "takenAt": "2026-09-12T09:31:35.799Z",
+      "file": "01-093741.png",
+      "takenAt": "2026-09-12T09:37:45.055Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 10,
-      "roads": 8,
+      "buildings": 11,
+      "roads": 13,
       "colours": [
-        "green",
         "blue",
         "red",
-        "black"
+        "green"
       ]
     },
     {
-      "file": "02-093405.png",
-      "takenAt": "2026-09-12T09:34:09.600Z",
+      "file": "02-094015.png",
+      "takenAt": "2026-09-12T09:40:18.884Z",
       "ok": true,
       "tokens": 18,
       "buildings": 10,
-      "roads": 10,
+      "roads": 13,
       "colours": [
-        "green",
         "blue",
         "red",
-        "black"
+        "green"
       ]
     }
   ],

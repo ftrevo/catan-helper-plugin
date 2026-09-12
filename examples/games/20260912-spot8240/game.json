@@ -1,0 +1,46 @@
+{
+  "roomCode": "spot8240",
+  "url": "https://colonist.io/#spot8240",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:52:22.155Z",
+  "finishedAt": "2026-09-12T10:55:15.495Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-105237.png",
+      "takenAt": "2026-09-12T10:52:41.702Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-105511.png",
+      "takenAt": "2026-09-12T10:55:15.495Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

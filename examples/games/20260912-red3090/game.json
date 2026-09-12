@@ -1,0 +1,48 @@
+{
+  "roomCode": "red3090",
+  "url": "https://colonist.io/#red3090",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:20:56.012Z",
+  "finishedAt": "2026-09-12T11:23:49.471Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-112111.png",
+      "takenAt": "2026-09-12T11:21:15.656Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 20,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-112345.png",
+      "takenAt": "2026-09-12T11:23:49.470Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 22,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

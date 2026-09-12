@@ -1,12 +1,12 @@
 {
-  "roomCode": "trade3688",
-  "url": "https://colonist.io/#trade3688",
+  "roomCode": "ore4990",
+  "url": "https://colonist.io/#ore4990",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T09:31:16.100Z",
-  "finishedAt": "2026-09-12T09:34:09.600Z",
+  "claimedAt": "2026-09-12T10:22:20.240Z",
+  "finishedAt": "2026-09-12T10:25:13.771Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,31 +14,32 @@
   },
   "captures": [
     {
-      "file": "01-093131.png",
-      "takenAt": "2026-09-12T09:31:35.799Z",
+      "file": "01-102236.png",
+      "takenAt": "2026-09-12T10:22:39.911Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "green",
+        "black",
+        "red",
+        "blue",
+        "pink"
+      ]
+    },
+    {
+      "file": "02-102509.png",
+      "takenAt": "2026-09-12T10:25:13.770Z",
       "ok": true,
       "tokens": 18,
       "buildings": 10,
       "roads": 8,
       "colours": [
         "green",
-        "blue",
+        "black",
         "red",
-        "black"
-      ]
-    },
-    {
-      "file": "02-093405.png",
-      "takenAt": "2026-09-12T09:34:09.600Z",
-      "ok": true,
-      "tokens": 18,
-      "buildings": 10,
-      "roads": 10,
-      "colours": [
-        "green",
-        "blue",
-        "red",
-        "black"
+        "blue"
       ]
     }
   ],

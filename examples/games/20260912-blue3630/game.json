@@ -1,0 +1,46 @@
+{
+  "roomCode": "blue3630",
+  "url": "https://colonist.io/#blue3630",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:46:18.650Z",
+  "finishedAt": "2026-09-12T10:49:12.107Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-104634.png",
+      "takenAt": "2026-09-12T10:46:38.257Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-104908.png",
+      "takenAt": "2026-09-12T10:49:12.107Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,45 @@
+{
+  "roomCode": "area3745",
+  "url": "https://colonist.io/#area3745",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:24:09.797Z",
+  "finishedAt": "2026-09-12T11:27:03.131Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-112425.png",
+      "takenAt": "2026-09-12T11:24:29.344Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 2,
+      "colours": [
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-112659.png",
+      "takenAt": "2026-09-12T11:27:03.130Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 9,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black",
+        "gold"
+      ]
+    }
+  ],
+  "notes": []
+}

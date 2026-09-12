@@ -1,0 +1,46 @@
+{
+  "roomCode": "isle4559",
+  "url": "https://colonist.io/#isle4559",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:39:40.141Z",
+  "finishedAt": "2026-09-12T11:42:33.519Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-113955.png",
+      "takenAt": "2026-09-12T11:39:59.706Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 4,
+      "roads": 6,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-114229.png",
+      "takenAt": "2026-09-12T11:42:33.519Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}
