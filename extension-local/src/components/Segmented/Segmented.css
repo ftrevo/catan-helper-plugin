@@ -1,0 +1,36 @@
+.segmented {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+}
+
+.segmented-option {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 5px 12px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.segmented-sm .segmented-option {
+  font-size: 12px;
+  padding: 3px 10px;
+}
+
+.segmented-option:hover {
+  color: var(--text);
+}
+
+.segmented-option.is-active {
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  color: var(--brand);
+}

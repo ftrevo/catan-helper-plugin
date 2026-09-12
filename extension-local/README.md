@@ -6,6 +6,12 @@ production statistics and settlement values. Recognition runs entirely inside th
 
 This folder supersedes `../extension` + `../back`/`../back-new`, which kept the recognition on a backend.
 
+| Capture                            | Board                          | Statistics                               |
+| ---------------------------------- | ------------------------------ | ---------------------------------------- |
+| ![Welcome](docs/popup-welcome.png) | ![Board](docs/popup-board.png) | ![Statistics](docs/popup-statistics.png) |
+
+The popup follows the system colour scheme; see `docs/popup-board-dark.png` for the dark variant.
+
 ## Using it
 
 ```bash
@@ -68,6 +74,13 @@ src/
 │   ├── settingsStore.ts   user preferences (chosen model set) in chrome.storage.local.
 │   └── runtime.ts         extension vs dev-server detection, asset URLs.
 ├── components/         Presentational React components, one folder each with its CSS.
+│   ├── Header, StatusBar  Frame of the popup: brand + capture button, model picker + capture time.
+│   ├── Segmented          Radio group styled as a segmented control (Board/Statistics, Sum/Rarity).
+│   ├── Board, Hexagon     Absolutely positioned hex grid; the board draws each of the 54 vertices once.
+│   ├── Legend             Vertex value bands.
+│   ├── Statistics         Resources ranked rarest first with pips, numbers and share bars.
+│   ├── Welcome, Notice    Empty/loading state and error or warning banners.
+│   └── ModelPicker, Icons
 └── mocks/              Dev-server stand-ins (fixture screenshot).
 public/
 ├── manifest.json       MV3 manifest. Permissions: activeTab (capture + URL of the current tab), storage.

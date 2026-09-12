@@ -11,3 +11,5 @@ Guidance for Claude Code when working in `extension-local/`.
 - The end-to-end test in `test/boardReader.e2e.spec.ts` is the safety net for any change to `vision/`
   or to the model files. Run `npm test` after touching them.
 - Formatting follows `.prettierrc` (no semicolons, single quotes, width 120).
+- All colours, radii and sizes are CSS custom properties in `src/index.css` (light and dark); components
+  use the tokens, never raw colours.

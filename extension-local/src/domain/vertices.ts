@@ -38,21 +38,26 @@ export const VERTEX_TILES: readonly (readonly TilePosition[])[] = (() => {
 })()
 
 /**
- * Production value of the six vertices around a tile: the sum of producing pips of every tile touching
- * each vertex, optionally weighted by resource scarcity.
+ * Production value of every vertex (0..53): the sum of producing pips of each tile touching it,
+ * optionally weighted by resource scarcity.
  */
-export const tileVertexValues = (
-  board: Board,
-  position: TilePosition,
-  scarcity?: ReadonlyMap<Resource, number>
-): number[] => {
-  return TILE_VERTICES[position].map((vertex) =>
-    (VERTEX_TILES[vertex] ?? []).reduce<number>((sum, neighbour) => {
-      const tile = board.tiles[neighbour]
+export const vertexValues = (board: Board, scarcity?: ReadonlyMap<Resource, number>): number[] =>
+  VERTEX_TILES.map((tiles) =>
+    tiles.reduce<number>((sum, position) => {
+      const tile = board.tiles[position]
       if (!tile) return sum
 
       const weight = scarcity?.get(tile.resource) ?? 1
       return sum + producingPipsOf(tile.number) * weight
     }, 0)
   )
+
+/** The six vertex values around one tile, in `TILE_VERTICES` order. */
+export const tileVertexValues = (
+  board: Board,
+  position: TilePosition,
+  scarcity?: ReadonlyMap<Resource, number>
+): number[] => {
+  const all = vertexValues(board, scarcity)
+  return TILE_VERTICES[position].map((vertex) => all[vertex] ?? 0)
 }

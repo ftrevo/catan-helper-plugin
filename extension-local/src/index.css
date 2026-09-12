@@ -1,63 +1,145 @@
+/* Design tokens. Light is the default; dark follows the system preference. */
 :root {
-  --color-brand: #3374c2;
-  --color-brand-light: #2196f3;
-  --color-text: #222;
-  --color-muted: #666;
+  --bg: #eef2f8;
+  --surface: #ffffff;
+  --surface-2: #f5f7fb;
+  --text: #17203a;
+  --muted: #667089;
+  --border: rgba(23, 32, 58, 0.1);
+  --brand: #2f6fd1;
+  --brand-strong: #1f56ad;
+  --brand-soft: rgba(47, 111, 209, 0.12);
+  --danger-bg: #fdecea;
+  --danger-fg: #8a1c14;
+  --warning-bg: #fff6e0;
+  --warning-fg: #7a5a00;
+  --shadow: 0 1px 2px rgba(23, 32, 58, 0.06), 0 6px 20px rgba(23, 32, 58, 0.06);
 
   /* Tile colours, shared by the board and the statistics bars. */
-  --color-brick: #8f2e26;
-  --color-desert: #e7d2a7;
-  --color-grain: #d4a037;
-  --color-lumber: #3b6e47;
-  --color-stone: #7e7e7e;
-  --color-wool: #7f9f49;
+  --tile-brick: #c25a40;
+  --tile-desert: #e6d4a5;
+  --tile-grain: #e3b43c;
+  --tile-lumber: #3e8150;
+  --tile-stone: #8d939c;
+  --tile-wool: #8fb64a;
+  --tile-outline: #d9b56d;
 
+  /* Vertex value scale, poor → best. */
+  --vertex-0: #dfe4ee;
+  --vertex-0-fg: #3a4460;
+  --vertex-1: #9ec1f0;
+  --vertex-1-fg: #12305f;
+  --vertex-2: #2f6fd1;
+  --vertex-2-fg: #ffffff;
+  --vertex-3: #12305f;
+  --vertex-3-fg: #ffd66b;
+
+  --token-bg: #f7f2e4;
+  --token-fg: #1c2b1e;
+  --token-hot: #c9262c;
+
+  --radius: 12px;
+  --radius-sm: 8px;
   --popup-width: 412px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131826;
+    --surface: #1c2334;
+    --surface-2: #232c40;
+    --text: #e8ecf5;
+    --muted: #98a3bb;
+    --border: rgba(255, 255, 255, 0.09);
+    --brand: #5c93e6;
+    --brand-strong: #7ba9ee;
+    --brand-soft: rgba(92, 147, 230, 0.18);
+    --danger-bg: #3a1d1b;
+    --danger-fg: #ffb4ad;
+    --warning-bg: #3a2f14;
+    --warning-fg: #ffd98a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+    --tile-outline: #a98a4a;
+    --vertex-0: #2a3348;
+    --vertex-0-fg: #c4ccdd;
+    --vertex-1: #3d5f96;
+    --vertex-1-fg: #e8f0ff;
+    --vertex-2: #6da0f0;
+    --vertex-2-fg: #0b1a35;
+    --vertex-3: #ffd66b;
+    --vertex-3-fg: #2a1d00;
+  }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
-  color: var(--color-text);
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+button,
+select {
+  font: inherit;
 }
 
 .app {
-  width: var(--popup-width);
-}
-
-.tab-content {
-  width: var(--popup-width);
-  min-height: 360px;
-  align-content: center;
-}
-
-.status-line {
-  align-items: center;
-  color: var(--color-muted);
   display: flex;
-  font-size: 12px;
-  gap: 12px;
-  justify-content: space-between;
-  padding: 4px 10px 8px;
+  flex-direction: column;
+  min-height: 460px;
+  width: var(--popup-width);
 }
 
-.resource-brick {
-  background-color: var(--color-brick);
+.app-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 12px 12px;
 }
-.resource-desert {
-  background-color: var(--color-desert);
+
+.toolbar {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
 }
-.resource-grain {
-  background-color: var(--color-grain);
+
+.tile-brick {
+  background-color: var(--tile-brick);
 }
-.resource-lumber {
-  background-color: var(--color-lumber);
+.tile-desert {
+  background-color: var(--tile-desert);
 }
-.resource-stone {
-  background-color: var(--color-stone);
+.tile-grain {
+  background-color: var(--tile-grain);
 }
-.resource-wool {
-  background-color: var(--color-wool);
+.tile-lumber {
+  background-color: var(--tile-lumber);
+}
+.tile-stone {
+  background-color: var(--tile-stone);
+}
+.tile-wool {
+  background-color: var(--tile-wool);
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }

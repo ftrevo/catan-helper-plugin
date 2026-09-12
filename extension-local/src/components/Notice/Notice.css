@@ -1,19 +1,16 @@
 .notice {
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   font-size: 13px;
   line-height: 1.4;
-  margin: 8px 10px 0;
-  padding: 8px 12px;
+  padding: 9px 12px;
 }
 
 .notice-error {
-  background: #fdecea;
-  border: 1px solid #f5c2c0;
-  color: #8a1c14;
+  background: var(--danger-bg);
+  color: var(--danger-fg);
 }
 
 .notice-warning {
-  background: #fff6e0;
-  border: 1px solid #f3dc9a;
-  color: #7a5a00;
+  background: var(--warning-bg);
+  color: var(--warning-fg);
 }

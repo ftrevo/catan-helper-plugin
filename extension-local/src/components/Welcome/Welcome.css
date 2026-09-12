@@ -1,55 +1,92 @@
 .welcome {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
-  margin: 12px auto;
-  padding: 15px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 24px 22px;
   text-align: center;
-  width: 305px;
+}
+
+.welcome-art {
+  background: var(--brand-soft);
+  border-radius: 999px;
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 14px;
 }
 
 .welcome-title {
-  color: var(--color-brand);
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
-  margin: 8px 0;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
 }
 
-.welcome-description {
-  color: #444;
-  font-size: 18px;
+.welcome-text {
+  color: var(--muted);
+  margin: 0 0 18px;
+  max-width: 300px;
 }
 
-.welcome-capture-btn {
-  background: linear-gradient(90deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
+.primary-button {
+  align-items: center;
+  background: var(--brand);
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(51, 116, 194, 0.08);
+  border-radius: 999px;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  display: inline-flex;
   font-weight: 600;
-  margin-bottom: 24px;
-  padding: 12px 24px;
+  gap: 8px;
+  min-width: 190px;
+  justify-content: center;
+  padding: 10px 20px;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
 }
 
-.welcome-loading {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 33px 0;
+.primary-button:hover {
+  background: var(--brand-strong);
 }
 
-.welcome-footer {
-  color: #888;
-  padding-bottom: 5px;
+.primary-button:active {
+  transform: translateY(1px);
 }
 
-.welcome-footer-link {
-  color: var(--color-brand);
-  font-weight: 600;
-  text-decoration: none;
+.primary-button:disabled {
+  cursor: progress;
+  opacity: 0.85;
 }
 
-.welcome-footer-link:hover {
-  text-decoration: underline;
+.spinner {
+  animation: spin 0.9s linear infinite;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  border-top-color: #fff;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+.welcome-hint {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 16px 0 0;
+}
+
+kbd {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 11px;
+  margin: 0 1px;
+  padding: 1px 5px;
 }

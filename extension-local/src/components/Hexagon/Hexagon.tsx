@@ -1,37 +1,38 @@
-import { type Board, type Resource, type TilePosition, tileVertexValues } from '../../domain'
-import { DiceNumber } from '../DiceNumber/DiceNumber'
-import { Vertex } from '../Vertex/Vertex'
+import { type HexNumber, type Resource, type Tile, pipsOf, rollProbability } from '../../domain'
 import './Hexagon.css'
 
-/** Tiles on the board's edge need extra borders so the outline is drawn on every side. */
-const LEFT_BORDER = new Set<TilePosition>([0, 3, 7, 12, 16])
-const LEFT_BORDER_AFTER = new Set<TilePosition>([7, 12, 16, 17, 18])
-const RIGHT_BORDER_BEFORE = new Set<TilePosition>([11, 15, 16, 17, 18])
+type TokenProps = { number: HexNumber; resource: Resource }
 
-type HexagonProps = {
-  board: Board
-  position: TilePosition
-  scarcity: ReadonlyMap<Resource, number> | undefined
-}
-
-export const Hexagon = ({ board, position, scarcity }: HexagonProps) => {
-  const tile = board.tiles[position]
-  if (!tile) return null
-
-  const classes = [
-    'hexagon',
-    `resource-${tile.resource}`,
-    LEFT_BORDER.has(position) && 'border-left',
-    LEFT_BORDER_AFTER.has(position) && 'border-left-after',
-    RIGHT_BORDER_BEFORE.has(position) && 'border-right-before',
-  ]
-
+/** Catan-style number token: number on a pale disc with probability dots, red for 6 and 8. */
+const Token = ({ number, resource }: TokenProps) => {
+  if (resource === 'desert') return null
+  const pips = pipsOf(number)
   return (
-    <div className={classes.filter(Boolean).join(' ')}>
-      <DiceNumber number={tile.number} />
-      {tileVertexValues(board, position, scarcity).map((value, index) => (
-        <Vertex key={index} index={index} value={value} />
-      ))}
+    <div className={`token ${pips === 5 ? 'token-hot' : ''}`} title={`${rollProbability(number)}% per roll`}>
+      <span className="token-number">{number}</span>
+      <span className="token-pips" aria-hidden="true">
+        {'•'.repeat(pips)}
+      </span>
     </div>
   )
 }
+
+type HexagonProps = {
+  tile: Tile
+  /** Centre of the hexagon inside the board canvas, in pixels. */
+  x: number
+  y: number
+}
+
+/** One tile: outlined hexagon face with its number token. Vertex badges are drawn by the board. */
+export const Hexagon = ({ tile, x, y }: HexagonProps) => (
+  <div
+    className="hex"
+    style={{ left: x, top: y }}
+    role="img"
+    aria-label={tile.resource === 'desert' ? 'desert' : `${tile.resource} ${tile.number}`}
+  >
+    <div className={`hex-face tile-${tile.resource}`} />
+    <Token number={tile.number} resource={tile.resource} />
+  </div>
+)
