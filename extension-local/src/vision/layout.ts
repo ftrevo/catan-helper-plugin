@@ -1,5 +1,7 @@
-import { TILES_PER_ROW, TILE_COUNT } from '../domain/board'
+import { ROW_HEIGHT_FACTOR, TILE_OFFSETS } from '../domain/board'
 import { type Point, type Rect, type Size } from './pixels'
+
+export { ROW_HEIGHT_FACTOR, TILE_OFFSETS }
 
 /**
  * Geometry of the board inside a screenshot: where the centre tile (position 9) sits and how far apart
@@ -16,9 +18,6 @@ export type BoardGeometry = {
  * and are scaled by `spacing / REFERENCE_SPACING` for any other capture.
  */
 export const REFERENCE_SPACING = 216
-
-/** Vertical distance between rows of a pointy-top hex grid, as a fraction of the spacing. */
-export const ROW_HEIGHT_FACTOR = Math.sqrt(3) / 2
 
 export type CropSpec = {
   /** Centre of the crop relative to the tile centre, in fractions of the spacing. */
@@ -38,19 +37,6 @@ export const NUMBER_CROP: CropSpec = {
   offset: { x: 2 / REFERENCE_SPACING, y: 1 / REFERENCE_SPACING },
   size: { width: 64, height: 70 },
 }
-
-/**
- * Offsets of the 19 tile centres from the centre tile, in units of spacing and in position order
- * (row by row, left to right). Rows are `TILES_PER_ROW` wide and centred on the middle column.
- */
-export const TILE_OFFSETS: readonly Point[] = TILES_PER_ROW.flatMap((count, row) =>
-  Array.from({ length: count }, (_, column) => ({
-    x: column - (count - 1) / 2,
-    y: (row - (TILES_PER_ROW.length - 1) / 2) * ROW_HEIGHT_FACTOR,
-  }))
-)
-
-if (TILE_OFFSETS.length !== TILE_COUNT) throw new Error(`Expected ${TILE_COUNT} tile offsets`)
 
 export const tileCenters = ({ center, spacing }: BoardGeometry): Point[] =>
   TILE_OFFSETS.map((offset) => ({ x: center.x + offset.x * spacing, y: center.y + offset.y * spacing }))

@@ -1,0 +1,14 @@
+.statusbar {
+  align-items: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  display: flex;
+  font-size: 12px;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+
+.statusbar-note {
+  white-space: nowrap;
+}

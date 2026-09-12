@@ -1,3 +1,4 @@
+import { CameraIcon, HexLogo } from '../Icons/Icons'
 import './Welcome.css'
 
 type WelcomeProps = {
@@ -7,23 +8,36 @@ type WelcomeProps = {
 
 export const Welcome = ({ onCapture, loading }: WelcomeProps) => (
   <section className="welcome">
-    <h2 className="welcome-title">👋 Hello!</h2>
-    <p className="welcome-description">
-      Catan Helper reads your <b>colonist.io</b> board and gives you instant statistics and insights for smarter
-      gameplay. Everything runs in your browser.
+    <div className="welcome-art">
+      <HexLogo size={72} />
+    </div>
+    <h1 className="welcome-title">Read your board</h1>
+    <p className="welcome-text">
+      Open a game on <b>colonist.io</b> and capture it. Catan Helper recognises every tile in your browser and shows
+      settlement values and production statistics.
     </p>
-    {loading ? (
-      <p className="welcome-loading">Reading the board…</p>
-    ) : (
-      <button className="welcome-capture-btn" onClick={onCapture}>
-        Capture board
-      </button>
-    )}
-    <footer className="welcome-footer">
-      <span>Created by </span>
-      <a className="welcome-footer-link" href="https://github.com/ftrevo" target="_blank" rel="noopener noreferrer">
-        @ftrevo
-      </a>
-    </footer>
+    <button
+      type="button"
+      className={`primary-button ${loading ? 'is-busy' : ''}`}
+      onClick={onCapture}
+      disabled={loading}
+    >
+      {loading ? (
+        <>
+          <span className="spinner" aria-hidden="true" />
+          Reading the board…
+        </>
+      ) : (
+        <>
+          <CameraIcon />
+          Capture board
+        </>
+      )}
+    </button>
+    <p className="welcome-hint">
+      Shortcut: <kbd>⌘</kbd>
+      <kbd>⇧</kbd>
+      <kbd>Y</kbd> opens this popup
+    </p>
   </section>
 )

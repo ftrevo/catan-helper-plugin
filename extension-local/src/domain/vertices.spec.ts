@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { createBoard } from './board'
 import { scarcityFactors } from './statistics'
-import { TILE_VERTICES, VERTEX_TILES, tileVertexValues } from './vertices'
+import { TILE_VERTICES, VERTEX_TILES, tileVertexValues, vertexValues } from './vertices'
 import { SAMPLE_BOARD } from '../../test/fixtures'
 
 const board = createBoard(SAMPLE_BOARD.resources, SAMPLE_BOARD.numbers)
@@ -18,6 +18,14 @@ describe('vertex tables', () => {
   test('vertex 8 is shared by tiles 0, 1 and 4', () => {
     expect(VERTEX_TILES[8]).toEqual([0, 1, 4])
     expect(TILE_VERTICES[4]).toContain(8)
+  })
+})
+
+describe('vertexValues', () => {
+  test('returns one value per vertex, consistent with the per-tile view', () => {
+    const all = vertexValues(board)
+    expect(all).toHaveLength(54)
+    expect(tileVertexValues(board, 4)).toEqual(TILE_VERTICES[4].map((v) => all[v]))
   })
 })
 

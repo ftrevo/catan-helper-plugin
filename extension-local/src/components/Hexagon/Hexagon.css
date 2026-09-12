@@ -1,41 +1,56 @@
-.hexagon {
-  border-right: 1px solid black;
-  display: inline-block;
-  height: 43px;
-  margin-top: 17px;
-  position: relative;
-  width: 73px;
-}
-
-.hexagon::before,
-.hexagon::after {
-  background: inherit;
-  content: '';
-  height: 43px;
-  left: 0;
+.hex {
+  --hex-shape: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  height: var(--hex-h);
   position: absolute;
-  top: 0;
-  width: 73px;
+  transform: translate(-50%, -50%);
+  width: var(--hex-w);
 }
 
-.hexagon::before {
-  border-left: 1px solid black;
-  transform: rotate(60deg);
+/* Outline layer: the full hexagon in the border colour, with the fill inset on top. */
+.hex::before {
+  background: var(--tile-outline);
+  clip-path: var(--hex-shape);
+  content: '';
+  inset: 0;
+  position: absolute;
 }
 
-.hexagon::after {
-  border-right: 1px solid black;
-  transform: rotate(-60deg);
+.hex-face {
+  clip-path: var(--hex-shape);
+  inset: 1.5px;
+  position: absolute;
 }
 
-.border-left-after::after {
-  border-left: 1px solid black;
+.token {
+  align-items: center;
+  background: var(--token-bg);
+  border-radius: 7px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  color: var(--token-fg);
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  justify-content: center;
+  left: 50%;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  z-index: 2;
 }
 
-.border-right-before::before {
-  border-right: 1px solid black;
+.token-number {
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.border-left {
-  border-left: 1px solid black;
+.token-pips {
+  font-size: 7px;
+  letter-spacing: 0.5px;
+  margin-top: 1px;
+}
+
+.token-hot {
+  color: var(--token-hot);
 }

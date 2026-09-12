@@ -16,6 +16,20 @@ export type HexNumber = (typeof HEX_NUMBERS)[number]
 export const TILES_PER_ROW = [3, 4, 5, 4, 3] as const
 export const TILE_COUNT = 19
 
+/** Vertical distance between rows of a pointy-top hex grid, as a fraction of the tile spacing. */
+export const ROW_HEIGHT_FACTOR = Math.sqrt(3) / 2
+
+/**
+ * Offsets of the 19 tile centres from the centre tile (position 9), in units of tile spacing and in
+ * position order (row by row, left to right). Rows are `TILES_PER_ROW` wide and centred on the middle column.
+ */
+export const TILE_OFFSETS: readonly { readonly x: number; readonly y: number }[] = TILES_PER_ROW.flatMap((count, row) =>
+  Array.from({ length: count }, (_, column) => ({
+    x: column - (count - 1) / 2,
+    y: (row - (TILES_PER_ROW.length - 1) / 2) * ROW_HEIGHT_FACTOR,
+  }))
+)
+
 export type TilePosition = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18
 
 export type Tile = {
