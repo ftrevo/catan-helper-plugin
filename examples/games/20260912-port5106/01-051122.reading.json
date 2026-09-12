@@ -13,18 +13,7 @@
     },
     "spacing": 114.89204036467622,
     "tokensFound": 18,
-    "extraTokens": 9,
-    "extraDistances": [
-      2.9822991817283997,
-      3.3430845733972028,
-      2.844301283123631,
-      2.8351519250210173,
-      2.9532323113637444,
-      2.6141127081407443,
-      2.373318270269404,
-      2.728858080177764,
-      2.2782323761470145
-    ]
+    "extraTokens": 0
   },
   "board": [
     {
@@ -242,6 +231,11 @@
         "colour": "orange"
       },
       {
+        "vertex": 34,
+        "kind": "city",
+        "colour": "red"
+      },
+      {
         "vertex": 40,
         "kind": "settlement",
         "colour": "green"
@@ -286,10 +280,6 @@
         "colour": "red"
       },
       {
-        "edge": 51,
-        "colour": "green"
-      },
-      {
         "edge": 58,
         "colour": "green"
       },
@@ -306,7 +296,7 @@
       "cities": 1,
       "metropolises": 0,
       "knights": 1,
-      "roads": 4,
+      "roads": 3,
       "production": {
         "wool": 8,
         "stone": 8,
@@ -315,7 +305,7 @@
         "grain": 3
       },
       "totalProduction": 33,
-      "longestRoad": 3,
+      "longestRoad": 2,
       "visiblePoints": 4
     },
     {
@@ -339,19 +329,21 @@
     {
       "colour": "red",
       "settlements": 1,
-      "cities": 0,
+      "cities": 1,
       "metropolises": 0,
       "knights": 1,
       "roads": 3,
       "production": {
-        "stone": 4,
-        "grain": 5
+        "stone": 12,
+        "grain": 5,
+        "wool": 8,
+        "lumber": 10
       },
-      "totalProduction": 9,
+      "totalProduction": 35,
       "longestRoad": 2,
-      "visiblePoints": 1
+      "visiblePoints": 3
     }
   ],
-  "durationMs": 1269,
-  "readAt": "2026-09-12T05:11:26.817Z"
+  "durationMs": 1304,
+  "readAt": "2026-09-12T12:39:45.618Z"
 }

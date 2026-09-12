@@ -206,6 +206,16 @@
         "colour": "blue"
       },
       {
+        "vertex": 17,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
+        "vertex": 24,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
         "vertex": 28,
         "kind": "city",
         "colour": "red"
@@ -344,17 +354,22 @@
     },
     {
       "colour": "black",
-      "settlements": 0,
+      "settlements": 2,
       "cities": 0,
       "metropolises": 0,
       "knights": 0,
       "roads": 3,
-      "production": {},
-      "totalProduction": 0,
+      "production": {
+        "grain": 2,
+        "stone": 9,
+        "lumber": 4,
+        "brick": 3
+      },
+      "totalProduction": 18,
       "longestRoad": 2,
-      "visiblePoints": 0
+      "visiblePoints": 2
     }
   ],
-  "durationMs": 1215,
-  "readAt": "2026-09-12T09:49:35.317Z"
+  "durationMs": 1383,
+  "readAt": "2026-09-12T12:39:41.773Z"
 }

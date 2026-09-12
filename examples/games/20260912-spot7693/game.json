@@ -31,13 +31,13 @@
       "takenAt": "2026-09-12T09:31:01.706Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 8,
+      "buildings": 9,
       "roads": 8,
       "colours": [
         "orange",
         "red",
         "blue",
-        "pink"
+        "bronze"
       ]
     }
   ],

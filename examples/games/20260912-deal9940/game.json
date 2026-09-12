@@ -19,13 +19,12 @@
       "ok": true,
       "tokens": 18,
       "buildings": 11,
-      "roads": 9,
+      "roads": 8,
       "colours": [
         "orange",
         "red",
         "blue",
-        "green",
-        "silver"
+        "green"
       ]
     },
     {
@@ -34,13 +33,12 @@
       "ok": true,
       "tokens": 18,
       "buildings": 14,
-      "roads": 12,
+      "roads": 11,
       "colours": [
         "orange",
         "red",
         "blue",
-        "green",
-        "silver"
+        "green"
       ]
     }
   ],

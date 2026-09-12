@@ -201,6 +201,11 @@
         "colour": "blue"
       },
       {
+        "vertex": 17,
+        "kind": "city",
+        "colour": "blue"
+      },
+      {
         "vertex": 18,
         "kind": "settlement",
         "colour": "blue"
@@ -214,6 +219,11 @@
         "vertex": 22,
         "kind": "knight",
         "colour": "blue"
+      },
+      {
+        "vertex": 25,
+        "kind": "metropolis",
+        "colour": "red"
       },
       {
         "vertex": 28,
@@ -247,14 +257,6 @@
       }
     ],
     "roads": [
-      {
-        "edge": 19,
-        "colour": "green"
-      },
-      {
-        "edge": 20,
-        "colour": "green"
-      },
       {
         "edge": 21,
         "colour": "blue"
@@ -305,51 +307,40 @@
     {
       "colour": "red",
       "settlements": 2,
-      "cities": 2,
-      "metropolises": 0,
+      "cities": 3,
+      "metropolises": 1,
       "knights": 2,
       "roads": 6,
       "production": {
+        "grain": 10,
+        "wool": 27,
         "stone": 20,
-        "wool": 13,
         "lumber": 20,
         "brick": 10
       },
-      "totalProduction": 63,
+      "totalProduction": 87,
       "longestRoad": 4,
-      "visiblePoints": 6
+      "visiblePoints": 10
     },
     {
       "colour": "blue",
       "settlements": 3,
-      "cities": 0,
+      "cities": 1,
       "metropolises": 0,
       "knights": 2,
       "roads": 5,
       "production": {
         "brick": 4,
-        "wool": 6,
+        "wool": 12,
         "grain": 5,
-        "lumber": 6,
+        "lumber": 14,
         "stone": 5
       },
-      "totalProduction": 26,
+      "totalProduction": 40,
       "longestRoad": 4,
-      "visiblePoints": 3
-    },
-    {
-      "colour": "green",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 2,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
+      "visiblePoints": 5
     }
   ],
-  "durationMs": 1226,
-  "readAt": "2026-09-12T09:37:45.033Z"
+  "durationMs": 1315,
+  "readAt": "2026-09-12T12:40:32.175Z"
 }

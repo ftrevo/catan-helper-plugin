@@ -287,10 +287,6 @@
         "colour": "red"
       },
       {
-        "edge": 51,
-        "colour": "green"
-      },
-      {
         "edge": 58,
         "colour": "green"
       },
@@ -307,7 +303,7 @@
       "cities": 1,
       "metropolises": 0,
       "knights": 1,
-      "roads": 5,
+      "roads": 4,
       "production": {
         "wool": 8,
         "stone": 8,
@@ -316,7 +312,7 @@
         "grain": 3
       },
       "totalProduction": 33,
-      "longestRoad": 3,
+      "longestRoad": 2,
       "visiblePoints": 4
     },
     {
@@ -355,6 +351,6 @@
       "visiblePoints": 3
     }
   ],
-  "durationMs": 1256,
-  "readAt": "2026-09-12T05:14:00.658Z"
+  "durationMs": 1283,
+  "readAt": "2026-09-12T12:39:49.481Z"
 }

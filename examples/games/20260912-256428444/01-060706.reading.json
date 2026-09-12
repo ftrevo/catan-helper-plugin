@@ -196,6 +196,16 @@
         "colour": "black"
       },
       {
+        "vertex": 12,
+        "kind": "city",
+        "colour": "black"
+      },
+      {
+        "vertex": 13,
+        "kind": "city",
+        "colour": "black"
+      },
+      {
         "vertex": 17,
         "kind": "knight",
         "colour": "black"
@@ -203,6 +213,11 @@
       {
         "vertex": 18,
         "kind": "knight",
+        "colour": "black"
+      },
+      {
+        "vertex": 22,
+        "kind": "city",
         "colour": "black"
       },
       {
@@ -223,6 +238,11 @@
       {
         "vertex": 33,
         "kind": "settlement",
+        "colour": "red"
+      },
+      {
+        "vertex": 34,
+        "kind": "city",
         "colour": "red"
       },
       {
@@ -280,35 +300,42 @@
   },
   "players": [
     {
+      "colour": "black",
+      "settlements": 0,
+      "cities": 3,
+      "metropolises": 0,
+      "knights": 3,
+      "roads": 7,
+      "production": {
+        "wool": 16,
+        "stone": 26,
+        "lumber": 12,
+        "grain": 10,
+        "brick": 8
+      },
+      "totalProduction": 72,
+      "longestRoad": 7,
+      "visiblePoints": 8
+    },
+    {
       "colour": "red",
       "settlements": 2,
-      "cities": 1,
+      "cities": 2,
       "metropolises": 0,
       "knights": 2,
       "roads": 4,
       "production": {
         "lumber": 6,
         "wool": 12,
-        "brick": 10,
-        "stone": 5
+        "brick": 18,
+        "stone": 9,
+        "grain": 10
       },
-      "totalProduction": 33,
+      "totalProduction": 55,
       "longestRoad": 2,
-      "visiblePoints": 4
-    },
-    {
-      "colour": "black",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 3,
-      "roads": 7,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 7,
-      "visiblePoints": 2
+      "visiblePoints": 6
     }
   ],
-  "durationMs": 1227,
-  "readAt": "2026-09-12T06:07:10.174Z"
+  "durationMs": 1319,
+  "readAt": "2026-09-12T12:27:20.018Z"
 }

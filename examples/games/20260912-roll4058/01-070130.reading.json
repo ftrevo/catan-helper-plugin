@@ -233,10 +233,6 @@
     ],
     "roads": [
       {
-        "edge": 15,
-        "colour": "black"
-      },
-      {
         "edge": 16,
         "colour": "blue"
       },
@@ -317,20 +313,8 @@
       "totalProduction": 29,
       "longestRoad": 1,
       "visiblePoints": 3
-    },
-    {
-      "colour": "black",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 1,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
     }
   ],
-  "durationMs": 1225,
-  "readAt": "2026-09-12T07:01:34.316Z"
+  "durationMs": 1296,
+  "readAt": "2026-09-12T12:41:02.944Z"
 }

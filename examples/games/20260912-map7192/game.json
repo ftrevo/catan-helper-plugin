@@ -1,0 +1,46 @@
+{
+  "roomCode": "map7192",
+  "url": "https://colonist.io/#map7192",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:36:58.441Z",
+  "finishedAt": "2026-09-12T12:39:52.279Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-123714.png",
+      "takenAt": "2026-09-12T12:37:18.258Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-123948.png",
+      "takenAt": "2026-09-12T12:39:52.279Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

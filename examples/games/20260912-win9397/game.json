@@ -25,7 +25,7 @@
         "green",
         "mysticblue",
         "red",
-        "black"
+        "orange"
       ]
     },
     {
@@ -34,7 +34,7 @@
       "ok": true,
       "tokens": 18,
       "buildings": 11,
-      "roads": 8,
+      "roads": 9,
       "colours": [
         "blue",
         "green",

@@ -207,8 +207,18 @@
       },
       {
         "vertex": 13,
-        "kind": "settlement",
+        "kind": "city",
         "colour": "red"
+      },
+      {
+        "vertex": 14,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
+        "vertex": 15,
+        "kind": "settlement",
+        "colour": "black"
       },
       {
         "vertex": 23,
@@ -224,6 +234,11 @@
         "vertex": 29,
         "kind": "knight",
         "colour": "blue"
+      },
+      {
+        "vertex": 35,
+        "kind": "city",
+        "colour": "black"
       },
       {
         "vertex": 39,
@@ -309,20 +324,38 @@
   "players": [
     {
       "colour": "red",
-      "settlements": 3,
-      "cities": 1,
+      "settlements": 2,
+      "cities": 2,
       "metropolises": 0,
       "knights": 2,
       "roads": 5,
       "production": {
-        "wool": 11,
-        "grain": 22,
+        "wool": 19,
+        "grain": 24,
         "stone": 6,
         "lumber": 6
       },
-      "totalProduction": 45,
+      "totalProduction": 55,
       "longestRoad": 3,
-      "visiblePoints": 5
+      "visiblePoints": 6
+    },
+    {
+      "colour": "black",
+      "settlements": 2,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 1,
+      "roads": 3,
+      "production": {
+        "grain": 7,
+        "stone": 6,
+        "wool": 4,
+        "lumber": 6,
+        "brick": 4
+      },
+      "totalProduction": 27,
+      "longestRoad": 2,
+      "visiblePoints": 4
     },
     {
       "colour": "blue",
@@ -356,20 +389,8 @@
       "totalProduction": 16,
       "longestRoad": 1,
       "visiblePoints": 2
-    },
-    {
-      "colour": "black",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 1,
-      "roads": 3,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 2,
-      "visiblePoints": 0
     }
   ],
-  "durationMs": 1213,
-  "readAt": "2026-09-12T08:08:04.828Z"
+  "durationMs": 1332,
+  "readAt": "2026-09-12T12:43:57.771Z"
 }

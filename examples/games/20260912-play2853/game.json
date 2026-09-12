@@ -1,0 +1,46 @@
+{
+  "roomCode": "play2853",
+  "url": "https://colonist.io/#play2853",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:33:56.581Z",
+  "finishedAt": "2026-09-12T12:36:50.465Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-123412.png",
+      "takenAt": "2026-09-12T12:34:16.412Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-123646.png",
+      "takenAt": "2026-09-12T12:36:50.465Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

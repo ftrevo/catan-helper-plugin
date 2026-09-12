@@ -191,6 +191,11 @@
   "pieces": {
     "buildings": [
       {
+        "vertex": 5,
+        "kind": "city",
+        "colour": "black"
+      },
+      {
         "vertex": 12,
         "kind": "settlement",
         "colour": "blue"
@@ -214,6 +219,16 @@
         "vertex": 25,
         "kind": "city",
         "colour": "orange"
+      },
+      {
+        "vertex": 40,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
+        "vertex": 49,
+        "kind": "city",
+        "colour": "blue"
       }
     ],
     "roads": [
@@ -244,10 +259,6 @@
       {
         "edge": 51,
         "colour": "black"
-      },
-      {
-        "edge": 64,
-        "colour": "green"
       },
       {
         "edge": 69,
@@ -294,43 +305,37 @@
     {
       "colour": "blue",
       "settlements": 1,
-      "cities": 0,
+      "cities": 1,
       "metropolises": 0,
       "knights": 0,
       "roads": 2,
       "production": {
         "stone": 7,
-        "brick": 5
+        "brick": 5,
+        "lumber": 14
       },
-      "totalProduction": 12,
+      "totalProduction": 26,
       "longestRoad": 1,
-      "visiblePoints": 1
+      "visiblePoints": 3
     },
     {
       "colour": "black",
-      "settlements": 0,
-      "cities": 0,
+      "settlements": 1,
+      "cities": 1,
       "metropolises": 0,
       "knights": 0,
       "roads": 2,
-      "production": {},
-      "totalProduction": 0,
+      "production": {
+        "grain": 7,
+        "stone": 10,
+        "brick": 4,
+        "lumber": 4
+      },
+      "totalProduction": 25,
       "longestRoad": 1,
-      "visiblePoints": 0
-    },
-    {
-      "colour": "green",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 1,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
+      "visiblePoints": 3
     }
   ],
-  "durationMs": 1221,
-  "readAt": "2026-09-12T06:04:08.076Z"
+  "durationMs": 1658,
+  "readAt": "2026-09-12T12:33:32.653Z"
 }

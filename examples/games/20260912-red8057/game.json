@@ -1,0 +1,46 @@
+{
+  "roomCode": "red8057",
+  "url": "https://colonist.io/#red8057",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:23:28.167Z",
+  "finishedAt": "2026-09-12T12:26:22.846Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-122343.png",
+      "takenAt": "2026-09-12T12:23:48.801Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "pink",
+        "green",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-122618.png",
+      "takenAt": "2026-09-12T12:26:22.845Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 12,
+      "colours": [
+        "pink",
+        "green",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -196,8 +196,18 @@
         "colour": "blue"
       },
       {
+        "vertex": 13,
+        "kind": "city",
+        "colour": "black"
+      },
+      {
         "vertex": 17,
         "kind": "knight",
+        "colour": "black"
+      },
+      {
+        "vertex": 23,
+        "kind": "metropolis",
         "colour": "black"
       },
       {
@@ -227,7 +237,7 @@
       },
       {
         "vertex": 35,
-        "kind": "settlement",
+        "kind": "city",
         "colour": "red"
       },
       {
@@ -290,6 +300,23 @@
   },
   "players": [
     {
+      "colour": "black",
+      "settlements": 0,
+      "cities": 2,
+      "metropolises": 1,
+      "knights": 1,
+      "roads": 3,
+      "production": {
+        "grain": 6,
+        "lumber": 24,
+        "stone": 4,
+        "wool": 8
+      },
+      "totalProduction": 42,
+      "longestRoad": 2,
+      "visiblePoints": 6
+    },
+    {
       "colour": "orange",
       "settlements": 0,
       "cities": 2,
@@ -307,21 +334,21 @@
     },
     {
       "colour": "red",
-      "settlements": 3,
-      "cities": 0,
+      "settlements": 2,
+      "cities": 1,
       "metropolises": 0,
       "knights": 1,
       "roads": 3,
       "production": {
-        "stone": 10,
-        "lumber": 4,
+        "stone": 14,
+        "lumber": 6,
         "brick": 5,
-        "grain": 3,
+        "grain": 6,
         "wool": 5
       },
-      "totalProduction": 27,
+      "totalProduction": 36,
       "longestRoad": 2,
-      "visiblePoints": 3
+      "visiblePoints": 4
     },
     {
       "colour": "blue",
@@ -338,20 +365,8 @@
       "totalProduction": 20,
       "longestRoad": 1,
       "visiblePoints": 2
-    },
-    {
-      "colour": "black",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 1,
-      "roads": 3,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 2,
-      "visiblePoints": 0
     }
   ],
-  "durationMs": 1226,
-  "readAt": "2026-09-12T07:10:17.699Z"
+  "durationMs": 1319,
+  "readAt": "2026-09-12T12:45:15.796Z"
 }

@@ -18,7 +18,7 @@
       "takenAt": "2026-09-12T12:02:32.713Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 20,
+      "buildings": 25,
       "roads": 26,
       "colours": [
         "black",
@@ -32,7 +32,7 @@
       "takenAt": "2026-09-12T12:05:06.591Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 21,
+      "buildings": 26,
       "roads": 29,
       "colours": [
         "black",

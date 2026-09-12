@@ -197,7 +197,7 @@
       },
       {
         "vertex": 12,
-        "kind": "settlement",
+        "kind": "city",
         "colour": "red"
       },
       {
@@ -209,6 +209,11 @@
         "vertex": 19,
         "kind": "settlement",
         "colour": "orange"
+      },
+      {
+        "vertex": 22,
+        "kind": "city",
+        "colour": "black"
       },
       {
         "vertex": 30,
@@ -272,6 +277,40 @@
   },
   "players": [
     {
+      "colour": "black",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 0,
+      "roads": 2,
+      "production": {
+        "wool": 18,
+        "grain": 8,
+        "stone": 3,
+        "lumber": 5
+      },
+      "totalProduction": 34,
+      "longestRoad": 1,
+      "visiblePoints": 3
+    },
+    {
+      "colour": "red",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 0,
+      "roads": 3,
+      "production": {
+        "lumber": 10,
+        "wool": 10,
+        "brick": 9,
+        "grain": 2
+      },
+      "totalProduction": 31,
+      "longestRoad": 2,
+      "visiblePoints": 3
+    },
+    {
       "colour": "orange",
       "settlements": 1,
       "cities": 1,
@@ -305,41 +344,8 @@
       "totalProduction": 25,
       "longestRoad": 1,
       "visiblePoints": 3
-    },
-    {
-      "colour": "red",
-      "settlements": 2,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 3,
-      "production": {
-        "lumber": 7,
-        "wool": 5,
-        "brick": 7,
-        "grain": 2
-      },
-      "totalProduction": 21,
-      "longestRoad": 2,
-      "visiblePoints": 2
-    },
-    {
-      "colour": "black",
-      "settlements": 1,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 2,
-      "production": {
-        "stone": 3,
-        "grain": 2,
-        "lumber": 5
-      },
-      "totalProduction": 10,
-      "longestRoad": 1,
-      "visiblePoints": 1
     }
   ],
-  "durationMs": 1224,
-  "readAt": "2026-09-12T06:37:43.425Z"
+  "durationMs": 1299,
+  "readAt": "2026-09-12T12:40:51.481Z"
 }

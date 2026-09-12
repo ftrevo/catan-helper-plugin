@@ -191,8 +191,13 @@
   "pieces": {
     "buildings": [
       {
-        "vertex": 13,
+        "vertex": 12,
         "kind": "settlement",
+        "colour": "black"
+      },
+      {
+        "vertex": 13,
+        "kind": "city",
         "colour": "red"
       },
       {
@@ -204,6 +209,11 @@
         "vertex": 31,
         "kind": "city",
         "colour": "orange"
+      },
+      {
+        "vertex": 35,
+        "kind": "city",
+        "colour": "black"
       },
       {
         "vertex": 41,
@@ -251,10 +261,6 @@
         "colour": "red"
       },
       {
-        "edge": 64,
-        "colour": "gold"
-      },
-      {
         "edge": 69,
         "colour": "orange"
       }
@@ -279,6 +285,24 @@
       "visiblePoints": 3
     },
     {
+      "colour": "red",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 0,
+      "roads": 2,
+      "production": {
+        "grain": 6,
+        "lumber": 4,
+        "brick": 13,
+        "wool": 3,
+        "stone": 5
+      },
+      "totalProduction": 31,
+      "longestRoad": 1,
+      "visiblePoints": 3
+    },
+    {
       "colour": "orange",
       "settlements": 1,
       "cities": 1,
@@ -297,48 +321,23 @@
       "visiblePoints": 3
     },
     {
-      "colour": "red",
-      "settlements": 2,
-      "cities": 0,
+      "colour": "black",
+      "settlements": 1,
+      "cities": 1,
       "metropolises": 0,
       "knights": 0,
       "roads": 2,
       "production": {
-        "grain": 3,
-        "lumber": 2,
-        "brick": 8,
-        "wool": 3,
-        "stone": 5
+        "stone": 5,
+        "lumber": 5,
+        "wool": 10,
+        "grain": 8
       },
-      "totalProduction": 21,
+      "totalProduction": 28,
       "longestRoad": 1,
-      "visiblePoints": 2
-    },
-    {
-      "colour": "black",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 2,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
-    },
-    {
-      "colour": "gold",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 1,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
+      "visiblePoints": 3
     }
   ],
-  "durationMs": 1225,
-  "readAt": "2026-09-12T11:27:03.109Z"
+  "durationMs": 1298,
+  "readAt": "2026-09-12T12:28:19.095Z"
 }

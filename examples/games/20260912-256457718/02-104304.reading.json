@@ -201,6 +201,16 @@
         "colour": "orange"
       },
       {
+        "vertex": 17,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
+        "vertex": 18,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
         "vertex": 22,
         "kind": "knight",
         "colour": "black"
@@ -216,6 +226,16 @@
         "colour": "orange"
       },
       {
+        "vertex": 28,
+        "kind": "city",
+        "colour": "black"
+      },
+      {
+        "vertex": 30,
+        "kind": "metropolis",
+        "colour": "black"
+      },
+      {
         "vertex": 31,
         "kind": "knight",
         "colour": "orange"
@@ -223,6 +243,11 @@
       {
         "vertex": 35,
         "kind": "knight",
+        "colour": "black"
+      },
+      {
+        "vertex": 40,
+        "kind": "settlement",
         "colour": "black"
       },
       {
@@ -239,6 +264,11 @@
         "vertex": 45,
         "kind": "knight",
         "colour": "orange"
+      },
+      {
+        "vertex": 48,
+        "kind": "settlement",
+        "colour": "black"
       },
       {
         "vertex": 49,
@@ -305,7 +335,7 @@
       },
       {
         "edge": 52,
-        "colour": "silver"
+        "colour": "white"
       },
       {
         "edge": 53,
@@ -351,6 +381,24 @@
   },
   "players": [
     {
+      "colour": "black",
+      "settlements": 4,
+      "cities": 2,
+      "metropolises": 1,
+      "knights": 3,
+      "roads": 13,
+      "production": {
+        "brick": 16,
+        "wool": 16,
+        "grain": 13,
+        "lumber": 16,
+        "stone": 18
+      },
+      "totalProduction": 79,
+      "longestRoad": 13,
+      "visiblePoints": 12
+    },
+    {
       "colour": "orange",
       "settlements": 3,
       "cities": 3,
@@ -369,19 +417,7 @@
       "visiblePoints": 9
     },
     {
-      "colour": "black",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 3,
-      "roads": 13,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 13,
-      "visiblePoints": 2
-    },
-    {
-      "colour": "silver",
+      "colour": "white",
       "settlements": 0,
       "cities": 0,
       "metropolises": 0,
@@ -393,6 +429,6 @@
       "visiblePoints": 0
     }
   ],
-  "durationMs": 1245,
-  "readAt": "2026-09-12T10:43:08.631Z"
+  "durationMs": 1317,
+  "readAt": "2026-09-12T12:28:03.439Z"
 }

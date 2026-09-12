@@ -191,6 +191,11 @@
   "pieces": {
     "buildings": [
       {
+        "vertex": 12,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
         "vertex": 41,
         "kind": "settlement",
         "colour": "red"
@@ -226,17 +231,20 @@
     },
     {
       "colour": "black",
-      "settlements": 0,
+      "settlements": 1,
       "cities": 0,
       "metropolises": 0,
       "knights": 0,
       "roads": 1,
-      "production": {},
-      "totalProduction": 0,
+      "production": {
+        "stone": 5,
+        "lumber": 5
+      },
+      "totalProduction": 10,
       "longestRoad": 1,
-      "visiblePoints": 0
+      "visiblePoints": 1
     }
   ],
-  "durationMs": 1181,
-  "readAt": "2026-09-12T11:24:29.325Z"
+  "durationMs": 1329,
+  "readAt": "2026-09-12T12:28:15.255Z"
 }

@@ -216,8 +216,18 @@
         "colour": "red"
       },
       {
+        "vertex": 19,
+        "kind": "metropolis",
+        "colour": "black"
+      },
+      {
+        "vertex": 22,
+        "kind": "metropolis",
+        "colour": "red"
+      },
+      {
         "vertex": 23,
-        "kind": "settlement",
+        "kind": "city",
         "colour": "red"
       },
       {
@@ -232,13 +242,18 @@
       },
       {
         "vertex": 34,
-        "kind": "settlement",
+        "kind": "metropolis",
         "colour": "red"
       },
       {
         "vertex": 35,
         "kind": "city",
         "colour": "red"
+      },
+      {
+        "vertex": 41,
+        "kind": "city",
+        "colour": "black"
       },
       {
         "vertex": 45,
@@ -248,6 +263,11 @@
       {
         "vertex": 46,
         "kind": "knight",
+        "colour": "black"
+      },
+      {
+        "vertex": 49,
+        "kind": "settlement",
         "colour": "black"
       }
     ],
@@ -321,35 +341,40 @@
   "players": [
     {
       "colour": "red",
-      "settlements": 4,
-      "cities": 1,
-      "metropolises": 0,
+      "settlements": 2,
+      "cities": 4,
+      "metropolises": 2,
       "knights": 4,
       "roads": 8,
       "production": {
-        "lumber": 13,
-        "grain": 25,
-        "brick": 19,
-        "stone": 6,
-        "wool": 2
+        "lumber": 23,
+        "grain": 32,
+        "brick": 24,
+        "wool": 10,
+        "stone": 18
       },
-      "totalProduction": 65,
+      "totalProduction": 107,
       "longestRoad": 6,
-      "visiblePoints": 6
+      "visiblePoints": 14
     },
     {
       "colour": "black",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
+      "settlements": 1,
+      "cities": 2,
+      "metropolises": 1,
       "knights": 3,
       "roads": 8,
-      "production": {},
-      "totalProduction": 0,
+      "production": {
+        "grain": 8,
+        "lumber": 22,
+        "stone": 12,
+        "wool": 9
+      },
+      "totalProduction": 51,
       "longestRoad": 7,
-      "visiblePoints": 2
+      "visiblePoints": 9
     }
   ],
-  "durationMs": 1207,
-  "readAt": "2026-09-12T07:19:22.026Z"
+  "durationMs": 1335,
+  "readAt": "2026-09-12T12:27:39.778Z"
 }

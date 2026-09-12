@@ -12,7 +12,8 @@
       "y": 425.3682420046895
     },
     "spacing": 114.81775235005071,
-    "tokensFound": 18
+    "tokensFound": 18,
+    "extraTokens": 0
   },
   "board": [
     {
@@ -469,6 +470,6 @@
       "visiblePoints": 5
     }
   ],
-  "durationMs": 1696,
-  "readAt": "2026-09-12T04:36:59.459Z"
+  "durationMs": 1721,
+  "readAt": "2026-09-12T12:33:28.413Z"
 }

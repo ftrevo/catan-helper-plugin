@@ -191,6 +191,11 @@
   "pieces": {
     "buildings": [
       {
+        "vertex": 10,
+        "kind": "city",
+        "colour": "black"
+      },
+      {
         "vertex": 13,
         "kind": "settlement",
         "colour": "blue"
@@ -209,6 +214,16 @@
         "vertex": 30,
         "kind": "city",
         "colour": "red"
+      },
+      {
+        "vertex": 31,
+        "kind": "city",
+        "colour": "blue"
+      },
+      {
+        "vertex": 40,
+        "kind": "settlement",
+        "colour": "black"
       },
       {
         "vertex": 41,
@@ -279,6 +294,23 @@
       "visiblePoints": 3
     },
     {
+      "colour": "blue",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 0,
+      "roads": 2,
+      "production": {
+        "wool": 8,
+        "stone": 3,
+        "grain": 4,
+        "brick": 16
+      },
+      "totalProduction": 31,
+      "longestRoad": 1,
+      "visiblePoints": 3
+    },
+    {
       "colour": "red",
       "settlements": 1,
       "cities": 1,
@@ -297,34 +329,24 @@
       "visiblePoints": 3
     },
     {
-      "colour": "blue",
-      "settlements": 1,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 2,
-      "production": {
-        "wool": 4,
-        "stone": 3,
-        "grain": 4
-      },
-      "totalProduction": 11,
-      "longestRoad": 1,
-      "visiblePoints": 1
-    },
-    {
       "colour": "black",
-      "settlements": 0,
-      "cities": 0,
+      "settlements": 1,
+      "cities": 1,
       "metropolises": 0,
       "knights": 1,
       "roads": 2,
-      "production": {},
-      "totalProduction": 0,
+      "production": {
+        "brick": 2,
+        "stone": 10,
+        "wool": 5,
+        "lumber": 4,
+        "grain": 4
+      },
+      "totalProduction": 25,
       "longestRoad": 1,
-      "visiblePoints": 0
+      "visiblePoints": 3
     }
   ],
-  "durationMs": 1198,
-  "readAt": "2026-09-12T10:04:28.582Z"
+  "durationMs": 1278,
+  "readAt": "2026-09-12T12:42:20.235Z"
 }

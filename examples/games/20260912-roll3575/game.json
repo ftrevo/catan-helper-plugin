@@ -27,13 +27,13 @@
       "takenAt": "2026-09-12T05:57:35.527Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 4,
+      "buildings": 6,
       "roads": 6,
       "colours": [
         "red",
         "orange",
-        "blue",
-        "black"
+        "black",
+        "blue"
       ]
     }
   ],

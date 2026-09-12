@@ -196,6 +196,21 @@
         "colour": "orange"
       },
       {
+        "vertex": 9,
+        "kind": "settlement",
+        "colour": "blue"
+      },
+      {
+        "vertex": 10,
+        "kind": "settlement",
+        "colour": "blue"
+      },
+      {
+        "vertex": 11,
+        "kind": "settlement",
+        "colour": "red"
+      },
+      {
         "vertex": 12,
         "kind": "city",
         "colour": "green"
@@ -211,6 +226,16 @@
         "colour": "red"
       },
       {
+        "vertex": 30,
+        "kind": "settlement",
+        "colour": "orange"
+      },
+      {
+        "vertex": 31,
+        "kind": "city",
+        "colour": "green"
+      },
+      {
         "vertex": 41,
         "kind": "city",
         "colour": "red"
@@ -223,6 +248,11 @@
       {
         "vertex": 48,
         "kind": "settlement",
+        "colour": "blue"
+      },
+      {
+        "vertex": 49,
+        "kind": "city",
         "colour": "blue"
       }
     ],
@@ -238,10 +268,6 @@
       {
         "edge": 8,
         "colour": "blue"
-      },
-      {
-        "edge": 12,
-        "colour": "silver"
       },
       {
         "edge": 15,
@@ -292,112 +318,87 @@
         "colour": "red"
       },
       {
-        "edge": 63,
-        "colour": "green"
-      },
-      {
         "edge": 68,
         "colour": "blue"
       },
       {
         "edge": 69,
         "colour": "blue"
-      },
-      {
-        "edge": 71,
-        "colour": "bronze"
       }
     ]
   },
   "players": [
     {
       "colour": "red",
-      "settlements": 0,
+      "settlements": 1,
       "cities": 2,
       "metropolises": 0,
       "knights": 0,
       "roads": 4,
       "production": {
-        "wool": 14,
+        "wool": 16,
         "stone": 8,
         "brick": 14,
         "grain": 6
       },
-      "totalProduction": 42,
+      "totalProduction": 44,
       "longestRoad": 3,
-      "visiblePoints": 4
+      "visiblePoints": 5
     },
     {
       "colour": "green",
       "settlements": 1,
-      "cities": 1,
+      "cities": 2,
       "metropolises": 0,
       "knights": 1,
-      "roads": 6,
+      "roads": 5,
       "production": {
         "lumber": 10,
         "wool": 4,
         "stone": 6,
-        "grain": 3
+        "grain": 19,
+        "brick": 4
       },
-      "totalProduction": 23,
+      "totalProduction": 43,
       "longestRoad": 3,
-      "visiblePoints": 3
+      "visiblePoints": 5
+    },
+    {
+      "colour": "blue",
+      "settlements": 3,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 0,
+      "roads": 5,
+      "production": {
+        "stone": 7,
+        "grain": 4,
+        "lumber": 14,
+        "brick": 10
+      },
+      "totalProduction": 35,
+      "longestRoad": 3,
+      "visiblePoints": 5
     },
     {
       "colour": "orange",
-      "settlements": 0,
+      "settlements": 1,
       "cities": 1,
       "metropolises": 0,
       "knights": 0,
       "roads": 3,
       "production": {
         "lumber": 10,
-        "stone": 6
+        "stone": 6,
+        "wool": 4,
+        "grain": 5,
+        "brick": 2
       },
-      "totalProduction": 16,
+      "totalProduction": 27,
       "longestRoad": 2,
-      "visiblePoints": 2
-    },
-    {
-      "colour": "blue",
-      "settlements": 1,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 5,
-      "production": {
-        "lumber": 7
-      },
-      "totalProduction": 7,
-      "longestRoad": 3,
-      "visiblePoints": 1
-    },
-    {
-      "colour": "silver",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 1,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
-    },
-    {
-      "colour": "bronze",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 1,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
+      "visiblePoints": 3
     }
   ],
-  "durationMs": 1241,
-  "readAt": "2026-09-12T05:14:28.915Z"
+  "durationMs": 1322,
+  "readAt": "2026-09-12T12:26:48.592Z"
 }

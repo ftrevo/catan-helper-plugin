@@ -271,10 +271,6 @@
         "colour": "orange"
       },
       {
-        "edge": 19,
-        "colour": "silver"
-      },
-      {
         "edge": 20,
         "colour": "red"
       },
@@ -381,20 +377,8 @@
       "totalProduction": 24,
       "longestRoad": 2,
       "visiblePoints": 3
-    },
-    {
-      "colour": "silver",
-      "settlements": 0,
-      "cities": 0,
-      "metropolises": 0,
-      "knights": 0,
-      "roads": 1,
-      "production": {},
-      "totalProduction": 0,
-      "longestRoad": 1,
-      "visiblePoints": 0
     }
   ],
-  "durationMs": 1245,
-  "readAt": "2026-09-12T09:08:00.453Z"
+  "durationMs": 1719,
+  "readAt": "2026-09-12T12:32:06.228Z"
 }
