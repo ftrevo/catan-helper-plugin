@@ -1,0 +1,60 @@
+:root {
+  --color-brand: #3374c2;
+  --color-brand-light: #2196f3;
+  --color-text: #222;
+  --color-muted: #666;
+
+  /* Tile colours, shared by the board and the statistics bars. */
+  --color-brick: #8f2e26;
+  --color-desert: #e7d2a7;
+  --color-grain: #d4a037;
+  --color-lumber: #3b6e47;
+  --color-stone: #7e7e7e;
+  --color-wool: #7f9f49;
+
+  --popup-width: 412px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.app {
+  width: var(--popup-width);
+}
+
+.tab-content {
+  width: var(--popup-width);
+  min-height: 360px;
+  align-content: center;
+}
+
+.status-line {
+  color: var(--color-muted);
+  font-size: 12px;
+  padding: 4px 10px 8px;
+  text-align: right;
+}
+
+.resource-brick {
+  background-color: var(--color-brick);
+}
+.resource-desert {
+  background-color: var(--color-desert);
+}
+.resource-grain {
+  background-color: var(--color-grain);
+}
+.resource-lumber {
+  background-color: var(--color-lumber);
+}
+.resource-stone {
+  background-color: var(--color-stone);
+}
+.resource-wool {
+  background-color: var(--color-wool);
+}

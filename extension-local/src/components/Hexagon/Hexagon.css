@@ -1,0 +1,41 @@
+.hexagon {
+  border-right: 1px solid black;
+  display: inline-block;
+  height: 43px;
+  margin-top: 17px;
+  position: relative;
+  width: 73px;
+}
+
+.hexagon::before,
+.hexagon::after {
+  background: inherit;
+  content: '';
+  height: 43px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 73px;
+}
+
+.hexagon::before {
+  border-left: 1px solid black;
+  transform: rotate(60deg);
+}
+
+.hexagon::after {
+  border-right: 1px solid black;
+  transform: rotate(-60deg);
+}
+
+.border-left-after::after {
+  border-left: 1px solid black;
+}
+
+.border-right-before::before {
+  border-right: 1px solid black;
+}
+
+.border-left {
+  border-left: 1px solid black;
+}
