@@ -1,12 +1,12 @@
 {
-  "roomCode": "cost4480",
-  "url": "https://colonist.io/#cost4480",
+  "roomCode": "area5876",
+  "url": "https://colonist.io/#area5876",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T06:55:05.256Z",
-  "finishedAt": "2026-09-12T06:57:58.610Z",
+  "claimedAt": "2026-09-12T07:45:34.562Z",
+  "finishedAt": "2026-09-12T07:48:27.981Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,33 +14,33 @@
   },
   "captures": [
     {
-      "file": "01-065521.png",
-      "takenAt": "2026-09-12T06:55:24.860Z",
+      "file": "01-074550.png",
+      "takenAt": "2026-09-12T07:45:54.175Z",
       "ok": true,
-      "tokens": 18,
-      "buildings": 9,
-      "roads": 10,
+      "tokens": 16,
+      "buildings": 13,
+      "roads": 14,
       "colours": [
-        "orange",
         "blue",
         "black",
+        "orange",
         "red",
+        "white",
         "silver"
       ]
     },
     {
-      "file": "02-065754.png",
-      "takenAt": "2026-09-12T06:57:58.610Z",
+      "file": "02-074824.png",
+      "takenAt": "2026-09-12T07:48:27.981Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 10,
+      "buildings": 12,
       "roads": 13,
       "colours": [
-        "orange",
         "blue",
         "black",
-        "red",
-        "silver"
+        "orange",
+        "red"
       ]
     }
   ],

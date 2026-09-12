@@ -1,0 +1,46 @@
+{
+  "roomCode": "rob50",
+  "url": "https://colonist.io/#rob50",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T08:56:58.015Z",
+  "finishedAt": "2026-09-12T08:59:51.758Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-085713.png",
+      "takenAt": "2026-09-12T08:57:17.958Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-085947.png",
+      "takenAt": "2026-09-12T08:59:51.758Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "orange",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

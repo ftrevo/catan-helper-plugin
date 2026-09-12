@@ -1,12 +1,12 @@
 {
-  "roomCode": "cost4480",
-  "url": "https://colonist.io/#cost4480",
+  "roomCode": "gold66",
+  "url": "https://colonist.io/#gold66",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T06:55:05.256Z",
-  "finishedAt": "2026-09-12T06:57:58.610Z",
+  "claimedAt": "2026-09-12T08:02:09.976Z",
+  "finishedAt": "2026-09-12T08:05:03.313Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,33 +14,32 @@
   },
   "captures": [
     {
-      "file": "01-065521.png",
-      "takenAt": "2026-09-12T06:55:24.860Z",
+      "file": "01-080225.png",
+      "takenAt": "2026-09-12T08:02:29.536Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 9,
-      "roads": 10,
+      "buildings": 11,
+      "roads": 12,
       "colours": [
-        "orange",
         "blue",
-        "black",
         "red",
-        "silver"
+        "orange",
+        "black"
       ]
     },
     {
-      "file": "02-065754.png",
-      "takenAt": "2026-09-12T06:57:58.610Z",
+      "file": "02-080459.png",
+      "takenAt": "2026-09-12T08:05:03.313Z",
       "ok": true,
       "tokens": 18,
       "buildings": 10,
       "roads": 13,
       "colours": [
-        "orange",
         "blue",
-        "black",
         "red",
-        "silver"
+        "orange",
+        "pink",
+        "black"
       ]
     }
   ],

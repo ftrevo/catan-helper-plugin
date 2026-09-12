@@ -1,0 +1,46 @@
+{
+  "roomCode": "clay4006",
+  "url": "https://colonist.io/#clay4006",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T08:32:27.253Z",
+  "finishedAt": "2026-09-12T08:35:20.637Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-083243.png",
+      "takenAt": "2026-09-12T08:32:46.858Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-083516.png",
+      "takenAt": "2026-09-12T08:35:20.637Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,49 @@
+{
+  "roomCode": "city4959",
+  "url": "https://colonist.io/#city4959",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:25:34.311Z",
+  "finishedAt": "2026-09-12T07:28:27.694Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-072550.png",
+      "takenAt": "2026-09-12T07:25:53.920Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 13,
+      "roads": 25,
+      "colours": [
+        "orange",
+        "black",
+        "blue",
+        "red",
+        "pink",
+        "white",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "02-072823.png",
+      "takenAt": "2026-09-12T07:28:27.694Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 25,
+      "colours": [
+        "orange",
+        "black",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

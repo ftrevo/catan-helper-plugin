@@ -1,0 +1,45 @@
+{
+  "roomCode": "trade1983",
+  "url": "https://colonist.io/#trade1983",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:38:04.562Z",
+  "finishedAt": "2026-09-12T07:40:57.850Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-073820.png",
+      "takenAt": "2026-09-12T07:38:24.120Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-074054.png",
+      "takenAt": "2026-09-12T07:40:57.850Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "green",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

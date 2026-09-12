@@ -1,0 +1,51 @@
+{
+  "roomCode": "turn6081",
+  "url": "https://colonist.io/#turn6081",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T09:03:01.893Z",
+  "finishedAt": "2026-09-12T09:04:58.228Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-090317.png",
+      "takenAt": "2026-09-12T09:03:21.515Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 14,
+      "colours": [
+        "black",
+        "red",
+        "orange",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-090454.png",
+      "takenAt": "2026-09-12T09:04:58.228Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 17,
+      "colours": [
+        "black",
+        "red",
+        "orange",
+        "blue",
+        "silver",
+        "green"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

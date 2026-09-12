@@ -1,0 +1,46 @@
+{
+  "roomCode": "blue7739",
+  "url": "https://colonist.io/#blue7739",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T09:23:40.117Z",
+  "finishedAt": "2026-09-12T09:26:33.573Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-092355.png",
+      "takenAt": "2026-09-12T09:23:59.774Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 12,
+      "colours": [
+        "red",
+        "black",
+        "purple",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-092629.png",
+      "takenAt": "2026-09-12T09:26:33.572Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 12,
+      "colours": [
+        "red",
+        "black",
+        "purple",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

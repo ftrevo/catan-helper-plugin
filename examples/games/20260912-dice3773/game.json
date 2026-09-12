@@ -1,0 +1,46 @@
+{
+  "roomCode": "dice3773",
+  "url": "https://colonist.io/#dice3773",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T08:50:48.724Z",
+  "finishedAt": "2026-09-12T08:53:42.088Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-085104.png",
+      "takenAt": "2026-09-12T08:51:08.268Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 14,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-085338.png",
+      "takenAt": "2026-09-12T08:53:42.088Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,44 @@
+{
+  "roomCode": "wood4097",
+  "url": "https://colonist.io/#wood4097",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T08:44:45.802Z",
+  "finishedAt": "2026-09-12T08:47:39.079Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-084501.png",
+      "takenAt": "2026-09-12T08:45:05.317Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 2,
+      "colours": [
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-084735.png",
+      "takenAt": "2026-09-12T08:47:39.079Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 5,
+      "roads": 6,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,16 @@
+{
+  "roomCode": "trade3688",
+  "url": "https://colonist.io/#trade3688",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T09:31:16.100Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [],
+  "notes": []
+}
