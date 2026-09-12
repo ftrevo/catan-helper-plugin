@@ -1,0 +1,46 @@
+{
+  "roomCode": "hand5728",
+  "url": "https://colonist.io/#hand5728",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T04:48:21.297Z",
+  "finishedAt": "2026-09-12T04:51:14.701Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-044837.png",
+      "takenAt": "2026-09-12T04:48:40.907Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "green",
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-045110.png",
+      "takenAt": "2026-09-12T04:51:14.701Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "green",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

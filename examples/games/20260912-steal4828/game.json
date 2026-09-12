@@ -1,0 +1,16 @@
+{
+  "roomCode": "steal4828",
+  "url": "https://colonist.io/#steal4828",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T04:19:26.343Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [],
+  "notes": []
+}

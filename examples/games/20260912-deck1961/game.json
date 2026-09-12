@@ -1,0 +1,48 @@
+{
+  "roomCode": "deck1961",
+  "url": "https://colonist.io/#deck1961",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:00:52.227Z",
+  "finishedAt": "2026-09-12T05:03:45.620Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-050108.png",
+      "takenAt": "2026-09-12T05:01:11.808Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-050341.png",
+      "takenAt": "2026-09-12T05:03:45.620Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "blue",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "luck3207",
+  "url": "https://colonist.io/#luck3207",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T04:42:17.409Z",
+  "finishedAt": "2026-09-12T04:45:10.894Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-044233.png",
+      "takenAt": "2026-09-12T04:42:37.070Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 21,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-044507.png",
+      "takenAt": "2026-09-12T04:45:10.893Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 21,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

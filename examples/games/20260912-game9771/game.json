@@ -1,0 +1,48 @@
+{
+  "roomCode": "game9771",
+  "url": "https://colonist.io/#game9771",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:17:11.092Z",
+  "finishedAt": "2026-09-12T05:20:04.548Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-051726.png",
+      "takenAt": "2026-09-12T05:17:30.739Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 17,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black",
+        "green"
+      ]
+    },
+    {
+      "file": "02-052000.png",
+      "takenAt": "2026-09-12T05:20:04.548Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 19,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

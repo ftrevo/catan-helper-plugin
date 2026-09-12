@@ -1,0 +1,46 @@
+{
+  "roomCode": "army6890",
+  "url": "https://colonist.io/#army6890",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:36:02.256Z",
+  "finishedAt": "2026-09-12T05:38:55.661Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-053618.png",
+      "takenAt": "2026-09-12T05:36:21.847Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 10,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-053851.png",
+      "takenAt": "2026-09-12T05:38:55.661Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 10,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

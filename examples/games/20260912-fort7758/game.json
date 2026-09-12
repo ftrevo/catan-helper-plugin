@@ -1,0 +1,31 @@
+{
+  "roomCode": "fort7758",
+  "url": "https://colonist.io/#fort7758",
+  "mode": "Colonist Rush",
+  "map": "Base",
+  "turnTimer": "5s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T04:08:11.557Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-040827.png",
+      "takenAt": "2026-09-12T04:08:31.022Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 30,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

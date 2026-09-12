@@ -1,0 +1,45 @@
+{
+  "roomCode": "gold6929",
+  "url": "https://colonist.io/#gold6929",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:26:22.362Z",
+  "finishedAt": "2026-09-12T05:29:15.883Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-052638.png",
+      "takenAt": "2026-09-12T05:26:42.093Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 18,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-052912.png",
+      "takenAt": "2026-09-12T05:29:15.883Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 19,
+      "colours": [
+        "red",
+        "black",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

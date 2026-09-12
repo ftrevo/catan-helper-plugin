@@ -1,0 +1,48 @@
+{
+  "roomCode": "sea4989",
+  "url": "https://colonist.io/#sea4989",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:22:19.258Z",
+  "finishedAt": "2026-09-12T06:25:12.624Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-062235.png",
+      "takenAt": "2026-09-12T06:22:38.835Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 26,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-062508.png",
+      "takenAt": "2026-09-12T06:25:12.623Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 27,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange",
+        "silver"
+      ]
+    }
+  ],
+  "notes": []
+}
