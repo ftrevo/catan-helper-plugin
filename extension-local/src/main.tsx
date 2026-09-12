@@ -7,6 +7,7 @@ import { createAnalysisStore } from './platform/analysisStore'
 import { decodeDataUrl } from './platform/decodeImage'
 import { assetUrl, isExtensionRuntime } from './platform/runtime'
 import { captureActiveTab } from './platform/screenshot'
+import { createSettingsStore } from './platform/settingsStore'
 import './index.css'
 
 /**
@@ -15,19 +16,14 @@ import './index.css'
  */
 const analyzer = createBoardAnalyzer({
   captureScreenshot: isExtensionRuntime() ? () => captureActiveTab().then(decodeDataUrl) : captureFixtureScreenshot,
-  modelSources: {
-    resources: assetUrl('models/resources/model.json'),
-    numbers: assetUrl('models/numbers/model.json'),
-  },
+  resolveModelUrl: assetUrl,
 })
-
-const store = createAnalysisStore()
 
 const container = document.getElementById('root')
 if (!container) throw new Error('Missing #root element')
 
 createRoot(container).render(
   <StrictMode>
-    <App analyzer={analyzer} store={store} />
+    <App analyzer={analyzer} analysisStore={createAnalysisStore()} settingsStore={createSettingsStore()} />
   </StrictMode>
 )

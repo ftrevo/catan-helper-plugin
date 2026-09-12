@@ -1,17 +1,21 @@
 import { useMemo, useState } from 'react'
 import { type BoardAnalyzer } from './app/boardAnalyzer'
 import { useBoardAnalysis } from './app/useBoardAnalysis'
+import { useSettings } from './app/useSettings'
 import { BoardView } from './components/Board/BoardView'
+import { ModelPicker } from './components/ModelPicker/ModelPicker'
 import { Notice } from './components/Notice/Notice'
 import { Statistics } from './components/Statistics/Statistics'
 import { type Tab, TabHeader } from './components/TabHeader/TabHeader'
 import { Welcome } from './components/Welcome/Welcome'
 import { boardWarnings, scarcityFactors } from './domain'
 import { type AnalysisStore } from './platform/analysisStore'
+import { type SettingsStore } from './platform/settingsStore'
 
 type AppProps = {
   analyzer: BoardAnalyzer
-  store: AnalysisStore
+  analysisStore: AnalysisStore
+  settingsStore: SettingsStore
 }
 
 /** Every tile but the desert carries a number token. */
@@ -20,10 +24,11 @@ const EXPECTED_TOKENS = 18
 const formatTime = (epochMs: number) =>
   new Date(epochMs).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })
 
-export const App = ({ analyzer, store }: AppProps) => {
+export const App = ({ analyzer, analysisStore, settingsStore }: AppProps) => {
   const [activeTab, setActiveTab] = useState<Tab>('board')
   const [rarityMode, setRarityMode] = useState(false)
-  const { analysis, isAnalyzing, error, analyze } = useBoardAnalysis(analyzer, store)
+  const [settings, updateSettings] = useSettings(settingsStore)
+  const { analysis, isAnalyzing, error, analyze } = useBoardAnalysis(analyzer, analysisStore, settings.modelSet)
 
   const reading = analysis?.reading
   const board = reading?.board
@@ -60,7 +65,18 @@ export const App = ({ analyzer, store }: AppProps) => {
         {board && activeTab === 'statistics' && <Statistics board={board} />}
       </main>
 
-      {analysis && <div className="status-line">Board captured at {formatTime(analysis.capturedAt)}</div>}
+      <footer className="status-line">
+        <ModelPicker
+          value={settings.modelSet}
+          onChange={(modelSet) => updateSettings({ modelSet })}
+          disabled={isAnalyzing}
+        />
+        {analysis && (
+          <span>
+            Captured at {formatTime(analysis.capturedAt)} with {analysis.modelSet}
+          </span>
+        )}
+      </footer>
     </div>
   )
 }

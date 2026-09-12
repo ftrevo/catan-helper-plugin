@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { type AnalysisStore, type StoredAnalysis } from '../platform/analysisStore'
 import { type BoardAnalyzer } from './boardAnalyzer'
 import { describeError } from './describeError'
+import { type ModelSetId } from '../vision/modelSets'
 
 export type BoardAnalysisState = {
   readonly analysis: StoredAnalysis | undefined
@@ -11,7 +12,11 @@ export type BoardAnalysisState = {
 }
 
 /** Popup state around the analyzer: restores the last reading on mount, runs new analyses on demand. */
-export const useBoardAnalysis = (analyzer: BoardAnalyzer, store: AnalysisStore): BoardAnalysisState => {
+export const useBoardAnalysis = (
+  analyzer: BoardAnalyzer,
+  store: AnalysisStore,
+  modelSet: ModelSetId
+): BoardAnalysisState => {
   const [analysis, setAnalysis] = useState<StoredAnalysis>()
   const [isAnalyzing, setAnalyzing] = useState(false)
   const [error, setError] = useState<string>()
@@ -36,15 +41,15 @@ export const useBoardAnalysis = (analyzer: BoardAnalyzer, store: AnalysisStore):
     setError(undefined)
 
     analyzer
-      .analyze()
+      .analyze(modelSet)
       .then(async (reading) => {
-        const next: StoredAnalysis = { reading, capturedAt: Date.now() }
+        const next: StoredAnalysis = { reading, capturedAt: Date.now(), modelSet }
         setAnalysis(next)
         await store.save(next)
       })
       .catch((failure: unknown) => setError(describeError(failure)))
       .finally(() => setAnalyzing(false))
-  }, [analyzer, store])
+  }, [analyzer, store, modelSet])
 
   return { analysis, isAnalyzing, error, analyze }
 }

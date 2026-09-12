@@ -4,6 +4,8 @@ export type StoredAnalysis = {
   readonly reading: BoardReading
   /** Epoch milliseconds of the capture. */
   readonly capturedAt: number
+  /** Which model set produced the reading. */
+  readonly modelSet: string
 }
 
 export type AnalysisStore = {
