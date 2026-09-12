@@ -7,7 +7,6 @@ import { createAnalysisStore } from './platform/analysisStore'
 import { decodeDataUrl } from './platform/decodeImage'
 import { assetUrl, isExtensionRuntime } from './platform/runtime'
 import { captureActiveTab } from './platform/screenshot'
-import { createSettingsStore } from './platform/settingsStore'
 import './index.css'
 
 /**
@@ -24,6 +23,6 @@ if (!container) throw new Error('Missing #root element')
 
 createRoot(container).render(
   <StrictMode>
-    <App analyzer={analyzer} analysisStore={createAnalysisStore()} settingsStore={createSettingsStore()} />
+    <App analyzer={analyzer} analysisStore={createAnalysisStore()} />
   </StrictMode>
 )
