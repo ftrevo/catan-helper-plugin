@@ -122,14 +122,23 @@ const looksLikeToken = (blob: Blob): boolean => {
 
 const distance = (a: Point, b: Point): number => Math.hypot(a.x - b.x, a.y - b.y)
 
-const median = (values: number[]): number => {
-  const sorted = [...values].sort((a, b) => a - b)
-  return sorted[Math.floor(sorted.length / 2)] ?? 0
+/**
+ * Adjacent tokens are exactly one spacing apart, so the spacing is a typical nearest-neighbour distance.
+ * Other white discs (Cities & Knights knight badges, harbour labels) sit closer to a token than a spacing
+ * and drag a plain median down, so several quantiles are tried and the lattice fit picks the winner.
+ */
+const spacingCandidates = (centers: readonly Point[]): number[] => {
+  const nearest = centers
+    .map((c) => Math.min(...centers.filter((other) => other !== c).map((other) => distance(c, other))))
+    .sort((a, b) => a - b)
+  const quantile = (q: number) => nearest[Math.min(nearest.length - 1, Math.floor(q * nearest.length))] ?? 0
+  const raw = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9].flatMap((q) => [quantile(q), quantile(q) * 2])
+  const distinct: number[] = []
+  for (const value of raw.sort((a, b) => a - b)) {
+    if (value > 0 && !distinct.some((d) => Math.abs(d - value) / value < 0.05)) distinct.push(value)
+  }
+  return distinct
 }
-
-/** Adjacent tokens are exactly one spacing apart, so the typical nearest-neighbour distance is the spacing. */
-const estimateSpacing = (centers: readonly Point[]): number =>
-  median(centers.map((c) => Math.min(...centers.filter((other) => other !== c).map((other) => distance(c, other)))))
 
 type Fit = { geometry: BoardGeometry; matches: Array<{ token: Point; offset: Point }> }
 
@@ -190,28 +199,29 @@ export const locateBoard = (image: RgbaImage): LocatedBoard => {
     throw new BoardNotFoundError(`only ${candidates.length} token-like shapes found`)
   }
 
-  const roughSpacing = estimateSpacing(candidates.map((c) => c.center))
-  const tokens = candidates
-    .filter((c) => {
-      const diameter = (c.width + c.height) / 2 / roughSpacing
-      return diameter >= TOKEN_DIAMETER_MIN && diameter <= TOKEN_DIAMETER_MAX
-    })
-    .map((c) => c.center)
-
-  // Try every token as the centre tile and keep the hypothesis that explains the most tokens.
-  let best: Fit | undefined
-  for (const token of tokens) {
-    const fit = matchLattice(tokens, { center: token, spacing: roughSpacing })
-    if (!best || fit.matches.length > best.matches.length) best = fit
+  // For each plausible spacing, keep only discs of token size, then try every one of them as the centre
+  // tile. The hypothesis explaining the most tokens wins across all spacings.
+  let best: { fit: Fit; tokens: Point[] } | undefined
+  for (const roughSpacing of spacingCandidates(candidates.map((c) => c.center))) {
+    const tokens = candidates
+      .filter((c) => {
+        const diameter = (c.width + c.height) / 2 / roughSpacing
+        return diameter >= TOKEN_DIAMETER_MIN && diameter <= TOKEN_DIAMETER_MAX
+      })
+      .map((c) => c.center)
+    for (const token of tokens) {
+      const fit = matchLattice(tokens, { center: token, spacing: roughSpacing })
+      if (!best || fit.matches.length > best.fit.matches.length) best = { fit, tokens }
+    }
   }
 
-  if (!best || best.matches.length < MIN_TOKENS) {
-    throw new BoardNotFoundError(`best lattice fit explains ${best?.matches.length ?? 0} of ${MAX_TOKENS} tokens`)
+  if (!best || best.fit.matches.length < MIN_TOKENS) {
+    throw new BoardNotFoundError(`best lattice fit explains ${best?.fit.matches.length ?? 0} of ${MAX_TOKENS} tokens`)
   }
 
-  const refined = refine(best)
+  const refined = refine(best.fit)
   // Re-match with the refined geometry: the desert or a covered token may now be resolved correctly.
-  const finalFit = matchLattice(tokens, refined)
+  const finalFit = matchLattice(best.tokens, refined)
 
   return { ...refine(finalFit), tokensFound: Math.min(finalFit.matches.length, MAX_TOKENS) }
 }

@@ -28,3 +28,11 @@ export const FIXTURES: readonly Fixture[] = [
   { name: 'bots game 3, 1920x1080 @1x', file: 'test/fixtures/colonist-board-3-1920x1080.png', truth: SAMPLE_BOARD_3, spacing: 126 },
   { name: 'bots game 3, 1512x758 @2x', file: 'test/fixtures/colonist-board-3-1512x758@2x.png', truth: SAMPLE_BOARD_3, spacing: 193 },
 ]
+
+/**
+ * Captures used only to check the locator: a spectated Cities & Knights game at 1600x900 whose knight
+ * badges are white discs of nearly token size. Tiles are not labelled.
+ */
+export const LOCATOR_ONLY_FIXTURES = [
+  { name: 'Cities & Knights spectated game, 1600x900 @1x', file: 'test/fixtures/colonist-board-4-ck.png', spacing: 115, minTokens: 16 },
+]
