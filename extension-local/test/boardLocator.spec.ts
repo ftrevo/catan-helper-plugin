@@ -19,6 +19,8 @@ describe('locateBoard', () => {
       expect(located.tokensFound).toBeGreaterThanOrEqual(fixture.minTokens)
       expect(located.spacing).toBeGreaterThan(fixture.spacing * 0.95)
       expect(located.spacing).toBeLessThan(fixture.spacing * 1.05)
+      // Knight badges and white buildings must not count as tokens outside the lattice.
+      expect(located.extraTokens).toBeLessThanOrEqual(1)
     }
   )
 

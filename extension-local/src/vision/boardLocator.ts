@@ -1,6 +1,6 @@
 import { TILE_COUNT } from '../domain/board'
 import { BoardNotFoundError } from './errors'
-import { type BoardGeometry, TILE_OFFSETS } from './layout'
+import { type BoardGeometry, TILE_OFFSETS, vertexCenters } from './layout'
 import { type Point, type RgbaImage } from './pixels'
 
 /**
@@ -43,6 +43,11 @@ const TOKEN_DIAMETER_MAX = 0.48
 
 /** A token counts as matching a lattice slot when it lies within this fraction of the spacing. */
 const MATCH_TOLERANCE = 0.2
+/**
+ * A stray disc this close to a board vertex is a white player's building, not a token: the tokens of a
+ * larger map sit at tile centres, which are at least 0.57 spacing from any vertex.
+ */
+const VERTEX_TOLERANCE = 0.2
 const MIN_TOKENS = 12
 const MAX_TOKENS = TILE_COUNT - 1
 
@@ -247,14 +252,17 @@ export const locateBoard = (image: RgbaImage): LocatedBoard => {
   const finalFit = matchLattice(best.tokens, refined)
   const geometry = refine(finalFit)
 
-  // Stray discs: token-sized, not on a slot, near the board and standing on land. Harbour ships are
-  // token-sized too, but they float on the sea and are ignored this way.
+  // Stray discs: token-sized, not on a slot, near the board, standing on land and not on a vertex.
+  // Harbour ships are token-sized too, but they float on the sea; white settlements and cities pass the
+  // colour filter, but they stand on vertices.
   const matched = new Set(finalFit.matches.map((m) => m.token))
+  const vertices = vertexCenters(geometry)
   const extraTokens = best.tokens.filter(
     (t) =>
       !matched.has(t) &&
       distance(t, geometry.center) < geometry.spacing * 4 &&
-      seaFraction(image, t, geometry.spacing * 0.3) < 0.5
+      seaFraction(image, t, geometry.spacing * 0.3) < 0.5 &&
+      !vertices.some((v) => distance(t, v) < geometry.spacing * VERTEX_TOLERANCE)
   ).length
 
   return { ...geometry, tokensFound: Math.min(finalFit.matches.length, MAX_TOKENS), extraTokens }

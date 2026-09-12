@@ -42,6 +42,12 @@ export const FIXTURES: readonly Fixture[] = [
  */
 export const LOCATOR_ONLY_FIXTURES = [
   { name: 'Cities & Knights spectated game, 1600x900 @1x', file: 'test/fixtures/colonist-board-4-ck.png', spacing: 115, minTokens: 16 },
+  {
+    name: 'Cities & Knights with a white player, 1600x900 @1x',
+    file: 'test/fixtures/colonist-board-7-ck-white-player.png',
+    spacing: 115,
+    minTokens: 17,
+  },
 ]
 
 /** Captures with only some pieces labelled (see `BOARD_6_KEY_PIECES`); tiles are not labelled. */
