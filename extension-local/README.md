@@ -57,6 +57,7 @@ src/
 │   ├── board.ts           Resource / HexNumber / Tile / Board types, validation, plausibility warnings.
 │   ├── probability.ts     pips and roll probabilities.
 │   ├── statistics.ts      per-resource production, scarcity factors.
+│   ├── strategy.ts        building costs, typical-game demand, strategy factors.
 │   └── vertices.ts        tile ↔ vertex tables and vertex values.
 ├── vision/             Screenshot → Board.
 │   ├── modelSets.ts       Registry of shipped model sets (id, label, paths) and the default.
@@ -99,6 +100,18 @@ test/
 scripts/
 └── evaluate-models.ts       `npm run evaluate`: per-fixture, per-set accuracy table.
 ```
+
+### Vertex weightings
+
+The board shows, at every corner, the pips a settlement there would collect per roll.
+
+- **Sum**: plain pips.
+- **Rarity**: each tile's pips are multiplied by 11.6 / (pips of its resource on the board), so scarce
+  resources count for more. The board total stays at the pip total.
+- **Strategy**: rarity multiplied by demand. Demand comes from the building costs and a typical game
+  (`src/domain/strategy.ts`: 8 roads, 3 settlements, 4 cities, 4 development cards beyond the starting
+  placement), which puts ore and grain above brick and lumber, and wool last. Factors are rescaled so the
+  board total is unchanged. Ports are not detected and therefore not considered.
 
 ### How a capture flows
 

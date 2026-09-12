@@ -5,6 +5,7 @@ import {
   resourceStatistics,
   roundPercentage,
   totalProducingPips,
+  strategicWeights,
 } from '../../domain'
 import './Statistics.css'
 
@@ -37,6 +38,7 @@ export const Statistics = ({ board }: StatisticsProps) => {
   const rarest = entries[0]
   // Shares are taken from what was actually read, so a misread tile shows up as an unusual total.
   const totalPips = totalProducingPips(board)
+  const demand = strategicWeights()
 
   return (
     <section className="stats">
@@ -77,7 +79,8 @@ export const Statistics = ({ board }: StatisticsProps) => {
                 </div>
                 <div className="stats-meta">
                   <span>
-                    {tileCount} {tileCount === 1 ? 'tile' : 'tiles'} · {share}% of production
+                    {tileCount} {tileCount === 1 ? 'tile' : 'tiles'} · {share}% of production · demand ×
+                    {(demand.get(resource) ?? 1).toFixed(2)}
                   </span>
                   <span className={scarcity === 1 ? 'stats-tag is-rarest' : 'stats-tag'}>
                     {scarcity === 1 ? 'rarest' : `×${scarcity.toFixed(2)} vs rarest`}
