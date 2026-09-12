@@ -1,0 +1,49 @@
+{
+  "target": 100,
+  "claims": {
+    "farm5375": {
+      "roomCode": "farm5375",
+      "agent": "w1",
+      "status": "rejected",
+      "claimedAt": "2026-09-12T03:59:52.868Z",
+      "heartbeatAt": "2026-09-12T03:59:52.868Z",
+      "reason": "Could not find the Catan board in the screenshot (only 7 token-like shapes found)",
+      "finishedAt": "2026-09-12T04:00:10.701Z"
+    },
+    "catan8396": {
+      "roomCode": "catan8396",
+      "agent": "w1",
+      "status": "rejected",
+      "claimedAt": "2026-09-12T04:00:49.954Z",
+      "heartbeatAt": "2026-09-12T04:00:49.954Z",
+      "reason": "tokens 14",
+      "finishedAt": "2026-09-12T04:01:56.014Z"
+    },
+    "army4004": {
+      "roomCode": "army4004",
+      "agent": "w1",
+      "status": "rejected",
+      "claimedAt": "2026-09-12T04:04:17.160Z",
+      "heartbeatAt": "2026-09-12T04:04:17.160Z",
+      "reason": "Could not find the Catan board in the screenshot (only 7 token-like shapes found)",
+      "finishedAt": "2026-09-12T04:05:18.204Z"
+    },
+    "area2419": {
+      "roomCode": "area2419",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:06:23.864Z",
+      "heartbeatAt": "2026-09-12T04:07:28.309Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "green"
+      ],
+      "buildings": 8,
+      "roads": 10,
+      "finishedAt": "2026-09-12T04:07:32.050Z"
+    }
+  }
+}

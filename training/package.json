@@ -14,7 +14,9 @@
     "typecheck": "tsc --noEmit",
     "locate": "node --import tsx src/locate.ts",
     "extract-tiles": "node --import tsx src/extract-tiles.ts",
-    "train:pieces": "node --require ./tfjs-node-compat.cjs --import tsx src/train-pieces.ts"
+    "train:pieces": "node --require ./tfjs-node-compat.cjs --import tsx src/train-pieces.ts",
+    "collect:worker": "node --import tsx src/collect/spectate-worker.ts",
+    "collect:status": "node --import tsx src/collect/status.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.60",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
+    "puppeteer-core": "^24.43.1",
     "tsx": "^4.20.0",
     "typescript": "~5.9.0"
   }

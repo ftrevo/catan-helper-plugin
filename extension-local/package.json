@@ -18,7 +18,8 @@
     "format:check": "prettier --check .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "evaluate": "vite-node scripts/evaluate-models.ts"
+    "evaluate": "vite-node scripts/evaluate-models.ts",
+    "read": "vite-node scripts/read-capture.ts"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",
