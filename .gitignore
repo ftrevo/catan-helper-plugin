@@ -394,3 +394,7 @@ Temporary Items
 
 /extension/build
 /back/output
+
+# back-new generated files
+back-new/swagger.json
+back-new/src/**/*.spec.js
