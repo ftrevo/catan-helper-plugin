@@ -22,8 +22,8 @@ examples/
 ```
 
 - PNGs are the raw viewport screenshots at 1x, 1600x900, the same pixels the extension would receive.
-- Games come from colonist.io's Spectate list, filtered to Map = Base (Cities & Knights excluded); most
-  live games are Colonist Rush, which fills the board with pieces within minutes.
+- Games come from colonist.io's Spectate list, filtered to Map = Base and the regular modes, base game and
+  Cities & Knights. Colonist Rush (simultaneous turns) is skipped.
   They are gitignored (a few hundred MB for 100 games); readings, metadata and the registry are committed.
 - `*.reading.json` is produced by `extension-local`'s `npm run read -- <png> <json>`: the located board,
   every tile with confidences, pieces, and per-colour player statistics. `ok: false` means the board was

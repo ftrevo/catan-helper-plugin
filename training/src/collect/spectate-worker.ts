@@ -44,9 +44,12 @@ const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 const VIEWPORT = { width: 1600, height: 900, deviceScaleFactor: 1 }
 const LOG_DIR = resolve(EXAMPLES_DIR, 'logs')
 
-/** Only the standard board. "Base 7-8 Player" and expansion maps are excluded; Cities & Knights adds foreign pieces. */
+/**
+ * Only the standard board ("Base 7-8 Player" and expansion maps are excluded) in the regular game modes:
+ * the base game and Cities & Knights. Colonist Rush is skipped; its simultaneous play makes boards noisy.
+ */
 const ACCEPTED_MAP = 'Base'
-const EXCLUDED_MODES = ['Cities & Knights']
+const isAcceptedMode = (mode: string) => /^base/i.test(mode) || /cities/i.test(mode)
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 const stamp = () => new Date().toISOString()
@@ -124,7 +127,7 @@ const openSpectateList = async (page: Page): Promise<Row[]> => {
   return rows
 }
 
-const isBaseGame = (row: Row) => row.map === ACCEPTED_MAP && !EXCLUDED_MODES.includes(row.mode)
+const isBaseGame = (row: Row) => row.map === ACCEPTED_MAP && isAcceptedMode(row.mode)
 
 const roomCodeOf = (url: string): string | undefined => {
   const hash = new URL(url).hash.replace(/^#/, '')
@@ -159,7 +162,8 @@ const watchOne = async (browser: Browser): Promise<'watched' | 'nothing'> => {
   try {
     const rows = await openSpectateList(page)
     const candidates = rows.filter(isBaseGame)
-    log(`spectate list: ${rows.length} games, ${candidates.length} on the base map`)
+    const modes = [...new Set(rows.filter((r) => r.map === ACCEPTED_MAP).map((r) => r.mode))].join(', ')
+    log(`spectate list: ${rows.length} games, ${candidates.length} accepted (base map modes seen: ${modes})`)
     if (candidates.length === 0) return 'nothing'
 
     // Random order so parallel workers rarely race for the same room; the registry settles any race.
@@ -364,7 +368,12 @@ const main = async () => {
       const page = await browser.newPage()
       const rows = await openSpectateList(page)
       console.table(rows.filter(isBaseGame).slice(0, 20))
-      console.log(`${rows.length} rows, ${rows.filter(isBaseGame).length} base-map games`)
+      const byMode = rows
+        .filter((r) => r.map === ACCEPTED_MAP)
+        .reduce<Record<string, number>>((acc, r) => ((acc[r.mode] = (acc[r.mode] ?? 0) + 1), acc), {})
+      console.log(
+        `${rows.length} rows, ${rows.filter(isBaseGame).length} accepted; base-map games by mode: ${JSON.stringify(byMode)}`
+      )
       return
     }
     let idle = 0
