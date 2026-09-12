@@ -1,0 +1,218 @@
+/**
+ * Renders synthetic colonist.io boards from the game's own sprites. The output mimics what a
+ * screenshot contains around each tile: neighbouring tiles, sea, number tokens and, randomly,
+ * the pieces and highlights that appear during a game.
+ */
+import { type Image, type SKRSContext2D, createCanvas, loadImage } from '@napi-rs/canvas'
+import {
+  HEX_NUMBERS,
+  type HexNumber,
+  RESOURCES,
+  type Resource,
+  TILE_COUNT,
+} from '../../extension-local/src/domain/board.ts'
+import { ROW_HEIGHT_FACTOR, TILE_OFFSETS } from '../../extension-local/src/vision/layout.ts'
+import { type Point, type RgbaImage } from '../../extension-local/src/vision/pixels.ts'
+import { type Atlas, drawSprite } from './atlas.ts'
+import { RENDERED_DIR } from './paths.ts'
+import { FACE_OFFSET_Y, TILE_SPRITE_SIZE } from './tile-geometry.ts'
+import { type Random } from './random.ts'
+
+/** Width of a tile sprite in source pixels; equals the flat-to-flat hex width, i.e. one spacing. */
+const TILE_SOURCE_WIDTH = 416
+
+/** Colours measured on real captures. */
+const SEA = 'rgb(7, 103, 166)'
+const SHALLOWS = 'rgb(131, 206, 239)'
+const SAND = 'rgb(236, 218, 170)'
+
+/** UI-layer sprites are not drawn at tile scale by the game; these are their sizes in spacings. */
+const HIGHLIGHT_DIAMETER = 0.3
+const ROBBER_HEIGHT = 0.45
+
+/**
+ * Full tile renders (background, border and artwork) cut from a large capture of the game with
+ * `extract-tiles.ts`. The atlas only ships flat `tile_*_empty` hexes; the artwork is drawn by the game.
+ * Each sprite is a square whose hexagon spans `TILE_SPRITE_HEX_WIDTH` of its width.
+ */
+export type TileSprites = Record<Resource, Image> & { desertClean: Image }
+
+export const loadTileSprites = async (dir = RENDERED_DIR): Promise<TileSprites> => {
+  const load = (name: string) => loadImage(`${dir}/${name}.png`)
+  const [brick, desert, grain, lumber, stone, wool, desertClean] = await Promise.all(
+    ['tile_brick', 'tile_desert', 'tile_grain', 'tile_lumber', 'tile_stone', 'tile_wool', 'tile_desert_clean'].map(load)
+  )
+  return { brick, desert, grain, lumber, stone, wool, desertClean } as TileSprites
+}
+
+/** Draws a tile sprite for the token centred at `c`; the sprite itself is centred on the face. */
+const drawTile = (ctx: SKRSContext2D, image: Image, c: Point, spacing: number): void => {
+  const size = spacing * TILE_SPRITE_SIZE
+  ctx.drawImage(image, c.x - size / 2, c.y + FACE_OFFSET_Y * spacing - size / 2, size, size)
+}
+
+const PIECE_COLOURS = [
+  'red',
+  'blue',
+  'orange',
+  'green',
+  'white',
+  'black',
+  'pink',
+  'purple',
+  'bronze',
+  'silver',
+  'gold',
+  'mysticblue',
+]
+
+/** Vertex directions of a pointy-top hex, radians from the x axis. */
+const VERTEX_ANGLES = [30, 90, 150, 210, 270, 330].map((deg) => (deg * Math.PI) / 180)
+/** Edge-midpoint directions; a road drawn along an edge is perpendicular to its direction. */
+const EDGE_ANGLES = [0, 60, 120, 180, 240, 300].map((deg) => (deg * Math.PI) / 180)
+
+export type SyntheticTile = { readonly resource: Resource; readonly number: HexNumber }
+
+export type SyntheticBoard = {
+  readonly image: RgbaImage
+  readonly center: Point
+  readonly spacing: number
+  readonly tiles: readonly SyntheticTile[]
+}
+
+export type RenderOptions = {
+  spacing: number
+  /** Probability that any given vertex gets a settlement or city. */
+  pieceDensity?: number
+  /** Probability that any given edge gets a road. */
+  roadDensity?: number
+  /** Probability that vertex highlight rings (placement phase) are drawn. */
+  highlightProbability?: number
+  /** Probability that the robber stands on the desert instead of a random tile. */
+  robberOnDesert?: number
+}
+
+const NUMBERS_WITH_TOKEN = HEX_NUMBERS.filter((n) => n !== '7')
+
+/** A standard board: one desert without a token, every other tile with a random token. */
+export const randomTiles = (random: Random): SyntheticTile[] => {
+  const desert = random.int(TILE_COUNT)
+  return Array.from({ length: TILE_COUNT }, (_, i) =>
+    i === desert
+      ? { resource: 'desert', number: '7' }
+      : { resource: random.pick(RESOURCES.filter((r) => r !== 'desert')), number: random.pick(NUMBERS_WITH_TOKEN) }
+  )
+}
+
+export const renderBoard = (
+  atlas: Atlas,
+  tileSprites: TileSprites,
+  random: Random,
+  options: RenderOptions
+): SyntheticBoard => {
+  const { spacing } = options
+  const pieceDensity = options.pieceDensity ?? 0.12
+  const roadDensity = options.roadDensity ?? 0.1
+  const highlightProbability = options.highlightProbability ?? 0.15
+  const robberOnDesert = options.robberOnDesert ?? 0.6
+
+  const scale = spacing / TILE_SOURCE_WIDTH
+  // Enough room for the board, one ring of sea and the crops that peek above the top row.
+  const width = Math.ceil(spacing * 7)
+  const height = Math.ceil(spacing * ROW_HEIGHT_FACTOR * 7)
+  const center = { x: width / 2 + random.range(-0.3, 0.3) * spacing, y: height / 2 + random.range(-0.3, 0.3) * spacing }
+  const tiles = randomTiles(random)
+
+  const canvas = createCanvas(width, height)
+  const ctx = canvas.getContext('2d')
+
+  const centers = TILE_OFFSETS.map((o) => ({ x: center.x + o.x * spacing, y: center.y + o.y * spacing }))
+
+  // Sea, then an island: shallow water rim and sand under the tiles, as the coast looks in captures.
+  ctx.fillStyle = SEA
+  ctx.fillRect(0, 0, width, height)
+  const faceCenters = centers.map((c) => ({ x: c.x, y: c.y + FACE_OFFSET_Y * spacing }))
+  ctx.fillStyle = SHALLOWS
+  for (const c of faceCenters) fillHex(ctx, c, spacing * 1.32)
+  ctx.fillStyle = SAND
+  for (const c of faceCenters) fillHex(ctx, c, spacing * 1.18)
+
+  // Robber: on the desert most of the time (drawn into that sprite), otherwise blocking a random tile.
+  const desertIndex = tiles.findIndex((t) => t.resource === 'desert')
+  const robberTile = random.chance(robberOnDesert) ? desertIndex : random.int(TILE_COUNT)
+
+  tiles.forEach((tile, i) => {
+    const c = centers[i] as Point
+    const image = tile.resource === 'desert' && robberTile !== i ? tileSprites.desertClean : tileSprites[tile.resource]
+    drawTile(ctx, image, c, spacing)
+  })
+  tiles.forEach((tile, i) => {
+    if (tile.number === '7') return
+    const c = centers[i] as Point
+    const token = atlas.get(`prob_${tile.number}`)
+    // The game drops a soft shadow under each token.
+    ctx.save()
+    ctx.globalAlpha = 0.35
+    ctx.filter = 'brightness(0)'
+    drawSprite(ctx, token, c.x + 0.012 * spacing, c.y + 0.022 * spacing, scale)
+    ctx.restore()
+    drawSprite(ctx, token, c.x, c.y, scale)
+  })
+
+  if (robberTile !== desertIndex) {
+    const robberCenter = centers[robberTile] as Point
+    const robber = atlas.get('icon_robber')
+    drawSprite(
+      ctx,
+      robber,
+      robberCenter.x - 0.2 * spacing,
+      robberCenter.y - 0.05 * spacing,
+      (ROBBER_HEIGHT * spacing) / robber.sourceSize.h
+    )
+  }
+
+  // Roads along random edges, then settlements/cities on random vertices (drawn last, like the game).
+  const vertexRadius = spacing / Math.sqrt(3)
+  for (const c of centers) {
+    for (const angle of EDGE_ANGLES) {
+      if (!random.chance(roadDensity)) continue
+      const colour = random.pick(PIECE_COLOURS)
+      if (!atlas.has(`road_${colour}`)) continue
+      const x = c.x + Math.cos(angle) * (spacing / 2)
+      const y = c.y + FACE_OFFSET_Y * spacing + Math.sin(angle) * (spacing / 2)
+      drawSprite(ctx, atlas.get(`road_${colour}`), x, y, scale, angle + Math.PI / 2)
+    }
+  }
+  const drawHighlights = random.chance(highlightProbability)
+  for (const c of centers) {
+    for (const angle of VERTEX_ANGLES) {
+      const x = c.x + Math.cos(angle) * vertexRadius
+      const y = c.y + FACE_OFFSET_Y * spacing + Math.sin(angle) * vertexRadius
+      if (drawHighlights && random.chance(0.7)) {
+        const ring = atlas.get('icon_highlight_circle')
+        drawSprite(ctx, ring, x, y, (HIGHLIGHT_DIAMETER * spacing) / ring.sourceSize.w)
+      }
+      if (!random.chance(pieceDensity)) continue
+      const colour = random.pick(PIECE_COLOURS)
+      const kind = random.chance(0.3) ? 'city' : 'settlement'
+      if (atlas.has(`${kind}_${colour}`)) drawSprite(ctx, atlas.get(`${kind}_${colour}`), x, y, scale)
+    }
+  }
+
+  const { data } = ctx.getImageData(0, 0, width, height)
+  return { image: { width, height, data }, center, spacing, tiles }
+}
+
+/** Fills a pointy-top hexagon of the given flat-to-flat width centred on `c`. */
+const fillHex = (ctx: SKRSContext2D, c: Point, width: number): void => {
+  const radius = width / Math.sqrt(3)
+  ctx.beginPath()
+  VERTEX_ANGLES.forEach((angle, i) => {
+    const x = c.x + Math.cos(angle) * radius
+    const y = c.y + Math.sin(angle) * radius
+    if (i === 0) ctx.moveTo(x, y)
+    else ctx.lineTo(x, y)
+  })
+  ctx.closePath()
+  ctx.fill()
+}

@@ -1,0 +1,5 @@
+node_modules
+# colonist.io artwork is downloaded on demand and must not be committed
+assets/
+# generated datasets and previews
+out/
