@@ -24,7 +24,7 @@ for (const c of claims) {
 }
 
 console.log(
-  `games done: ${done}/${registry.target}  watching: ${watching.length} (${stale.length} stale)  rejected: ${rejected.length}`
+  `games done: ${done}${registry.target === null ? ' (no target, runs until STOP)' : `/${registry.target}`}  watching: ${watching.length} (${stale.length} stale)  rejected: ${rejected.length}`
 )
 console.log('colours in finished games:', [...colours].map(([k, v]) => `${k} ${v}`).join(', ') || 'none yet')
 console.log(
