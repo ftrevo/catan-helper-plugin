@@ -11,7 +11,7 @@ import { Segmented } from './components/Segmented/Segmented'
 import { Statistics } from './components/Statistics/Statistics'
 import { StatusBar } from './components/StatusBar/StatusBar'
 import { Welcome } from './components/Welcome/Welcome'
-import { boardWarnings, scarcityFactors } from './domain'
+import { boardWarnings, scarcityFactors, strategyFactors } from './domain'
 import { type AnalysisStore } from './platform/analysisStore'
 import { type SettingsStore } from './platform/settingsStore'
 
@@ -22,7 +22,7 @@ type AppProps = {
 }
 
 type Tab = 'board' | 'statistics'
-type Weighting = 'sum' | 'rarity'
+type Weighting = 'sum' | 'rarity' | 'strategy'
 
 /** Every tile but the desert carries a number token. */
 const EXPECTED_TOKENS = 18
@@ -35,14 +35,16 @@ export const App = ({ analyzer, analysisStore, settingsStore }: AppProps) => {
 
   const reading = analysis?.reading
   const board = reading?.board
-  const rarityMode = weighting === 'rarity'
   const warnings = useMemo(() => {
     if (!reading) return []
     const found = reading.location.tokensFound
     const partial = found < EXPECTED_TOKENS ? [`Only ${found} of ${EXPECTED_TOKENS} number tokens were found.`] : []
     return [...partial, ...boardWarnings(reading.board)]
   }, [reading])
-  const scarcity = useMemo(() => (board && rarityMode ? scarcityFactors(board) : undefined), [board, rarityMode])
+  const factors = useMemo(() => {
+    if (!board || weighting === 'sum') return undefined
+    return weighting === 'rarity' ? scarcityFactors(board) : strategyFactors(board)
+  }, [board, weighting])
 
   return (
     <div className="app">
@@ -78,15 +80,25 @@ export const App = ({ analyzer, analysisStore, settingsStore }: AppProps) => {
                   onChange={setWeighting}
                   options={[
                     { value: 'sum', label: 'Sum', title: 'Plain pip sums' },
-                    { value: 'rarity', label: 'Rarity', title: 'Pips weighted by how scarce each resource is' },
+                    {
+                      value: 'rarity',
+                      label: 'Rarity',
+                      title: 'Pips weighted by how scarce each resource is on this board',
+                    },
+                    {
+                      value: 'strategy',
+                      label: 'Strategy',
+                      title:
+                        'Rarity combined with how much a typical game needs each resource (ore and grain for cities and development cards)',
+                    },
                   ]}
                 />
               )}
             </div>
             {tab === 'board' && (
               <>
-                <BoardView board={board} scarcity={scarcity} />
-                <Legend rarityMode={rarityMode} />
+                <BoardView board={board} scarcity={factors} />
+                <Legend weighting={weighting} />
               </>
             )}
             {tab === 'statistics' && <Statistics board={board} />}
