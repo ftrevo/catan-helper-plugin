@@ -3,7 +3,7 @@ import { loadLayersModel, scalar, tensor, type LayersModel } from '@tensorflow/t
 import { resolve } from 'node:path'
 
 const resourceClasses = ['brick', 'desert', 'grain', 'lumber', 'stone', 'wool']
-const numberClasses = ['2', '3', '4', '5', '6', '8', '9', '10', '11', '12']
+const numberClasses = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 
 @Injectable()
 export class PredictorService implements OnModuleInit {
