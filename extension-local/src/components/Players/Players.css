@@ -1,0 +1,108 @@
+.players {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px 14px 8px;
+}
+
+.players-empty {
+  color: var(--muted);
+  padding: 24px 14px;
+  text-align: center;
+}
+
+.players-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.players-title {
+  font-weight: 700;
+}
+
+.players-subtitle {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.players-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.player {
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 9px 0;
+}
+
+.player-line {
+  align-items: baseline;
+  display: flex;
+  gap: 8px;
+}
+
+.player-swatch {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  display: inline-block;
+  flex: none;
+  height: 12px;
+  transform: translateY(1px);
+  width: 12px;
+}
+
+.player-name {
+  font-weight: 600;
+}
+
+.player-pieces {
+  color: var(--muted);
+  flex: 1;
+  font-size: 12px;
+}
+
+.player-pieces small,
+.player-points small {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.player-points {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.player-points small {
+  color: var(--muted);
+}
+
+.player-bar {
+  background: var(--surface-2);
+  border-radius: 999px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.player-fill {
+  border-radius: inherit;
+  height: 100%;
+}
+
+.player-meta {
+  color: var(--muted);
+  display: flex;
+  font-size: 11px;
+  justify-content: space-between;
+}
+
+.player-production {
+  display: inline-flex;
+  gap: 8px;
+}

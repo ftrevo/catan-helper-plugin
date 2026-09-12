@@ -1,4 +1,14 @@
-import { type Board, type Resource, TILE_OFFSETS, TILE_VERTICES, VERTEX_TILES, vertexValues } from '../../domain'
+import {
+  type Board,
+  EDGES,
+  type Pieces,
+  type Resource,
+  TILE_OFFSETS,
+  TILE_VERTICES,
+  VERTEX_TILES,
+  vertexValues,
+} from '../../domain'
+import { PIECE_COLOURS } from './pieceColours'
 import { Hexagon } from '../Hexagon/Hexagon'
 import { formatVertexValue, vertexLevel } from './vertexDisplay'
 import './BoardView.css'
@@ -35,10 +45,24 @@ type BoardViewProps = {
   board: Board
   /** When set, vertex values are weighted by resource rarity. */
   scarcity: ReadonlyMap<Resource, number> | undefined
+  pieces: Pieces
 }
 
-export const BoardView = ({ board, scarcity }: BoardViewProps) => {
+/** Roads are drawn along their edge; length in pixels and rotation from the edge direction. */
+const edgeSegments = EDGES.map(([a, b]) => {
+  const p = vertexPositions[a] ?? ORIGIN
+  const q = vertexPositions[b] ?? ORIGIN
+  return {
+    x: (p.x + q.x) / 2,
+    y: (p.y + q.y) / 2,
+    length: Math.hypot(q.x - p.x, q.y - p.y),
+    angle: (Math.atan2(q.y - p.y, q.x - p.x) * 180) / Math.PI,
+  }
+})
+
+export const BoardView = ({ board, scarcity, pieces }: BoardViewProps) => {
   const values = vertexValues(board, scarcity)
+  const buildingAt = new Map(pieces.buildings.map((b) => [b.vertex, b]))
 
   return (
     <div className="board">
@@ -50,9 +74,41 @@ export const BoardView = ({ board, scarcity }: BoardViewProps) => {
           const c = tileCenters[tile.position]
           return c ? <Hexagon key={tile.position} tile={tile} x={c.x} y={c.y} /> : null
         })}
+        {pieces.roads.map((road) => {
+          const seg = edgeSegments[road.edge]
+          return seg ? (
+            <span
+              key={`road-${road.edge}`}
+              className="road"
+              style={{
+                left: seg.x,
+                top: seg.y,
+                width: seg.length * 0.62,
+                background: PIECE_COLOURS[road.colour].fill,
+                transform: `translate(-50%, -50%) rotate(${seg.angle}deg)`,
+              }}
+              title={`${road.colour} road`}
+            />
+          ) : null
+        })}
         {values.map((value, vertex) => {
           const p = vertexPositions[vertex]
-          return p ? (
+          if (!p) return null
+          const building = buildingAt.get(vertex)
+          if (building) {
+            const palette = PIECE_COLOURS[building.colour]
+            return (
+              <span
+                key={vertex}
+                className={`building building-${building.kind}`}
+                style={{ left: p.x, top: p.y, background: palette.fill, color: palette.text }}
+                title={`${building.colour} ${building.kind} · ${value.toFixed(2)} pips`}
+              >
+                {formatVertexValue(value)}
+              </span>
+            )
+          }
+          return (
             <span
               key={vertex}
               className={`vertex vertex-level-${vertexLevel(value)}`}
@@ -61,7 +117,7 @@ export const BoardView = ({ board, scarcity }: BoardViewProps) => {
             >
               {formatVertexValue(value)}
             </span>
-          ) : null
+          )
         })}
       </div>
     </div>

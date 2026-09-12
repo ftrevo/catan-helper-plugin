@@ -93,12 +93,12 @@ const train = async (
     callbacks: [
       // Synthetic data is learnt quickly; stop once validation loss stalls instead of burning epochs.
       tf.callbacks.earlyStopping({ monitor: 'val_loss', patience: 3 }),
-      {
+      new tf.CustomCallback({
         onEpochEnd: async (epoch: number, logs?: tf.Logs) =>
           console.log(
             `  epoch ${epoch + 1}/${epochs} loss ${logs?.loss?.toFixed(4)} acc ${logs?.acc?.toFixed(4)} val_acc ${logs?.val_acc?.toFixed(4)}`
           ),
-      },
+      }),
     ],
   })
   xs.dispose()

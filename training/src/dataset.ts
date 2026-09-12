@@ -2,12 +2,20 @@
  * Turns rendered boards into model inputs using exactly the crop geometry the extension applies at
  * runtime (imported from the extension source), so training and inference never drift apart.
  */
+import { type Pieces } from '../../extension-local/src/domain/pieces.ts'
+import { BUILDING_LABELS, ROAD_LABELS } from '../../extension-local/src/vision/labels.ts'
 import {
+  BUILDING_PATCH,
   type BoardGeometry,
   NUMBER_CROP,
+  type PatchSpec,
   RESOURCE_CROP,
+  ROAD_PATCH,
   cropRect,
+  edgeCenters,
+  patchRect,
   tileCenters,
+  vertexCenters,
 } from '../../extension-local/src/vision/layout.ts'
 import { type RgbaImage, cropAndResize, rectFitsIn } from '../../extension-local/src/vision/pixels.ts'
 import { type Random } from './random.ts'
@@ -33,4 +41,55 @@ export const cropTiles = (image: RgbaImage, geometry: BoardGeometry, jitter: num
     })
 
   return { resources: crop(RESOURCE_CROP), numbers: crop(NUMBER_CROP) }
+}
+
+export type LabelledPatches = { images: RgbaImage[]; labels: number[] }
+
+const cropPatch = (
+  image: RgbaImage,
+  center: { x: number; y: number },
+  spec: PatchSpec,
+  jitter: number,
+  spacing: number,
+  random?: Random
+) => {
+  const c = {
+    x: center.x + (random ? random.range(-jitter, jitter) : 0) * spacing,
+    y: center.y + (random ? random.range(-jitter, jitter) : 0) * spacing,
+  }
+  const rect = patchRect(c, spec, spacing)
+  if (!rectFitsIn(rect, image)) return undefined
+  return cropAndResize(image, rect, { width: spec.size, height: spec.size })
+}
+
+/** Vertex and edge patches with their class indices, exactly as the extension's piece reader crops them. */
+export const cropPiecePatches = (
+  image: RgbaImage,
+  geometry: BoardGeometry,
+  pieces: Pieces,
+  jitter: number,
+  random?: Random
+): { buildings: LabelledPatches; roads: LabelledPatches } => {
+  const buildings: LabelledPatches = { images: [], labels: [] }
+  const roads: LabelledPatches = { images: [], labels: [] }
+
+  vertexCenters(geometry).forEach((c, vertex) => {
+    const patch = cropPatch(image, c, BUILDING_PATCH, jitter, geometry.spacing, random)
+    if (!patch) return
+    const piece = pieces.buildings.find((b) => b.vertex === vertex)
+    const label = piece ? `${piece.kind}_${piece.colour}` : 'none'
+    buildings.images.push(patch)
+    buildings.labels.push((BUILDING_LABELS as readonly string[]).indexOf(label))
+  })
+
+  edgeCenters(geometry).forEach((c, edge) => {
+    const patch = cropPatch(image, c, ROAD_PATCH, jitter, geometry.spacing, random)
+    if (!patch) return
+    const piece = pieces.roads.find((r) => r.edge === edge)
+    const label = piece ? `road_${piece.colour}` : 'none'
+    roads.images.push(patch)
+    roads.labels.push((ROAD_LABELS as readonly string[]).indexOf(label))
+  })
+
+  return { buildings, roads }
 }

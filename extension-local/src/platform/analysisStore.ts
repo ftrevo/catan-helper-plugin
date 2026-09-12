@@ -1,3 +1,4 @@
+import { NO_PIECES } from '../domain/pieces'
 import { type BoardReading } from '../vision/boardReader'
 
 export type StoredAnalysis = {
@@ -22,7 +23,11 @@ const STORAGE_KEY = 'lastAnalysis'
 const chromeSessionStore = (): AnalysisStore => ({
   async load() {
     const stored = await chrome.storage.session.get(STORAGE_KEY)
-    return stored[STORAGE_KEY] as StoredAnalysis | undefined
+    const analysis = stored[STORAGE_KEY] as StoredAnalysis | undefined
+    // Readings saved before piece detection existed have no `pieces`.
+    return analysis
+      ? { ...analysis, reading: { ...analysis.reading, pieces: analysis.reading.pieces ?? NO_PIECES } }
+      : undefined
   },
   async save(analysis) {
     await chrome.storage.session.set({ [STORAGE_KEY]: analysis })

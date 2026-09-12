@@ -47,3 +47,44 @@
   background: var(--vertex-3);
   color: var(--vertex-3-fg);
 }
+
+/* Player pieces: buildings replace the vertex badge at their corner, roads run along the edge. */
+.building {
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  cursor: default;
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 700;
+  height: 20px;
+  justify-content: center;
+  line-height: 1;
+  min-width: 20px;
+  padding: 0 4px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.building-settlement {
+  border-radius: 5px;
+}
+
+.building-city {
+  border-radius: 5px;
+  box-shadow:
+    0 0 0 2px rgba(0, 0, 0, 0.55),
+    0 1px 3px rgba(0, 0, 0, 0.45);
+  height: 22px;
+  min-width: 24px;
+}
+
+.road {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+  height: 6px;
+  position: absolute;
+  z-index: 3;
+}

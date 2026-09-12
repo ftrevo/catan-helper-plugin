@@ -1,6 +1,19 @@
 import { describe, expect, test } from 'vitest'
 import { TILE_COUNT } from '../domain/board'
-import { NUMBER_CROP, REFERENCE_SPACING, RESOURCE_CROP, TILE_OFFSETS, cropRect, tileCenters } from './layout'
+import { EDGES } from '../domain/edges'
+import {
+  BUILDING_PATCH,
+  FACE_OFFSET_Y,
+  NUMBER_CROP,
+  REFERENCE_SPACING,
+  RESOURCE_CROP,
+  TILE_OFFSETS,
+  cropRect,
+  edgeCenters,
+  patchRect,
+  tileCenters,
+  vertexCenters,
+} from './layout'
 
 describe('TILE_OFFSETS', () => {
   test('describes a 3-4-5-4-3 hex grid centred on tile 9', () => {
@@ -40,5 +53,31 @@ describe('cropRect', () => {
     expect(centers[9]).toEqual({ x: 100, y: 200 })
     expect(centers[10]).toEqual({ x: 110, y: 200 })
     expect(centers[0]?.y).toBeCloseTo(200 - 10 * Math.sqrt(3))
+  })
+})
+
+describe('piece geometry', () => {
+  const geometry = { center: { x: 1000, y: 1000 }, spacing: 100 }
+
+  test('vertex 8 (shared by tiles 0, 1 and 4) sits between them, above the token row', () => {
+    const v = vertexCenters(geometry)
+    expect(v).toHaveLength(54)
+    // Tile 0 is at (-1, -sqrt3) spacings; its lower-right corner is half a spacing right, sqrt3/6 down, then the face offset.
+    expect(v[8]?.x).toBeCloseTo(1000 - 100 + 50)
+    expect(v[8]?.y).toBeCloseTo(1000 - Math.sqrt(3) * 100 + (100 / Math.sqrt(3)) * 0.5 + FACE_OFFSET_Y * 100)
+  })
+
+  test('edge midpoints lie halfway between their vertices', () => {
+    const v = vertexCenters(geometry)
+    const e = edgeCenters(geometry)
+    expect(e).toHaveLength(72)
+    const [a, b] = EDGES[0] as [number, number]
+    expect(e[0]?.x).toBeCloseTo(((v[a]?.x ?? 0) + (v[b]?.x ?? 0)) / 2)
+  })
+
+  test('patches scale with the spacing', () => {
+    const rect = patchRect({ x: 50, y: 50 }, BUILDING_PATCH, 100)
+    expect(rect.width).toBeCloseTo(42)
+    expect(rect.x).toBeCloseTo(29)
   })
 })

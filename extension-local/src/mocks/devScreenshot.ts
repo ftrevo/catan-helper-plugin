@@ -6,4 +6,4 @@ import { type RgbaImage } from '../vision/pixels'
  * board screenshot from the test fixtures so the real recognition pipeline can be exercised.
  */
 export const captureFixtureScreenshot = (): Promise<RgbaImage> =>
-  decodeImageUrl(new URL('/test/fixtures/colonist-board.png', document.baseURI).href)
+  decodeImageUrl(new URL('/test/fixtures/colonist-board-3-1920x1080.png', document.baseURI).href)
