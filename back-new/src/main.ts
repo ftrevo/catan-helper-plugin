@@ -4,12 +4,13 @@ import { HttpAdapterHost, NestFactory } from '@nestjs/core'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 import { Logger } from 'nestjs-pino'
 import { cleanupOpenApiDoc } from 'nestjs-zod'
-import { AppModule } from './app.module'
-
-import { logBlocklist } from './constants'
-import { ExceptionsFilter } from './lib/exception-filter'
 import { json } from 'express'
+import helmet from 'helmet'
 import { INestApplication } from '@nestjs/common'
+
+import { AppModule } from './app.module'
+import { ExceptionsFilter } from './lib/exception-filter'
+import { isStagingOrProductionEnv } from './utils'
 
 async function setupSwagger(app: INestApplication) {
   const swaggerConfig = new DocumentBuilder()
@@ -38,13 +39,21 @@ async function bootstrap() {
 
   app.useLogger(app.get(Logger))
   app.useGlobalFilters(new ExceptionsFilter(httpAdapter))
+
+  app.enableCors({
+    origin: process.env.CORS_ORIGIN ? [process.env.CORS_ORIGIN] : '*',
+    methods: ['GET', 'POST', 'PATCH', 'HEAD', 'OPTIONS', 'DELETE', 'PUT'],
+    allowedHeaders: ['Content-Type', 'Accept'],
+  })
+  app.use(helmet())
   app.use(json({ limit: '5mb' }))
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-  app.getHttpAdapter().getInstance().disable('x-powered-by')
   app.enableShutdownHooks()
 
-  await setupSwagger(app)
+  if (!isStagingOrProductionEnv()) {
+    await setupSwagger(app)
+  }
+
   await app.listen(process.env.PORT ?? 3000)
 }
 
-bootstrap()
+void bootstrap()
