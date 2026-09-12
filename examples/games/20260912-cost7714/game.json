@@ -1,0 +1,46 @@
+{
+  "roomCode": "cost7714",
+  "url": "https://colonist.io/#cost7714",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:54:05.448Z",
+  "finishedAt": "2026-09-12T21:56:58.925Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-215421.png",
+      "takenAt": "2026-09-12T21:54:25.069Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "green",
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-215655.png",
+      "takenAt": "2026-09-12T21:56:58.925Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "green",
+        "blue",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

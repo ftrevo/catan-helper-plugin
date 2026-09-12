@@ -1,12 +1,12 @@
 {
-  "roomCode": "hand4271",
-  "url": "https://colonist.io/#hand4271",
+  "roomCode": "brick8895",
+  "url": "https://colonist.io/#brick8895",
   "mode": "Cities & Knights",
   "map": "Base",
   "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T20:09:54.982Z",
-  "finishedAt": "2026-09-12T20:12:48.569Z",
+  "claimedAt": "2026-09-12T21:29:31.939Z",
+  "finishedAt": "2026-09-12T21:32:25.361Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,31 +14,31 @@
   },
   "captures": [
     {
-      "file": "01-201010.png",
-      "takenAt": "2026-09-12T20:10:14.668Z",
+      "file": "01-212947.png",
+      "takenAt": "2026-09-12T21:29:51.569Z",
       "ok": true,
       "tokens": 18,
       "buildings": 15,
-      "roads": 10,
+      "roads": 18,
       "colours": [
-        "red",
         "orange",
+        "red",
         "blue",
         "black"
       ]
     },
     {
-      "file": "02-201244.png",
-      "takenAt": "2026-09-12T20:12:48.569Z",
+      "file": "02-213221.png",
+      "takenAt": "2026-09-12T21:32:25.361Z",
       "ok": true,
       "tokens": 18,
       "buildings": 16,
-      "roads": 12,
+      "roads": 18,
       "colours": [
-        "red",
         "orange",
-        "blue",
-        "black"
+        "red",
+        "black",
+        "blue"
       ]
     }
   ],

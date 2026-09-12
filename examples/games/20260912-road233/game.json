@@ -1,0 +1,47 @@
+{
+  "roomCode": "road233",
+  "url": "https://colonist.io/#road233",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:35:36.687Z",
+  "finishedAt": "2026-09-12T21:38:30.148Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-213552.png",
+      "takenAt": "2026-09-12T21:35:56.281Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-213826.png",
+      "takenAt": "2026-09-12T21:38:30.147Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black",
+        "white"
+      ]
+    }
+  ],
+  "notes": []
+}

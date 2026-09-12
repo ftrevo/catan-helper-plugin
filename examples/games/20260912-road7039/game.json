@@ -1,0 +1,47 @@
+{
+  "roomCode": "road7039",
+  "url": "https://colonist.io/#road7039",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:35:34.792Z",
+  "finishedAt": "2026-09-12T20:38:28.294Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-203550.png",
+      "takenAt": "2026-09-12T20:35:54.482Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 23,
+      "colours": [
+        "green",
+        "red",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-203824.png",
+      "takenAt": "2026-09-12T20:38:28.293Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 27,
+      "colours": [
+        "green",
+        "red",
+        "orange",
+        "black",
+        "white"
+      ]
+    }
+  ],
+  "notes": []
+}

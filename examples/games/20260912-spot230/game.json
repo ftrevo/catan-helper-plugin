@@ -1,0 +1,47 @@
+{
+  "roomCode": "spot230",
+  "url": "https://colonist.io/#spot230",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:26:29.517Z",
+  "finishedAt": "2026-09-12T21:29:23.026Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-212645.png",
+      "takenAt": "2026-09-12T21:26:49.173Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 16,
+      "colours": [
+        "red",
+        "green",
+        "blue",
+        "orange",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-212919.png",
+      "takenAt": "2026-09-12T21:29:23.026Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 17,
+      "colours": [
+        "red",
+        "green",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

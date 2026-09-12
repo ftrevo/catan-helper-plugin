@@ -1,0 +1,42 @@
+{
+  "roomCode": "steal3258",
+  "url": "https://colonist.io/#steal3258",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:17:19.660Z",
+  "finishedAt": "2026-09-12T20:20:11.865Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-201735.png",
+      "takenAt": "2026-09-12T20:17:39.263Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "black",
+        "red",
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-202009.png",
+      "takenAt": "2026-09-12T20:20:11.865Z",
+      "ok": false,
+      "tokens": 0,
+      "buildings": 0,
+      "roads": 0,
+      "colours": [],
+      "reason": "Could not find the Catan board in the screenshot (only 0 token-like shapes found)"
+    }
+  ],
+  "notes": []
+}

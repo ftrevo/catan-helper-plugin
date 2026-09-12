@@ -1,0 +1,46 @@
+{
+  "roomCode": "plan4727",
+  "url": "https://colonist.io/#plan4727",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:07:08.668Z",
+  "finishedAt": "2026-09-12T21:10:02.339Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-210724.png",
+      "takenAt": "2026-09-12T21:07:28.388Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-210958.png",
+      "takenAt": "2026-09-12T21:10:02.338Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 19,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

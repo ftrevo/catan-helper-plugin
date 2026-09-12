@@ -1,0 +1,46 @@
+{
+  "roomCode": "farm9271",
+  "url": "https://colonist.io/#farm9271",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:04:06.647Z",
+  "finishedAt": "2026-09-12T21:07:00.255Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-210422.png",
+      "takenAt": "2026-09-12T21:04:26.385Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "white",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-210656.png",
+      "takenAt": "2026-09-12T21:07:00.254Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 16,
+      "colours": [
+        "blue",
+        "white",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

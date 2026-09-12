@@ -1,0 +1,42 @@
+{
+  "roomCode": "spot8893",
+  "url": "https://colonist.io/#spot8893",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:41:44.282Z",
+  "finishedAt": "2026-09-12T20:44:37.730Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-204200.png",
+      "takenAt": "2026-09-12T20:42:03.886Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 6,
+      "colours": [
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-204433.png",
+      "takenAt": "2026-09-12T20:44:37.730Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

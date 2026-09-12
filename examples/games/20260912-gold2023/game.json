@@ -1,0 +1,44 @@
+{
+  "roomCode": "gold2023",
+  "url": "https://colonist.io/#gold2023",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:32:34.370Z",
+  "finishedAt": "2026-09-12T21:35:27.758Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-213250.png",
+      "takenAt": "2026-09-12T21:32:53.938Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 10,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-213523.png",
+      "takenAt": "2026-09-12T21:35:27.758Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 13,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

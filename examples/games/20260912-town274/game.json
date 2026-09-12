@@ -1,0 +1,46 @@
+{
+  "roomCode": "town274",
+  "url": "https://colonist.io/#town274",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T22:24:07.408Z",
+  "finishedAt": "2026-09-12T22:27:01.130Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-222423.png",
+      "takenAt": "2026-09-12T22:24:27.225Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "green",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-222657.png",
+      "takenAt": "2026-09-12T22:27:01.129Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 14,
+      "colours": [
+        "orange",
+        "green",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

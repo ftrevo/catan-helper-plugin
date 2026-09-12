@@ -1,0 +1,49 @@
+{
+  "roomCode": "brick7193",
+  "url": "https://colonist.io/#brick7193",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:20:26.255Z",
+  "finishedAt": "2026-09-12T21:23:19.787Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-212042.png",
+      "takenAt": "2026-09-12T21:20:45.765Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-212315.png",
+      "takenAt": "2026-09-12T21:23:19.786Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 12,
+      "roads": 14,
+      "colours": [
+        "green",
+        "bronze",
+        "black",
+        "blue",
+        "orange",
+        "red",
+        "white"
+      ]
+    }
+  ],
+  "notes": []
+}

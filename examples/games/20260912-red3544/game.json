@@ -1,0 +1,47 @@
+{
+  "roomCode": "red3544",
+  "url": "https://colonist.io/#red3544",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:50:51.906Z",
+  "finishedAt": "2026-09-12T21:53:45.361Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-215107.png",
+      "takenAt": "2026-09-12T21:51:11.505Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-215341.png",
+      "takenAt": "2026-09-12T21:53:45.361Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 13,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

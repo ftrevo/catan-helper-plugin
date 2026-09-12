@@ -1,0 +1,48 @@
+{
+  "roomCode": "band1908",
+  "url": "https://colonist.io/#band1908",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T22:15:48.355Z",
+  "finishedAt": "2026-09-12T22:17:45.254Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-221604.png",
+      "takenAt": "2026-09-12T22:16:08.509Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "black",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-221741.png",
+      "takenAt": "2026-09-12T22:17:45.254Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 14,
+      "colours": [
+        "orange",
+        "black",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

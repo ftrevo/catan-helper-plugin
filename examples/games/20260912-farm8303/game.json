@@ -1,0 +1,48 @@
+{
+  "roomCode": "farm8303",
+  "url": "https://colonist.io/#farm8303",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:57:07.029Z",
+  "finishedAt": "2026-09-12T22:00:00.499Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-215722.png",
+      "takenAt": "2026-09-12T21:57:26.673Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "green",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-215956.png",
+      "takenAt": "2026-09-12T22:00:00.499Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "green",
+        "gold"
+      ]
+    }
+  ],
+  "notes": []
+}
