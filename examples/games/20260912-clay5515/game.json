@@ -1,0 +1,46 @@
+{
+  "roomCode": "clay5515",
+  "url": "https://colonist.io/#clay5515",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:41:09.400Z",
+  "finishedAt": "2026-09-12T13:44:02.949Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-134125.png",
+      "takenAt": "2026-09-12T13:41:29.041Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 19,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-134359.png",
+      "takenAt": "2026-09-12T13:44:02.948Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 22,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

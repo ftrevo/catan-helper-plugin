@@ -1,0 +1,46 @@
+{
+  "roomCode": "wood3939",
+  "url": "https://colonist.io/#wood3939",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:22:31.730Z",
+  "finishedAt": "2026-09-12T14:25:25.524Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-142247.png",
+      "takenAt": "2026-09-12T14:22:51.659Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-142521.png",
+      "takenAt": "2026-09-12T14:25:25.523Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

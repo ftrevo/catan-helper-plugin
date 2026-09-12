@@ -1,0 +1,44 @@
+{
+  "roomCode": "road1494",
+  "url": "https://colonist.io/#road1494",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:38:07.819Z",
+  "finishedAt": "2026-09-12T13:41:01.321Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-133823.png",
+      "takenAt": "2026-09-12T13:38:27.436Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-134057.png",
+      "takenAt": "2026-09-12T13:41:01.320Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

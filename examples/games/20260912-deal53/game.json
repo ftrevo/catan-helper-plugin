@@ -1,0 +1,46 @@
+{
+  "roomCode": "deal53",
+  "url": "https://colonist.io/#deal53",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:44:51.190Z",
+  "finishedAt": "2026-09-12T14:47:44.666Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-144507.png",
+      "takenAt": "2026-09-12T14:45:10.821Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-144740.png",
+      "takenAt": "2026-09-12T14:47:44.665Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

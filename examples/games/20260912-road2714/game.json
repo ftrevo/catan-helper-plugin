@@ -1,0 +1,46 @@
+{
+  "roomCode": "road2714",
+  "url": "https://colonist.io/#road2714",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:10:22.171Z",
+  "finishedAt": "2026-09-12T14:13:15.738Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-141037.png",
+      "takenAt": "2026-09-12T14:10:41.861Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-141311.png",
+      "takenAt": "2026-09-12T14:13:15.738Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 19,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

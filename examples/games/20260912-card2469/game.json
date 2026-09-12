@@ -1,0 +1,40 @@
+{
+  "roomCode": "card2469",
+  "url": "https://colonist.io/#card2469",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:53:45.667Z",
+  "finishedAt": "2026-09-12T12:56:39.186Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-125401.png",
+      "takenAt": "2026-09-12T12:54:05.319Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 0,
+      "roads": 0,
+      "colours": []
+    },
+    {
+      "file": "02-125635.png",
+      "takenAt": "2026-09-12T12:56:39.186Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 4,
+      "roads": 4,
+      "colours": [
+        "red",
+        "black",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

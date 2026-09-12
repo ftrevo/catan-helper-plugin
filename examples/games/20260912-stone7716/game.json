@@ -1,0 +1,46 @@
+{
+  "roomCode": "stone7716",
+  "url": "https://colonist.io/#stone7716",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:07:38.016Z",
+  "finishedAt": "2026-09-12T13:10:31.564Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-130753.png",
+      "takenAt": "2026-09-12T13:07:57.699Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 7,
+      "colours": [
+        "green",
+        "blue",
+        "red",
+        "white"
+      ]
+    },
+    {
+      "file": "02-131027.png",
+      "takenAt": "2026-09-12T13:10:31.564Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "green",
+        "blue",
+        "red",
+        "white"
+      ]
+    }
+  ],
+  "notes": []
+}

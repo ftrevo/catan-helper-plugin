@@ -1,0 +1,46 @@
+{
+  "roomCode": "red7636",
+  "url": "https://colonist.io/#red7636",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:02:56.282Z",
+  "finishedAt": "2026-09-12T14:05:49.952Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-140312.png",
+      "takenAt": "2026-09-12T14:03:15.947Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "white",
+        "red",
+        "black",
+        "green"
+      ]
+    },
+    {
+      "file": "02-140545.png",
+      "takenAt": "2026-09-12T14:05:49.952Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "white",
+        "red",
+        "black",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

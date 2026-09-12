@@ -1,0 +1,46 @@
+{
+  "roomCode": "ore996",
+  "url": "https://colonist.io/#ore996",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:51:24.034Z",
+  "finishedAt": "2026-09-12T14:54:17.520Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-145139.png",
+      "takenAt": "2026-09-12T14:51:43.661Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "black",
+        "red",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-145413.png",
+      "takenAt": "2026-09-12T14:54:17.520Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 13,
+      "colours": [
+        "black",
+        "red",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

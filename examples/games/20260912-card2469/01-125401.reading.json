@@ -1,0 +1,198 @@
+{
+  "ok": true,
+  "capture": {
+    "file": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260912-card2469/01-125401.png",
+    "width": 1600,
+    "height": 900
+  },
+  "modelSet": "v2-synthetic",
+  "location": {
+    "center": {
+      "x": 619.5761466568888,
+      "y": 425.57770614791764
+    },
+    "spacing": 114.7665497992769,
+    "tokensFound": 18,
+    "extraTokens": 0
+  },
+  "board": [
+    {
+      "position": 0,
+      "resource": "wool",
+      "number": "10",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 1,
+      "resource": "desert",
+      "number": "7",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999998807907104
+      }
+    },
+    {
+      "position": 2,
+      "resource": "grain",
+      "number": "8",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 3,
+      "resource": "stone",
+      "number": "9",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 4,
+      "resource": "lumber",
+      "number": "5",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 5,
+      "resource": "stone",
+      "number": "4",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999997615814209
+      }
+    },
+    {
+      "position": 6,
+      "resource": "grain",
+      "number": "3",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 7,
+      "resource": "brick",
+      "number": "12",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 8,
+      "resource": "grain",
+      "number": "6",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 9,
+      "resource": "lumber",
+      "number": "11",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999997615814209
+      }
+    },
+    {
+      "position": 10,
+      "resource": "wool",
+      "number": "9",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 11,
+      "resource": "lumber",
+      "number": "6",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 12,
+      "resource": "grain",
+      "number": "11",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999997615814209
+      }
+    },
+    {
+      "position": 13,
+      "resource": "brick",
+      "number": "3",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 14,
+      "resource": "stone",
+      "number": "10",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 15,
+      "resource": "brick",
+      "number": "2",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 16,
+      "resource": "lumber",
+      "number": "4",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999998807907104
+      }
+    },
+    {
+      "position": 17,
+      "resource": "wool",
+      "number": "8",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 18,
+      "resource": "wool",
+      "number": "5",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    }
+  ],
+  "pieces": {
+    "buildings": [],
+    "roads": []
+  },
+  "players": [],
+  "durationMs": 1211,
+  "readAt": "2026-09-12T12:54:05.299Z"
+}
