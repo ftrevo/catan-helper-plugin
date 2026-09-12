@@ -41,8 +41,6 @@
   --radius: 12px;
   --radius-sm: 8px;
   --popup-width: 412px;
-  --hex-w: 74px;
-  --hex-h: calc(var(--hex-w) * 1.1547);
 }
 
 @media (prefers-color-scheme: dark) {
