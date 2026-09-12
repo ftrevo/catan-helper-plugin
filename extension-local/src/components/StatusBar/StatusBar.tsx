@@ -1,24 +1,16 @@
-import { type ReactNode } from 'react'
 import './StatusBar.css'
 
 type StatusBarProps = {
-  /** Left slot: settings such as the model picker. */
-  children: ReactNode
   capturedAt: number | undefined
-  modelSet: string | undefined
 }
 
 const formatTime = (epochMs: number) =>
   new Date(epochMs).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })
 
-export const StatusBar = ({ children, capturedAt, modelSet }: StatusBarProps) => (
-  <footer className="statusbar">
-    {children}
-    {capturedAt !== undefined && (
-      <span className="statusbar-note">
-        Captured {formatTime(capturedAt)}
-        {modelSet ? ` · ${modelSet}` : ''}
-      </span>
-    )}
-  </footer>
-)
+/** Footer with the time of the last capture; hidden until a board has been read. */
+export const StatusBar = ({ capturedAt }: StatusBarProps) =>
+  capturedAt === undefined ? null : (
+    <footer className="statusbar">
+      <span className="statusbar-note">Captured {formatTime(capturedAt)}</span>
+    </footer>
+  )

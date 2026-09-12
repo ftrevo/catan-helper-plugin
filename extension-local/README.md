@@ -72,7 +72,6 @@ src/
 │   ├── screenshot.ts      chrome.tabs.captureVisibleTab with the colonist.io check.
 │   ├── decodeImage.ts     data URL / URL → RgbaImage via ImageBitmap + OffscreenCanvas.
 │   ├── analysisStore.ts   last reading in chrome.storage.session (memory fallback in dev).
-│   ├── settingsStore.ts   user preferences (chosen model set) in chrome.storage.local.
 │   └── runtime.ts         extension vs dev-server detection, asset URLs.
 ├── components/         Presentational React components, one folder each with its CSS.
 │   ├── Header, StatusBar  Frame of the popup: brand + capture button, model picker + capture time.
@@ -81,14 +80,14 @@ src/
 │   ├── Legend             Vertex value bands.
 │   ├── Statistics         Resources ranked rarest first with pips, numbers and share bars.
 │   ├── Welcome, Notice    Empty/loading state and error or warning banners.
-│   └── ModelPicker, Icons
+│   └── Icons
 └── mocks/              Dev-server stand-ins (fixture screenshot).
 public/
 ├── manifest.json       MV3 manifest. Permissions: activeTab (capture + URL of the current tab), storage.
 │                       Also declares the Cmd/Ctrl+Shift+Y shortcut that opens the popup.
 ├── models/             One folder per model set, each with resources/, numbers/ and a manifest.json.
-│   ├── v1/                The 2025 models trained on screenshots (from ../back-new/models).
 │   └── v2-synthetic/      Trained in ../training on synthetic boards built from the game artwork.
+│                          (The 2025 screenshot-trained v1 set lives in git history, feat/extension-local.)
 └── icons/
 test/
 ├── boardLocator.spec.ts     Locates the board in every fixture screenshot.
@@ -132,9 +131,8 @@ page opens the real popup and the capture flow can be driven end to end.
 
 ### Model sets
 
-Several model sets ship side by side so they can be compared on real games. The popup has a picker in its
-footer, the choice is remembered, and each reading records which set produced it. `src/vision/modelSets.ts`
-lists the sets and the default.
+One model set ships, `v2-synthetic`, listed in `src/vision/modelSets.ts` together with the default. The
+registry remains so a candidate set can be added next to it and scored on the fixtures before replacing it.
 
 To add a set: train it in `../training` (or copy `model.json` + `weights.bin` pairs into
 `public/models/<id>/{resources,numbers}/` with a `manifest.json`), register it in `modelSets.ts`, and run
