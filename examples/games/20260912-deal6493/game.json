@@ -1,0 +1,44 @@
+{
+  "roomCode": "deal6493",
+  "url": "https://colonist.io/#deal6493",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:06:13.291Z",
+  "finishedAt": "2026-09-12T19:09:06.908Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-190629.png",
+      "takenAt": "2026-09-12T19:06:32.862Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-190902.png",
+      "takenAt": "2026-09-12T19:09:06.908Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

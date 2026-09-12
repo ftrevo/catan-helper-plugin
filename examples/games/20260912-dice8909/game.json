@@ -1,0 +1,46 @@
+{
+  "roomCode": "dice8909",
+  "url": "https://colonist.io/#dice8909",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:49:02.949Z",
+  "finishedAt": "2026-09-12T17:51:56.665Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-174918.png",
+      "takenAt": "2026-09-12T17:49:22.703Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 30,
+      "roads": 32,
+      "colours": [
+        "green",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-175152.png",
+      "takenAt": "2026-09-12T17:51:56.664Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 31,
+      "roads": 34,
+      "colours": [
+        "green",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

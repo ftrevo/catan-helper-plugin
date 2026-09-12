@@ -1,0 +1,47 @@
+{
+  "roomCode": "sail9558",
+  "url": "https://colonist.io/#sail9558",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:39:27.692Z",
+  "finishedAt": "2026-09-12T18:42:21.212Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-183943.png",
+      "takenAt": "2026-09-12T18:39:47.355Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 10,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-184217.png",
+      "takenAt": "2026-09-12T18:42:21.212Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "ore1015",
+  "url": "https://colonist.io/#ore1015",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:45:32.110Z",
+  "finishedAt": "2026-09-12T17:46:28.933Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-174547.png",
+      "takenAt": "2026-09-12T17:45:52.121Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 14,
+      "colours": [
+        "orange",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-174625.png",
+      "takenAt": "2026-09-12T17:46:28.933Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 15,
+      "colours": [
+        "orange",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

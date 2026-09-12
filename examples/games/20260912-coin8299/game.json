@@ -1,0 +1,46 @@
+{
+  "roomCode": "coin8299",
+  "url": "https://colonist.io/#coin8299",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:55:06.626Z",
+  "finishedAt": "2026-09-12T17:58:00.177Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-175522.png",
+      "takenAt": "2026-09-12T17:55:26.305Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 16,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-175756.png",
+      "takenAt": "2026-09-12T17:58:00.176Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 16,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

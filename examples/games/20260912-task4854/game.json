@@ -1,0 +1,46 @@
+{
+  "roomCode": "task4854",
+  "url": "https://colonist.io/#task4854",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:00:03.996Z",
+  "finishedAt": "2026-09-12T19:02:57.504Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-190019.png",
+      "takenAt": "2026-09-12T19:00:23.653Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 16,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-190253.png",
+      "takenAt": "2026-09-12T19:02:57.504Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

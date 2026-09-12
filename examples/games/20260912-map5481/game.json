@@ -1,0 +1,46 @@
+{
+  "roomCode": "map5481",
+  "url": "https://colonist.io/#map5481",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:01:09.874Z",
+  "finishedAt": "2026-09-12T18:04:03.443Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-180125.png",
+      "takenAt": "2026-09-12T18:01:29.579Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 17,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-180359.png",
+      "takenAt": "2026-09-12T18:04:03.443Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 21,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

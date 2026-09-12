@@ -1,0 +1,46 @@
+{
+  "roomCode": "city1417",
+  "url": "https://colonist.io/#city1417",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:39:13.103Z",
+  "finishedAt": "2026-09-12T17:42:06.619Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-173928.png",
+      "takenAt": "2026-09-12T17:39:32.747Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "green",
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-174202.png",
+      "takenAt": "2026-09-12T17:42:06.619Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "green",
+        "blue",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

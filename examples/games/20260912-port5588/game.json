@@ -1,0 +1,46 @@
+{
+  "roomCode": "port5588",
+  "url": "https://colonist.io/#port5588",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:18:19.541Z",
+  "finishedAt": "2026-09-12T19:21:13.061Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-191835.png",
+      "takenAt": "2026-09-12T19:18:39.203Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-192109.png",
+      "takenAt": "2026-09-12T19:21:13.061Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

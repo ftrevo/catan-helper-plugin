@@ -1,0 +1,46 @@
+{
+  "roomCode": "ship8181",
+  "url": "https://colonist.io/#ship8181",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:54:36.995Z",
+  "finishedAt": "2026-09-12T19:57:30.412Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-195452.png",
+      "takenAt": "2026-09-12T19:54:56.572Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-195726.png",
+      "takenAt": "2026-09-12T19:57:30.412Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

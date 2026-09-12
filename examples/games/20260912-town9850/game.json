@@ -1,0 +1,46 @@
+{
+  "roomCode": "town9850",
+  "url": "https://colonist.io/#town9850",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:30:10.390Z",
+  "finishedAt": "2026-09-12T18:33:03.965Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-183026.png",
+      "takenAt": "2026-09-12T18:30:30.063Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 20,
+      "colours": [
+        "pink",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-183300.png",
+      "takenAt": "2026-09-12T18:33:03.965Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 22,
+      "colours": [
+        "pink",
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

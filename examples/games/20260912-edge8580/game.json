@@ -1,0 +1,46 @@
+{
+  "roomCode": "edge8580",
+  "url": "https://colonist.io/#edge8580",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:13:16.880Z",
+  "finishedAt": "2026-09-12T18:16:10.551Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-181332.png",
+      "takenAt": "2026-09-12T18:13:36.481Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-181606.png",
+      "takenAt": "2026-09-12T18:16:10.551Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 16,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

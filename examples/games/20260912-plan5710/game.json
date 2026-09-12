@@ -1,0 +1,48 @@
+{
+  "roomCode": "plan5710",
+  "url": "https://colonist.io/#plan5710",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:45:36.807Z",
+  "finishedAt": "2026-09-12T18:47:33.207Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-184552.png",
+      "takenAt": "2026-09-12T18:45:56.430Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 22,
+      "colours": [
+        "red",
+        "black",
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-184729.png",
+      "takenAt": "2026-09-12T18:47:33.206Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 23,
+      "colours": [
+        "red",
+        "black",
+        "green",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

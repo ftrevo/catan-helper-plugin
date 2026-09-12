@@ -1,0 +1,16 @@
+{
+  "roomCode": "hand4271",
+  "url": "https://colonist.io/#hand4271",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:09:54.982Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [],
+  "notes": []
+}

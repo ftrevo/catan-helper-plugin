@@ -1,0 +1,46 @@
+{
+  "roomCode": "play2434",
+  "url": "https://colonist.io/#play2434",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:47:56.828Z",
+  "finishedAt": "2026-09-12T18:50:50.554Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-184812.png",
+      "takenAt": "2026-09-12T18:48:16.688Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 19,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-185046.png",
+      "takenAt": "2026-09-12T18:50:50.553Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 22,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}
