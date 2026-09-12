@@ -12,6 +12,11 @@ import { type Point, type RgbaImage } from './pixels'
 export type LocatedBoard = BoardGeometry & {
   /** How many of the 18 tokens (the desert has none) matched the fitted lattice. */
   readonly tokensFound: number
+  /**
+   * Token-sized discs near the board that are not on any of the 19 slots. A standard board has none or
+   * one (a knight badge); larger maps show many, since only part of them fits the lattice.
+   */
+  readonly extraTokens: number
 }
 
 type Blob = {
@@ -222,6 +227,15 @@ export const locateBoard = (image: RgbaImage): LocatedBoard => {
   const refined = refine(best.fit)
   // Re-match with the refined geometry: the desert or a covered token may now be resolved correctly.
   const finalFit = matchLattice(best.tokens, refined)
+  const geometry = refine(finalFit)
 
-  return { ...refine(finalFit), tokensFound: Math.min(finalFit.matches.length, MAX_TOKENS) }
+  const matched = new Set(finalFit.matches.map((m) => m.token))
+  const extraTokens = best.tokens.filter(
+    (t) =>
+      !matched.has(t) &&
+      distance(t, geometry.center) < geometry.spacing * 4 &&
+      distance(t, geometry.center) > geometry.spacing * 0.5
+  ).length
+
+  return { ...geometry, tokensFound: Math.min(finalFit.matches.length, MAX_TOKENS), extraTokens }
 }

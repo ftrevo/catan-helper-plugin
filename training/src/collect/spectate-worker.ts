@@ -23,6 +23,8 @@ const FIRST_CAPTURE_RETRY_MS = 12_000
  * fits the grid from 12 tokens; this keeps a margin so the tile reading stays trustworthy.
  */
 const MIN_TOKENS = 15
+/** More stray token-like discs than this means a larger map only partly fitted the lattice. */
+const MAX_EXTRA_TOKENS = 2
 
 const { values } = parseArgs({
   options: {
@@ -155,7 +157,7 @@ const readCapture = (png: string, json: string) => {
   return JSON.parse(readFileSync(json, 'utf8')) as {
     ok: boolean
     reason?: string
-    location?: { tokensFound: number; spacing: number }
+    location?: { tokensFound: number; spacing: number; extraTokens: number }
     pieces?: { buildings: { colour: string }[]; roads: { colour: string }[] }
   }
 }
@@ -283,7 +285,9 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
       writeFileSync(json, JSON.stringify(reading, null, 2) + '\n')
     }
     const tokens = reading.location?.tokensFound ?? 0
-    const standard = reading.ok && tokens >= MIN_TOKENS
+    const extra = reading.location?.extraTokens ?? 0
+    // The list can shuffle between parsing and clicking, so verify the map geometrically as well.
+    const standard = reading.ok && tokens >= MIN_TOKENS && extra <= MAX_EXTRA_TOKENS
     const colours = [
       ...new Set([...(reading.pieces?.buildings ?? []), ...(reading.pieces?.roads ?? [])].map((p) => p.colour)),
     ]
@@ -295,7 +299,13 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
       buildings: reading.pieces?.buildings.length ?? 0,
       roads: reading.pieces?.roads.length ?? 0,
       colours,
-      ...(standard ? {} : { reason: reading.reason ?? `only ${tokens} tokens` }),
+      ...(standard
+        ? {}
+        : {
+            reason:
+              reading.reason ??
+              (extra > MAX_EXTRA_TOKENS ? `${extra} stray tokens: not the base map` : `only ${tokens} tokens`),
+          }),
     })
     save()
     log(

@@ -35,7 +35,13 @@ export const App = ({ analyzer, analysisStore }: AppProps) => {
     if (!reading) return []
     const found = reading.location.tokensFound
     const partial = found < EXPECTED_TOKENS ? [`Only ${found} of ${EXPECTED_TOKENS} number tokens were found.`] : []
-    return [...partial, ...boardWarnings(reading.board)]
+    const stray =
+      reading.location.extraTokens > 1
+        ? [
+            `${reading.location.extraTokens} tokens lie outside the standard board; this does not look like the base map.`,
+          ]
+        : []
+    return [...partial, ...stray, ...boardWarnings(reading.board)]
   }, [reading])
   const factors = useMemo(() => {
     if (!board || weighting === 'sum') return undefined

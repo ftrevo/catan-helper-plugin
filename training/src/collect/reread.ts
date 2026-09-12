@@ -50,11 +50,11 @@ for (const root of dirs) {
       const reading = JSON.parse(readFileSync(json, 'utf8')) as {
         ok: boolean
         reason?: string
-        location?: { tokensFound: number }
+        location?: { tokensFound: number; extraTokens?: number }
         pieces?: { buildings: { colour: string; kind: string }[]; roads: { colour: string }[] }
       }
       const tokens = reading.location?.tokensFound ?? 0
-      capture.ok = reading.ok && tokens >= 15
+      capture.ok = reading.ok && tokens >= 15 && (reading.location?.extraTokens ?? 0) <= 2
       capture.tokens = tokens
       capture.buildings = reading.pieces?.buildings.length ?? 0
       capture.roads = reading.pieces?.roads.length ?? 0
