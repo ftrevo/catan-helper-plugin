@@ -24,6 +24,10 @@ export const resourceStatistics = (board: Board): Map<Resource, ResourceStatisti
   return stats
 }
 
+/** Producing pips actually present on the board; 58 on a correctly read standard board. */
+export const totalProducingPips = (board: Board): number =>
+  board.tiles.reduce((sum, tile) => sum + (tile.resource === 'desert' ? 0 : producingPipsOf(tile.number)), 0)
+
 /**
  * How much rarer than average each resource is on this board. A factor above 1 means the resource
  * has fewer pips than an average resource, so each of its pips is worth more.

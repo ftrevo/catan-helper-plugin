@@ -1,4 +1,11 @@
-import { type Board, type Resource, TOTAL_PIPS, resourceStatistics, roundPercentage } from '../../domain'
+import {
+  type Board,
+  type Resource,
+  TOTAL_PIPS,
+  resourceStatistics,
+  roundPercentage,
+  totalProducingPips,
+} from '../../domain'
 import './Statistics.css'
 
 const EMOJI: Record<Exclude<Resource, 'desert'>, string> = {
@@ -28,16 +35,21 @@ export const Statistics = ({ board }: StatisticsProps) => {
     .sort((a, b) => a[1].pipSum - b[1].pipSum)
   const maxPips = Math.max(...entries.map(([, s]) => s.pipSum), 1)
   const rarest = entries[0]
+  // Shares are taken from what was actually read, so a misread tile shows up as an unusual total.
+  const totalPips = totalProducingPips(board)
 
   return (
     <section className="stats">
       <header className="stats-header">
         <span className="stats-title">Production by resource</span>
-        <span className="stats-subtitle">{TOTAL_PIPS} pips on the board · rarest first</span>
+        <span className="stats-subtitle">
+          {totalPips} pips on the board{totalPips !== TOTAL_PIPS ? ` (standard boards have ${TOTAL_PIPS})` : ''} ·
+          rarest first
+        </span>
       </header>
       <ol className="stats-list">
         {entries.map(([resource, { pipSum, tileCount, numbers }]) => {
-          const share = roundPercentage((pipSum / TOTAL_PIPS) * 100)
+          const share = totalPips === 0 ? 0 : roundPercentage((pipSum / totalPips) * 100)
           const scarcity = rarest ? pipSum / rarest[1].pipSum : 1
           return (
             <li className="stats-row" key={resource}>

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { createBoard } from './board'
-import { resourceStatistics, scarcityFactors } from './statistics'
+import { resourceStatistics, scarcityFactors, totalProducingPips } from './statistics'
 import { SAMPLE_BOARD } from '../../test/fixtures'
 
 const board = createBoard(SAMPLE_BOARD.resources, SAMPLE_BOARD.numbers)
@@ -20,6 +20,13 @@ describe('resourceStatistics', () => {
   test('all producing pips add up to the standard 58', () => {
     const total = [...resourceStatistics(board).values()].reduce((sum, s) => sum + s.pipSum, 0)
     expect(total).toBe(58)
+    expect(totalProducingPips(board)).toBe(58)
+  })
+
+  test('total follows the board, not the constant, when a tile is misread', () => {
+    const numbers = [...SAMPLE_BOARD.numbers]
+    numbers[0] = '2' // an 8 (5 pips) read as a 2 (1 pip)
+    expect(totalProducingPips(createBoard(SAMPLE_BOARD.resources, numbers))).toBe(54)
   })
 })
 
