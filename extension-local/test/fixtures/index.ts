@@ -36,3 +36,8 @@ export const FIXTURES: readonly Fixture[] = [
 export const LOCATOR_ONLY_FIXTURES = [
   { name: 'Cities & Knights spectated game, 1600x900 @1x', file: 'test/fixtures/colonist-board-4-ck.png', spacing: 115, minTokens: 16 },
 ]
+
+/** A large custom island, listed as a base game by mistake: part of it fits the lattice, the rest gives it away. */
+export const NON_STANDARD_FIXTURES = [
+  { name: 'custom island map, 1600x900 @1x', file: 'test/fixtures/colonist-board-5-custom-map.png' },
+]
