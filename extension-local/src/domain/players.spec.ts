@@ -55,3 +55,26 @@ describe('playerStatistics', () => {
     expect(blue?.visiblePoints).toBe(2)
   })
 })
+
+describe('Cities & Knights pieces', () => {
+  test('a metropolis is worth four points and yields like a city; knights yield nothing and do not block roads', () => {
+    const pieces: Pieces = {
+      buildings: [
+        { vertex: 30, kind: 'metropolis', colour: 'blue' },
+        { vertex: 4, kind: 'knight', colour: 'blue' },
+      ],
+      roads: [
+        { edge: edgeIdOf(0, 4), colour: 'red' },
+        { edge: edgeIdOf(4, 8), colour: 'red' },
+      ],
+    }
+    const stats = playerStatistics(board, pieces)
+    const blue = stats.find((p) => p.colour === 'blue')
+    expect(blue?.visiblePoints).toBe(4)
+    expect(blue?.cities).toBe(1)
+    expect(blue?.metropolises).toBe(1)
+    expect(blue?.knights).toBe(1)
+    expect(blue?.production.get('lumber')).toBe((2 + 3) * 2)
+    expect(longestRoad(pieces, 'red')).toBe(2)
+  })
+})

@@ -3,7 +3,7 @@
  * runtime (imported from the extension source), so training and inference never drift apart.
  */
 import { type Pieces } from '../../extension-local/src/domain/pieces.ts'
-import { BUILDING_LABELS, ROAD_LABELS } from '../../extension-local/src/vision/labels.ts'
+import { BUILDING_KIND_LABELS, COLOUR_LABELS, ROAD_LABELS } from '../../extension-local/src/vision/labels.ts'
 import {
   BUILDING_PATCH,
   type BoardGeometry,
@@ -44,6 +44,8 @@ export const cropTiles = (image: RgbaImage, geometry: BoardGeometry, jitter: num
 }
 
 export type LabelledPatches = { images: RgbaImage[]; labels: number[] }
+/** Vertex patches carry two labels: what stands there and, for occupied corners, whose colour it is (-1 when empty). */
+export type VertexPatches = { images: RgbaImage[]; kinds: number[]; colours: number[] }
 
 const cropPatch = (
   image: RgbaImage,
@@ -69,17 +71,17 @@ export const cropPiecePatches = (
   pieces: Pieces,
   jitter: number,
   random?: Random
-): { buildings: LabelledPatches; roads: LabelledPatches } => {
-  const buildings: LabelledPatches = { images: [], labels: [] }
+): { buildings: VertexPatches; roads: LabelledPatches } => {
+  const buildings: VertexPatches = { images: [], kinds: [], colours: [] }
   const roads: LabelledPatches = { images: [], labels: [] }
 
   vertexCenters(geometry).forEach((c, vertex) => {
     const patch = cropPatch(image, c, BUILDING_PATCH, jitter, geometry.spacing, random)
     if (!patch) return
     const piece = pieces.buildings.find((b) => b.vertex === vertex)
-    const label = piece ? `${piece.kind}_${piece.colour}` : 'none'
     buildings.images.push(patch)
-    buildings.labels.push((BUILDING_LABELS as readonly string[]).indexOf(label))
+    buildings.kinds.push((BUILDING_KIND_LABELS as readonly string[]).indexOf(piece?.kind ?? 'none'))
+    buildings.colours.push(piece ? (COLOUR_LABELS as readonly string[]).indexOf(piece.colour) : -1)
   })
 
   edgeCenters(geometry).forEach((c, edge) => {

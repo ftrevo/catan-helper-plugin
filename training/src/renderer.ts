@@ -31,6 +31,20 @@ const SAND = 'rgb(236, 218, 170)'
 /** UI-layer sprites are not drawn at tile scale by the game; these are their sizes in spacings. */
 const HIGHLIGHT_DIAMETER = 0.3
 const ROBBER_HEIGHT = 0.45
+/** Cities & Knights knight badges, measured on a spectated game: about a third of a spacing across. */
+const KNIGHT_DIAMETER = 0.35
+
+/**
+ * Mix of vertex pieces in a mid-game board; knights only exist in Cities & Knights. Metropolises are not
+ * rendered yet: the game's exact drawing is unknown and a guessed tower made real settlements look like
+ * metropolises to the model. The class stays in the labels so it can be trained once a reference exists.
+ */
+const VERTEX_PIECE_KINDS = [
+  ['settlement', 0.55],
+  ['city', 0.3],
+  ['metropolis', 0],
+  ['knight', 0.15],
+] as const
 
 /**
  * Full tile renders (background, border and artwork) cut from a large capture of the game with
@@ -203,8 +217,28 @@ export const renderBoard = (
     }
     if (colours.length === 0 || !random.chance(pieceDensity)) return
     const colour = random.pick(colours)
-    const kind = random.chance(0.3) ? 'city' : 'settlement'
-    drawSprite(ctx, atlas.get(`${kind}_${colour}`), v.x, v.y, scale)
+    const kind = pickKind(random)
+    if (kind === 'knight') {
+      const level = random.pick([1, 2, 3])
+      const state = random.chance(0.6) ? 'active' : 'inactive'
+      const knight = atlas.get(`knight_level${level}_${state}_${colour}`)
+      drawSprite(ctx, knight, v.x, v.y, (KNIGHT_DIAMETER * spacing) / knight.sourceSize.w)
+    } else {
+      // Cities may carry a wall (drawn underneath); a metropolis is a city with a tower on top.
+      if (kind !== 'settlement' && random.chance(0.35) && atlas.has(`city_wall_${colour}`)) {
+        drawSprite(ctx, atlas.get(`city_wall_${colour}`), v.x, v.y + 0.04 * spacing, scale)
+      }
+      drawSprite(ctx, atlas.get(`${kind === 'metropolis' ? 'city' : kind}_${colour}`), v.x, v.y, scale)
+      if (kind === 'metropolis') {
+        drawSprite(
+          ctx,
+          atlas.get(`metropolis_${random.pick(['politics', 'science', 'trade'])}`),
+          v.x,
+          v.y - 0.06 * spacing,
+          scale
+        )
+      }
+    }
     buildings.push({ vertex, kind, colour })
   })
 
@@ -224,6 +258,15 @@ const fillHex = (ctx: SKRSContext2D, c: Point, width: number): void => {
   })
   ctx.closePath()
   ctx.fill()
+}
+
+const pickKind = (random: Random): (typeof VERTEX_PIECE_KINDS)[number][0] => {
+  let roll = random.next()
+  for (const [kind, weight] of VERTEX_PIECE_KINDS) {
+    roll -= weight
+    if (roll <= 0) return kind
+  }
+  return 'settlement'
 }
 
 const shuffle = <T>(random: Random, items: readonly T[]): T[] => {

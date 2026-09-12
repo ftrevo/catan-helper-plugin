@@ -90,6 +90,7 @@ try {
   const paths = pieceModelPaths()
   const pieceReader = await createPieceReader({
     buildings: await nodeModelSource(`public/${paths.buildings}`),
+    colours: await nodeModelSource(`public/${paths.colours}`),
     roads: await nodeModelSource(`public/${paths.roads}`),
   })
   console.log('\npieces')

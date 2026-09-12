@@ -1,9 +1,9 @@
 {
   "name": "pieces-v1",
-  "trainedAt": "2026-09-12T03:25:28.746Z",
+  "trainedAt": "2026-09-12T04:35:35.486Z",
   "architecture": "deep",
-  "boards": 300,
-  "epochs": 10,
+  "boards": 600,
+  "epochs": 8,
   "patches": {
     "buildings": {
       "region": 0.42,
@@ -17,30 +17,24 @@
   "labels": {
     "buildings": [
       "none",
-      "settlement_red",
-      "settlement_blue",
-      "settlement_orange",
-      "settlement_green",
-      "settlement_white",
-      "settlement_black",
-      "settlement_pink",
-      "settlement_purple",
-      "settlement_bronze",
-      "settlement_silver",
-      "settlement_gold",
-      "settlement_mysticblue",
-      "city_red",
-      "city_blue",
-      "city_orange",
-      "city_green",
-      "city_white",
-      "city_black",
-      "city_pink",
-      "city_purple",
-      "city_bronze",
-      "city_silver",
-      "city_gold",
-      "city_mysticblue"
+      "settlement",
+      "city",
+      "metropolis",
+      "knight"
+    ],
+    "colours": [
+      "red",
+      "blue",
+      "orange",
+      "green",
+      "white",
+      "black",
+      "pink",
+      "purple",
+      "bronze",
+      "silver",
+      "gold",
+      "mysticblue"
     ],
     "roads": [
       "none",

@@ -106,13 +106,16 @@ scripts/
 
 ### Pieces and players
 
-Two more classifiers read the pieces: one looks at a square patch around each of the 54 vertices
-(empty, or a settlement / city in one of colonist.io's twelve colours), the other at each of the 72 edge
-midpoints (empty, or a road in a colour). Patches are cut with the same geometry the training renderer
+Three more classifiers read the pieces. A square patch around each of the 54 vertices is classified by
+kind (empty, settlement, city, metropolis, knight) and, when occupied, by colour (colonist.io's twelve);
+each of the 72 edge midpoints is classified as empty or a road in a colour. Knights and city walls come
+from Cities & Knights; the metropolis class is declared but not trained yet, since the game's drawing of it
+has not been captured. Patches are cut with the same geometry the training renderer
 uses, so the synthetic pieces line up with real captures. Detected pieces are drawn on the board, and the
 Players tab derives per-colour statistics: settlements, cities, roads, expected production per resource
 (cities count twice), longest road and the points visible on the board. Cards are hidden, so real scores
-can be higher. The piece models live in `public/models/pieces-v1` and are shared by every tile model set.
+can be higher. The piece models live in `public/models/pieces-v1` (`buildings` for kinds, `colours`, `roads`) and are
+shared by every tile model set.
 
 ### Vertex weightings
 

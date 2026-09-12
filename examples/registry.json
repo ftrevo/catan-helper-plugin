@@ -1,14 +1,20 @@
 {
   "target": 100,
   "claims": {
-    "farm5375": {
-      "roomCode": "farm5375",
+    "256411788": {
+      "roomCode": "256411788",
       "agent": "w1",
-      "status": "rejected",
-      "claimedAt": "2026-09-12T03:59:52.868Z",
-      "heartbeatAt": "2026-09-12T03:59:52.868Z",
-      "reason": "Could not find the Catan board in the screenshot (only 7 token-like shapes found)",
-      "finishedAt": "2026-09-12T04:00:10.701Z"
+      "status": "done",
+      "claimedAt": "2026-09-12T04:10:53.678Z",
+      "heartbeatAt": "2026-09-12T04:10:53.678Z",
+      "finishedAt": "2026-09-12T04:12:02.708Z",
+      "captures": 1,
+      "colours": [
+        "black",
+        "blue"
+      ],
+      "buildings": 4,
+      "roads": 4
     },
     "catan8396": {
       "roomCode": "catan8396",
@@ -19,19 +25,10 @@
       "reason": "tokens 14",
       "finishedAt": "2026-09-12T04:01:56.014Z"
     },
-    "army4004": {
-      "roomCode": "army4004",
-      "agent": "w1",
-      "status": "rejected",
-      "claimedAt": "2026-09-12T04:04:17.160Z",
-      "heartbeatAt": "2026-09-12T04:04:17.160Z",
-      "reason": "Could not find the Catan board in the screenshot (only 7 token-like shapes found)",
-      "finishedAt": "2026-09-12T04:05:18.204Z"
-    },
     "area2419": {
       "roomCode": "area2419",
       "agent": "w1",
-      "status": "done",
+      "status": "rejected",
       "claimedAt": "2026-09-12T04:06:23.864Z",
       "heartbeatAt": "2026-09-12T04:07:28.309Z",
       "captures": 2,
@@ -43,7 +40,116 @@
       ],
       "buildings": 8,
       "roads": 10,
-      "finishedAt": "2026-09-12T04:07:32.050Z"
+      "finishedAt": "2026-09-12T04:07:32.050Z",
+      "reason": "mode Colonist Rush excluded after policy change"
+    },
+    "loot8435": {
+      "roomCode": "loot8435",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:09:23.152Z",
+      "heartbeatAt": "2026-09-12T04:10:42.644Z",
+      "captures": 1,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ],
+      "buildings": 14,
+      "roads": 19,
+      "finishedAt": "2026-09-12T04:10:45.316Z"
+    },
+    "win6276": {
+      "roomCode": "win6276",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:16:19.520Z",
+      "heartbeatAt": "2026-09-12T04:19:09.133Z",
+      "captures": 1,
+      "colours": [
+        "white",
+        "black",
+        "red",
+        "blue",
+        "bronze"
+      ],
+      "buildings": 7,
+      "roads": 8,
+      "finishedAt": "2026-09-12T04:19:12.071Z"
+    },
+    "king6295": {
+      "roomCode": "king6295",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:23:56.690Z",
+      "heartbeatAt": "2026-09-12T04:26:46.327Z",
+      "captures": 2,
+      "colours": [],
+      "buildings": 0,
+      "roads": 0,
+      "finishedAt": "2026-09-12T04:26:50.455Z"
+    },
+    "pact8981": {
+      "roomCode": "pact8981",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:26:58.846Z",
+      "heartbeatAt": "2026-09-12T04:29:49.148Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "black"
+      ],
+      "buildings": 8,
+      "roads": 14,
+      "finishedAt": "2026-09-12T04:29:53.103Z"
+    },
+    "gangshit": {
+      "roomCode": "gangshit",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:30:01.210Z",
+      "heartbeatAt": "2026-09-12T04:32:51.147Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange",
+        "purple"
+      ],
+      "buildings": 16,
+      "roads": 38,
+      "finishedAt": "2026-09-12T04:32:55.658Z"
+    },
+    "grain5470": {
+      "roomCode": "grain5470",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T04:33:04.478Z",
+      "heartbeatAt": "2026-09-12T04:35:55.101Z",
+      "captures": 2,
+      "colours": [
+        "mysticblue",
+        "red",
+        "blue",
+        "black",
+        "pink",
+        "purple",
+        "green"
+      ],
+      "buildings": 14,
+      "roads": 16,
+      "finishedAt": "2026-09-12T04:35:59.075Z"
+    },
+    "ore9621": {
+      "roomCode": "ore9621",
+      "agent": "w1",
+      "status": "watching",
+      "claimedAt": "2026-09-12T04:36:13.165Z",
+      "heartbeatAt": "2026-09-12T04:37:33.072Z"
     }
   }
 }

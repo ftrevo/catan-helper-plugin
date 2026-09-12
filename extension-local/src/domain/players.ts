@@ -1,13 +1,16 @@
 import { type Board, type Resource } from './board'
 import { EDGES, VERTEX_EDGES } from './edges'
-import { type Pieces, type PlayerColour } from './pieces'
+import { BUILDING_POINTS, BUILDING_YIELD, type Pieces, type PlayerColour } from './pieces'
 import { producingPipsOf } from './probability'
 import { VERTEX_TILES } from './vertices'
 
 export type PlayerStatistics = {
   readonly colour: PlayerColour
   readonly settlements: number
+  /** Cities, metropolises included. */
   readonly cities: number
+  readonly metropolises: number
+  readonly knights: number
   readonly roads: number
   /** Expected resource cards per 36 rolls, per resource: settlements count once, cities twice. */
   readonly production: ReadonlyMap<Resource, number>
@@ -27,7 +30,10 @@ export const LONGEST_ROAD_MINIMUM = 5
 export const longestRoad = (pieces: Pieces, colour: PlayerColour): number => {
   const own = new Set(pieces.roads.filter((r) => r.colour === colour).map((r) => r.edge))
   if (own.size === 0) return 0
-  const blocked = new Set(pieces.buildings.filter((b) => b.colour !== colour).map((b) => b.vertex))
+  // Only buildings break an opponent's road; knights stand on corners without cutting it.
+  const blocked = new Set(
+    pieces.buildings.filter((b) => b.colour !== colour && b.kind !== 'knight').map((b) => b.vertex)
+  )
 
   const walk = (vertex: number, used: Set<number>): number => {
     let best = 0
@@ -66,26 +72,28 @@ export const playerStatistics = (board: Board, pieces: Pieces): PlayerStatistics
       const buildings = pieces.buildings.filter((b) => b.colour === colour)
       const production = new Map<Resource, number>()
       for (const building of buildings) {
-        const weight = building.kind === 'city' ? 2 : 1
+        const weight = BUILDING_YIELD[building.kind]
+        if (weight === 0) continue
         for (const position of VERTEX_TILES[building.vertex] ?? []) {
           const tile = board.tiles[position]
           if (!tile || tile.resource === 'desert') continue
           production.set(tile.resource, (production.get(tile.resource) ?? 0) + producingPipsOf(tile.number) * weight)
         }
       }
-      const settlements = buildings.filter((b) => b.kind === 'settlement').length
-      const cities = buildings.filter((b) => b.kind === 'city').length
+      const count = (kind: string) => buildings.filter((b) => b.kind === kind).length
       const road = roadLengths.get(colour) ?? 0
       const hasLongest = holders.length === 1 && holders[0]?.[0] === colour
       return {
         colour,
-        settlements,
-        cities,
+        settlements: count('settlement'),
+        cities: count('city') + count('metropolis'),
+        metropolises: count('metropolis'),
+        knights: count('knight'),
         roads: pieces.roads.filter((r) => r.colour === colour).length,
         production,
         totalProduction: [...production.values()].reduce((s, p) => s + p, 0),
         longestRoad: road,
-        visiblePoints: settlements + 2 * cities + (hasLongest ? 2 : 0),
+        visiblePoints: buildings.reduce((sum, b) => sum + BUILDING_POINTS[b.kind], 0) + (hasLongest ? 2 : 0),
       }
     })
     .sort((a, b) => b.visiblePoints - a.visiblePoints || b.totalProduction - a.totalProduction)
