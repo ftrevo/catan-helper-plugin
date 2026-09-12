@@ -116,7 +116,7 @@ const main = async () => {
       roadDensity: 0.3,
       highlightProbability: 0.3,
     })
-    const patches = cropPiecePatches(board.image, board, board.pieces, 0.015, random)
+    const patches = cropPiecePatches(board.image, board, board.pieces, 0.04, random)
     vertices.images.push(...patches.buildings.images.map(augment))
     vertices.kinds.push(...patches.buildings.kinds)
     vertices.colours.push(...patches.buildings.colours)

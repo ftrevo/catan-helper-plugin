@@ -28,12 +28,14 @@ The measured tile geometry (face offset, border, token patch) lives in `src/tile
 
 ## Commands
 
-| Command                                                                    | What it does                                                                                 |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `npm run preview`                                                          | Renders one synthetic board and a contact sheet comparing synthetic and real crops (`out/`). |
-| `npm run train -- --set v2-synthetic --arch deep --boards 800 --epochs 15` | Generates boards, trains both classifiers, saves the set and scores it on the real fixtures. |
-| `npm run locate -- capture.png`                                            | Prints the board geometry the extension's locator finds in a capture.                        |
-| `npm run typecheck`                                                        | Type-checks the scripts, including the extension modules they import.                        |
+| Command                                                                    | What it does                                                                                            |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `npm run preview`                                                          | Renders one synthetic board and a contact sheet comparing synthetic and real crops (`out/`).            |
+| `npm run train -- --set v2-synthetic --arch deep --boards 800 --epochs 15` | Generates boards, trains both classifiers, saves the set and scores it on the real fixtures.            |
+| `npm run locate -- capture.png`                                            | Prints the board geometry the extension's locator finds in a capture.                                   |
+| `npm run train:pieces -- --set pieces-v1 --boards 600 --epochs 10`         | Trains the vertex kind, piece colour and road classifiers from synthetic boards.                        |
+| `npm run measure:pieces`                                                   | Template-matches piece sprites against the fixtures to calibrate the renderer's piece scale and anchor. |
+| `npm run typecheck`                                                        | Type-checks the scripts, including the extension modules they import.                                   |
 
 Options: `--arch compact|deep`, `--boards`, `--epochs`, `--seed`, `--min-spacing`, `--max-spacing`.
 

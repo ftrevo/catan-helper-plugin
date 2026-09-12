@@ -33,16 +33,25 @@ const HIGHLIGHT_DIAMETER = 0.3
 const ROBBER_HEIGHT = 0.45
 /** Cities & Knights knight badges, measured on a spectated game: about a third of a spacing across. */
 const KNIGHT_DIAMETER = 0.35
+/**
+ * Buildings are not drawn at tile scale either: template-matching the atlas sprites against real captures
+ * (`measure-pieces.ts`) gives 1.2x the tile scale, anchored 0.065 spacing above the vertex, at every
+ * board size tried (86 to 216 px spacing).
+ */
+const PIECE_SCALE = 1.2
+const PIECE_ANCHOR_DY = -0.065
+/** A metropolis tower stands beside its city, this fraction of the city sprite width to the right. */
+const METROPOLIS_DX = 0.28
 
 /**
- * Mix of vertex pieces in a mid-game board; knights only exist in Cities & Knights. Metropolises are not
- * rendered yet: the game's exact drawing is unknown and a guessed tower made real settlements look like
- * metropolises to the model. The class stays in the labels so it can be trained once a reference exists.
+ * Mix of vertex pieces in a mid-game board; knights and metropolises only exist in Cities & Knights.
+ * Metropolises are rare in real games (at most three per game) but get a larger share here so the class
+ * is learnt.
  */
 const VERTEX_PIECE_KINDS = [
-  ['settlement', 0.55],
-  ['city', 0.3],
-  ['metropolis', 0],
+  ['settlement', 0.5],
+  ['city', 0.27],
+  ['metropolis', 0.08],
   ['knight', 0.15],
 ] as const
 
@@ -224,19 +233,17 @@ export const renderBoard = (
       const knight = atlas.get(`knight_level${level}_${state}_${colour}`)
       drawSprite(ctx, knight, v.x, v.y, (KNIGHT_DIAMETER * spacing) / knight.sourceSize.w)
     } else {
-      // Cities may carry a wall (drawn underneath); a metropolis is a city with a tower on top.
+      const pieceScale = scale * PIECE_SCALE
+      const anchor = { x: v.x, y: v.y + PIECE_ANCHOR_DY * spacing }
+      const sprite = atlas.get(`${kind === 'metropolis' ? 'city' : kind}_${colour}`)
+      // Cities may carry a wall (drawn underneath); a metropolis is a city with a commodity tower beside it.
       if (kind !== 'settlement' && random.chance(0.35) && atlas.has(`city_wall_${colour}`)) {
-        drawSprite(ctx, atlas.get(`city_wall_${colour}`), v.x, v.y + 0.04 * spacing, scale)
+        drawSprite(ctx, atlas.get(`city_wall_${colour}`), anchor.x, anchor.y + 0.04 * spacing, pieceScale)
       }
-      drawSprite(ctx, atlas.get(`${kind === 'metropolis' ? 'city' : kind}_${colour}`), v.x, v.y, scale)
+      drawSprite(ctx, sprite, anchor.x, anchor.y, pieceScale)
       if (kind === 'metropolis') {
-        drawSprite(
-          ctx,
-          atlas.get(`metropolis_${random.pick(['politics', 'science', 'trade'])}`),
-          v.x,
-          v.y - 0.06 * spacing,
-          scale
-        )
+        const tower = atlas.get(`metropolis_${random.pick(['politics', 'science', 'trade'])}`)
+        drawSprite(ctx, tower, anchor.x + METROPOLIS_DX * sprite.sourceSize.w * pieceScale, anchor.y, pieceScale)
       }
     }
     buildings.push({ vertex, kind, colour })
