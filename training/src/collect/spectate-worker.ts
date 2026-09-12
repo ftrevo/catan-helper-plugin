@@ -63,19 +63,23 @@ const log = (message: string) => {
   appendFileSync(resolve(LOG_DIR, `${AGENT}.log`), line + '\n')
 }
 
-const clickText = async (page: Page, text: string, exact = false): Promise<boolean> => {
+type Match = 'exact' | 'includes' | 'prefix'
+const matches = (t: string, text: string, mode: Match) =>
+  mode === 'exact' ? t === text : mode === 'prefix' ? t.startsWith(text) : t.includes(text)
+
+const clickText = async (page: Page, text: string, mode: Match = 'includes'): Promise<boolean> => {
   const handles = await page.$$('button, a, div, span, p, li, [role=button]')
   for (const h of handles) {
     const t = (await h.evaluate((el) => (el as HTMLElement).innerText || '')).trim()
-    if (!(exact ? t === text : t.includes(text))) continue
+    if (!matches(t, text, mode)) continue
     const hasChild = await h.evaluate(
-      (el, text, exact) =>
+      (el, text, mode) =>
         [...el.querySelectorAll('*')].some((c) => {
           const t = ((c as HTMLElement).innerText || '').trim()
-          return exact ? t === text : t.includes(text)
+          return mode === 'exact' ? t === text : mode === 'prefix' ? t.startsWith(text) : t.includes(text)
         }),
       text,
-      exact
+      mode
     )
     if (hasChild) continue
     const box = await h.boundingBox()
@@ -96,20 +100,20 @@ const openSpectateList = async (page: Page): Promise<Row[]> => {
     await page.goto('https://colonist.io/#lobby=1', { waitUntil: 'networkidle2', timeout: 60_000 })
     await sleep(2000)
   }
-  if (await clickText(page, 'Manage options', true)) {
+  if (await clickText(page, 'Manage options', 'exact')) {
     await sleep(1500)
-    await clickText(page, 'Confirm choices', true)
+    await clickText(page, 'Confirm choices', 'exact')
     await sleep(1500)
   }
   // The landing page has no navigation until "Play Online" opens the app.
-  if (!(await clickText(page, 'Rooms', true))) {
-    await clickText(page, 'Play Online', true)
+  if (!(await clickText(page, 'Rooms', 'exact'))) {
+    await clickText(page, 'Play Online', 'exact')
     await sleep(2500)
-    await clickText(page, 'Rooms', true)
+    await clickText(page, 'Rooms', 'exact')
   }
   await page.waitForSelector('table tr', { timeout: 20_000 }).catch(() => undefined)
   await sleep(1000)
-  await clickText(page, 'Spectate', true)
+  await clickText(page, 'Spectate', 'exact')
   await page
     .waitForFunction(() => document.querySelectorAll('table tr td').length > 6, { timeout: 20_000 })
     .catch(() => undefined)
@@ -235,24 +239,33 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
   await page.mouse.move(700, VIEWPORT.height - 30)
   await sleep(800)
 
-  // A finished game still appears in the list; its Game Over overlay has a Map button showing the final board.
+  /**
+   * A finished game still appears in the list, and a game may end between captures. The Game Over overlay
+   * has a "Map" / "Map / Replay" button that reveals the complete final board; after that one more capture
+   * is all there is to take.
+   */
   let finalBoard = false
-  if ((await gameState(page)).ended) {
-    if (await clickText(page, 'Map', true)) {
+  const revealFinalBoardIfOver = async (): Promise<boolean> => {
+    if (finalBoard || !(await gameState(page)).ended) return true
+    if (await clickText(page, 'Map', 'prefix')) {
       await sleep(2500)
       finalBoard = true
       game.notes.push('game over: captured the final board via the Map button')
-    } else {
-      game.notes.push('game over overlay without a Map button')
-      reject(roomCode, AGENT, 'game already over')
-      rmSync(dir, { recursive: true, force: true })
-      return
+      return true
     }
+    game.notes.push('game over overlay without a Map button')
+    return false
   }
-  const plannedCaptures = finalBoard ? 1 : CAPTURES
+
+  if (!(await revealFinalBoardIfOver())) {
+    reject(roomCode, AGENT, 'game already over')
+    rmSync(dir, { recursive: true, force: true })
+    return
+  }
 
   let firstAttempt = 1
-  for (let seq = 1; seq <= plannedCaptures; seq++) {
+  for (let seq = 1; seq <= CAPTURES; seq++) {
+    if (seq > 1 && !(await revealFinalBoardIfOver())) break
     const state = await gameState(page)
     if (state.canvases < 2 || state.inLobby) {
       game.notes.push(`capture ${seq}: no game canvas (hash ${state.hash || 'none'})`)
@@ -309,11 +322,8 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
       reject(roomCode, AGENT, game.captures[0]?.reason ?? 'unreadable')
       return
     }
-    if (state.ended && !finalBoard) {
-      game.notes.push('game ended')
-      break
-    }
-    if (seq < plannedCaptures) {
+    if (finalBoard) break
+    if (seq < CAPTURES) {
       const until = Date.now() + INTERVAL_MS
       while (Date.now() < until) {
         await sleep(Math.min(30_000, until - Date.now()))
