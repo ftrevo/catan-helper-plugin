@@ -1,19 +1,7 @@
 import { type Board, type Resource, TILE_OFFSETS, TILE_VERTICES, VERTEX_TILES, vertexValues } from '../../domain'
 import { Hexagon } from '../Hexagon/Hexagon'
+import { formatVertexValue, vertexLevel } from './vertexDisplay'
 import './BoardView.css'
-
-/**
- * Vertex value bands, in producing pips.
- * 13+: best settlement spots, 10-12: good, 7-9: medium, below 7: poor.
- */
-export const VERTEX_BANDS = [
-  { minimum: 13, level: 3, label: '13+' },
-  { minimum: 10, level: 2, label: '10–12' },
-  { minimum: 7, level: 1, label: '7–9' },
-  { minimum: -Infinity, level: 0, label: '< 7' },
-] as const
-
-const vertexLevel = (value: number): number => VERTEX_BANDS.find((band) => value >= band.minimum)?.level ?? 0
 
 /** Board geometry in CSS pixels. The hex width plus the gap is the lattice spacing. */
 const HEX_WIDTH = 70
@@ -69,9 +57,9 @@ export const BoardView = ({ board, scarcity }: BoardViewProps) => {
               key={vertex}
               className={`vertex vertex-level-${vertexLevel(value)}`}
               style={{ left: p.x, top: p.y }}
-              title={`Vertex ${vertex}: ${value.toFixed(1)} pips`}
+              title={`Vertex ${vertex}: ${value.toFixed(2)} pips`}
             >
-              {Math.trunc(value)}
+              {formatVertexValue(value)}
             </span>
           ) : null
         })}

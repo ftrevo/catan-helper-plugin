@@ -1,4 +1,4 @@
-import { VERTEX_BANDS } from '../Board/BoardView'
+import { VERTEX_BANDS } from '../Board/vertexDisplay'
 import './Legend.css'
 
 type LegendProps = { rarityMode: boolean }

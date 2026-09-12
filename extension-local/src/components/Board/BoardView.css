@@ -24,7 +24,8 @@
   justify-content: center;
   line-height: 1;
   min-width: 17px;
-  padding: 0 3px;
+  padding: 0 4px;
+  white-space: nowrap;
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: 3;
