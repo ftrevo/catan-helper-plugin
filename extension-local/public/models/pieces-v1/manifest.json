@@ -1,17 +1,19 @@
 {
   "name": "pieces-v1",
-  "trainedAt": "2026-09-12T04:35:35.486Z",
+  "trainedAt": "2026-09-12T12:25:51.595Z",
   "architecture": "deep",
   "boards": 600,
-  "epochs": 8,
+  "epochs": 10,
   "patches": {
     "buildings": {
-      "region": 0.42,
-      "size": 40
+      "region": 0.5,
+      "size": 40,
+      "offsetY": -0.05
     },
     "roads": {
       "region": 0.5,
-      "size": 40
+      "size": 40,
+      "offsetY": 0
     }
   },
   "labels": {

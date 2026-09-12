@@ -1,4 +1,4 @@
-import { type Pieces } from '../../src/domain/pieces'
+import { type Building, type Pieces } from '../../src/domain/pieces'
 
 /**
  * Pieces visible on the fixture captures, labelled by hand with vertex and edge ids from
@@ -61,6 +61,22 @@ export const BOARD_1_PIECES: Pieces = {
     { edge: 61, colour: 'blue' },
   ],
 }
+
+/**
+ * A spectated Cities & Knights game at its end: the black player holds the Science and Politics
+ * metropolises, red holds Trade. Only these pieces are labelled; every one must be read with its kind and
+ * colour. Black pieces used to be missed entirely by the first piece models.
+ */
+export const BOARD_6_KEY_PIECES: readonly Building[] = [
+  { vertex: 24, kind: 'metropolis', colour: 'black' },
+  { vertex: 40, kind: 'metropolis', colour: 'black' },
+  { vertex: 28, kind: 'metropolis', colour: 'red' },
+  { vertex: 25, kind: 'city', colour: 'black' },
+  { vertex: 48, kind: 'city', colour: 'black' },
+  { vertex: 19, kind: 'knight', colour: 'black' },
+  { vertex: 13, kind: 'city', colour: 'blue' },
+  { vertex: 36, kind: 'settlement', colour: 'orange' },
+]
 
 /** Fixtures whose artwork predates the current game rendering; piece detection is checked loosely there. */
 export const LEGACY_RENDER_FIXTURES = new Set(['test/fixtures/colonist-board.png'])

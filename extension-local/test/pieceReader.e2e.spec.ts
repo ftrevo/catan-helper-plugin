@@ -3,7 +3,13 @@ import { NO_PIECES, type Pieces } from '../src/domain/pieces'
 import { locateBoard } from '../src/vision/boardLocator'
 import { pieceModelPaths } from '../src/vision/modelSets'
 import { type PieceReader, createPieceReader } from '../src/vision/pieceReader'
-import { FIXTURES, FIXTURE_PIECES, LEGACY_RENDER_FIXTURES } from './fixtures'
+import {
+  BOARD_6_KEY_PIECES,
+  FIXTURES,
+  FIXTURE_PIECES,
+  LEGACY_RENDER_FIXTURES,
+  PARTIAL_PIECE_FIXTURES,
+} from './fixtures'
 import { loadPng } from './loadPng'
 import { nodeModelSource } from './nodeModelSource'
 
@@ -57,6 +63,19 @@ describe('piece reader on real screenshots', () => {
         ).length + a.roads.filter((x) => b.roads.some((y) => y.edge === x.edge && y.colour === x.colour)).length
       const total = truth.buildings.length + truth.roads.length
       expect(exact(pieces, truth) / total).toBeGreaterThanOrEqual(0.65)
+    }
+  )
+
+  test.each(PARTIAL_PIECE_FIXTURES.map((f) => [f.name, f] as const))(
+    'reads the metropolises and black pieces on %s',
+    async (_name, fixture) => {
+      const image = await loadPng(fixture.file)
+      const { pieces } = await reader.read(image, locateBoard(image))
+      for (const expected of BOARD_6_KEY_PIECES) {
+        expect(pieces.buildings.find((b) => b.vertex === expected.vertex)).toEqual(expected)
+      }
+      // Three metropolises are the most a game can have.
+      expect(pieces.buildings.filter((b) => b.kind === 'metropolis')).toHaveLength(3)
     }
   )
 })

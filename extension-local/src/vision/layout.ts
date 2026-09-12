@@ -68,12 +68,20 @@ export const CORNER_ANGLES = [-90, -150, -30, 150, 30, 90].map((deg) => (deg * M
 
 /** Square patch around a piece: side as a fraction of the spacing, resampled to `size` pixels for the model. */
 export type PatchSpec = {
+  /** Side of the square patch, in spacings. */
   readonly region: number
+  /** Side of the resized patch fed to the model, in pixels. */
   readonly size: number
+  /** Vertical shift of the patch centre, in spacings. */
+  readonly offsetY: number
 }
 
-export const BUILDING_PATCH: PatchSpec = { region: 0.42, size: 40 }
-export const ROAD_PATCH: PatchSpec = { region: 0.5, size: 40 }
+/**
+ * The game draws buildings anchored slightly above the vertex, and a metropolis adds a tower to the right
+ * of its city, so the vertex patch is shifted up and wide enough to hold both.
+ */
+export const BUILDING_PATCH: PatchSpec = { region: 0.5, size: 40, offsetY: -0.05 }
+export const ROAD_PATCH: PatchSpec = { region: 0.5, size: 40, offsetY: 0 }
 
 /** Screen position of every vertex (face corner), derived from the first tile that touches it. */
 export const vertexCenters = ({ center, spacing }: BoardGeometry): Point[] => {
@@ -103,5 +111,5 @@ export const edgeCenters = (geometry: BoardGeometry): Point[] => {
 
 export const patchRect = (center: Point, spec: PatchSpec, spacing: number): Rect => {
   const side = spec.region * spacing
-  return { x: center.x - side / 2, y: center.y - side / 2, width: side, height: side }
+  return { x: center.x - side / 2, y: center.y + spec.offsetY * spacing - side / 2, width: side, height: side }
 }
