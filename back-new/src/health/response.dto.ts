@@ -3,7 +3,7 @@ import { z } from 'zod'
 
 export const healthCheckReponseSchema = z.object({
   status: z.union([z.literal('ok'), z.literal('error')]),
-  version: z.hash('sha1'),
+  version: z.string().min(1),
 })
 
 export class HealthCheckResponseDto extends createZodDto(healthCheckReponseSchema) {}

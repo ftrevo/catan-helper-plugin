@@ -1,17 +1,34 @@
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger'
-import { Controller, Get, HttpStatus } from '@nestjs/common'
+import { Controller, Get, HttpStatus, Logger } from '@nestjs/common'
 import { HealthCheckResponseDto } from './response.dto'
 import { ZodResponse } from 'nestjs-zod'
 import { execSync } from 'node:child_process'
 
 const gitCommand = 'git rev-parse HEAD'
 
+const resolveVersion = (logger: Logger): string => {
+  if (process.env.GIT_COMMIT) {
+    return process.env.GIT_COMMIT
+  }
+
+  try {
+    return execSync(gitCommand, { stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString()
+      .trim()
+  } catch {
+    logger.warn('Could not resolve git commit hash; set GIT_COMMIT to expose it on /health')
+    return 'unknown'
+  }
+}
+
 @ApiTags('Health Check')
 @Controller()
 export class HealthController {
-  gitHash: string
+  private readonly logger = new Logger(HealthController.name)
+  private readonly version: string
+
   constructor() {
-    this.gitHash = execSync(gitCommand).toString().trim()
+    this.version = resolveVersion(this.logger)
   }
 
   @Get('health')
@@ -28,7 +45,7 @@ export class HealthController {
   check() {
     return {
       status: 'ok' as const,
-      version: this.gitHash,
+      version: this.version,
     }
   }
 }
