@@ -28,3 +28,11 @@ export const modelSetPaths = (id: ModelSetId) => ({
   resources: `models/${id}/resources/model.json`,
   numbers: `models/${id}/numbers/model.json`,
 })
+
+/** Piece detectors are shared by all tile model sets. */
+export const PIECE_MODEL_SET = 'pieces-v1'
+
+export const pieceModelPaths = () => ({
+  buildings: `models/${PIECE_MODEL_SET}/buildings/model.json`,
+  roads: `models/${PIECE_MODEL_SET}/roads/model.json`,
+})

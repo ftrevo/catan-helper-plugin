@@ -7,6 +7,7 @@ import { SAMPLE_BOARD_2 } from './sample-board-2'
 import { SAMPLE_BOARD_3 } from './sample-board-3'
 
 export { SAMPLE_BOARD, SAMPLE_BOARD_2, SAMPLE_BOARD_3 }
+export { BOARD_1_PIECES, BOARD_2_PIECES, BOARD_3_PIECES, FIXTURE_PIECES, LEGACY_RENDER_FIXTURES } from './pieces'
 
 export type BoardTruth = { readonly resources: readonly string[]; readonly numbers: readonly string[] }
 

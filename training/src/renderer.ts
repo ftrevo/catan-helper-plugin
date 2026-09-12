@@ -11,7 +11,9 @@ import {
   type Resource,
   TILE_COUNT,
 } from '../../extension-local/src/domain/board.ts'
-import { ROW_HEIGHT_FACTOR, TILE_OFFSETS } from '../../extension-local/src/vision/layout.ts'
+import { EDGES } from '../../extension-local/src/domain/edges.ts'
+import { PLAYER_COLOURS, type Pieces } from '../../extension-local/src/domain/pieces.ts'
+import { ROW_HEIGHT_FACTOR, TILE_OFFSETS, edgeCenters, vertexCenters } from '../../extension-local/src/vision/layout.ts'
 import { type Point, type RgbaImage } from '../../extension-local/src/vision/pixels.ts'
 import { type Atlas, drawSprite } from './atlas.ts'
 import { RENDERED_DIR } from './paths.ts'
@@ -66,10 +68,8 @@ const PIECE_COLOURS = [
   'mysticblue',
 ]
 
-/** Vertex directions of a pointy-top hex, radians from the x axis. */
+/** Vertex directions of a pointy-top hex, radians from the x axis (used to fill hexagons). */
 const VERTEX_ANGLES = [30, 90, 150, 210, 270, 330].map((deg) => (deg * Math.PI) / 180)
-/** Edge-midpoint directions; a road drawn along an edge is perpendicular to its direction. */
-const EDGE_ANGLES = [0, 60, 120, 180, 240, 300].map((deg) => (deg * Math.PI) / 180)
 
 export type SyntheticTile = { readonly resource: Resource; readonly number: HexNumber }
 
@@ -78,6 +78,8 @@ export type SyntheticBoard = {
   readonly center: Point
   readonly spacing: number
   readonly tiles: readonly SyntheticTile[]
+  /** Buildings and roads that were drawn, by vertex and edge id. */
+  readonly pieces: Pieces
 }
 
 export type RenderOptions = {
@@ -86,6 +88,8 @@ export type RenderOptions = {
   pieceDensity?: number
   /** Probability that any given edge gets a road. */
   roadDensity?: number
+  /** Colours in play; pieces are drawn from these. Defaults to a random 2-6 of the twelve. */
+  colours?: readonly (typeof PLAYER_COLOURS)[number][]
   /** Probability that vertex highlight rings (placement phase) are drawn. */
   highlightProbability?: number
   /** Probability that the robber stands on the desert instead of a random tile. */
@@ -171,36 +175,41 @@ export const renderBoard = (
     )
   }
 
-  // Roads along random edges, then settlements/cities on random vertices (drawn last, like the game).
-  const vertexRadius = spacing / Math.sqrt(3)
-  for (const c of centers) {
-    for (const angle of EDGE_ANGLES) {
-      if (!random.chance(roadDensity)) continue
-      const colour = random.pick(PIECE_COLOURS)
-      if (!atlas.has(`road_${colour}`)) continue
-      const x = c.x + Math.cos(angle) * (spacing / 2)
-      const y = c.y + FACE_OFFSET_Y * spacing + Math.sin(angle) * (spacing / 2)
-      drawSprite(ctx, atlas.get(`road_${colour}`), x, y, scale, angle + Math.PI / 2)
-    }
-  }
+  // Pieces on the shared vertices and edges of the board, using the extension's geometry so training
+  // patches line up exactly with what the popup crops. Roads first, buildings last, like the game.
+  const geometry = { center, spacing }
+  const vertices = vertexCenters(geometry)
+  const edges = edgeCenters(geometry)
+  const colours = options.colours ?? shuffle(random, PLAYER_COLOURS).slice(0, random.pick([2, 3, 4, 4, 4, 5, 6]))
+  const buildings: Pieces['buildings'][number][] = []
+  const roads: Pieces['roads'][number][] = []
+
+  EDGES.forEach(([a, b], edge) => {
+    if (colours.length === 0 || !random.chance(roadDensity)) return
+    const colour = random.pick(colours)
+    const p = vertices[a] as Point
+    const q = vertices[b] as Point
+    const m = edges[edge] as Point
+    const angle = Math.atan2(q.y - p.y, q.x - p.x)
+    drawSprite(ctx, atlas.get(`road_${colour}`), m.x, m.y, scale, angle + Math.PI / 2)
+    roads.push({ edge, colour })
+  })
+
   const drawHighlights = random.chance(highlightProbability)
-  for (const c of centers) {
-    for (const angle of VERTEX_ANGLES) {
-      const x = c.x + Math.cos(angle) * vertexRadius
-      const y = c.y + FACE_OFFSET_Y * spacing + Math.sin(angle) * vertexRadius
-      if (drawHighlights && random.chance(0.7)) {
-        const ring = atlas.get('icon_highlight_circle')
-        drawSprite(ctx, ring, x, y, (HIGHLIGHT_DIAMETER * spacing) / ring.sourceSize.w)
-      }
-      if (!random.chance(pieceDensity)) continue
-      const colour = random.pick(PIECE_COLOURS)
-      const kind = random.chance(0.3) ? 'city' : 'settlement'
-      if (atlas.has(`${kind}_${colour}`)) drawSprite(ctx, atlas.get(`${kind}_${colour}`), x, y, scale)
+  vertices.forEach((v, vertex) => {
+    if (drawHighlights && random.chance(0.7)) {
+      const ring = atlas.get('icon_highlight_circle')
+      drawSprite(ctx, ring, v.x, v.y, (HIGHLIGHT_DIAMETER * spacing) / ring.sourceSize.w)
     }
-  }
+    if (colours.length === 0 || !random.chance(pieceDensity)) return
+    const colour = random.pick(colours)
+    const kind = random.chance(0.3) ? 'city' : 'settlement'
+    drawSprite(ctx, atlas.get(`${kind}_${colour}`), v.x, v.y, scale)
+    buildings.push({ vertex, kind, colour })
+  })
 
   const { data } = ctx.getImageData(0, 0, width, height)
-  return { image: { width, height, data }, center, spacing, tiles }
+  return { image: { width, height, data }, center, spacing, tiles, pieces: { buildings, roads } }
 }
 
 /** Fills a pointy-top hexagon of the given flat-to-flat width centred on `c`. */
@@ -215,4 +224,13 @@ const fillHex = (ctx: SKRSContext2D, c: Point, width: number): void => {
   })
   ctx.closePath()
   ctx.fill()
+}
+
+const shuffle = <T>(random: Random, items: readonly T[]): T[] => {
+  const copy = [...items]
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = random.int(i + 1)
+    ;[copy[i], copy[j]] = [copy[j] as T, copy[i] as T]
+  }
+  return copy
 }

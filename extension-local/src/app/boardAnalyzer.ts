@@ -1,5 +1,5 @@
 import { type BoardReader, type BoardReading, createBoardReader } from '../vision/boardReader'
-import { type ModelSetId, modelSetPaths } from '../vision/modelSets'
+import { type ModelSetId, modelSetPaths, pieceModelPaths } from '../vision/modelSets'
 import { type RgbaImage } from '../vision/pixels'
 
 export type ScreenshotProvider = () => Promise<RgbaImage>
@@ -26,9 +26,11 @@ export const createBoardAnalyzer = ({ captureScreenshot, resolveModelUrl }: Depe
     let reader = readers.get(modelSet)
     if (!reader) {
       const paths = modelSetPaths(modelSet)
+      const pieces = pieceModelPaths()
       reader = createBoardReader({
         resources: resolveModelUrl(paths.resources),
         numbers: resolveModelUrl(paths.numbers),
+        pieces: { buildings: resolveModelUrl(pieces.buildings), roads: resolveModelUrl(pieces.roads) },
       }).catch((error: unknown) => {
         readers.delete(modelSet)
         throw error

@@ -3,8 +3,9 @@ import { type BoardAnalyzer } from './app/boardAnalyzer'
 import { useBoardAnalysis } from './app/useBoardAnalysis'
 import { BoardView } from './components/Board/BoardView'
 import { CameraIcon } from './components/Icons/Icons'
-import { Legend } from './components/Legend/Legend'
+import { Legend, type Weighting } from './components/Legend/Legend'
 import { Notice } from './components/Notice/Notice'
+import { Players } from './components/Players/Players'
 import { Segmented } from './components/Segmented/Segmented'
 import { Statistics } from './components/Statistics/Statistics'
 import { StatusBar } from './components/StatusBar/StatusBar'
@@ -18,8 +19,7 @@ type AppProps = {
   analysisStore: AnalysisStore
 }
 
-type Tab = 'board' | 'statistics'
-type Weighting = 'sum' | 'rarity' | 'strategy'
+type Tab = 'board' | 'statistics' | 'players'
 
 /** Every tile but the desert carries a number token. */
 const EXPECTED_TOKENS = 18
@@ -54,7 +54,7 @@ export const App = ({ analyzer, analysisStore }: AppProps) => {
 
         {!board && <Welcome onCapture={analyze} loading={isAnalyzing} />}
 
-        {board && (
+        {board && reading && (
           <>
             <div className="toolbar">
               <Segmented
@@ -65,30 +65,9 @@ export const App = ({ analyzer, analysisStore }: AppProps) => {
                 options={[
                   { value: 'board', label: 'Board' },
                   { value: 'statistics', label: 'Statistics' },
+                  { value: 'players', label: 'Players' },
                 ]}
               />
-              {tab === 'board' && (
-                <Segmented
-                  ariaLabel="Vertex weighting"
-                  size="sm"
-                  value={weighting}
-                  onChange={setWeighting}
-                  options={[
-                    { value: 'sum', label: 'Sum', title: 'Plain pip sums' },
-                    {
-                      value: 'rarity',
-                      label: 'Rarity',
-                      title: 'Pips weighted by how scarce each resource is on this board',
-                    },
-                    {
-                      value: 'strategy',
-                      label: 'Strategy',
-                      title:
-                        'Rarity combined with how much a typical game needs each resource (ore and grain for cities and development cards)',
-                    },
-                  ]}
-                />
-              )}
               <button
                 type="button"
                 className={`icon-button ${isAnalyzing ? 'is-busy' : ''}`}
@@ -102,11 +81,12 @@ export const App = ({ analyzer, analysisStore }: AppProps) => {
             </div>
             {tab === 'board' && (
               <>
-                <BoardView board={board} scarcity={factors} />
-                <Legend weighting={weighting} />
+                <BoardView board={board} scarcity={factors} pieces={reading.pieces} />
+                <Legend weighting={weighting} onWeightingChange={setWeighting} />
               </>
             )}
             {tab === 'statistics' && <Statistics board={board} />}
+            {tab === 'players' && <Players board={board} pieces={reading.pieces} />}
           </>
         )}
       </main>

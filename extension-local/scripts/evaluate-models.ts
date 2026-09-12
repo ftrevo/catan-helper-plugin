@@ -8,7 +8,11 @@
  */
 import { createBoardReader } from '../src/vision/boardReader'
 import { MODEL_SETS, modelSetPaths } from '../src/vision/modelSets'
-import { FIXTURES } from '../test/fixtures'
+import { FIXTURES, FIXTURE_PIECES } from '../test/fixtures'
+import { NO_PIECES } from '../src/domain/pieces'
+import { locateBoard } from '../src/vision/boardLocator'
+import { pieceModelPaths } from '../src/vision/modelSets'
+import { createPieceReader } from '../src/vision/pieceReader'
 import { loadPng } from '../test/loadPng'
 import { nodeModelSource } from '../test/nodeModelSource'
 
@@ -79,4 +83,39 @@ for (const set of evaluated) {
     for (const mistake of score.mistakes) console.log(`    ${name}: ${mistake}`)
     if (score.error) console.log(`    ${name}: ${score.error}`)
   }
+}
+
+// Piece detectors: exact matches of (position, kind, colour) against the hand-labelled fixtures.
+try {
+  const paths = pieceModelPaths()
+  const pieceReader = await createPieceReader({
+    buildings: await nodeModelSource(`public/${paths.buildings}`),
+    roads: await nodeModelSource(`public/${paths.roads}`),
+  })
+  console.log('\npieces')
+  let hits = 0
+  let expectedTotal = 0
+  let predictedTotal = 0
+  for (const fixture of FIXTURES) {
+    const image = await loadPng(fixture.file)
+    const { pieces } = await pieceReader.read(image, locateBoard(image))
+    const truth = FIXTURE_PIECES[fixture.file] ?? NO_PIECES
+    const key = (p: { vertex?: number; edge?: number; kind?: string; colour: string }) =>
+      `${p.vertex ?? 'e' + p.edge}:${p.kind ?? 'road'}:${p.colour}`
+    const expected = new Set([...truth.buildings, ...truth.roads].map(key))
+    const predicted = new Set([...pieces.buildings, ...pieces.roads].map(key))
+    const correct = [...predicted].filter((k) => expected.has(k)).length
+    hits += correct
+    expectedTotal += expected.size
+    predictedTotal += predicted.size
+    const missed = [...expected].filter((k) => !predicted.has(k))
+    const extra = [...predicted].filter((k) => !expected.has(k))
+    console.log(
+      `  ${pad(fixture.name, 44)} ${correct}/${expected.size} found, ${extra.length} spurious${missed.length ? ` · missed ${missed.join(' ')}` : ''}${extra.length ? ` · extra ${extra.join(' ')}` : ''}`
+    )
+  }
+  console.log(`  recall ${hits}/${expectedTotal}, precision ${hits}/${predictedTotal}`)
+  pieceReader.dispose()
+} catch (error) {
+  console.log(`\npieces: skipped (${(error as Error).message})`)
 }

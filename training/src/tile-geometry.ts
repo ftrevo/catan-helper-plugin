@@ -5,8 +5,8 @@
  * the face corners, which are the token-lattice vertices shifted up by the same amount.
  */
 
-/** Vertical offset of the face centre from the token centre (negative = up). */
-export const FACE_OFFSET_Y = -0.18
+/** Vertical offset of the face centre from the token centre (negative = up); shared with the extension. */
+export { FACE_OFFSET_Y } from '../../extension-local/src/vision/layout.ts'
 
 /** Side of the square sprite that `extract-tiles.ts` cuts around the face centre. */
 export const TILE_SPRITE_SIZE = 1.16

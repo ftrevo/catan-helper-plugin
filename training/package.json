@@ -13,7 +13,8 @@
     "train": "node --require ./tfjs-node-compat.cjs --import tsx src/train.ts",
     "typecheck": "tsc --noEmit",
     "locate": "node --import tsx src/locate.ts",
-    "extract-tiles": "node --import tsx src/extract-tiles.ts"
+    "extract-tiles": "node --import tsx src/extract-tiles.ts",
+    "train:pieces": "node --require ./tfjs-node-compat.cjs --import tsx src/train-pieces.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.60",

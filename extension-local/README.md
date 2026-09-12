@@ -66,7 +66,8 @@ src/
 │   ├── layout.ts          Tile centres and crop rectangles derived from that geometry; reference offsets.
 │   ├── labels.ts          Model class order (fixed by training, see ../train-model).
 │   ├── classifier.ts      TileClassifier: one Keras model, batched inference, argmax + confidence.
-│   ├── boardReader.ts     Crops all tiles, runs both classifiers, builds a validated Board.
+│   ├── boardReader.ts     Crops all tiles, runs both classifiers, builds a validated Board (+ pieces).
+│   ├── pieceReader.ts     Vertex and edge patches → settlements, cities and roads with colours.
 │   └── tfjs.ts            Backend selection (WebGL, then CPU).
 ├── platform/           Thin adapters over browser / Chrome APIs.
 │   ├── screenshot.ts      chrome.tabs.captureVisibleTab with the colonist.io check.
@@ -80,6 +81,7 @@ src/
 │   ├── Board, Hexagon     Absolutely positioned hex grid; the board draws each of the 54 vertices once.
 │   ├── Legend             Vertex value bands.
 │   ├── Statistics         Resources ranked rarest first with pips, numbers and share bars.
+│   ├── Players            Per-colour cards: visible points, pieces and production.
 │   ├── Welcome, Notice    Empty/loading state and error or warning banners.
 │   └── Icons
 └── mocks/              Dev-server stand-ins (fixture screenshot).
@@ -93,6 +95,7 @@ public/
 test/
 ├── boardLocator.spec.ts     Locates the board in every fixture screenshot.
 ├── boardReader.e2e.spec.ts  Reads every fixture with every model set, tile by tile.
+├── pieceReader.e2e.spec.ts  Finds every hand-labelled piece on every fixture.
 ├── nodeModelSource.ts       IOHandler that reads model.json + weights.bin without tfjs-node.
 ├── loadPng.ts               PNG → RgbaImage for tests and scripts.
 └── fixtures/                Real captures at 1280x720, 1366x768, 1920x1080 (1x) and 1512x758 (2x), with
@@ -100,6 +103,16 @@ test/
 scripts/
 └── evaluate-models.ts       `npm run evaluate`: per-fixture, per-set accuracy table.
 ```
+
+### Pieces and players
+
+Two more classifiers read the pieces: one looks at a square patch around each of the 54 vertices
+(empty, or a settlement / city in one of colonist.io's twelve colours), the other at each of the 72 edge
+midpoints (empty, or a road in a colour). Patches are cut with the same geometry the training renderer
+uses, so the synthetic pieces line up with real captures. Detected pieces are drawn on the board, and the
+Players tab derives per-colour statistics: settlements, cities, roads, expected production per resource
+(cities count twice), longest road and the points visible on the board. Cards are hidden, so real scores
+can be higher. The piece models live in `public/models/pieces-v1` and are shared by every tile model set.
 
 ### Vertex weightings
 

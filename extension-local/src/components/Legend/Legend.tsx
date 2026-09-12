@@ -1,27 +1,35 @@
 import { VERTEX_BANDS } from '../Board/vertexDisplay'
+import { Segmented } from '../Segmented/Segmented'
 import './Legend.css'
 
-type LegendProps = { weighting: 'sum' | 'rarity' | 'strategy' }
+export type Weighting = 'sum' | 'rarity' | 'strategy'
 
-const TITLES: Record<LegendProps['weighting'], string> = {
-  sum: 'Vertex value in pips',
-  rarity: 'Vertex value, weighted by rarity',
-  strategy: 'Vertex value, rarity × demand',
+type LegendProps = {
+  weighting: Weighting
+  onWeightingChange: (weighting: Weighting) => void
 }
 
-/** Explains the vertex badges: pips per roll around each corner, best spots darkest. */
-export const Legend = ({ weighting }: LegendProps) => (
+const OPTIONS = [
+  { value: 'sum', label: 'Sum', title: 'Plain pip sums' },
+  { value: 'rarity', label: 'Rarity', title: 'Pips weighted by how scarce each resource is on this board' },
+  {
+    value: 'strategy',
+    label: 'Strategy',
+    title:
+      'Rarity combined with how much a typical game needs each resource (ore and grain for cities and development cards). Ports are not considered.',
+  },
+] as const
+
+/** Weighting control for the vertex badges plus the colour bands they use. */
+export const Legend = ({ weighting, onWeightingChange }: LegendProps) => (
   <div className="legend">
-    <span
-      className="legend-title"
-      title={
-        weighting === 'strategy'
-          ? 'Demand follows the building costs of a typical game. Ports are not considered.'
-          : undefined
-      }
-    >
-      {TITLES[weighting]}
-    </span>
+    <Segmented
+      ariaLabel="Vertex weighting"
+      size="sm"
+      value={weighting}
+      onChange={onWeightingChange}
+      options={OPTIONS}
+    />
     <span className="legend-scale">
       {[...VERTEX_BANDS].reverse().map((band) => (
         <span key={band.level} className="legend-item">
