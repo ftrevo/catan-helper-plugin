@@ -17,6 +17,11 @@ export const MODEL_SETS = [
     label: 'v1 · screenshots',
     description: 'Original 2025 models trained on hand-cropped screenshots.',
   },
+  {
+    id: 'v2-synthetic',
+    label: 'v2 · synthetic',
+    description: 'Trained on boards composed from the game artwork at many sizes, with pieces and highlights.',
+  },
 ] as const satisfies readonly ModelSet[]
 
 export const DEFAULT_MODEL_SET: ModelSetId = 'v1'

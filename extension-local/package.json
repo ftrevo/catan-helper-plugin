@@ -17,7 +17,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "evaluate": "vite-node scripts/evaluate-models.ts"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

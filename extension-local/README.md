@@ -53,6 +53,7 @@ src/
 │   ├── statistics.ts      per-resource production, scarcity factors.
 │   └── vertices.ts        tile ↔ vertex tables and vertex values.
 ├── vision/             Screenshot → Board.
+│   ├── modelSets.ts       Registry of shipped model sets (id, label, paths) and the default.
 │   ├── pixels.ts          RgbaImage, cropping, RGBA→RGB. Environment independent.
 │   ├── boardLocator.ts    Finds the number tokens and fits the hex lattice: board centre + tile spacing.
 │   ├── layout.ts          Tile centres and crop rectangles derived from that geometry; reference offsets.
@@ -64,19 +65,26 @@ src/
 │   ├── screenshot.ts      chrome.tabs.captureVisibleTab with the colonist.io check.
 │   ├── decodeImage.ts     data URL / URL → RgbaImage via ImageBitmap + OffscreenCanvas.
 │   ├── analysisStore.ts   last reading in chrome.storage.session (memory fallback in dev).
+│   ├── settingsStore.ts   user preferences (chosen model set) in chrome.storage.local.
 │   └── runtime.ts         extension vs dev-server detection, asset URLs.
 ├── components/         Presentational React components, one folder each with its CSS.
 └── mocks/              Dev-server stand-ins (fixture screenshot).
 public/
 ├── manifest.json       MV3 manifest. Permissions: activeTab (capture + URL of the current tab), storage.
 │                       Also declares the Cmd/Ctrl+Shift+Y shortcut that opens the popup.
-├── models/             The two TensorFlow.js layers models, copied from ../back-new/models.
+├── models/             One folder per model set, each with resources/, numbers/ and a manifest.json.
+│   ├── v1/                The 2025 models trained on screenshots (from ../back-new/models).
+│   └── v2-synthetic/      Trained in ../training on synthetic boards built from the game artwork.
 └── icons/
 test/
-├── boardLocator.spec.ts     Locates the board in both fixture screenshots.
-├── boardReader.e2e.spec.ts  Loads the models from disk and reads both fixture screenshots tile by tile.
+├── boardLocator.spec.ts     Locates the board in every fixture screenshot.
+├── boardReader.e2e.spec.ts  Reads every fixture with every model set, tile by tile.
 ├── nodeModelSource.ts       IOHandler that reads model.json + weights.bin without tfjs-node.
-└── fixtures/                Two real screenshots (spacing 216 and ~193 px) with their ground-truth boards.
+├── loadPng.ts               PNG → RgbaImage for tests and scripts.
+└── fixtures/                Real captures at 1280x720, 1366x768, 1920x1080 (1x) and 1512x758 (2x), with
+                             hand-read ground truth in index.ts.
+scripts/
+└── evaluate-models.ts       `npm run evaluate`: per-fixture, per-set accuracy table.
 ```
 
 ### How a capture flows
@@ -96,8 +104,13 @@ it installs a copy of `dist/` whose manifest adds `"host_permissions": ["<all_ur
 test-only change, never ship it. With such a copy loaded, `chrome.action.openPopup()` from any extension
 page opens the real popup and the capture flow can be driven end to end.
 
-### Updating the models
+### Model sets
 
-Retrain in `../train-model`, copy `model.json` + `weights.bin` into `public/models/<name>/`, and make sure
-`src/vision/labels.ts` still matches the training class order. The end-to-end test will catch a class-count
-mismatch and a regression on the sample screenshot.
+Several model sets ship side by side so they can be compared on real games. The popup has a picker in its
+footer, the choice is remembered, and each reading records which set produced it. `src/vision/modelSets.ts`
+lists the sets and the default.
+
+To add a set: train it in `../training` (or copy `model.json` + `weights.bin` pairs into
+`public/models/<id>/{resources,numbers}/` with a `manifest.json`), register it in `modelSets.ts`, and run
+`npm test` and `npm run evaluate`. The class order in `src/vision/labels.ts` must match the training order;
+the end-to-end test fails on a class-count mismatch.
