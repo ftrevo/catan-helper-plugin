@@ -1,0 +1,46 @@
+{
+  "roomCode": "turn3916",
+  "url": "https://colonist.io/#turn3916",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T16:37:27.596Z",
+  "finishedAt": "2026-09-12T16:40:21.129Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-163743.png",
+      "takenAt": "2026-09-12T16:37:47.311Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 22,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-164017.png",
+      "takenAt": "2026-09-12T16:40:21.129Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 24,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

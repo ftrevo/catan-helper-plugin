@@ -1,0 +1,46 @@
+{
+  "roomCode": "deck2071",
+  "url": "https://colonist.io/#deck2071",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:17:17.375Z",
+  "finishedAt": "2026-09-12T15:20:10.864Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-151733.png",
+      "takenAt": "2026-09-12T15:17:37.039Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 12,
+      "colours": [
+        "white",
+        "black",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-152007.png",
+      "takenAt": "2026-09-12T15:20:10.863Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "white",
+        "black",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

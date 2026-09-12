@@ -1,0 +1,46 @@
+{
+  "roomCode": "isle4352",
+  "url": "https://colonist.io/#isle4352",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T16:21:25.003Z",
+  "finishedAt": "2026-09-12T16:24:18.636Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-162140.png",
+      "takenAt": "2026-09-12T16:21:44.781Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "green"
+      ]
+    },
+    {
+      "file": "02-162414.png",
+      "takenAt": "2026-09-12T16:24:18.636Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

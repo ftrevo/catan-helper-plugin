@@ -1,0 +1,46 @@
+{
+  "roomCode": "hill6716",
+  "url": "https://colonist.io/#hill6716",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:08:21.434Z",
+  "finishedAt": "2026-09-12T17:11:15.074Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-170837.png",
+      "takenAt": "2026-09-12T17:08:41.242Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "02-171111.png",
+      "takenAt": "2026-09-12T17:11:15.074Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    }
+  ],
+  "notes": []
+}

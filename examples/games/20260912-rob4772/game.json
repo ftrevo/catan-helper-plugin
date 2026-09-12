@@ -1,0 +1,46 @@
+{
+  "roomCode": "rob4772",
+  "url": "https://colonist.io/#rob4772",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:35:51.406Z",
+  "finishedAt": "2026-09-12T15:38:45.018Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-153607.png",
+      "takenAt": "2026-09-12T15:36:11.039Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 6,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-153841.png",
+      "takenAt": "2026-09-12T15:38:45.018Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

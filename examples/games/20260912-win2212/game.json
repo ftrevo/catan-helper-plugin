@@ -1,0 +1,46 @@
+{
+  "roomCode": "win2212",
+  "url": "https://colonist.io/#win2212",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:17:32.580Z",
+  "finishedAt": "2026-09-12T17:20:26.059Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-171748.png",
+      "takenAt": "2026-09-12T17:17:52.210Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "white",
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-172022.png",
+      "takenAt": "2026-09-12T17:20:26.059Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "white",
+        "blue",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "land872",
+  "url": "https://colonist.io/#land872",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:29:42.206Z",
+  "finishedAt": "2026-09-12T15:32:35.718Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-152958.png",
+      "takenAt": "2026-09-12T15:30:01.870Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-153231.png",
+      "takenAt": "2026-09-12T15:32:35.718Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

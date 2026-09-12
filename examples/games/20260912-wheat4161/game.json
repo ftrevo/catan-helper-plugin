@@ -1,0 +1,46 @@
+{
+  "roomCode": "wheat4161",
+  "url": "https://colonist.io/#wheat4161",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:20:58.009Z",
+  "finishedAt": "2026-09-12T17:23:51.505Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-172113.png",
+      "takenAt": "2026-09-12T17:21:17.692Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-172347.png",
+      "takenAt": "2026-09-12T17:23:51.504Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

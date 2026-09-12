@@ -1,0 +1,46 @@
+{
+  "roomCode": "trade852",
+  "url": "https://colonist.io/#trade852",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:32:43.812Z",
+  "finishedAt": "2026-09-12T15:35:37.376Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-153259.png",
+      "takenAt": "2026-09-12T15:33:03.464Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 18,
+      "colours": [
+        "green",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-153533.png",
+      "takenAt": "2026-09-12T15:35:37.375Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 18,
+      "colours": [
+        "green",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

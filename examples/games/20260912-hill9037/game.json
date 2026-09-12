@@ -1,0 +1,46 @@
+{
+  "roomCode": "hill9037",
+  "url": "https://colonist.io/#hill9037",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:48:05.275Z",
+  "finishedAt": "2026-09-12T15:50:58.916Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-154821.png",
+      "takenAt": "2026-09-12T15:48:24.989Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-155055.png",
+      "takenAt": "2026-09-12T15:50:58.916Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

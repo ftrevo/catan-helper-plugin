@@ -1,0 +1,46 @@
+{
+  "roomCode": "city8246",
+  "url": "https://colonist.io/#city8246",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:02:11.934Z",
+  "finishedAt": "2026-09-12T17:05:05.354Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-170227.png",
+      "takenAt": "2026-09-12T17:02:31.532Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 4,
+      "roads": 4,
+      "colours": [
+        "blue",
+        "black",
+        "green",
+        "red"
+      ]
+    },
+    {
+      "file": "02-170501.png",
+      "takenAt": "2026-09-12T17:05:05.353Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "black",
+        "green",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

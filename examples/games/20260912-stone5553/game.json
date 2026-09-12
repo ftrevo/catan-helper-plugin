@@ -1,0 +1,46 @@
+{
+  "roomCode": "stone5553",
+  "url": "https://colonist.io/#stone5553",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T16:25:48.012Z",
+  "finishedAt": "2026-09-12T16:28:41.475Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-162603.png",
+      "takenAt": "2026-09-12T16:26:07.631Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-162837.png",
+      "takenAt": "2026-09-12T16:28:41.475Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

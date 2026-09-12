@@ -1,0 +1,46 @@
+{
+  "roomCode": "city3697",
+  "url": "https://colonist.io/#city3697",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:54:10.096Z",
+  "finishedAt": "2026-09-12T15:57:03.696Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-155425.png",
+      "takenAt": "2026-09-12T15:54:29.786Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "black",
+        "green",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-155659.png",
+      "takenAt": "2026-09-12T15:57:03.696Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 17,
+      "colours": [
+        "black",
+        "green",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

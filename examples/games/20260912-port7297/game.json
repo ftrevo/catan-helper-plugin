@@ -1,0 +1,46 @@
+{
+  "roomCode": "port7297",
+  "url": "https://colonist.io/#port7297",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:05:04.192Z",
+  "finishedAt": "2026-09-12T15:07:57.639Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-150520.png",
+      "takenAt": "2026-09-12T15:05:23.854Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-150753.png",
+      "takenAt": "2026-09-12T15:07:57.639Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "land5766",
+  "url": "https://colonist.io/#land5766",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:11:13.817Z",
+  "finishedAt": "2026-09-12T15:14:07.249Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-151129.png",
+      "takenAt": "2026-09-12T15:11:33.464Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 8,
+      "colours": [
+        "black",
+        "blue",
+        "bronze",
+        "red"
+      ]
+    },
+    {
+      "file": "02-151403.png",
+      "takenAt": "2026-09-12T15:14:07.249Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 8,
+      "colours": [
+        "blue",
+        "black",
+        "bronze",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

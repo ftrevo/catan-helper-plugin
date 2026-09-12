@@ -3638,9 +3638,837 @@
     "cost1293": {
       "roomCode": "cost1293",
       "agent": "w1",
-      "status": "watching",
+      "status": "done",
       "claimedAt": "2026-09-12T14:54:25.502Z",
-      "heartbeatAt": "2026-09-12T14:54:25.502Z"
+      "heartbeatAt": "2026-09-12T14:57:15.134Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "bronze",
+        "white",
+        "pink"
+      ],
+      "buildings": 9,
+      "roads": 16,
+      "finishedAt": "2026-09-12T14:57:19.127Z"
+    },
+    "sail3862": {
+      "roomCode": "sail3862",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T14:57:33.666Z",
+      "heartbeatAt": "2026-09-12T15:00:23.320Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "black"
+      ],
+      "buildings": 14,
+      "roads": 11,
+      "finishedAt": "2026-09-12T15:00:27.162Z"
+    },
+    "coin1672": {
+      "roomCode": "coin1672",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:00:41.291Z",
+      "heartbeatAt": "2026-09-12T15:03:31.045Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "green",
+        "black",
+        "red"
+      ],
+      "buildings": 15,
+      "roads": 12,
+      "finishedAt": "2026-09-12T15:03:34.919Z"
+    },
+    "wool9475": {
+      "roomCode": "wool9475",
+      "agent": "w1",
+      "status": "rejected",
+      "claimedAt": "2026-09-12T15:03:49.022Z",
+      "heartbeatAt": "2026-09-12T15:03:49.022Z",
+      "reason": "5 stray tokens: not the base map",
+      "finishedAt": "2026-09-12T15:04:56.155Z"
+    },
+    "port7297": {
+      "roomCode": "port7297",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:05:04.192Z",
+      "heartbeatAt": "2026-09-12T15:07:53.857Z",
+      "captures": 2,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "buildings": 14,
+      "roads": 12,
+      "finishedAt": "2026-09-12T15:07:57.639Z"
+    },
+    "white709": {
+      "roomCode": "white709",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:08:11.991Z",
+      "heartbeatAt": "2026-09-12T15:11:01.637Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "green"
+      ],
+      "buildings": 14,
+      "roads": 12,
+      "finishedAt": "2026-09-12T15:11:05.454Z"
+    },
+    "land5766": {
+      "roomCode": "land5766",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:11:13.817Z",
+      "heartbeatAt": "2026-09-12T15:14:03.469Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "bronze",
+        "red"
+      ],
+      "buildings": 14,
+      "roads": 8,
+      "finishedAt": "2026-09-12T15:14:07.249Z"
+    },
+    "steal756": {
+      "roomCode": "steal756",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:14:15.506Z",
+      "heartbeatAt": "2026-09-12T15:17:05.225Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ],
+      "buildings": 21,
+      "roads": 19,
+      "finishedAt": "2026-09-12T15:17:09.183Z"
+    },
+    "deck2071": {
+      "roomCode": "deck2071",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:17:17.375Z",
+      "heartbeatAt": "2026-09-12T15:20:07.040Z",
+      "captures": 2,
+      "colours": [
+        "white",
+        "black",
+        "blue",
+        "red"
+      ],
+      "buildings": 13,
+      "roads": 11,
+      "finishedAt": "2026-09-12T15:20:10.864Z"
+    },
+    "green1688": {
+      "roomCode": "green1688",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:20:19.259Z",
+      "heartbeatAt": "2026-09-12T15:23:08.913Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red",
+        "green"
+      ],
+      "buildings": 12,
+      "roads": 10,
+      "finishedAt": "2026-09-12T15:23:12.749Z"
+    },
+    "rob2900": {
+      "roomCode": "rob2900",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:23:26.970Z",
+      "heartbeatAt": "2026-09-12T15:26:16.593Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "buildings": 7,
+      "roads": 6,
+      "finishedAt": "2026-09-12T15:26:20.413Z"
+    },
+    "wool2923": {
+      "roomCode": "wool2923",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:26:40.717Z",
+      "heartbeatAt": "2026-09-12T15:29:30.335Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "bronze"
+      ],
+      "buildings": 10,
+      "roads": 9,
+      "finishedAt": "2026-09-12T15:29:34.160Z"
+    },
+    "land872": {
+      "roomCode": "land872",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:29:42.205Z",
+      "heartbeatAt": "2026-09-12T15:32:31.872Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ],
+      "buildings": 14,
+      "roads": 13,
+      "finishedAt": "2026-09-12T15:32:35.719Z"
+    },
+    "trade852": {
+      "roomCode": "trade852",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:32:43.811Z",
+      "heartbeatAt": "2026-09-12T15:35:33.466Z",
+      "captures": 2,
+      "colours": [
+        "green",
+        "red",
+        "blue",
+        "black"
+      ],
+      "buildings": 18,
+      "roads": 18,
+      "finishedAt": "2026-09-12T15:35:37.376Z"
+    },
+    "rob4772": {
+      "roomCode": "rob4772",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:35:51.406Z",
+      "heartbeatAt": "2026-09-12T15:38:41.043Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "buildings": 12,
+      "roads": 10,
+      "finishedAt": "2026-09-12T15:38:45.019Z"
+    },
+    "pack6316": {
+      "roomCode": "pack6316",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:38:59.521Z",
+      "heartbeatAt": "2026-09-12T15:41:49.153Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "orange"
+      ],
+      "buildings": 23,
+      "roads": 24,
+      "finishedAt": "2026-09-12T15:41:53.069Z"
+    },
+    "green5703": {
+      "roomCode": "green5703",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:42:01.171Z",
+      "heartbeatAt": "2026-09-12T15:44:50.856Z",
+      "captures": 2,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "buildings": 23,
+      "roads": 16,
+      "finishedAt": "2026-09-12T15:44:54.723Z"
+    },
+    "dice1262": {
+      "roomCode": "dice1262",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:45:02.919Z",
+      "heartbeatAt": "2026-09-12T15:47:52.635Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "red",
+        "green",
+        "blue",
+        "white"
+      ],
+      "buildings": 21,
+      "roads": 21,
+      "finishedAt": "2026-09-12T15:47:56.513Z"
+    },
+    "hill9037": {
+      "roomCode": "hill9037",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:48:05.274Z",
+      "heartbeatAt": "2026-09-12T15:50:54.991Z",
+      "captures": 2,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ],
+      "buildings": 21,
+      "roads": 21,
+      "finishedAt": "2026-09-12T15:50:58.917Z"
+    },
+    "wall6707": {
+      "roomCode": "wall6707",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:51:07.613Z",
+      "heartbeatAt": "2026-09-12T15:53:57.309Z",
+      "captures": 2,
+      "colours": [
+        "green",
+        "orange",
+        "blue",
+        "red"
+      ],
+      "buildings": 17,
+      "roads": 13,
+      "finishedAt": "2026-09-12T15:54:01.171Z"
+    },
+    "city3697": {
+      "roomCode": "city3697",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:54:10.096Z",
+      "heartbeatAt": "2026-09-12T15:56:59.788Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "green",
+        "red",
+        "blue"
+      ],
+      "buildings": 17,
+      "roads": 17,
+      "finishedAt": "2026-09-12T15:57:03.697Z"
+    },
+    "rule1748": {
+      "roomCode": "rule1748",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T15:57:18.295Z",
+      "heartbeatAt": "2026-09-12T16:00:07.968Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "black"
+      ],
+      "buildings": 7,
+      "roads": 12,
+      "finishedAt": "2026-09-12T16:00:11.684Z"
+    },
+    "wood3458": {
+      "roomCode": "wood3458",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:00:20.415Z",
+      "heartbeatAt": "2026-09-12T16:03:10.125Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ],
+      "buildings": 19,
+      "roads": 14,
+      "finishedAt": "2026-09-12T16:03:14.041Z"
+    },
+    "blue8642": {
+      "roomCode": "blue8642",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:03:22.686Z",
+      "heartbeatAt": "2026-09-12T16:06:12.345Z",
+      "captures": 2,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "buildings": 9,
+      "roads": 10,
+      "finishedAt": "2026-09-12T16:06:16.200Z"
+    },
+    "wool8372": {
+      "roomCode": "wool8372",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:06:25.188Z",
+      "heartbeatAt": "2026-09-12T16:09:14.922Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "bronze",
+        "mysticblue",
+        "black"
+      ],
+      "buildings": 21,
+      "roads": 19,
+      "finishedAt": "2026-09-12T16:09:18.785Z"
+    },
+    "area5226": {
+      "roomCode": "area5226",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:09:26.830Z",
+      "heartbeatAt": "2026-09-12T16:11:46.574Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ],
+      "buildings": 29,
+      "roads": 32,
+      "finishedAt": "2026-09-12T16:11:53.431Z"
+    },
+    "wall2085": {
+      "roomCode": "wall2085",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:12:01.568Z",
+      "heartbeatAt": "2026-09-12T16:14:51.215Z",
+      "captures": 2,
+      "colours": [
+        "green",
+        "red"
+      ],
+      "buildings": 11,
+      "roads": 9,
+      "finishedAt": "2026-09-12T16:14:55.060Z"
+    },
+    "cost6871": {
+      "roomCode": "cost6871",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:15:15.237Z",
+      "heartbeatAt": "2026-09-12T16:18:04.953Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ],
+      "buildings": 18,
+      "roads": 18,
+      "finishedAt": "2026-09-12T16:18:08.772Z"
+    },
+    "card5569": {
+      "roomCode": "card5569",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:18:17.398Z",
+      "heartbeatAt": "2026-09-12T16:21:07.014Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ],
+      "buildings": 9,
+      "roads": 9,
+      "finishedAt": "2026-09-12T16:21:10.875Z"
+    },
+    "isle4352": {
+      "roomCode": "isle4352",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:21:25.002Z",
+      "heartbeatAt": "2026-09-12T16:24:14.783Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "green"
+      ],
+      "buildings": 11,
+      "roads": 13,
+      "finishedAt": "2026-09-12T16:24:18.636Z"
+    },
+    "wool3256": {
+      "roomCode": "wool3256",
+      "agent": "w1",
+      "status": "rejected",
+      "claimedAt": "2026-09-12T16:24:26.663Z",
+      "heartbeatAt": "2026-09-12T16:24:26.663Z",
+      "reason": "5 stray tokens: not the base map",
+      "finishedAt": "2026-09-12T16:25:33.877Z"
+    },
+    "stone5553": {
+      "roomCode": "stone5553",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:25:48.011Z",
+      "heartbeatAt": "2026-09-12T16:28:37.633Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ],
+      "buildings": 17,
+      "roads": 15,
+      "finishedAt": "2026-09-12T16:28:41.475Z"
+    },
+    "pact2924": {
+      "roomCode": "pact2924",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:28:49.609Z",
+      "heartbeatAt": "2026-09-12T16:31:09.290Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "black",
+        "white"
+      ],
+      "buildings": 17,
+      "roads": 17,
+      "finishedAt": "2026-09-12T16:31:16.068Z"
+    },
+    "tile9857": {
+      "roomCode": "tile9857",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:31:24.262Z",
+      "heartbeatAt": "2026-09-12T16:34:13.896Z",
+      "captures": 2,
+      "colours": [
+        "orange",
+        "red"
+      ],
+      "buildings": 15,
+      "roads": 18,
+      "finishedAt": "2026-09-12T16:34:17.736Z"
+    },
+    "wall586": {
+      "roomCode": "wall586",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:34:25.965Z",
+      "heartbeatAt": "2026-09-12T16:37:15.650Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red",
+        "white"
+      ],
+      "buildings": 13,
+      "roads": 12,
+      "finishedAt": "2026-09-12T16:37:19.464Z"
+    },
+    "turn3916": {
+      "roomCode": "turn3916",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:37:27.595Z",
+      "heartbeatAt": "2026-09-12T16:40:17.314Z",
+      "captures": 2,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "buildings": 23,
+      "roads": 24,
+      "finishedAt": "2026-09-12T16:40:21.130Z"
+    },
+    "event263": {
+      "roomCode": "event263",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:40:29.215Z",
+      "heartbeatAt": "2026-09-12T16:43:18.869Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "orange",
+        "bronze",
+        "white",
+        "green"
+      ],
+      "buildings": 14,
+      "roads": 20,
+      "finishedAt": "2026-09-12T16:43:22.732Z"
+    },
+    "ore3766": {
+      "roomCode": "ore3766",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:43:36.997Z",
+      "heartbeatAt": "2026-09-12T16:46:26.479Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ],
+      "buildings": 8,
+      "roads": 9,
+      "finishedAt": "2026-09-12T16:46:30.259Z"
+    },
+    "edge6700": {
+      "roomCode": "edge6700",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:46:51.249Z",
+      "heartbeatAt": "2026-09-12T16:49:40.957Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ],
+      "buildings": 21,
+      "roads": 23,
+      "finishedAt": "2026-09-12T16:49:45.040Z"
+    },
+    "trade5172": {
+      "roomCode": "trade5172",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:49:59.065Z",
+      "heartbeatAt": "2026-09-12T16:52:48.731Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "red",
+        "green",
+        "blue",
+        "white"
+      ],
+      "buildings": 19,
+      "roads": 14,
+      "finishedAt": "2026-09-12T16:52:52.585Z"
+    },
+    "hand4522": {
+      "roomCode": "hand4522",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:53:06.910Z",
+      "heartbeatAt": "2026-09-12T16:55:56.535Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ],
+      "buildings": 13,
+      "roads": 12,
+      "finishedAt": "2026-09-12T16:56:00.312Z"
+    },
+    "hill4380": {
+      "roomCode": "hill4380",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:56:08.600Z",
+      "heartbeatAt": "2026-09-12T16:58:58.190Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ],
+      "buildings": 4,
+      "roads": 4,
+      "finishedAt": "2026-09-12T16:59:01.976Z"
+    },
+    "isle696": {
+      "roomCode": "isle696",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T16:59:10.075Z",
+      "heartbeatAt": "2026-09-12T17:01:59.732Z",
+      "captures": 2,
+      "colours": [
+        "green",
+        "black",
+        "red",
+        "blue",
+        "bronze"
+      ],
+      "buildings": 23,
+      "roads": 19,
+      "finishedAt": "2026-09-12T17:02:03.640Z"
+    },
+    "city8246": {
+      "roomCode": "city8246",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T17:02:11.934Z",
+      "heartbeatAt": "2026-09-12T17:05:01.533Z",
+      "captures": 2,
+      "colours": [
+        "blue",
+        "black",
+        "green",
+        "red"
+      ],
+      "buildings": 11,
+      "roads": 10,
+      "finishedAt": "2026-09-12T17:05:05.354Z"
+    },
+    "task8396": {
+      "roomCode": "task8396",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T17:05:19.461Z",
+      "heartbeatAt": "2026-09-12T17:08:09.182Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "buildings": 16,
+      "roads": 13,
+      "finishedAt": "2026-09-12T17:08:13.088Z"
+    },
+    "hill6716": {
+      "roomCode": "hill6716",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T17:08:21.433Z",
+      "heartbeatAt": "2026-09-12T17:11:11.244Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ],
+      "buildings": 12,
+      "roads": 10,
+      "finishedAt": "2026-09-12T17:11:15.074Z"
+    },
+    "isle848": {
+      "roomCode": "isle848",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T17:11:23.161Z",
+      "heartbeatAt": "2026-09-12T17:14:12.855Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ],
+      "buildings": 17,
+      "roads": 12,
+      "finishedAt": "2026-09-12T17:14:16.716Z"
+    },
+    "sheep5170": {
+      "roomCode": "sheep5170",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T17:14:30.837Z",
+      "heartbeatAt": "2026-09-12T17:17:20.548Z",
+      "captures": 2,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red"
+      ],
+      "buildings": 21,
+      "roads": 21,
+      "finishedAt": "2026-09-12T17:17:24.450Z"
+    },
+    "win2212": {
+      "roomCode": "win2212",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T17:17:32.579Z",
+      "heartbeatAt": "2026-09-12T17:20:22.211Z",
+      "captures": 2,
+      "colours": [
+        "white",
+        "blue",
+        "orange",
+        "red"
+      ],
+      "buildings": 13,
+      "roads": 11,
+      "finishedAt": "2026-09-12T17:20:26.060Z"
+    },
+    "wheat4161": {
+      "roomCode": "wheat4161",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-12T17:20:58.008Z",
+      "heartbeatAt": "2026-09-12T17:23:47.696Z",
+      "captures": 2,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ],
+      "buildings": 17,
+      "roads": 14,
+      "finishedAt": "2026-09-12T17:23:51.505Z"
     }
   }
 }

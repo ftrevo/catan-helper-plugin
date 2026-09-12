@@ -1,0 +1,364 @@
+{
+  "ok": true,
+  "capture": {
+    "file": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260912-city8246/02-170501.png",
+    "width": 1600,
+    "height": 900
+  },
+  "modelSet": "v2-synthetic",
+  "location": {
+    "center": {
+      "x": 619.6173557764931,
+      "y": 425.4508740549048
+    },
+    "spacing": 114.84791261616576,
+    "tokensFound": 18,
+    "extraTokens": 0
+  },
+  "board": [
+    {
+      "position": 0,
+      "resource": "brick",
+      "number": "8",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 1,
+      "resource": "stone",
+      "number": "3",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999998807907104
+      }
+    },
+    {
+      "position": 2,
+      "resource": "grain",
+      "number": "6",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 3,
+      "resource": "brick",
+      "number": "10",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 4,
+      "resource": "lumber",
+      "number": "5",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 5,
+      "resource": "wool",
+      "number": "4",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999996423721313
+      }
+    },
+    {
+      "position": 6,
+      "resource": "grain",
+      "number": "2",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 7,
+      "resource": "brick",
+      "number": "9",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 8,
+      "resource": "desert",
+      "number": "7",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999998807907104
+      }
+    },
+    {
+      "position": 9,
+      "resource": "wool",
+      "number": "11",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999998807907104
+      }
+    },
+    {
+      "position": 10,
+      "resource": "lumber",
+      "number": "9",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 11,
+      "resource": "grain",
+      "number": "5",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 12,
+      "resource": "lumber",
+      "number": "12",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 13,
+      "resource": "wool",
+      "number": "6",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 14,
+      "resource": "stone",
+      "number": "3",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 15,
+      "resource": "wool",
+      "number": "10",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    },
+    {
+      "position": 16,
+      "resource": "grain",
+      "number": "11",
+      "confidence": {
+        "resource": 0.9994766116142273,
+        "number": 0.9999998807907104
+      }
+    },
+    {
+      "position": 17,
+      "resource": "lumber",
+      "number": "4",
+      "confidence": {
+        "resource": 1,
+        "number": 0.9999998807907104
+      }
+    },
+    {
+      "position": 18,
+      "resource": "stone",
+      "number": "8",
+      "confidence": {
+        "resource": 1,
+        "number": 1
+      }
+    }
+  ],
+  "pieces": {
+    "buildings": [
+      {
+        "vertex": 5,
+        "kind": "knight",
+        "colour": "blue"
+      },
+      {
+        "vertex": 9,
+        "kind": "settlement",
+        "colour": "blue"
+      },
+      {
+        "vertex": 12,
+        "kind": "settlement",
+        "colour": "black"
+      },
+      {
+        "vertex": 16,
+        "kind": "city",
+        "colour": "green"
+      },
+      {
+        "vertex": 29,
+        "kind": "knight",
+        "colour": "black"
+      },
+      {
+        "vertex": 31,
+        "kind": "settlement",
+        "colour": "green"
+      },
+      {
+        "vertex": 35,
+        "kind": "city",
+        "colour": "black"
+      },
+      {
+        "vertex": 41,
+        "kind": "settlement",
+        "colour": "red"
+      },
+      {
+        "vertex": 44,
+        "kind": "city",
+        "colour": "red"
+      },
+      {
+        "vertex": 46,
+        "kind": "knight",
+        "colour": "red"
+      },
+      {
+        "vertex": 49,
+        "kind": "city",
+        "colour": "blue"
+      }
+    ],
+    "roads": [
+      {
+        "edge": 8,
+        "colour": "blue"
+      },
+      {
+        "edge": 11,
+        "colour": "black"
+      },
+      {
+        "edge": 24,
+        "colour": "green"
+      },
+      {
+        "edge": 25,
+        "colour": "green"
+      },
+      {
+        "edge": 26,
+        "colour": "green"
+      },
+      {
+        "edge": 43,
+        "colour": "black"
+      },
+      {
+        "edge": 47,
+        "colour": "green"
+      },
+      {
+        "edge": 56,
+        "colour": "red"
+      },
+      {
+        "edge": 60,
+        "colour": "red"
+      },
+      {
+        "edge": 70,
+        "colour": "blue"
+      }
+    ]
+  },
+  "players": [
+    {
+      "colour": "black",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 1,
+      "roads": 2,
+      "production": {
+        "brick": 8,
+        "lumber": 4,
+        "wool": 14,
+        "stone": 4
+      },
+      "totalProduction": 30,
+      "longestRoad": 1,
+      "visiblePoints": 3
+    },
+    {
+      "colour": "red",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 1,
+      "roads": 2,
+      "production": {
+        "stone": 7,
+        "wool": 13,
+        "grain": 4,
+        "lumber": 6
+      },
+      "totalProduction": 30,
+      "longestRoad": 1,
+      "visiblePoints": 3
+    },
+    {
+      "colour": "blue",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 1,
+      "roads": 2,
+      "production": {
+        "stone": 12,
+        "grain": 5,
+        "wool": 3,
+        "lumber": 6
+      },
+      "totalProduction": 26,
+      "longestRoad": 1,
+      "visiblePoints": 3
+    },
+    {
+      "colour": "green",
+      "settlements": 1,
+      "cities": 1,
+      "metropolises": 0,
+      "knights": 0,
+      "roads": 4,
+      "production": {
+        "brick": 14,
+        "lumber": 4,
+        "grain": 4,
+        "wool": 3
+      },
+      "totalProduction": 25,
+      "longestRoad": 3,
+      "visiblePoints": 3
+    }
+  ],
+  "durationMs": 1257,
+  "readAt": "2026-09-12T17:05:05.332Z"
+}
