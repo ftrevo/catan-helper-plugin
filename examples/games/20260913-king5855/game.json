@@ -1,0 +1,96 @@
+{
+  "roomCode": "king5855",
+  "url": "https://colonist.io/#king5855",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T04:58:35.035Z",
+  "seats": [
+    "black",
+    "white",
+    "green",
+    "blue"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-045852.png",
+      "takenAt": "2026-09-13T04:58:57.237Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "02-050143.png",
+      "takenAt": "2026-09-13T05:01:48.974Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "03-050420.png",
+      "takenAt": "2026-09-13T05:04:25.923Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 14,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "04-050652.png",
+      "takenAt": "2026-09-13T05:06:57.447Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 15,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "05-050926.png",
+      "takenAt": "2026-09-13T05:09:31.779Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}
