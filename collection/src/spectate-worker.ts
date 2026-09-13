@@ -82,7 +82,8 @@ const LOG_DIR = resolve(EXAMPLES_DIR, 'logs')
  * the base game and Cities & Knights. Colonist Rush is skipped; its simultaneous play makes boards noisy.
  */
 const ACCEPTED_MAP = 'Base'
-const isAcceptedMode = (mode: string) => /^base(\s*game)?(\s*\d-\dp)?$/i.test(mode) || /cities|c&k/i.test(mode)
+const isAcceptedMode = (mode: string) =>
+  !/seafarers/i.test(mode) && (/^base(\s*game)?(\s*\d-\dp)?$/i.test(mode) || /cities|c&k/i.test(mode))
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 const stamp = () => new Date().toISOString()
