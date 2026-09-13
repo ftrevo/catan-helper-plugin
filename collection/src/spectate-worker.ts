@@ -33,6 +33,8 @@ const FIRST_CAPTURE_RETRY_MS = 12_000
  * fits the grid from 12 tokens; this keeps a margin so the tile reading stays trustworthy.
  */
 const MIN_TOKENS = 15
+/** With --all-maps only the lattice geometry matters, so the locator's own minimum is enough. */
+const MIN_TOKENS_ANY_MAP = 12
 /** More stray token-like discs than this means a larger map only partly fitted the lattice. */
 const MAX_EXTRA_TOKENS = 2
 
@@ -358,7 +360,9 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
     const extra = reading.location?.extraTokens ?? 0
     // The list can shuffle between parsing and clicking, so verify the map geometrically as well. With
     // --all-maps a located lattice is enough: the pieces on its 54 vertices and 72 edges are what matters.
-    const standard = reading.ok && tokens >= MIN_TOKENS && (ALL_MAPS || extra <= MAX_EXTRA_TOKENS)
+    const standard = ALL_MAPS
+      ? reading.ok && tokens >= MIN_TOKENS_ANY_MAP
+      : reading.ok && tokens >= MIN_TOKENS && extra <= MAX_EXTRA_TOKENS
     const colours = [
       ...new Set([...(reading.pieces?.buildings ?? []), ...(reading.pieces?.roads ?? [])].map((p) => p.colour)),
     ]
@@ -375,7 +379,9 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
         : {
             reason:
               reading.reason ??
-              (tokens < MIN_TOKENS ? `only ${tokens} tokens` : `${extra} stray tokens: not the base map`),
+              (tokens < (ALL_MAPS ? MIN_TOKENS_ANY_MAP : MIN_TOKENS)
+                ? `only ${tokens} tokens`
+                : `${extra} stray tokens: not the base map`),
           }),
     })
     save()

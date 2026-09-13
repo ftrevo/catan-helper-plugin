@@ -33,11 +33,14 @@ type Reading = {
 /** A capture counts when the board was found with most tokens and nothing standing outside the lattice. */
 export const MIN_TOKENS = 15
 export const MAX_EXTRA_TOKENS = 2
+/** Rooms collected with --all-maps only need the lattice geometry, so the locator's own minimum is enough. */
+export const MIN_TOKENS_ANY_MAP = 12
 
 export const acceptable = (reading: Reading, anyMap = false): boolean =>
   reading.ok &&
-  (reading.location?.tokensFound ?? 0) >= MIN_TOKENS &&
-  (anyMap || (reading.location?.extraTokens ?? 0) <= MAX_EXTRA_TOKENS)
+  (anyMap
+    ? (reading.location?.tokensFound ?? 0) >= MIN_TOKENS_ANY_MAP
+    : (reading.location?.tokensFound ?? 0) >= MIN_TOKENS && (reading.location?.extraTokens ?? 0) <= MAX_EXTRA_TOKENS)
 
 /** Re-reads `capture` in `dir`, rewriting its .reading.json and summary; returns the kinds found, or undefined when the read failed. */
 export const rereadCapture = (
