@@ -1,25 +1,5 @@
 [
   {
-    "roomCode": "spot2571",
-    "url": "https://colonist.io/#spot2571",
-    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-spot2571",
-    "seats": [
-      "black",
-      "blue",
-      "red",
-      "mysticblue"
-    ],
-    "wanted": [
-      "mysticblue"
-    ],
-    "agent": "f1",
-    "addedAt": "2026-09-13T04:41:15.434Z",
-    "nextVisitAt": "2026-09-13T05:10:54.108Z",
-    "visits": 12,
-    "maxVisits": 20,
-    "failures": 0
-  },
-  {
     "roomCode": "king5855",
     "url": "https://colonist.io/#king5855",
     "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-king5855",
@@ -34,8 +14,68 @@
     ],
     "agent": "f1",
     "addedAt": "2026-09-13T04:58:57.237Z",
-    "nextVisitAt": "2026-09-13T05:11:31.780Z",
-    "visits": 5,
+    "nextVisitAt": "2026-09-13T05:34:17.420Z",
+    "visits": 14,
+    "maxVisits": 20,
+    "failures": 0
+  },
+  {
+    "roomCode": "grain9566",
+    "url": "https://colonist.io/#grain9566",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-grain9566",
+    "seats": [
+      "red",
+      "blue",
+      "black",
+      "mysticblue"
+    ],
+    "wanted": [
+      "mysticblue"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T05:26:04.761Z",
+    "nextVisitAt": "2026-09-13T05:33:17.442Z",
+    "visits": 1,
+    "maxVisits": 20,
+    "failures": 0
+  },
+  {
+    "roomCode": "hill5176",
+    "url": "https://colonist.io/#hill5176",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-hill5176",
+    "seats": [
+      "purple",
+      "blue",
+      "black",
+      "red"
+    ],
+    "wanted": [
+      "purple"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T05:20:56.812Z",
+    "nextVisitAt": "2026-09-13T05:33:17.442Z",
+    "visits": 1,
+    "maxVisits": 20,
+    "failures": 0
+  },
+  {
+    "roomCode": "task707",
+    "url": "https://colonist.io/#task707",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-task707",
+    "seats": [
+      "mysticblue",
+      "red",
+      "blue",
+      "black"
+    ],
+    "wanted": [
+      "mysticblue"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T05:31:47.934Z",
+    "nextVisitAt": "2026-09-13T05:33:17.443Z",
+    "visits": 1,
     "maxVisits": 20,
     "failures": 0
   }

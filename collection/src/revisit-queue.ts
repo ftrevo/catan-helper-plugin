@@ -1,6 +1,7 @@
 /**
  * Games the focus worker returns to. Persisted in examples/revisit.json so a restart resumes the visits;
- * only the focus worker writes it, so no lock is needed.
+ * only the focus worker process writes it, so no lock is needed, but every write must go through
+ * modifyQueue because its two loops interleave.
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'

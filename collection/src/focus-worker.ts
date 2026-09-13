@@ -32,7 +32,7 @@ import {
   skip,
   unavailableRooms,
 } from './registry.ts'
-import { type Revisit, dueNow, loadQueue, saveQueue } from './revisit-queue.ts'
+import { type Revisit, dueNow, loadQueue, modifyQueue } from './revisit-queue.ts'
 
 const REJECTED_DIR = resolve(EXAMPLES_DIR, 'rejected')
 const VARIANTS_FILE = resolve(EXAMPLES_DIR, 'variants.json')
@@ -470,21 +470,21 @@ const scoutGame = async (page: Page, roomCode: string, row: Row): Promise<'queue
     finishGame(dir, game, 'final board captured on the first visit')
     return 'queued'
   }
-  const queue = loadQueue()
-  queue.push({
-    roomCode,
-    url: game.url,
-    dir,
-    seats: game.seats,
-    wanted: game.wanted,
-    agent: AGENT,
-    addedAt: stamp(),
-    nextVisitAt: new Date(Date.now() + revisitInterval(queue.length + 1)).toISOString(),
-    visits: 1,
-    maxVisits: MAX_VISITS,
-    failures: 0,
+  const queue = modifyQueue((q) => {
+    q.push({
+      roomCode,
+      url: game.url,
+      dir,
+      seats: game.seats,
+      wanted: game.wanted,
+      agent: AGENT,
+      addedAt: stamp(),
+      nextVisitAt: new Date(Date.now() + revisitInterval(q.length + 1)).toISOString(),
+      visits: 1,
+      maxVisits: MAX_VISITS,
+      failures: 0,
+    })
   })
-  saveQueue(queue)
   log(
     `${roomCode} queued, next visit in ${Math.round(revisitInterval(queue.length) / 60_000)} min (${queue.length} in queue)`
   )
@@ -494,13 +494,13 @@ const scoutGame = async (page: Page, roomCode: string, row: Row): Promise<'queue
 // -------------------------------------------------------------------------------------------- revisit
 
 const revisit = async (page: Page, entry: Revisit) => {
-  const queue = loadQueue()
-  const drop = () => saveQueue(queue.filter((r) => r.roomCode !== entry.roomCode))
-  const update = (patch: Partial<Revisit>) => {
-    const current = queue.find((r) => r.roomCode === entry.roomCode)
-    if (current) Object.assign(current, patch)
-    saveQueue(queue)
-  }
+  const drop = () => modifyQueue((q) => q.filter((r) => r.roomCode !== entry.roomCode))
+  /** Patches this entry in the stored queue and returns the queue length, for the next interval. */
+  const update = (patch: Partial<Revisit>): number =>
+    modifyQueue((q) => {
+      const current = q.find((r) => r.roomCode === entry.roomCode)
+      if (current) Object.assign(current, patch)
+    }).length
   if (!existsSync(gameFile(entry.dir))) {
     log(`${entry.roomCode} revisit: game folder is gone, dropping`)
     drop()
@@ -520,7 +520,7 @@ const revisit = async (page: Page, entry: Revisit) => {
       finishGame(entry.dir, game, `revisits stopped: game unreachable after ${entry.visits} visits`)
     } else {
       log(`${entry.roomCode} revisit: no game canvas (hash ${state.hash || 'none'}), will retry`)
-      update({ failures, nextVisitAt: new Date(Date.now() + revisitInterval(queue.length)).toISOString() })
+      update({ failures, nextVisitAt: new Date(Date.now() + revisitInterval(loadQueue().length)).toISOString() })
     }
     return
   }
@@ -543,7 +543,7 @@ const revisit = async (page: Page, entry: Revisit) => {
     finishGame(entry.dir, game, `visit budget of ${entry.maxVisits} spent`)
     return
   }
-  const interval = revisitInterval(queue.length)
+  const interval = revisitInterval(loadQueue().length)
   update({ visits, failures: 0, nextVisitAt: new Date(Date.now() + interval).toISOString() })
   log(`${entry.roomCode} revisit ${visits}/${entry.maxVisits} done, next in ${Math.round(interval / 60_000)} min`)
 }
