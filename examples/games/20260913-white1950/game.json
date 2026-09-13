@@ -1,0 +1,46 @@
+{
+  "roomCode": "white1950",
+  "url": "https://colonist.io/#white1950",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:55:48.922Z",
+  "finishedAt": "2026-09-13T02:58:42.378Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-025604.png",
+      "takenAt": "2026-09-13T02:56:08.551Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-025838.png",
+      "takenAt": "2026-09-13T02:58:42.377Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,39 @@
+{
+  "roomCode": "sheep9907",
+  "url": "https://colonist.io/#sheep9907",
+  "mode": "Base",
+  "map": "Lakes",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T03:25:01.316Z",
+  "anyMap": true,
+  "seats": [
+    "orange",
+    "green",
+    "blue",
+    "red"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-032605.png",
+      "takenAt": "2026-09-13T03:26:09.215Z",
+      "ok": true,
+      "tokens": 14,
+      "buildings": 10,
+      "roads": 20,
+      "colours": [
+        "orange",
+        "green",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}

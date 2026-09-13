@@ -8,7 +8,7 @@ cd "$(dirname "$0")/.."
 AGENT="${1:-w1}"
 PROFILE="${2:-.profiles/$AGENT}"
 shift $(( $# > 2 ? 2 : $# ))
-pkill -f 'src/spectate-worker.ts' || true
+pkill -f 'src/(spectate|focus)-worker.ts' || true
 sleep 2
 pkill -f "$(basename "$PROFILE")" || true
 sleep 3

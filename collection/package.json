@@ -10,7 +10,8 @@
     "recover": "node --import tsx src/recover.ts",
     "variants": "node --import tsx src/variants.ts",
     "typecheck": "tsc --noEmit -p .",
-    "format": "prettier --write src bin README.md"
+    "format": "prettier --write src bin README.md",
+    "focus": "node --import tsx src/focus-worker.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

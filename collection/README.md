@@ -25,11 +25,15 @@ These were set when the collection started and have not changed since. Change th
 - **Two captures per game**, about 150 s apart, after a 15 s settle. On a "Game Over" overlay the worker
   clicks the "Map" button to reveal the final board and captures that.
 - **Focus phase (from 2026-09-13, 450 games in).** The user relaxed the map rule to fill the gaps in the
-  rare colours: `--all-maps` accepts every map the lobby lists (a located 19-tile lattice is enough, since
-  only the pieces on its vertices and edges matter) and `--focus` leaves any game whose seats use none of
-  the colours listed in `../examples/variants.json` (written by `npm run variants -- --min 5`). Rare-colour
-  games get more captures (`--captures 6 --interval 120`). The goal is at least 5 sightings of every piece
-  variant for every colour. Rooms left this way are `skipped` in the registry.
+  rare colours; this is a separate script, `src/focus-worker.ts`, so the original worker stays as it was.
+  It accepts every map (a located lattice is enough, since only the pieces on its vertices and edges
+  matter; such rooms carry `anyMap: true`), reads the seat colours from the game page and leaves at once
+  unless a seat uses a colour listed in `../examples/variants.json` (written by
+  `npm run variants -- --min 5`). A wanted game gets one capture and enters the revisit queue
+  (`../examples/revisit.json`): a second tab in the same Chrome returns to it every 5 minutes for another
+  capture, up to 10 visits or until the game ends, because knights get promoted and metropolises appear
+  late. Rooms left for lack of a wanted colour are `skipped` in the registry. Goal: at least 5 sightings
+  of every piece variant for every colour.
 - **Never add tool attribution to commits.** Conventional commits, short messages.
 
 ## How a worker runs

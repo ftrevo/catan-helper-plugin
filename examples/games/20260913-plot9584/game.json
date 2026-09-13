@@ -1,0 +1,45 @@
+{
+  "roomCode": "plot9584",
+  "url": "https://colonist.io/#plot9584",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:49:45.547Z",
+  "finishedAt": "2026-09-13T02:52:38.919Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-025001.png",
+      "takenAt": "2026-09-13T02:50:05.101Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "black",
+        "red",
+        "green"
+      ]
+    },
+    {
+      "file": "02-025235.png",
+      "takenAt": "2026-09-13T02:52:38.919Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

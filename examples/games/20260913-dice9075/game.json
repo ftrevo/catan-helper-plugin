@@ -1,0 +1,83 @@
+{
+  "roomCode": "dice9075",
+  "url": "https://colonist.io/#dice9075",
+  "mode": "Base",
+  "map": "Gold Rush",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T03:12:28.808Z",
+  "finishedAt": "2026-09-13T03:18:33.841Z",
+  "anyMap": true,
+  "seats": [
+    "black",
+    "blue",
+    "red",
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-031244.png",
+      "takenAt": "2026-09-13T03:12:48.706Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 34,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "02-031448.png",
+      "takenAt": "2026-09-13T03:14:52.755Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 36,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "03-031652.png",
+      "takenAt": "2026-09-13T03:16:56.834Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 37,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "04-031829.png",
+      "takenAt": "2026-09-13T03:18:33.841Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 38,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "mysticblue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}
