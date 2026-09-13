@@ -375,7 +375,7 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
         : {
             reason:
               reading.reason ??
-              (extra > MAX_EXTRA_TOKENS ? `${extra} stray tokens: not the base map` : `only ${tokens} tokens`),
+              (tokens < MIN_TOKENS ? `only ${tokens} tokens` : `${extra} stray tokens: not the base map`),
           }),
     })
     save()
