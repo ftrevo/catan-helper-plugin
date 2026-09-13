@@ -166,16 +166,24 @@ const openSpectateList = async (page: Page): Promise<Row[]> => {
   return rows
 }
 
-/** Colours the collection still needs, from the gap report. Without a report every game is wanted. */
-const wantedColours = (): string[] => {
+/** Missing variants per colour, from the gap report. Without a report every colour needs everything. */
+const readGaps = (): Record<string, string[]> => {
   try {
-    const report = JSON.parse(readFileSync(VARIANTS_FILE, 'utf8')) as { gaps: Record<string, unknown> }
-    return Object.keys(report.gaps)
+    const report = JSON.parse(readFileSync(VARIANTS_FILE, 'utf8')) as { gaps: Record<string, Record<string, number>> }
+    return Object.fromEntries(Object.entries(report.gaps).map(([colour, variants]) => [colour, Object.keys(variants)]))
   } catch {
     log(`${VARIANTS_FILE} is missing or unreadable; every colour counts as wanted`)
-    return PLAYER_COLOUR_NAMES
+    return Object.fromEntries(PLAYER_COLOUR_NAMES.map((c) => [c, ['any']]))
   }
 }
+
+/** Knights and metropolises exist only in Cities & Knights; the other variants appear in every mode. */
+const isCitiesAndKnights = (mode: string) => /cities|c&k/i.test(mode)
+const obtainableIn = (variant: string, mode: string) => isCitiesAndKnights(mode) || !/metropolis|knight/.test(variant)
+
+/** Seat colours whose missing variants this game's mode can still produce. */
+const wantedSeats = (seats: string[], mode: string, gaps: Record<string, string[]>): string[] =>
+  seats.filter((colour) => (gaps[colour] ?? []).some((variant) => obtainableIn(variant, mode)))
 
 /** The game page marks each player's avatar with a class named after the colour, e.g. "red-mDDVK4ZW". */
 const readSeatColours = (page: Page): Promise<string[]> =>
@@ -407,17 +415,22 @@ const scoutGame = async (page: Page, roomCode: string, row: Row): Promise<'queue
 
   await settleIn(page)
   game.seats = await readSeatColours(page).catch(() => [])
-  const wanted = wantedColours()
-  game.wanted = game.seats.filter((c) => wanted.includes(c))
+  const gaps = readGaps()
+  game.wanted = wantedSeats(game.seats, row.mode, gaps)
   if (game.seats.length > 0 && game.wanted.length === 0) {
-    log(`${roomCode} skipped: seats ${game.seats.join(',')} have no wanted colour (${wanted.join(',')})`)
+    const gapColours = game.seats.filter((c) => gaps[c])
+    log(
+      `${roomCode} skipped: seats ${game.seats.join(',')} ${gapColours.length ? `only need Cities & Knights pieces (${gapColours.join(',')}) and this is ${row.mode}` : `have no wanted colour (${Object.keys(gaps).join(',')})`}`
+    )
     skip(roomCode, AGENT, game.seats)
     return 'skipped'
   }
   if (game.seats.length === 0) game.notes.push('seat colours not found on the page; watched anyway')
   mkdirSync(dir, { recursive: true })
   saveGame(dir, game)
-  log(`${roomCode} wanted: ${game.wanted.join(',') || 'unknown seats'} (seats ${game.seats.join(',')})`)
+  log(
+    `${roomCode} wanted: ${game.wanted.map((c) => `${c} [${(gaps[c] ?? []).filter((v) => obtainableIn(v, row.mode)).join(', ')}]`).join('; ') || 'unknown seats'} (seats ${game.seats.join(',')}, ${row.mode})`
+  )
 
   const over = await revealFinalBoardIfOver(page, game)
   if (over === 'unreachable') {
