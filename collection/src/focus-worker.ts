@@ -291,9 +291,15 @@ const revealFinalBoardIfOver = async (page: Page, game: Game): Promise<'playing'
   if (!(await gameState(page)).ended) return 'playing'
   const clicked = await withFront(page, () => clickText(page, 'Map', 'prefix'))
   if (clicked) {
-    await sleep(2500)
-    game.notes.push('game over: captured the final board via the Map button')
-    return 'final'
+    await sleep(4000)
+    // The click sometimes leaves the room (the site then shows the lobby with a sign-up dialog).
+    const state = await gameState(page)
+    if (state.canvases >= 2 && !state.inLobby && roomCodeOf(page.url()) === game.roomCode) {
+      game.notes.push('game over: captured the final board via the Map button')
+      return 'final'
+    }
+    game.notes.push('game over: the Map button left the room')
+    return 'unreachable'
   }
   game.notes.push('game over overlay without a Map button')
   return 'unreachable'
@@ -341,6 +347,14 @@ const captureOnce = async (page: Page, dir: string, game: Game): Promise<Capture
     `${game.roomCode} capture ${seq}: ${ok ? `ok, ${colours.length} colours, ${capture.buildings} buildings, ${capture.roads} roads` : `rejected (${capture.reason})`}`
   )
   return capture
+}
+
+/** Removes a capture that turned out unreadable, so no junk frame stays in the set. */
+const discardCapture = (dir: string, game: Game, capture: Capture) => {
+  game.captures = game.captures.filter((c) => c !== capture)
+  rmSync(resolve(dir, capture.file), { force: true })
+  rmSync(resolve(dir, capture.file.replace(/\.png$/, '.reading.json')), { force: true })
+  saveGame(dir, game)
 }
 
 const finishGame = (dir: string, game: Game, why: string) => {
@@ -531,11 +545,12 @@ const revisit = async (page: Page, entry: Revisit) => {
     finishGame(entry.dir, game, `game over after ${entry.visits} visits`)
     return
   }
-  await captureOnce(page, entry.dir, game)
+  const capture = await captureOnce(page, entry.dir, game)
   const visits = entry.visits + 1
   if (over === 'final') {
+    if (!capture.ok) discardCapture(entry.dir, game, capture)
     drop()
-    finishGame(entry.dir, game, `final board captured on visit ${visits}`)
+    finishGame(entry.dir, game, capture.ok ? `final board captured on visit ${visits}` : `game over on visit ${visits}`)
     return
   }
   if (visits >= entry.maxVisits) {
