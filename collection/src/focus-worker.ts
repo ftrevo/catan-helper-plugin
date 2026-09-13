@@ -216,6 +216,8 @@ const gameState = (page: Page) =>
     canvases: document.querySelectorAll('canvas').length,
     ended: /won the game|has won|Game Over|game has ended|winner/i.test(document.body.innerText),
     inLobby: /Open Rooms|Spectate/.test(document.body.innerText) && document.querySelectorAll('canvas').length < 2,
+    /** A finished game frees its code; opening the old link then creates an empty pre-game room with us as host. */
+    roomSetup: /Room ID:/.test(document.body.innerText) && /Start Game|Add Bot/.test(document.body.innerText),
   }))
 
 const readCapture = (png: string, json: string) => {
@@ -529,6 +531,15 @@ const revisit = async (page: Page, entry: Revisit) => {
   }
   await page.goto(entry.url, { waitUntil: 'networkidle2', timeout: 60_000 }).catch(() => undefined)
   await settleIn(page)
+  if ((await gameState(page)).roomSetup) {
+    // The game is over and its code was recycled into an empty room we now host: leave it at once.
+    await page
+      .goto('https://colonist.io/#lobby=1', { waitUntil: 'networkidle2', timeout: 60_000 })
+      .catch(() => undefined)
+    drop()
+    finishGame(entry.dir, game, `game over after ${entry.visits} visits (room code recycled)`)
+    return
+  }
   if (!(await inRoom())) {
     // The deep link sometimes lands on the lobby; a pass through the lobby and back usually reconnects.
     await page.screenshot({ path: resolve(LOG_DIR, `${AGENT}-revisit-${entry.roomCode}.png`) }).catch(() => undefined)
