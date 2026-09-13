@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-13T03:12:06.373Z",
+  "generatedAt": "2026-09-13T05:10:30.260Z",
   "min": 5,
   "counts": {
     "black": {
-      "settlement": 1132,
-      "city": 880,
-      "road": 2926,
-      "knight level 1 inactive": 338,
-      "metropolis science": 52,
-      "knight level 1 active": 245,
-      "knight level 2 active": 187,
-      "knight level 2 inactive": 149,
+      "settlement": 1209,
+      "city": 967,
+      "road": 3173,
+      "knight level 1 inactive": 364,
+      "metropolis science": 55,
+      "knight level 1 active": 272,
+      "knight level 2 active": 207,
+      "knight level 2 inactive": 160,
       "metropolis trade": 25,
       "knight level 3 active": 34,
       "metropolis politics": 29,
@@ -18,15 +18,15 @@
       "knight (no close match)": 1
     },
     "blue": {
-      "city": 825,
-      "settlement": 1126,
-      "road": 2762,
-      "knight level 1 inactive": 333,
-      "knight level 2 active": 175,
-      "knight level 2 inactive": 156,
-      "metropolis science": 37,
-      "knight level 1 active": 243,
-      "metropolis trade": 23,
+      "city": 902,
+      "settlement": 1203,
+      "road": 2968,
+      "knight level 1 inactive": 342,
+      "knight level 2 active": 201,
+      "knight level 2 inactive": 166,
+      "metropolis science": 43,
+      "knight level 1 active": 261,
+      "metropolis trade": 27,
       "knight level 3 active": 19,
       "knight level 3 inactive": 16,
       "metropolis politics": 15,
@@ -35,7 +35,7 @@
     "orange": {
       "city": 654,
       "settlement": 845,
-      "road": 2109,
+      "road": 2110,
       "knight level 2 active": 148,
       "knight level 2 inactive": 115,
       "knight level 1 active": 159,
@@ -47,28 +47,28 @@
       "knight level 3 active": 12
     },
     "red": {
-      "settlement": 1233,
-      "city": 964,
-      "road": 3120,
-      "knight level 1 active": 266,
-      "knight level 1 inactive": 354,
-      "knight level 2 active": 234,
+      "settlement": 1264,
+      "city": 1037,
+      "road": 3249,
+      "knight level 1 active": 278,
+      "knight level 1 inactive": 368,
+      "knight level 2 active": 251,
       "metropolis trade": 35,
-      "metropolis science": 47,
-      "knight level 3 active": 29,
-      "knight level 3 inactive": 19,
-      "knight level 2 inactive": 174,
+      "metropolis science": 48,
+      "knight level 3 active": 36,
+      "knight level 3 inactive": 24,
+      "knight level 2 inactive": 179,
       "metropolis politics": 16,
       "knight (no close match)": 1
     },
     "green": {
-      "city": 223,
-      "settlement": 354,
-      "road": 841,
-      "knight level 1 inactive": 89,
-      "knight level 2 active": 51,
-      "knight level 2 inactive": 39,
-      "knight level 1 active": 69,
+      "city": 229,
+      "settlement": 369,
+      "road": 871,
+      "knight level 1 inactive": 93,
+      "knight level 2 active": 55,
+      "knight level 2 inactive": 40,
+      "knight level 1 active": 73,
       "knight level 3 active": 7,
       "metropolis trade": 5,
       "knight level 3 inactive": 1,
@@ -77,7 +77,7 @@
       "knight (no close match)": 1
     },
     "bronze": {
-      "road": 77,
+      "road": 81,
       "city": 9,
       "knight level 1 active": 4,
       "knight level 2 active": 1,
@@ -87,29 +87,31 @@
       "knight level 1 inactive": 3
     },
     "white": {
-      "road": 172,
-      "settlement": 52,
-      "knight level 1 active": 20,
-      "city": 45,
+      "road": 210,
+      "settlement": 72,
+      "knight level 1 active": 22,
+      "city": 50,
       "knight level 1 inactive": 20,
-      "knight level 2 active": 4,
+      "knight level 2 active": 7,
       "knight level 2 inactive": 2,
       "knight (no close match)": 1,
       "knight level 3 inactive": 1,
       "knight level 3 active": 1,
       "metropolis science": 2,
-      "metropolis politics": 1
+      "metropolis politics": 2,
+      "metropolis trade": 3
     },
     "pink": {
-      "settlement": 27,
-      "city": 24,
-      "road": 69,
-      "knight level 2 active": 8,
-      "knight level 2 inactive": 5,
-      "knight level 1 active": 10,
+      "settlement": 58,
+      "city": 38,
+      "road": 148,
+      "knight level 2 active": 16,
+      "knight level 2 inactive": 7,
+      "knight level 1 active": 21,
       "knight level 3 active": 1,
       "metropolis science": 4,
-      "knight level 1 inactive": 4
+      "knight level 1 inactive": 9,
+      "metropolis trade": 3
     },
     "purple": {
       "settlement": 13,
@@ -119,34 +121,44 @@
       "knight level 2 inactive": 1
     },
     "mysticblue": {
-      "settlement": 36,
-      "city": 22,
-      "road": 86,
-      "knight level 1 active": 13,
-      "knight level 1 inactive": 6,
-      "knight level 2 active": 4,
-      "knight level 2 inactive": 1,
-      "metropolis science": 2
+      "settlement": 66,
+      "city": 80,
+      "road": 220,
+      "knight level 1 active": 32,
+      "knight level 1 inactive": 24,
+      "knight level 2 active": 30,
+      "knight level 2 inactive": 13,
+      "metropolis science": 2,
+      "metropolis politics": 9,
+      "knight level 3 inactive": 3,
+      "metropolis trade": 1
     },
     "gold": {
-      "road": 13,
-      "city": 5,
-      "settlement": 6,
-      "knight level 1 active": 2,
-      "knight level 1 inactive": 2,
-      "knight (no close match)": 1
+      "road": 75,
+      "city": 13,
+      "settlement": 37,
+      "knight level 1 active": 9,
+      "knight level 1 inactive": 3,
+      "knight (no close match)": 1,
+      "knight level 2 active": 1,
+      "knight level 2 inactive": 3
     },
     "silver": {
-      "knight (no close match)": 1,
-      "road": 4
+      "knight (no close match)": 2,
+      "road": 4,
+      "settlement": 1,
+      "city": 1
     }
   },
   "gaps": {
+    "green": {
+      "metropolis science": 4,
+      "knight level 3 inactive": 1
+    },
     "white": {
       "metropolis science": 2,
-      "metropolis politics": 1,
-      "metropolis trade": 0,
-      "knight level 2 active": 4,
+      "metropolis politics": 2,
+      "metropolis trade": 3,
       "knight level 2 inactive": 2,
       "knight level 3 active": 1,
       "knight level 3 inactive": 1
@@ -166,14 +178,13 @@
     "pink": {
       "metropolis science": 4,
       "metropolis politics": 0,
-      "metropolis trade": 0,
-      "knight level 1 inactive": 4,
+      "metropolis trade": 3,
       "knight level 3 active": 1,
       "knight level 3 inactive": 0
     },
     "silver": {
-      "settlement": 0,
-      "city": 0,
+      "settlement": 1,
+      "city": 1,
       "road": 4,
       "metropolis science": 0,
       "metropolis politics": 0,
@@ -201,22 +212,17 @@
       "metropolis science": 0,
       "metropolis politics": 0,
       "metropolis trade": 0,
-      "knight level 1 active": 2,
-      "knight level 1 inactive": 2,
-      "knight level 2 active": 0,
-      "knight level 2 inactive": 0,
+      "knight level 1 inactive": 3,
+      "knight level 2 active": 1,
+      "knight level 2 inactive": 3,
       "knight level 3 active": 0,
       "knight level 3 inactive": 0
     },
     "mysticblue": {
       "metropolis science": 2,
-      "metropolis politics": 0,
-      "metropolis trade": 0,
-      "knight level 2 active": 4,
-      "knight level 2 inactive": 1,
+      "metropolis trade": 1,
       "knight level 3 active": 0,
-      "knight level 3 inactive": 0
+      "knight level 3 inactive": 3
     }
-  },
-  "note": "green removed by hand on 2026-09-13: its two thin variants fill from queued games"
+  }
 }

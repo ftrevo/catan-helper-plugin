@@ -1,63 +1,41 @@
 [
   {
-    "roomCode": "edge7681",
-    "url": "https://colonist.io/#edge7681",
-    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-edge7681",
+    "roomCode": "spot2571",
+    "url": "https://colonist.io/#spot2571",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-spot2571",
     "seats": [
-      "pink",
-      "red",
       "black",
-      "blue"
+      "blue",
+      "red",
+      "mysticblue"
     ],
     "wanted": [
-      "pink"
+      "mysticblue"
     ],
     "agent": "f1",
-    "addedAt": "2026-09-13T03:40:04.909Z",
-    "nextVisitAt": "2026-09-13T04:20:41.850Z",
-    "visits": 8,
+    "addedAt": "2026-09-13T04:41:15.434Z",
+    "nextVisitAt": "2026-09-13T05:10:54.108Z",
+    "visits": 12,
     "maxVisits": 20,
     "failures": 0
   },
   {
-    "roomCode": "white3776",
-    "url": "https://colonist.io/#white3776",
-    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-white3776",
-    "seats": [
-      "mysticblue",
-      "gold",
-      "red",
-      "black"
-    ],
-    "wanted": [
-      "mysticblue",
-      "gold"
-    ],
-    "agent": "f1",
-    "addedAt": "2026-09-13T03:48:35.754Z",
-    "nextVisitAt": "2026-09-13T04:21:13.880Z",
-    "visits": 5,
-    "maxVisits": 20,
-    "failures": 1
-  },
-  {
-    "roomCode": "event161",
-    "url": "https://colonist.io/#event161",
-    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-event161",
+    "roomCode": "king5855",
+    "url": "https://colonist.io/#king5855",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-king5855",
     "seats": [
       "black",
-      "blue",
-      "gold",
-      "mysticblue"
+      "white",
+      "green",
+      "blue"
     ],
     "wanted": [
-      "gold",
-      "mysticblue"
+      "white"
     ],
     "agent": "f1",
-    "addedAt": "2026-09-13T04:02:23.226Z",
-    "nextVisitAt": "2026-09-13T04:23:51.479Z",
-    "visits": 4,
+    "addedAt": "2026-09-13T04:58:57.237Z",
+    "nextVisitAt": "2026-09-13T05:11:31.780Z",
+    "visits": 5,
     "maxVisits": 20,
     "failures": 0
   }
