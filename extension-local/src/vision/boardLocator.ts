@@ -227,9 +227,11 @@ export const locateBoard = (image: RgbaImage): LocatedBoard => {
     throw new BoardNotFoundError(`only ${candidates.length} token-like shapes found`)
   }
 
-  // For each plausible spacing, keep only discs of token size, then try every one of them as the centre
-  // tile. The hypothesis explaining the most tokens wins across all spacings.
-  let best: { fit: Fit; tokens: Point[] } | undefined
+  // For each plausible spacing, keep only discs of token size, then hypothesise every centre at which one
+  // of them sits on a lattice slot: the centre tile itself may carry no token (the desert, the robber or a
+  // card sprite on it). The hypothesis explaining the most tokens wins across all spacings; ties go to the
+  // centre nearest the tokens' centroid, since a lattice shifted by a tile can explain as many tokens.
+  let best: { fit: Fit; tokens: Point[]; offCentre: number } | undefined
   for (const roughSpacing of spacingCandidates(candidates.map((c) => c.center))) {
     const tokens = candidates
       .filter((c) => {
@@ -237,9 +239,23 @@ export const locateBoard = (image: RgbaImage): LocatedBoard => {
         return diameter >= TOKEN_DIAMETER_MIN && diameter <= TOKEN_DIAMETER_MAX
       })
       .map((c) => c.center)
+    const centroid = {
+      x: tokens.reduce((sum, t) => sum + t.x, 0) / tokens.length,
+      y: tokens.reduce((sum, t) => sum + t.y, 0) / tokens.length,
+    }
     for (const token of tokens) {
-      const fit = matchLattice(tokens, { center: token, spacing: roughSpacing })
-      if (!best || fit.matches.length > best.fit.matches.length) best = { fit, tokens }
+      for (const slot of TILE_OFFSETS) {
+        const center = { x: token.x - slot.x * roughSpacing, y: token.y - slot.y * roughSpacing }
+        const fit = matchLattice(tokens, { center, spacing: roughSpacing })
+        const offCentre = distance(center, centroid)
+        if (
+          !best ||
+          fit.matches.length > best.fit.matches.length ||
+          (fit.matches.length === best.fit.matches.length && offCentre < best.offCentre)
+        ) {
+          best = { fit, tokens, offCentre }
+        }
+      }
     }
   }
 

@@ -48,6 +48,12 @@ export const LOCATOR_ONLY_FIXTURES = [
     spacing: 115,
     minTokens: 17,
   },
+  {
+    name: 'Cities & Knights with five tiles dimmed by a progress card, 1600x900 @1x',
+    file: 'test/fixtures/colonist-board-8-ck-dimmed-tiles.png',
+    spacing: 115,
+    minTokens: 13,
+  },
 ]
 
 /** Captures with only some pieces labelled (see `BOARD_6_KEY_PIECES`); tiles are not labelled. */
