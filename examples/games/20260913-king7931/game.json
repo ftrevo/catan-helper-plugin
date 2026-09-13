@@ -1,0 +1,67 @@
+{
+  "roomCode": "king7931",
+  "url": "https://colonist.io/#king7931",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T17:13:10.012Z",
+  "seats": [
+    "red",
+    "white",
+    "black"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-171327.png",
+      "takenAt": "2026-09-13T17:13:32.199Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 7,
+      "colours": [
+        "white",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-171636.png",
+      "takenAt": "2026-09-13T17:16:41.983Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 11,
+      "colours": [
+        "white",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "03-171859.png",
+      "takenAt": "2026-09-13T17:19:04.501Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "white",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 3 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T17:21:36.134Z"
+}

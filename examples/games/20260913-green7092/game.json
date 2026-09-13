@@ -1,0 +1,127 @@
+{
+  "roomCode": "green7092",
+  "url": "https://colonist.io/#green7092",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T19:33:31.858Z",
+  "seats": [
+    "red",
+    "green",
+    "mysticblue",
+    "black"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-193348.png",
+      "takenAt": "2026-09-13T19:33:53.844Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 10,
+      "colours": [
+        "red",
+        "green",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-193739.png",
+      "takenAt": "2026-09-13T19:37:44.450Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 14,
+      "colours": [
+        "red",
+        "green",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "03-194130.png",
+      "takenAt": "2026-09-13T19:41:35.326Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 17,
+      "colours": [
+        "red",
+        "green",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "04-194609.png",
+      "takenAt": "2026-09-13T19:46:14.383Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 20,
+      "colours": [
+        "red",
+        "green",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "05-194959.png",
+      "takenAt": "2026-09-13T19:50:04.901Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 22,
+      "colours": [
+        "red",
+        "green",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "06-195350.png",
+      "takenAt": "2026-09-13T19:53:55.595Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 26,
+      "colours": [
+        "red",
+        "green",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "07-195746.png",
+      "takenAt": "2026-09-13T19:57:51.197Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 26,
+      "colours": [
+        "red",
+        "green",
+        "mysticblue",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 7 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T20:03:11.823Z"
+}

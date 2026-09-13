@@ -1,0 +1,83 @@
+{
+  "roomCode": "land5194",
+  "url": "https://colonist.io/#land5194",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T20:20:09.105Z",
+  "seats": [
+    "black",
+    "red",
+    "blue",
+    "white"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-202026.png",
+      "takenAt": "2026-09-13T20:20:31.089Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "file": "02-202251.png",
+      "takenAt": "2026-09-13T20:22:56.547Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 12,
+      "roads": 12,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "file": "03-202522.png",
+      "takenAt": "2026-09-13T20:25:27.287Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 14,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "file": "04-202752.png",
+      "takenAt": "2026-09-13T20:27:57.296Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

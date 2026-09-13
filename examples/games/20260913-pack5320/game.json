@@ -1,0 +1,39 @@
+{
+  "roomCode": "pack5320",
+  "url": "https://colonist.io/#pack5320",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T19:03:00.293Z",
+  "seats": [
+    "orange",
+    "silver"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-190317.png",
+      "takenAt": "2026-09-13T19:03:22.818Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "silver"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 1 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T19:06:04.874Z"
+}

@@ -1,0 +1,127 @@
+{
+  "roomCode": "dice5721",
+  "url": "https://colonist.io/#dice5721",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T16:30:41.669Z",
+  "seats": [
+    "blue",
+    "red",
+    "black",
+    "purple"
+  ],
+  "wanted": [
+    "purple"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-163058.png",
+      "takenAt": "2026-09-13T16:31:04.211Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-163331.png",
+      "takenAt": "2026-09-13T16:33:39.103Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-163603.png",
+      "takenAt": "2026-09-13T16:36:09.085Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-163834.png",
+      "takenAt": "2026-09-13T16:38:39.377Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-164121.png",
+      "takenAt": "2026-09-13T16:41:26.667Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-164351.png",
+      "takenAt": "2026-09-13T16:43:57.060Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 12,
+      "colours": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ]
+    },
+    {
+      "file": "07-164621.png",
+      "takenAt": "2026-09-13T16:46:27.368Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 14,
+      "colours": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 7 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T16:48:52.712Z"
+}

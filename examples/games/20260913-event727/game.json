@@ -1,0 +1,214 @@
+{
+  "roomCode": "event727",
+  "url": "https://colonist.io/#event727",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T18:27:51.004Z",
+  "seats": [
+    "white",
+    "red",
+    "blue",
+    "black"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-182808.png",
+      "takenAt": "2026-09-13T18:28:13.187Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 6,
+      "colours": [
+        "white",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-183157.png",
+      "takenAt": "2026-09-13T18:32:02.978Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 12,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black",
+        "bronze"
+      ]
+    },
+    {
+      "file": "03-183600.png",
+      "takenAt": "2026-09-13T18:36:05.998Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "04-183914.png",
+      "takenAt": "2026-09-13T18:39:20.576Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "05-184230.png",
+      "takenAt": "2026-09-13T18:42:36.418Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 13,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "06-184541.png",
+      "takenAt": "2026-09-13T18:45:46.710Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 16,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "07-184813.png",
+      "takenAt": "2026-09-13T18:48:18.750Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 19,
+      "roads": 19,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black",
+        "bronze"
+      ]
+    },
+    {
+      "file": "08-185043.png",
+      "takenAt": "2026-09-13T18:50:48.338Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 17,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "09-185314.png",
+      "takenAt": "2026-09-13T18:53:20.098Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 20,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "10-185539.png",
+      "takenAt": "2026-09-13T18:55:45.218Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "11-185803.png",
+      "takenAt": "2026-09-13T18:58:08.520Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 23,
+      "roads": 22,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "12-190026.png",
+      "takenAt": "2026-09-13T19:00:32.254Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 22,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "13-190304.png",
+      "takenAt": "2026-09-13T19:03:09.493Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 24,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 13 visits"
+  ],
+  "finishedAt": "2026-09-13T19:05:32.816Z"
+}
