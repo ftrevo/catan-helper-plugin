@@ -34,3 +34,14 @@ export const dueNow = (queue: Revisit[]): Revisit | undefined =>
   queue
     .filter((r) => Date.parse(r.nextVisitAt) <= Date.now())
     .sort((a, b) => a.nextVisitAt.localeCompare(b.nextVisitAt))[0]
+
+/**
+ * Applies a change to the queue as stored right now and saves it. The scout and revisit loops interleave,
+ * so a copy loaded earlier must never be written back: it would drop entries added in between.
+ */
+export const modifyQueue = (change: (queue: Revisit[]) => Revisit[] | void): Revisit[] => {
+  const queue = loadQueue()
+  const result = change(queue) ?? queue
+  saveQueue(result)
+  return result
+}
