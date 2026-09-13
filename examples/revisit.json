@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "roomCode": "turn9715",
+    "url": "https://colonist.io/#turn9715",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-turn9715",
+    "seats": [
+      "red",
+      "blue",
+      "orange",
+      "white"
+    ],
+    "wanted": [
+      "white"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T20:11:53.428Z",
+    "nextVisitAt": "2026-09-13T20:29:19.990Z",
+    "visits": 7,
+    "maxVisits": 20,
+    "failures": 0
+  },
+  {
+    "roomCode": "land5194",
+    "url": "https://colonist.io/#land5194",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-land5194",
+    "seats": [
+      "black",
+      "red",
+      "blue",
+      "white"
+    ],
+    "wanted": [
+      "white"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T20:20:31.089Z",
+    "nextVisitAt": "2026-09-13T20:29:57.297Z",
+    "visits": 4,
+    "maxVisits": 20,
+    "failures": 0
+  }
+]
