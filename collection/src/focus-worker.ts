@@ -523,10 +523,24 @@ const revisit = async (page: Page, entry: Revisit) => {
   const game = loadGame(entry.dir)
   heartbeat(entry.roomCode, AGENT)
 
+  const inRoom = async () => {
+    const state = await gameState(page)
+    return state.canvases >= 2 && !state.inLobby && roomCodeOf(page.url()) === entry.roomCode
+  }
   await page.goto(entry.url, { waitUntil: 'networkidle2', timeout: 60_000 }).catch(() => undefined)
   await settleIn(page)
+  if (!(await inRoom())) {
+    // The deep link sometimes lands on the lobby; a pass through the lobby and back usually reconnects.
+    await page.screenshot({ path: resolve(LOG_DIR, `${AGENT}-revisit-${entry.roomCode}.png`) }).catch(() => undefined)
+    await page
+      .goto('https://colonist.io/#lobby=1', { waitUntil: 'networkidle2', timeout: 60_000 })
+      .catch(() => undefined)
+    await sleep(3000)
+    await page.goto(entry.url, { waitUntil: 'networkidle2', timeout: 60_000 }).catch(() => undefined)
+    await settleIn(page)
+  }
   const state = await gameState(page)
-  if (state.canvases < 2 || state.inLobby || roomCodeOf(page.url()) !== entry.roomCode) {
+  if (!(await inRoom())) {
     const failures = entry.failures + 1
     if (failures >= MAX_REVISIT_FAILURES) {
       log(`${entry.roomCode} revisit: could not reach the game ${failures} times, finishing`)
