@@ -19,7 +19,7 @@ for (const game of readdirSync(rejectedDir).sort()) {
   if (!existsSync(gameFile)) continue
   const meta = JSON.parse(readFileSync(gameFile, 'utf8')) as GameMeta
   const captures = meta.captures.filter((c) => existsSync(resolve(dir, c.file)))
-  for (const capture of captures) rereadCapture(dir, capture)
+  for (const capture of captures) rereadCapture(dir, capture, meta.anyMap)
   const good = captures.filter((c) => c.ok)
   if (good.length === 0) {
     console.log(`${game}: still rejected (${captures.map((c) => c.reason).join('; ')})`)

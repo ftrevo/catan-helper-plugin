@@ -15,7 +15,13 @@ export type CaptureSummary = {
   reason?: string
 }
 
-export type GameMeta = { roomCode: string; captures: CaptureSummary[]; notes: string[] }
+export type GameMeta = {
+  roomCode: string
+  /** Set when the room was collected with --all-maps: captures need not be a standard board. */
+  anyMap?: boolean
+  captures: CaptureSummary[]
+  notes: string[]
+}
 
 type Reading = {
   ok: boolean
@@ -28,13 +34,17 @@ type Reading = {
 export const MIN_TOKENS = 15
 export const MAX_EXTRA_TOKENS = 2
 
-export const acceptable = (reading: Reading): boolean =>
+export const acceptable = (reading: Reading, anyMap = false): boolean =>
   reading.ok &&
   (reading.location?.tokensFound ?? 0) >= MIN_TOKENS &&
-  (reading.location?.extraTokens ?? 0) <= MAX_EXTRA_TOKENS
+  (anyMap || (reading.location?.extraTokens ?? 0) <= MAX_EXTRA_TOKENS)
 
 /** Re-reads `capture` in `dir`, rewriting its .reading.json and summary; returns the kinds found, or undefined when the read failed. */
-export const rereadCapture = (dir: string, capture: CaptureSummary): Record<string, number> | undefined => {
+export const rereadCapture = (
+  dir: string,
+  capture: CaptureSummary,
+  anyMap = false
+): Record<string, number> | undefined => {
   const png = resolve(dir, capture.file)
   const json = png.replace(/\.png$/, '.reading.json')
   if (!existsSync(png)) return undefined
@@ -49,7 +59,7 @@ export const rereadCapture = (dir: string, capture: CaptureSummary): Record<stri
   }
   const reading = JSON.parse(readFileSync(json, 'utf8')) as Reading
   const tokens = reading.location?.tokensFound ?? 0
-  capture.ok = acceptable(reading)
+  capture.ok = acceptable(reading, anyMap)
   capture.tokens = tokens
   capture.buildings = reading.pieces?.buildings.length ?? 0
   capture.roads = reading.pieces?.roads.length ?? 0

@@ -4,15 +4,48 @@
  *
  *   npm run variants -- [colour ...]
  */
-import { createCanvas, loadImage } from '@napi-rs/canvas'
-import { existsSync, readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { createRequire } from 'node:module'
 import { resolve } from 'node:path'
 import { vertexCenters } from '../../extension-local/src/vision/layout.ts'
 import { Atlas, drawSprite } from '../../training/src/atlas.ts'
+import { EXAMPLES_DIR, TRAINING_DIR } from './paths.ts'
 import { GAMES_DIR } from './registry.ts'
 
+// The atlas draws with the training package's canvas module; a second copy would reject its images.
+const { createCanvas, loadImage } = createRequire(resolve(TRAINING_DIR, 'src/atlas.ts'))(
+  '@napi-rs/canvas'
+) as typeof import('@napi-rs/canvas')
+
 const atlas = await Atlas.load()
-const only = process.argv.slice(2)
+const args = process.argv.slice(2)
+const minIndex = args.indexOf('--min')
+/** With --min N, also writes examples/variants.json listing, per colour, the variants seen fewer than N times. */
+const min = minIndex >= 0 ? Number(args[minIndex + 1]) : undefined
+const only = args.filter((a, i) => a !== '--min' && i !== minIndex + 1)
+const ALL_COLOURS = [
+  'red',
+  'blue',
+  'orange',
+  'black',
+  'green',
+  'white',
+  'purple',
+  'pink',
+  'silver',
+  'bronze',
+  'gold',
+  'mysticblue',
+]
+const ALL_VARIANTS = [
+  'settlement',
+  'city',
+  'road',
+  'metropolis science',
+  'metropolis politics',
+  'metropolis trade',
+  ...[1, 2, 3].flatMap((l) => ['active', 'inactive'].map((s) => `knight level ${l} ${s}`)),
+]
 const TILE_SOURCE_WIDTH = 416
 const PIECE_SCALE = 1.2
 const PIECE_ANCHOR_DY = -0.065
@@ -21,7 +54,7 @@ const KNIGHT_DIAMETER = 0.35
 type Reading = {
   ok: boolean
   location?: { center: { x: number; y: number }; spacing: number }
-  pieces?: { buildings: { vertex: number; kind: string; colour: string }[] }
+  pieces?: { buildings: { vertex: number; kind: string; colour: string }[]; roads?: { colour: string }[] }
 }
 
 const render = (name: string, scale: number) => {
@@ -94,6 +127,11 @@ for (const game of readdirSync(GAMES_DIR).sort()) {
   for (const file of readdirSync(dir).filter((f) => f.endsWith('.reading.json'))) {
     const reading = JSON.parse(readFileSync(resolve(dir, file), 'utf8')) as Reading
     if (!reading.ok || !reading.location || !reading.pieces) continue
+    for (const b of reading.pieces.buildings) {
+      if ((b.kind === 'settlement' || b.kind === 'city') && (only.length === 0 || only.includes(b.colour)))
+        bump(b.colour, b.kind)
+    }
+    for (const r of reading.pieces.roads ?? []) if (only.length === 0 || only.includes(r.colour)) bump(r.colour, 'road')
     const pieces = reading.pieces.buildings.filter(
       (b) => (b.kind === 'metropolis' || b.kind === 'knight') && (only.length === 0 || only.includes(b.colour))
     )
@@ -162,6 +200,22 @@ for (const game of readdirSync(GAMES_DIR).sort()) {
 }
 
 console.log(`scanned ${captures} captures`)
+if (min !== undefined) {
+  const gaps: Record<string, Record<string, number>> = {}
+  for (const colour of only.length ? only : ALL_COLOURS) {
+    for (const variant of ALL_VARIANTS) {
+      const n = counts[colour]?.[variant] ?? 0
+      if (n < min) (gaps[colour] ??= {})[variant] = n
+    }
+  }
+  const file = resolve(EXAMPLES_DIR, 'variants.json')
+  writeFileSync(file, JSON.stringify({ generatedAt: new Date().toISOString(), min, counts, gaps }, null, 2) + '\n')
+  console.log(
+    `gaps below ${min}: ${Object.entries(gaps)
+      .map(([c, g]) => `${c} ${Object.keys(g).length}`)
+      .join(', ')} (written to ${file})`
+  )
+}
 for (const [colour, keys] of Object.entries(counts).sort()) {
   console.log(colour)
   for (const [key, n] of Object.entries(keys).sort()) console.log(`  ${key.padEnd(28)} ${n}`)

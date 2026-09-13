@@ -24,6 +24,12 @@ These were set when the collection started and have not changed since. Change th
   workers, and nothing is done to bypass or hide from the check. If the profile stops passing, stop.
 - **Two captures per game**, about 150 s apart, after a 15 s settle. On a "Game Over" overlay the worker
   clicks the "Map" button to reveal the final board and captures that.
+- **Focus phase (from 2026-09-13, 450 games in).** The user relaxed the map rule to fill the gaps in the
+  rare colours: `--all-maps` accepts every map the lobby lists (a located 19-tile lattice is enough, since
+  only the pieces on its vertices and edges matter) and `--focus` leaves any game whose seats use none of
+  the colours listed in `../examples/variants.json` (written by `npm run variants -- --min 5`). Rare-colour
+  games get more captures (`--captures 6 --interval 120`). The goal is at least 5 sightings of every piece
+  variant for every colour. Rooms left this way are `skipped` in the registry.
 - **Never add tool attribution to commits.** Conventional commits, short messages.
 
 ## How a worker runs
@@ -74,6 +80,9 @@ tail -f ../examples/logs/w1.log | grep -E 'done:|rejected \(|error:|fatal|stop r
 - **After changing `extension-local/src/vision` or the models.** Run the extension tests, then
   `npm run reread` (and `npm run recover` if the change affects the locator), then `bin/restart-worker.sh`.
   The worker only loads code and models at start-up.
+- **Focus phase.** Refresh the gap report at every snapshot (`npm run variants -- --min 5`); the worker
+  reads it before each game, so colours drop out of the wanted list as they fill up. When the report has
+  no gaps left, stop the focus run.
 - **Stopping.** Create `../examples/STOP` or kill the worker. Stale claims from a killed worker expire on
   their own.
 

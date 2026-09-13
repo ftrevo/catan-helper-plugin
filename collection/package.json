@@ -12,14 +12,12 @@
     "typecheck": "tsc --noEmit -p .",
     "format": "prettier --write src bin README.md"
   },
-  "dependencies": {
-    "@napi-rs/canvas": "^0.1.60"
-  },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "prettier": "^3.6.0",
     "puppeteer-core": "^24.43.1",
     "tsx": "^4.20.0",
-    "typescript": "~5.9.0"
+    "typescript": "~5.9.0",
+    "@napi-rs/canvas": "^0.1.60"
   }
 }

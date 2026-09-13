@@ -11,7 +11,17 @@ import { resolve } from 'node:path'
 import { parseArgs } from 'node:util'
 import puppeteer, { type Browser, type Page } from 'puppeteer-core'
 import { EXTENSION_DIR, PROFILES_DIR } from './paths.ts'
-import { EXAMPLES_DIR, GAMES_DIR, claim, finish, heartbeat, reject, shouldStop, unavailableRooms } from './registry.ts'
+import {
+  EXAMPLES_DIR,
+  GAMES_DIR,
+  claim,
+  finish,
+  heartbeat,
+  reject,
+  shouldStop,
+  skip,
+  unavailableRooms,
+} from './registry.ts'
 
 /** Rejected games are kept here (PNGs are gitignored) so failures can be inspected. */
 const REJECTED_DIR = resolve(EXAMPLES_DIR, 'rejected')
@@ -36,8 +46,29 @@ const { values } = parseArgs({
     'settle-seconds': { type: 'string', default: '12' },
     /** Chrome profile to reuse; defaults to a per-agent profile under collection/.profiles. */
     profile: { type: 'string' },
+    /** Accept every map the lobby lists, not only Base; captures then only need a located lattice. */
+    'all-maps': { type: 'boolean', default: false },
+    /** Leave games whose players use none of the colours with gaps in examples/variants.json. */
+    focus: { type: 'boolean', default: false },
   },
 })
+const ALL_MAPS = values['all-maps']
+const FOCUS = values.focus
+const VARIANTS_FILE = resolve(EXAMPLES_DIR, 'variants.json')
+const PLAYER_COLOUR_NAMES = [
+  'red',
+  'blue',
+  'orange',
+  'black',
+  'green',
+  'white',
+  'purple',
+  'pink',
+  'silver',
+  'bronze',
+  'gold',
+  'mysticblue',
+]
 const AGENT = values.agent
 const CAPTURES = Number(values.captures)
 const INTERVAL_MS = Number(values.interval) * 1000
@@ -51,7 +82,7 @@ const LOG_DIR = resolve(EXAMPLES_DIR, 'logs')
  * the base game and Cities & Knights. Colonist Rush is skipped; its simultaneous play makes boards noisy.
  */
 const ACCEPTED_MAP = 'Base'
-const isAcceptedMode = (mode: string) => /^base(\s*game)?$/i.test(mode) || /cities/i.test(mode)
+const isAcceptedMode = (mode: string) => /^base(\s*game)?(\s*\d-\dp)?$/i.test(mode) || /cities|c&k/i.test(mode)
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 const stamp = () => new Date().toISOString()
@@ -133,7 +164,32 @@ const openSpectateList = async (page: Page): Promise<Row[]> => {
   return rows
 }
 
-const isBaseGame = (row: Row) => row.map === ACCEPTED_MAP && isAcceptedMode(row.mode)
+const isBaseGame = (row: Row) => (ALL_MAPS || row.map === ACCEPTED_MAP) && isAcceptedMode(row.mode)
+
+/** Colours the collection still needs, from the gap report written by `npm run variants -- --min N`. */
+const wantedColours = (): string[] | undefined => {
+  if (!FOCUS) return undefined
+  try {
+    const report = JSON.parse(readFileSync(VARIANTS_FILE, 'utf8')) as { gaps: Record<string, unknown> }
+    return Object.keys(report.gaps)
+  } catch {
+    log(`focus requested but ${VARIANTS_FILE} is missing or unreadable; watching every game`)
+    return undefined
+  }
+}
+
+/** The game page marks each player's avatar with a class named after the colour, e.g. "red-mDDVK4ZW". */
+const readSeatColours = (page: Page): Promise<string[]> =>
+  page.evaluate((names) => {
+    const found = new Set<string>()
+    for (const el of document.querySelectorAll('[class*="avatar"]')) {
+      for (const cls of el.classList) {
+        const name = cls.split('-')[0] ?? ''
+        if (names.includes(name)) found.add(name)
+      }
+    }
+    return [...found]
+  }, PLAYER_COLOUR_NAMES)
 
 const roomCodeOf = (url: string): string | undefined => {
   const hash = new URL(url).hash.replace(/^#/, '')
@@ -168,8 +224,8 @@ const watchOne = async (browser: Browser): Promise<'watched' | 'nothing'> => {
   try {
     const rows = await openSpectateList(page)
     const candidates = rows.filter(isBaseGame)
-    const modes = [...new Set(rows.filter((r) => r.map === ACCEPTED_MAP).map((r) => r.mode))].join(', ')
-    log(`spectate list: ${rows.length} games, ${candidates.length} accepted (base map modes seen: ${modes})`)
+    const modes = [...new Set(rows.filter((r) => ALL_MAPS || r.map === ACCEPTED_MAP).map((r) => r.mode))].join(', ')
+    log(`spectate list: ${rows.length} games, ${candidates.length} accepted (modes seen: ${modes})`)
     if (candidates.length === 0) return 'nothing'
 
     // Random order so parallel workers rarely race for the same room; the registry settles any race.
@@ -219,6 +275,8 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
     agent: AGENT,
     claimedAt: stamp(),
     finishedAt: undefined as string | undefined,
+    ...(ALL_MAPS ? { anyMap: true } : {}),
+    seats: [] as string[],
     viewport: VIEWPORT,
     captures: [] as Array<{
       file: string
@@ -240,6 +298,17 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
   await page.mouse.click(700, VIEWPORT.height - 40).catch(() => undefined)
   await page.mouse.move(700, VIEWPORT.height - 30)
   await sleep(800)
+
+  game.seats = await readSeatColours(page).catch(() => [])
+  const wanted = wantedColours()
+  if (wanted && game.seats.length > 0 && !game.seats.some((c) => wanted.includes(c))) {
+    log(`${roomCode} skipped: seats ${game.seats.join(',')} have no wanted colour (${wanted.join(',')})`)
+    skip(roomCode, AGENT, game.seats)
+    rmSync(dir, { recursive: true, force: true })
+    return
+  }
+  if (wanted && game.seats.length === 0) game.notes.push('seat colours not found on the page; watched anyway')
+  save()
 
   /**
    * A finished game still appears in the list, and a game may end between captures. The Game Over overlay
@@ -286,8 +355,9 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
     }
     const tokens = reading.location?.tokensFound ?? 0
     const extra = reading.location?.extraTokens ?? 0
-    // The list can shuffle between parsing and clicking, so verify the map geometrically as well.
-    const standard = reading.ok && tokens >= MIN_TOKENS && extra <= MAX_EXTRA_TOKENS
+    // The list can shuffle between parsing and clicking, so verify the map geometrically as well. With
+    // --all-maps a located lattice is enough: the pieces on its 54 vertices and 72 edges are what matters.
+    const standard = reading.ok && tokens >= MIN_TOKENS && (ALL_MAPS || extra <= MAX_EXTRA_TOKENS)
     const colours = [
       ...new Set([...(reading.pieces?.buildings ?? []), ...(reading.pieces?.roads ?? [])].map((p) => p.colour)),
     ]
@@ -358,6 +428,7 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
     colours: [...new Set(good.flatMap((c) => c.colours))],
     buildings: last?.buildings,
     roads: last?.roads,
+    seats: game.seats,
   })
   log(`${roomCode} done: ${good.length} captures`)
 }

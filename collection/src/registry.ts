@@ -12,7 +12,7 @@ export const REGISTRY_FILE = resolve(EXAMPLES_DIR, 'registry.json')
 export const STOP_FILE = resolve(EXAMPLES_DIR, 'STOP')
 const LOCK_DIR = resolve(EXAMPLES_DIR, '.registry.lock')
 
-export type ClaimStatus = 'watching' | 'done' | 'rejected'
+export type ClaimStatus = 'watching' | 'done' | 'rejected' | 'skipped'
 
 export type Claim = {
   roomCode: string
@@ -26,6 +26,8 @@ export type Claim = {
   buildings?: number
   roads?: number
   reason?: string
+  /** Player colours read from the game page on joining. */
+  seats?: string[]
 }
 
 export type Registry = {
@@ -103,13 +105,23 @@ export const heartbeat = (roomCode: string, agent: string): void =>
 export const finish = (
   roomCode: string,
   agent: string,
-  summary: Pick<Claim, 'captures' | 'colours' | 'buildings' | 'roads'>
+  summary: Pick<Claim, 'captures' | 'colours' | 'buildings' | 'roads' | 'seats'>
 ): void =>
   withLock(() => {
     const registry = readRegistry()
     const c = registry.claims[roomCode]
     if (!c || c.agent !== agent) return
     Object.assign(c, summary, { status: 'done', finishedAt: new Date().toISOString() })
+    writeRegistry(registry)
+  })
+
+/** Leaves a room untouched because none of its players uses a colour the collection still needs. */
+export const skip = (roomCode: string, agent: string, seats: string[]): void =>
+  withLock(() => {
+    const registry = readRegistry()
+    const c = registry.claims[roomCode]
+    if (!c || c.agent !== agent) return
+    Object.assign(c, { status: 'skipped', seats, reason: 'no wanted colour', finishedAt: new Date().toISOString() })
     writeRegistry(registry)
   })
 
@@ -133,7 +145,7 @@ export const recover = (roomCode: string, summary: Pick<Claim, 'captures' | 'col
     writeRegistry(registry)
   })
 
-/** Rooms nobody should pick: held, done or rejected. */
+/** Rooms nobody should pick: held, done, rejected or skipped. */
 export const unavailableRooms = (): Set<string> => {
   const registry = readRegistry()
   return new Set(

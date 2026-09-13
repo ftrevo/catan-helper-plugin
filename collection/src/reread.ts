@@ -24,7 +24,7 @@ for (const root of dirs) {
     for (const capture of meta.captures) {
       if (!existsSync(resolve(dir, capture.file))) continue
       captures++
-      const kinds = rereadCapture(dir, capture)
+      const kinds = rereadCapture(dir, capture, meta.anyMap)
       if (!kinds) {
         console.log(`${game}/${capture.file}: read failed`)
         continue

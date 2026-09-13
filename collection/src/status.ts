@@ -13,18 +13,19 @@ const done = doneCount(registry)
 const watching = claims.filter((c) => c.status === 'watching')
 const stale = watching.filter((c) => Date.now() - Date.parse(c.heartbeatAt) > STALE_AFTER_MS)
 const rejected = claims.filter((c) => c.status === 'rejected')
+const skipped = claims.filter((c) => c.status === 'skipped')
 const colours = new Map<string, number>()
 for (const c of claims)
   if (c.status === 'done') for (const col of c.colours ?? []) colours.set(col, (colours.get(col) ?? 0) + 1)
-const perAgent = new Map<string, { done: number; watching: number; rejected: number }>()
+const perAgent = new Map<string, { done: number; watching: number; rejected: number; skipped: number }>()
 for (const c of claims) {
-  const a = perAgent.get(c.agent) ?? { done: 0, watching: 0, rejected: 0 }
+  const a = perAgent.get(c.agent) ?? { done: 0, watching: 0, rejected: 0, skipped: 0 }
   a[c.status]++
   perAgent.set(c.agent, a)
 }
 
 console.log(
-  `games done: ${done}${registry.target === null ? ' (no target, runs until STOP)' : `/${registry.target}`}  watching: ${watching.length} (${stale.length} stale)  rejected: ${rejected.length}`
+  `games done: ${done}${registry.target === null ? ' (no target, runs until STOP)' : `/${registry.target}`}  watching: ${watching.length} (${stale.length} stale)  rejected: ${rejected.length}  skipped: ${skipped.length}`
 )
 console.log('colours in finished games:', [...colours].map(([k, v]) => `${k} ${v}`).join(', ') || 'none yet')
 console.log(
