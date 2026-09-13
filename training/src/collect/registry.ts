@@ -122,6 +122,17 @@ export const reject = (roomCode: string, agent: string, reason: string): void =>
     writeRegistry(registry)
   })
 
+/** Turns a rejected room into a done one, after its captures were re-read successfully. */
+export const recover = (roomCode: string, summary: Pick<Claim, 'captures' | 'colours' | 'buildings' | 'roads'>): void =>
+  withLock(() => {
+    const registry = readRegistry()
+    const c = registry.claims[roomCode]
+    if (!c || c.status !== 'rejected') return
+    delete c.reason
+    Object.assign(c, summary, { status: 'done', finishedAt: new Date().toISOString() })
+    writeRegistry(registry)
+  })
+
 /** Rooms nobody should pick: held, done or rejected. */
 export const unavailableRooms = (): Set<string> => {
   const registry = readRegistry()

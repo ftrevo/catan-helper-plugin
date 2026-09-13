@@ -5,10 +5,9 @@
  *
  *   node --import tsx src/collect/reread.ts [--rejected]
  */
-import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { EXTENSION_DIR } from '../paths.ts'
+import { type GameMeta, rereadCapture } from './reading.ts'
 import { EXAMPLES_DIR, GAMES_DIR } from './registry.ts'
 
 const dirs = [GAMES_DIR, ...(process.argv.includes('--rejected') ? [resolve(EXAMPLES_DIR, 'rejected')] : [])]
@@ -21,56 +20,18 @@ for (const root of dirs) {
     const dir = resolve(root, game)
     const gameFile = resolve(dir, 'game.json')
     if (!existsSync(gameFile)) continue
-    const meta = JSON.parse(readFileSync(gameFile, 'utf8')) as {
-      captures: Array<{
-        file: string
-        ok: boolean
-        tokens?: number
-        buildings: number
-        roads: number
-        colours: string[]
-        reason?: string
-      }>
-    }
+    const meta = JSON.parse(readFileSync(gameFile, 'utf8')) as GameMeta
     for (const capture of meta.captures) {
-      const png = resolve(dir, capture.file)
-      const json = png.replace(/\.png$/, '.reading.json')
-      if (!existsSync(png)) continue
+      if (!existsSync(resolve(dir, capture.file))) continue
       captures++
-      try {
-        execFileSync('npx', ['vite-node', 'scripts/read-capture.ts', png, json], {
-          cwd: EXTENSION_DIR,
-          stdio: 'pipe',
-          timeout: 180_000,
-        })
-      } catch (error) {
-        console.log(`${game}/${capture.file}: read failed (${(error as Error).message.slice(0, 120)})`)
+      const kinds = rereadCapture(dir, capture)
+      if (!kinds) {
+        console.log(`${game}/${capture.file}: read failed`)
         continue
       }
-      const reading = JSON.parse(readFileSync(json, 'utf8')) as {
-        ok: boolean
-        reason?: string
-        location?: { tokensFound: number; extraTokens?: number }
-        pieces?: { buildings: { colour: string; kind: string }[]; roads: { colour: string }[] }
-      }
-      const tokens = reading.location?.tokensFound ?? 0
-      capture.ok = reading.ok && tokens >= 15 && (reading.location?.extraTokens ?? 0) <= 2
-      capture.tokens = tokens
-      capture.buildings = reading.pieces?.buildings.length ?? 0
-      capture.roads = reading.pieces?.roads.length ?? 0
-      capture.colours = [
-        ...new Set([...(reading.pieces?.buildings ?? []), ...(reading.pieces?.roads ?? [])].map((p) => p.colour)),
-      ]
-      if (capture.ok) {
-        delete capture.reason
-        ok++
-      } else capture.reason = reading.reason ?? `only ${tokens} tokens`
-      const kinds = (reading.pieces?.buildings ?? []).reduce<Record<string, number>>(
-        (acc, b) => ((acc[b.kind] = (acc[b.kind] ?? 0) + 1), acc),
-        {}
-      )
+      if (capture.ok) ok++
       console.log(
-        `${game}/${capture.file}: ${capture.ok ? 'ok' : 'not ok'} tokens ${tokens} ${JSON.stringify(kinds)} roads ${capture.roads} colours ${capture.colours.join(',')}`
+        `${game}/${capture.file}: ${capture.ok ? 'ok' : 'not ok'} tokens ${capture.tokens} ${JSON.stringify(kinds)} roads ${capture.roads} colours ${capture.colours.join(',')}`
       )
     }
     writeFileSync(gameFile, JSON.stringify(meta, null, 2) + '\n')

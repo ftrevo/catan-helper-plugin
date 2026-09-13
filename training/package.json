@@ -18,7 +18,8 @@
     "collect:worker": "node --import tsx src/collect/spectate-worker.ts",
     "collect:status": "node --import tsx src/collect/status.ts",
     "collect:reread": "node --import tsx src/collect/reread.ts",
-    "measure:pieces": "tsx src/measure-pieces.ts"
+    "measure:pieces": "tsx src/measure-pieces.ts",
+    "collect:recover": "node --import tsx src/collect/recover.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.60",
