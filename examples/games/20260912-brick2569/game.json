@@ -1,12 +1,12 @@
 {
-  "roomCode": "king5845",
-  "url": "https://colonist.io/#king5845",
+  "roomCode": "brick2569",
+  "url": "https://colonist.io/#brick2569",
   "mode": "Cities & Knights",
   "map": "Base",
-  "turnTimer": "30s",
+  "turnTimer": "60s",
   "agent": "w1",
-  "claimedAt": "2026-09-12T22:36:16.461Z",
-  "finishedAt": "2026-09-12T22:39:09.848Z",
+  "claimedAt": "2026-09-12T23:49:27.964Z",
+  "finishedAt": "2026-09-12T23:52:21.449Z",
   "viewport": {
     "width": 1600,
     "height": 900,
@@ -14,31 +14,32 @@
   },
   "captures": [
     {
-      "file": "01-223632.png",
-      "takenAt": "2026-09-12T22:36:36.057Z",
+      "file": "01-234943.png",
+      "takenAt": "2026-09-12T23:49:47.604Z",
       "ok": true,
       "tokens": 18,
-      "buildings": 3,
-      "roads": 3,
+      "buildings": 9,
+      "roads": 10,
       "colours": [
         "orange",
+        "blue",
+        "black",
         "red",
-        "black"
+        "bronze"
       ]
     },
     {
-      "file": "02-223906.png",
-      "takenAt": "2026-09-12T22:39:09.848Z",
+      "file": "02-235217.png",
+      "takenAt": "2026-09-12T23:52:21.449Z",
       "ok": true,
       "tokens": 18,
       "buildings": 10,
       "roads": 9,
       "colours": [
-        "blue",
-        "red",
         "orange",
+        "blue",
         "black",
-        "white"
+        "red"
       ]
     }
   ],

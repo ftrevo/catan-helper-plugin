@@ -1,0 +1,46 @@
+{
+  "roomCode": "isle5935",
+  "url": "https://colonist.io/#isle5935",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:37:01.961Z",
+  "finishedAt": "2026-09-12T23:39:55.491Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-233717.png",
+      "takenAt": "2026-09-12T23:37:21.638Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 22,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-233951.png",
+      "takenAt": "2026-09-12T23:39:55.491Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 23,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

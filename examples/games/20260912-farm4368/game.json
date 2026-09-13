@@ -1,0 +1,46 @@
+{
+  "roomCode": "farm4368",
+  "url": "https://colonist.io/#farm4368",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:01:07.940Z",
+  "finishedAt": "2026-09-12T23:04:01.633Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-230123.png",
+      "takenAt": "2026-09-12T23:01:27.586Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "black",
+        "pink",
+        "red"
+      ]
+    },
+    {
+      "file": "02-230357.png",
+      "takenAt": "2026-09-12T23:04:01.633Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "black",
+        "pink",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

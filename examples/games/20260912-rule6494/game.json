@@ -1,0 +1,33 @@
+{
+  "roomCode": "rule6494",
+  "url": "https://colonist.io/#rule6494",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:29:32.903Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-123036.png",
+      "takenAt": "2026-09-12T12:30:40.874Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 27,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}

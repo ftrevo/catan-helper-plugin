@@ -1,0 +1,46 @@
+{
+  "roomCode": "spot857",
+  "url": "https://colonist.io/#spot857",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:46:20.095Z",
+  "finishedAt": "2026-09-12T23:49:13.714Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-234635.png",
+      "takenAt": "2026-09-12T23:46:39.814Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 30,
+      "roads": 37,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-234909.png",
+      "takenAt": "2026-09-12T23:49:13.714Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 31,
+      "roads": 38,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

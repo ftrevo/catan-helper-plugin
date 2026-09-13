@@ -1,0 +1,46 @@
+{
+  "roomCode": "stone267",
+  "url": "https://colonist.io/#stone267",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:23:15.089Z",
+  "finishedAt": "2026-09-12T23:26:08.970Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-232330.png",
+      "takenAt": "2026-09-12T23:23:35.127Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-232605.png",
+      "takenAt": "2026-09-12T23:26:08.970Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 16,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

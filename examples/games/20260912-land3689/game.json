@@ -1,0 +1,31 @@
+{
+  "roomCode": "land3689",
+  "url": "https://colonist.io/#land3689",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:09:51.499Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-051054.png",
+      "takenAt": "2026-09-12T05:10:58.583Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 5,
+      "roads": 4,
+      "colours": [
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}
