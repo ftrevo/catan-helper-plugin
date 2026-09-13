@@ -14,9 +14,51 @@
     ],
     "agent": "f1",
     "addedAt": "2026-09-13T03:40:04.909Z",
-    "nextVisitAt": "2026-09-13T03:42:09.493Z",
-    "visits": 1,
-    "maxVisits": 10,
+    "nextVisitAt": "2026-09-13T04:20:41.850Z",
+    "visits": 8,
+    "maxVisits": 20,
+    "failures": 0
+  },
+  {
+    "roomCode": "white3776",
+    "url": "https://colonist.io/#white3776",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-white3776",
+    "seats": [
+      "mysticblue",
+      "gold",
+      "red",
+      "black"
+    ],
+    "wanted": [
+      "mysticblue",
+      "gold"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T03:48:35.754Z",
+    "nextVisitAt": "2026-09-13T04:21:13.880Z",
+    "visits": 5,
+    "maxVisits": 20,
+    "failures": 1
+  },
+  {
+    "roomCode": "event161",
+    "url": "https://colonist.io/#event161",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-event161",
+    "seats": [
+      "black",
+      "blue",
+      "gold",
+      "mysticblue"
+    ],
+    "wanted": [
+      "gold",
+      "mysticblue"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T04:02:23.226Z",
+    "nextVisitAt": "2026-09-13T04:23:51.479Z",
+    "visits": 4,
+    "maxVisits": 20,
     "failures": 0
   }
 ]

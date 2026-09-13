@@ -31,7 +31,7 @@ These were set when the collection started and have not changed since. Change th
   `../examples/variants.json`, written by `npm run variants -- --min 5`) the game's mode can produce: knights and
   metropolises only exist in Cities & Knights, so a base-mode game is skipped for a colour that only lacks those. A wanted game gets one capture
   and enters the revisit queue (`../examples/revisit.json`): a second tab in the same Chrome returns to it
-  every 5 minutes for another capture, up to 10 visits or until the game ends, because knights get
+  every 2 to 5 minutes (40 s per queued game) for another capture, up to 20 visits or until the game ends, because knights get
   promoted and metropolises appear late. Scouting pauses while 8 games wait. Rooms left for lack of a
   wanted colour are `skipped` in the registry; the few non-base games collected during the trial sit in
   `../examples/other-maps/` (gitignored). Goal: at least 5 sightings of every piece variant per colour.

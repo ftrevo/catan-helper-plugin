@@ -5,14 +5,15 @@
  *   reads the seat colours from the page and leaves at once unless a player uses a colour that still has
  *   gaps in examples/variants.json (written by `npm run variants -- --min N`). A wanted game gets one
  *   capture and goes into the revisit queue.
- * - The revisit tab returns to every queued game every --revisit-minutes for another capture, because
+ * - The revisit tab returns to every queued game for another capture, every 2 to 5 minutes depending on
+ *   how many games wait (about 40 s of interval per queued game keeps the tab caught up), because
  *   knights get promoted and metropolises appear as the game goes on, until the game ends or --max-visits
  *   is spent. The queue is persisted in examples/revisit.json, so a restart resumes it.
  *
  * Both tabs share the one Chrome profile that colonist.io accepts; a second browser would not get past the
  * site's bot check. Screenshots bring the tab to the front, since a hidden WebGL canvas stops drawing.
  *
- *   npm run focus -- --agent f1 --profile <dir> [--revisit-minutes 5] [--max-visits 10] [--max-queue 8] [--once] [--list]
+ *   npm run focus -- --agent f1 --profile <dir> [--revisit-minutes 5] [--min-revisit-minutes 2] [--max-visits 20] [--max-queue 8] [--once] [--list]
  */
 import { execFileSync } from 'node:child_process'
 import { appendFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs'
@@ -65,8 +66,10 @@ const { values } = parseArgs({
     once: { type: 'boolean', default: false },
     list: { type: 'boolean', default: false },
     'settle-seconds': { type: 'string', default: '15' },
+    /** Longest gap between visits to one game; the gap shrinks to --min-revisit-minutes when the queue is short. */
     'revisit-minutes': { type: 'string', default: '5' },
-    'max-visits': { type: 'string', default: '10' },
+    'min-revisit-minutes': { type: 'string', default: '2' },
+    'max-visits': { type: 'string', default: '20' },
     /** Scouting pauses while this many games wait for revisits; the revisit tab serves about 10 per 5 min. */
     'max-queue': { type: 'string', default: '8' },
     /** Chrome profile to reuse; defaults to a per-agent profile under collection/.profiles. */
@@ -75,7 +78,11 @@ const { values } = parseArgs({
 })
 const AGENT = values.agent
 const SETTLE_MS = Number(values['settle-seconds']) * 1000
-const REVISIT_MS = Number(values['revisit-minutes']) * 60_000
+const MAX_REVISIT_MS = Number(values['revisit-minutes']) * 60_000
+const MIN_REVISIT_MS = Number(values['min-revisit-minutes']) * 60_000
+/** A visit takes about 35 s (rejoin, settle, capture, read), so this much interval per queued game keeps up. */
+const VISIT_COST_MS = 40_000
+const revisitInterval = (queued: number) => Math.min(MAX_REVISIT_MS, Math.max(MIN_REVISIT_MS, queued * VISIT_COST_MS))
 const MAX_VISITS = Number(values['max-visits'])
 const MAX_QUEUE = Number(values['max-queue'])
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
@@ -472,13 +479,15 @@ const scoutGame = async (page: Page, roomCode: string, row: Row): Promise<'queue
     wanted: game.wanted,
     agent: AGENT,
     addedAt: stamp(),
-    nextVisitAt: new Date(Date.now() + REVISIT_MS).toISOString(),
+    nextVisitAt: new Date(Date.now() + revisitInterval(queue.length + 1)).toISOString(),
     visits: 1,
     maxVisits: MAX_VISITS,
     failures: 0,
   })
   saveQueue(queue)
-  log(`${roomCode} queued for revisits every ${REVISIT_MS / 60_000} min (${queue.length} in queue)`)
+  log(
+    `${roomCode} queued, next visit in ${Math.round(revisitInterval(queue.length) / 60_000)} min (${queue.length} in queue)`
+  )
   return 'queued'
 }
 
@@ -511,7 +520,7 @@ const revisit = async (page: Page, entry: Revisit) => {
       finishGame(entry.dir, game, `revisits stopped: game unreachable after ${entry.visits} visits`)
     } else {
       log(`${entry.roomCode} revisit: no game canvas (hash ${state.hash || 'none'}), will retry`)
-      update({ failures, nextVisitAt: new Date(Date.now() + REVISIT_MS).toISOString() })
+      update({ failures, nextVisitAt: new Date(Date.now() + revisitInterval(queue.length)).toISOString() })
     }
     return
   }
@@ -534,8 +543,9 @@ const revisit = async (page: Page, entry: Revisit) => {
     finishGame(entry.dir, game, `visit budget of ${entry.maxVisits} spent`)
     return
   }
-  update({ visits, failures: 0, nextVisitAt: new Date(Date.now() + REVISIT_MS).toISOString() })
-  log(`${entry.roomCode} revisit ${visits}/${entry.maxVisits} done, next in ${REVISIT_MS / 60_000} min`)
+  const interval = revisitInterval(queue.length)
+  update({ visits, failures: 0, nextVisitAt: new Date(Date.now() + interval).toISOString() })
+  log(`${entry.roomCode} revisit ${visits}/${entry.maxVisits} done, next in ${Math.round(interval / 60_000)} min`)
 }
 
 // ----------------------------------------------------------------------------------------------- main

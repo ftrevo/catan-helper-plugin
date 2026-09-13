@@ -13,6 +13,6 @@ sleep 2
 pkill -f "$(basename "$PROFILE")" || true
 sleep 3
 mkdir -p ../examples/logs
-nohup npm run -s focus -- --agent "$AGENT" --profile "$PROFILE" --revisit-minutes 5 --max-visits 10 --settle-seconds 15 "$@" \
+nohup npm run -s focus -- --agent "$AGENT" --profile "$PROFILE" --revisit-minutes 5 --min-revisit-minutes 2 --max-visits 20 --settle-seconds 15 "$@" \
   >> "../examples/logs/$AGENT.stdout.log" 2>&1 &
 echo "focus worker $AGENT started (pid $!); follow ../examples/logs/$AGENT.log"

@@ -10,4 +10,4 @@ cd "$(dirname "$0")/.."
 AGENT="${1:-f1}"
 PROFILE="${2:-.profiles/$AGENT}"
 shift $(( $# > 2 ? 2 : $# ))
-exec npm run -s focus -- --agent "$AGENT" --profile "$PROFILE" --revisit-minutes 5 --max-visits 10 --settle-seconds 15 "$@"
+exec npm run -s focus -- --agent "$AGENT" --profile "$PROFILE" --revisit-minutes 5 --min-revisit-minutes 2 --max-visits 20 --settle-seconds 15 "$@"
