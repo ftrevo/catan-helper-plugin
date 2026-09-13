@@ -1,0 +1,46 @@
+{
+  "roomCode": "path9969",
+  "url": "https://colonist.io/#path9969",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:39:08.934Z",
+  "finishedAt": "2026-09-13T00:42:02.310Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-003924.png",
+      "takenAt": "2026-09-13T00:39:28.525Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 4,
+      "roads": 4,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-004158.png",
+      "takenAt": "2026-09-13T00:42:02.310Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 10,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

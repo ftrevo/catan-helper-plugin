@@ -1,0 +1,46 @@
+{
+  "roomCode": "rob7234",
+  "url": "https://colonist.io/#rob7234",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:17:51.384Z",
+  "finishedAt": "2026-09-13T00:20:44.856Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-001807.png",
+      "takenAt": "2026-09-13T00:18:11.007Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 13,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-002041.png",
+      "takenAt": "2026-09-13T00:20:44.855Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 13,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

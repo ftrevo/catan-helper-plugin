@@ -1,0 +1,48 @@
+{
+  "roomCode": "map2124",
+  "url": "https://colonist.io/#map2124",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:33:02.206Z",
+  "finishedAt": "2026-09-13T00:35:58.945Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-003318.png",
+      "takenAt": "2026-09-13T00:33:22.212Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 20,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-003555.png",
+      "takenAt": "2026-09-13T00:35:58.945Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 23,
+      "colours": [
+        "black",
+        "red",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

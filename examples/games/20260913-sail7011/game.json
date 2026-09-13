@@ -1,0 +1,44 @@
+{
+  "roomCode": "sail7011",
+  "url": "https://colonist.io/#sail7011",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:28:36.967Z",
+  "finishedAt": "2026-09-13T02:31:30.877Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-022852.png",
+      "takenAt": "2026-09-13T02:28:56.625Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 8,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-023126.png",
+      "takenAt": "2026-09-13T02:31:30.877Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

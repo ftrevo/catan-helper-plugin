@@ -1,0 +1,44 @@
+{
+  "roomCode": "land9050",
+  "url": "https://colonist.io/#land9050",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:07:27.337Z",
+  "finishedAt": "2026-09-13T01:10:21.093Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-010743.png",
+      "takenAt": "2026-09-13T01:07:46.960Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "black"
+      ]
+    },
+    {
+      "file": "02-011016.png",
+      "takenAt": "2026-09-13T01:10:21.093Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 8,
+      "colours": [
+        "orange",
+        "black",
+        "blue",
+        "red",
+        "white"
+      ]
+    }
+  ],
+  "notes": []
+}

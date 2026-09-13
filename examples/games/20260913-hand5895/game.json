@@ -1,0 +1,44 @@
+{
+  "roomCode": "hand5895",
+  "url": "https://colonist.io/#hand5895",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:32:38.322Z",
+  "finishedAt": "2026-09-13T01:35:32.089Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-013254.png",
+      "takenAt": "2026-09-13T01:32:58.278Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-013528.png",
+      "takenAt": "2026-09-13T01:35:32.089Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 14,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

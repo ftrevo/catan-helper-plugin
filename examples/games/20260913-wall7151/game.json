@@ -1,0 +1,43 @@
+{
+  "roomCode": "wall7151",
+  "url": "https://colonist.io/#wall7151",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:10:11.330Z",
+  "finishedAt": "2026-09-13T02:13:05.111Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-021027.png",
+      "takenAt": "2026-09-13T02:10:30.901Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 0,
+      "colours": [
+        "blue"
+      ]
+    },
+    {
+      "file": "02-021300.png",
+      "takenAt": "2026-09-13T02:13:05.111Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

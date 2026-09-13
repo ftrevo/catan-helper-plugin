@@ -1,0 +1,46 @@
+{
+  "roomCode": "turn1790",
+  "url": "https://colonist.io/#turn1790",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:29:36.421Z",
+  "finishedAt": "2026-09-13T01:32:29.893Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-012952.png",
+      "takenAt": "2026-09-13T01:29:56.036Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-013226.png",
+      "takenAt": "2026-09-13T01:32:29.893Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

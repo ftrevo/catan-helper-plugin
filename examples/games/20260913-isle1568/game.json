@@ -1,0 +1,46 @@
+{
+  "roomCode": "isle1568",
+  "url": "https://colonist.io/#isle1568",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:26:56.655Z",
+  "finishedAt": "2026-09-13T00:29:50.478Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-002712.png",
+      "takenAt": "2026-09-13T00:27:16.657Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 15,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "green"
+      ]
+    },
+    {
+      "file": "02-002946.png",
+      "takenAt": "2026-09-13T00:29:50.478Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 15,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

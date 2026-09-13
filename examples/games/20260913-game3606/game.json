@@ -1,0 +1,46 @@
+{
+  "roomCode": "game3606",
+  "url": "https://colonist.io/#game3606",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:26:28.170Z",
+  "finishedAt": "2026-09-13T01:29:21.525Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-012643.png",
+      "takenAt": "2026-09-13T01:26:47.718Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 4,
+      "roads": 4,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-012917.png",
+      "takenAt": "2026-09-13T01:29:21.524Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 8,
+      "colours": [
+        "green",
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,47 @@
+{
+  "roomCode": "tile2726",
+  "url": "https://colonist.io/#tile2726",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:22:31.525Z",
+  "finishedAt": "2026-09-13T02:25:25.602Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-022247.png",
+      "takenAt": "2026-09-13T02:22:51.572Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-022521.png",
+      "takenAt": "2026-09-13T02:25:25.602Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 22,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

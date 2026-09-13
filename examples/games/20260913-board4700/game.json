@@ -1,0 +1,46 @@
+{
+  "roomCode": "board4700",
+  "url": "https://colonist.io/#board4700",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:04:19.214Z",
+  "finishedAt": "2026-09-13T01:07:12.633Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-010435.png",
+      "takenAt": "2026-09-13T01:04:38.814Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "green",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-010708.png",
+      "takenAt": "2026-09-13T01:07:12.632Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "green",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,44 @@
+{
+  "roomCode": "bank2889",
+  "url": "https://colonist.io/#bank2889",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:23:14.475Z",
+  "finishedAt": "2026-09-13T01:26:07.862Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-012330.png",
+      "takenAt": "2026-09-13T01:23:34.042Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-012604.png",
+      "takenAt": "2026-09-13T01:26:07.861Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}
