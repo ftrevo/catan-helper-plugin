@@ -142,10 +142,6 @@
     }
   },
   "gaps": {
-    "green": {
-      "metropolis science": 4,
-      "knight level 3 inactive": 1
-    },
     "white": {
       "metropolis science": 2,
       "metropolis politics": 1,
@@ -221,5 +217,6 @@
       "knight level 3 active": 0,
       "knight level 3 inactive": 0
     }
-  }
+  },
+  "note": "green removed by hand on 2026-09-13: its two thin variants fill from queued games"
 }

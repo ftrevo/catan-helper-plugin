@@ -12,7 +12,7 @@
  * Both tabs share the one Chrome profile that colonist.io accepts; a second browser would not get past the
  * site's bot check. Screenshots bring the tab to the front, since a hidden WebGL canvas stops drawing.
  *
- *   npm run focus -- --agent f1 --profile <dir> [--revisit-minutes 5] [--max-visits 10] [--once] [--list]
+ *   npm run focus -- --agent f1 --profile <dir> [--revisit-minutes 5] [--max-visits 10] [--max-queue 8] [--once] [--list]
  */
 import { execFileSync } from 'node:child_process'
 import { appendFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs'
@@ -65,6 +65,8 @@ const { values } = parseArgs({
     'settle-seconds': { type: 'string', default: '15' },
     'revisit-minutes': { type: 'string', default: '5' },
     'max-visits': { type: 'string', default: '10' },
+    /** Scouting pauses while this many games wait for revisits; the revisit tab serves about 10 per 5 min. */
+    'max-queue': { type: 'string', default: '8' },
     /** Chrome profile to reuse; defaults to a per-agent profile under collection/.profiles. */
     profile: { type: 'string' },
   },
@@ -73,6 +75,7 @@ const AGENT = values.agent
 const SETTLE_MS = Number(values['settle-seconds']) * 1000
 const REVISIT_MS = Number(values['revisit-minutes']) * 60_000
 const MAX_VISITS = Number(values['max-visits'])
+const MAX_QUEUE = Number(values['max-queue'])
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 const VIEWPORT = { width: 1600, height: 900, deviceScaleFactor: 1 }
 const LOG_DIR = resolve(EXAMPLES_DIR, 'logs')
@@ -340,7 +343,8 @@ const finishGame = (dir: string, game: Game, why: string) => {
 
 // ---------------------------------------------------------------------------------------------- scout
 
-const scoutOne = async (page: Page): Promise<'queued' | 'skipped' | 'nothing'> => {
+const scoutOne = async (page: Page): Promise<'queued' | 'skipped' | 'nothing' | 'full'> => {
+  if (loadQueue().length >= MAX_QUEUE) return 'full'
   const rows = await openSpectateList(page)
   const candidates = rows.filter((r) => isAcceptedMode(r.mode))
   log(`spectate list: ${rows.length} games, ${candidates.length} in accepted modes`)
@@ -559,6 +563,10 @@ const main = async () => {
           return 'nothing' as const
         })
         if (values.once) break
+        if (outcome === 'full') {
+          await sleep(60_000)
+          continue
+        }
         idle = outcome === 'nothing' ? idle + 1 : 0
         if (outcome === 'nothing') await sleep(Math.min(120_000, 15_000 * idle))
       }
