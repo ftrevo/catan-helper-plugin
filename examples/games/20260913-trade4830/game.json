@@ -1,0 +1,113 @@
+{
+  "roomCode": "trade4830",
+  "url": "https://colonist.io/#trade4830",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T09:12:59.217Z",
+  "seats": [
+    "white",
+    "red",
+    "blue"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-091319.png",
+      "takenAt": "2026-09-13T09:13:24.731Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-091622.png",
+      "takenAt": "2026-09-13T09:16:27.780Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-091859.png",
+      "takenAt": "2026-09-13T09:19:04.486Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-092136.png",
+      "takenAt": "2026-09-13T09:21:41.543Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-092413.png",
+      "takenAt": "2026-09-13T09:24:19.069Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-092744.png",
+      "takenAt": "2026-09-13T09:27:49.546Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 17,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "07-093103.png",
+      "takenAt": "2026-09-13T09:31:09.434Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 20,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button",
+    "final board captured on visit 7"
+  ],
+  "finishedAt": "2026-09-13T09:31:09.434Z"
+}

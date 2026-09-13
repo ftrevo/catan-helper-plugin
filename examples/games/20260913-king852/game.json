@@ -1,0 +1,238 @@
+{
+  "roomCode": "king852",
+  "url": "https://colonist.io/#king852",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T11:18:53.980Z",
+  "seats": [
+    "blue",
+    "black",
+    "red",
+    "mysticblue"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-111911.png",
+      "takenAt": "2026-09-13T11:19:16.323Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 2,
+      "roads": 2,
+      "colours": [
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "02-112143.png",
+      "takenAt": "2026-09-13T11:21:48.337Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "03-112405.png",
+      "takenAt": "2026-09-13T11:24:10.556Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "04-112627.png",
+      "takenAt": "2026-09-13T11:26:33.230Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "05-112900.png",
+      "takenAt": "2026-09-13T11:29:05.226Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "06-113122.png",
+      "takenAt": "2026-09-13T11:31:27.448Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "07-113344.png",
+      "takenAt": "2026-09-13T11:33:50.076Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "08-113607.png",
+      "takenAt": "2026-09-13T11:36:12.333Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "09-113829.png",
+      "takenAt": "2026-09-13T11:38:34.956Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "10-114052.png",
+      "takenAt": "2026-09-13T11:40:57.172Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "11-114314.png",
+      "takenAt": "2026-09-13T11:43:19.771Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 12,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "12-114536.png",
+      "takenAt": "2026-09-13T11:45:42.044Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "13-114759.png",
+      "takenAt": "2026-09-13T11:48:04.278Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "14-115021.png",
+      "takenAt": "2026-09-13T11:50:26.559Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    },
+    {
+      "file": "15-115243.png",
+      "takenAt": "2026-09-13T11:52:48.860Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "mysticblue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 15 visits"
+  ],
+  "finishedAt": "2026-09-13T11:55:11.306Z"
+}

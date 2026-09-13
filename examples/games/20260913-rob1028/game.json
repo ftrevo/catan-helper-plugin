@@ -1,0 +1,52 @@
+{
+  "roomCode": "rob1028",
+  "url": "https://colonist.io/#rob1028",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T12:32:41.167Z",
+  "seats": [
+    "white",
+    "red",
+    "blue",
+    "black"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-123258.png",
+      "takenAt": "2026-09-13T12:33:03.785Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 8,
+      "colours": [
+        "black",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-123534.png",
+      "takenAt": "2026-09-13T12:35:39.232Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "black",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}
