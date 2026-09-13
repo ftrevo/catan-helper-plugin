@@ -1,0 +1,47 @@
+{
+  "roomCode": "port8371",
+  "url": "https://colonist.io/#port8371",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:08:38.080Z",
+  "finishedAt": "2026-09-13T00:11:31.979Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-000853.png",
+      "takenAt": "2026-09-13T00:08:58.128Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 6,
+      "colours": [
+        "orange",
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-001128.png",
+      "takenAt": "2026-09-13T00:11:31.978Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 13,
+      "colours": [
+        "orange",
+        "red",
+        "white",
+        "blue",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

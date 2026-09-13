@@ -6912,6 +6912,24 @@
       "buildings": 21,
       "roads": 21,
       "finishedAt": "2026-09-13T00:08:28.978Z"
+    },
+    "port8371": {
+      "roomCode": "port8371",
+      "agent": "w1",
+      "status": "done",
+      "claimedAt": "2026-09-13T00:08:38.079Z",
+      "heartbeatAt": "2026-09-13T00:11:28.130Z",
+      "captures": 2,
+      "colours": [
+        "orange",
+        "red",
+        "white",
+        "blue",
+        "green"
+      ],
+      "buildings": 11,
+      "roads": 13,
+      "finishedAt": "2026-09-13T00:11:31.979Z"
     }
   }
 }
