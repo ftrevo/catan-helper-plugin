@@ -1,0 +1,25 @@
+{
+  "name": "catan-helper-collection",
+  "private": true,
+  "type": "module",
+  "description": "Spectates colonist.io games and collects board captures with their readings into ../examples",
+  "scripts": {
+    "worker": "node --import tsx src/spectate-worker.ts",
+    "status": "node --import tsx src/status.ts",
+    "reread": "node --import tsx src/reread.ts",
+    "recover": "node --import tsx src/recover.ts",
+    "variants": "node --import tsx src/variants.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "format": "prettier --write src bin README.md"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.60"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prettier": "^3.6.0",
+    "puppeteer-core": "^24.43.1",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.0"
+  }
+}

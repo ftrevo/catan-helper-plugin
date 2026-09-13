@@ -2,7 +2,7 @@
 import { execFileSync } from 'node:child_process'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { EXTENSION_DIR } from '../paths.ts'
+import { EXTENSION_DIR } from './paths.ts'
 
 export type CaptureSummary = {
   file: string

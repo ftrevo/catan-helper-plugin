@@ -3,7 +3,7 @@
  * rewriting the *.reading.json files and the per-game summaries. Use after retraining or changing the
  * vision code, so the stored readings always reflect the current models.
  *
- *   node --import tsx src/collect/reread.ts [--rejected]
+ *   npm run reread -- [--rejected]
  */
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'

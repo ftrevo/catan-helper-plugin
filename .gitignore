@@ -399,3 +399,6 @@ examples/.registry.lock
 examples/STOP
 examples/rejected/
 examples/logs/
+
+# Chrome profiles of the collection workers
+collection/.profiles/

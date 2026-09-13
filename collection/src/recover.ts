@@ -3,7 +3,7 @@
  * now pass back into examples/games, marking them done in the registry. Use after a locator fix that was
  * wrongly rejecting standard boards.
  *
- *   node --import tsx src/collect/recover.ts
+ *   npm run recover
  */
 import { existsSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'

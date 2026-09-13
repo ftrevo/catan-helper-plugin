@@ -2,7 +2,7 @@
  * Coordinator view of the collection: progress against the target, per-agent activity, stale claims,
  * colours seen, and a STOP file once the target is reached.
  *
- *   node --import tsx src/collect/status.ts [--stop-at-target]
+ *   npm run status -- [--stop-at-target]
  */
 import { existsSync, writeFileSync } from 'node:fs'
 import { STALE_AFTER_MS, STOP_FILE, doneCount, readRegistry } from './registry.ts'

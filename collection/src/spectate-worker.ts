@@ -3,14 +3,14 @@
  * extension's reading on every capture. Meant to run as one of several parallel workers sharing the
  * registry in examples/registry.json.
  *
- *   node --import tsx src/collect/spectate-worker.ts --agent w1 [--once] [--captures 3] [--interval 300] [--list]
+ *   npm run worker -- --agent w1 [--once] [--captures 3] [--interval 300] [--list]
  */
 import { execFileSync } from 'node:child_process'
 import { appendFileSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { parseArgs } from 'node:util'
 import puppeteer, { type Browser, type Page } from 'puppeteer-core'
-import { EXTENSION_DIR, TRAINING_DIR } from '../paths.ts'
+import { EXTENSION_DIR, PROFILES_DIR } from './paths.ts'
 import { EXAMPLES_DIR, GAMES_DIR, claim, finish, heartbeat, reject, shouldStop, unavailableRooms } from './registry.ts'
 
 /** Rejected games are kept here (PNGs are gitignored) so failures can be inspected. */
@@ -34,7 +34,7 @@ const { values } = parseArgs({
     captures: { type: 'string', default: '3' },
     interval: { type: 'string', default: '300' },
     'settle-seconds': { type: 'string', default: '12' },
-    /** Chrome profile to reuse; defaults to a per-agent profile under training/.collect. */
+    /** Chrome profile to reuse; defaults to a per-agent profile under collection/.profiles. */
     profile: { type: 'string' },
   },
 })
@@ -363,7 +363,7 @@ const captureGame = async (page: Page, roomCode: string, row: Row) => {
 }
 
 const main = async () => {
-  const profile = values.profile ?? resolve(TRAINING_DIR, '.collect/profiles', AGENT)
+  const profile = values.profile ?? resolve(PROFILES_DIR, AGENT)
   mkdirSync(profile, { recursive: true })
   // A visible, ordinary Chrome window: the game is a WebGL canvas and the site treats headless browsers as
   // bots. Same launch shape as the extension test harness.

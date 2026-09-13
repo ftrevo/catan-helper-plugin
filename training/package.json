@@ -15,12 +15,7 @@
     "locate": "node --import tsx src/locate.ts",
     "extract-tiles": "node --import tsx src/extract-tiles.ts",
     "train:pieces": "node --require ./tfjs-node-compat.cjs --import tsx src/train-pieces.ts",
-    "collect:worker": "node --import tsx src/collect/spectate-worker.ts",
-    "collect:status": "node --import tsx src/collect/status.ts",
-    "collect:reread": "node --import tsx src/collect/reread.ts",
-    "measure:pieces": "tsx src/measure-pieces.ts",
-    "collect:recover": "node --import tsx src/collect/recover.ts",
-    "collect:variants": "node --import tsx src/collect/variants.ts"
+    "measure:pieces": "tsx src/measure-pieces.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.60",

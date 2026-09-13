@@ -4,9 +4,9 @@
  */
 import { existsSync, mkdirSync, readFileSync, rmdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { TRAINING_DIR } from '../paths.ts'
+import { EXAMPLES_DIR } from './paths.ts'
 
-export const EXAMPLES_DIR = resolve(TRAINING_DIR, '../examples')
+export { EXAMPLES_DIR }
 export const GAMES_DIR = resolve(EXAMPLES_DIR, 'games')
 export const REGISTRY_FILE = resolve(EXAMPLES_DIR, 'registry.json')
 export const STOP_FILE = resolve(EXAMPLES_DIR, 'STOP')

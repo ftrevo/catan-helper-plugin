@@ -2,13 +2,13 @@
  * Counts the piece variants the readings do not distinguish: metropolis type (science, politics, trade)
  * and knight level and state, per player colour, by matching the atlas sprites at the detected pieces.
  *
- *   node --import tsx src/collect/variants.ts [colour ...]
+ *   npm run variants -- [colour ...]
  */
 import { createCanvas, loadImage } from '@napi-rs/canvas'
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { vertexCenters } from '../../../extension-local/src/vision/layout.ts'
-import { Atlas, drawSprite } from '../atlas.ts'
+import { vertexCenters } from '../../extension-local/src/vision/layout.ts'
+import { Atlas, drawSprite } from '../../training/src/atlas.ts'
 import { GAMES_DIR } from './registry.ts'
 
 const atlas = await Atlas.load()
@@ -60,7 +60,12 @@ const template = (name: string, scale: number) => {
   return t
 }
 
-const matchScore = (img: { width: number; height: number; data: Uint8ClampedArray }, t: ReturnType<typeof render>, cx: number, cy: number) => {
+const matchScore = (
+  img: { width: number; height: number; data: Uint8ClampedArray },
+  t: ReturnType<typeof render>,
+  cx: number,
+  cy: number
+) => {
   let err = 0,
     n = 0
   for (let y = 0; y < t.size; y++)

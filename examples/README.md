@@ -41,7 +41,7 @@ moved to `examples/rejected/` for inspection and marked `rejected` in the regist
 
 ## Registry protocol
 
-`training/src/collect/registry.ts` implements atomic claims with a lock directory:
+`collection/src/registry.ts` implements atomic claims with a lock directory:
 
 - `claim(roomCode, agent)` fails if another worker already holds or finished the room.
 - `finish(roomCode, summary)` / `reject(roomCode, reason)` close a claim.
