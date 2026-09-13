@@ -1,0 +1,133 @@
+{
+  "roomCode": "hill5081",
+  "url": "https://colonist.io/#hill5081",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T07:26:16.590Z",
+  "seats": [
+    "blue",
+    "white",
+    "red"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-072633.png",
+      "takenAt": "2026-09-13T07:26:38.756Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "02-072858.png",
+      "takenAt": "2026-09-13T07:29:03.340Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "03-073120.png",
+      "takenAt": "2026-09-13T07:31:25.567Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "04-073342.png",
+      "takenAt": "2026-09-13T07:33:47.970Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "05-073605.png",
+      "takenAt": "2026-09-13T07:36:10.277Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "06-073834.png",
+      "takenAt": "2026-09-13T07:38:40.286Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 12,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "07-074104.png",
+      "takenAt": "2026-09-13T07:41:09.968Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 12,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "08-074334.png",
+      "takenAt": "2026-09-13T07:43:39.528Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 8 visits"
+  ],
+  "finishedAt": "2026-09-13T07:46:03.973Z"
+}

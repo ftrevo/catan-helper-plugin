@@ -1,0 +1,127 @@
+{
+  "roomCode": "loot3793",
+  "url": "https://colonist.io/#loot3793",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T05:40:07.798Z",
+  "seats": [
+    "blue",
+    "red",
+    "black",
+    "white"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-054024.png",
+      "takenAt": "2026-09-13T05:40:30.339Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 15,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-054453.png",
+      "takenAt": "2026-09-13T05:44:58.928Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 17,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-054845.png",
+      "takenAt": "2026-09-13T05:48:50.269Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 17,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-055340.png",
+      "takenAt": "2026-09-13T05:53:46.072Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 22,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-055912.png",
+      "takenAt": "2026-09-13T05:59:17.300Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 26,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-060220.png",
+      "takenAt": "2026-09-13T06:02:26.215Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 26,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "07-060458.png",
+      "takenAt": "2026-09-13T06:05:03.414Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 26,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "revisits stopped: game unreachable after 7 visits"
+  ],
+  "finishedAt": "2026-09-13T06:12:23.189Z"
+}

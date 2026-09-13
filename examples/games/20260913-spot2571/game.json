@@ -189,7 +189,80 @@
         "black",
         "red"
       ]
+    },
+    {
+      "file": "13-051120.png",
+      "takenAt": "2026-09-13T05:11:26.109Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 23,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "14-051350.png",
+      "takenAt": "2026-09-13T05:13:55.687Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 25,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "15-051619.png",
+      "takenAt": "2026-09-13T05:16:25.193Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 27,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "16-051849.png",
+      "takenAt": "2026-09-13T05:18:55.197Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 29,
+      "roads": 29,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "17-052127.png",
+      "takenAt": "2026-09-13T05:21:32.336Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 30,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "black",
+        "red"
+      ]
     }
   ],
-  "notes": []
+  "notes": [
+    "revisits stopped: game unreachable after 17 visits"
+  ],
+  "finishedAt": "2026-09-13T05:29:07.558Z"
 }

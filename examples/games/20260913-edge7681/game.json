@@ -138,25 +138,6 @@
       ]
     },
     {
-      "file": "09-042112.png",
-      "takenAt": "2026-09-13T04:21:17.642Z",
-      "ok": false,
-      "tokens": 14,
-      "buildings": 19,
-      "roads": 32,
-      "colours": [
-        "pink",
-        "blue",
-        "white",
-        "silver",
-        "red",
-        "bronze",
-        "black",
-        "green"
-      ],
-      "reason": "only 14 tokens"
-    },
-    {
       "file": "10-042336.png",
       "takenAt": "2026-09-13T04:23:41.942Z",
       "ok": true,

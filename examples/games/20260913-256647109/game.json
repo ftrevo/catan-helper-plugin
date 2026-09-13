@@ -1,0 +1,185 @@
+{
+  "roomCode": "256647109",
+  "url": "https://colonist.io/#256647109",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T07:49:29.033Z",
+  "seats": [
+    "red",
+    "blue",
+    "white"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-074946.png",
+      "takenAt": "2026-09-13T07:49:51.521Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 6,
+      "roads": 5,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-075210.png",
+      "takenAt": "2026-09-13T07:52:15.293Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 10,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-075432.png",
+      "takenAt": "2026-09-13T07:54:37.827Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 13,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-075702.png",
+      "takenAt": "2026-09-13T07:57:07.318Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 13,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-075931.png",
+      "takenAt": "2026-09-13T07:59:36.733Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 13,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-080201.png",
+      "takenAt": "2026-09-13T08:02:06.302Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "07-080430.png",
+      "takenAt": "2026-09-13T08:04:35.654Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 16,
+      "roads": 19,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "08-080659.png",
+      "takenAt": "2026-09-13T08:07:05.093Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 21,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "09-080929.png",
+      "takenAt": "2026-09-13T08:09:34.592Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 25,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "10-081158.png",
+      "takenAt": "2026-09-13T08:12:04.138Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 29,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "11-081428.png",
+      "takenAt": "2026-09-13T08:14:33.442Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 30,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "12-081703.png",
+      "takenAt": "2026-09-13T08:17:08.925Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 31,
+      "colours": [
+        "red",
+        "white",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button",
+    "final board captured on visit 12"
+  ],
+  "finishedAt": "2026-09-13T08:17:08.926Z"
+}

@@ -1,0 +1,40 @@
+{
+  "roomCode": "coin2022",
+  "url": "https://colonist.io/#coin2022",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T05:51:50.156Z",
+  "seats": [
+    "red",
+    "orange",
+    "green",
+    "blue"
+  ],
+  "wanted": [
+    "green"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-055207.png",
+      "takenAt": "2026-09-13T05:52:12.360Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}
