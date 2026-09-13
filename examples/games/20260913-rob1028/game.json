@@ -46,7 +46,51 @@
         "blue",
         "red"
       ]
+    },
+    {
+      "file": "03-123803.png",
+      "takenAt": "2026-09-13T12:38:08.792Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 15,
+      "colours": [
+        "black",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "04-124027.png",
+      "takenAt": "2026-09-13T12:40:33.086Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 19,
+      "colours": [
+        "black",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "05-124250.png",
+      "takenAt": "2026-09-13T12:42:57.389Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 19,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "white"
+      ]
     }
   ],
-  "notes": []
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 5 visits"
+  ],
+  "finishedAt": "2026-09-13T12:45:19.868Z"
 }

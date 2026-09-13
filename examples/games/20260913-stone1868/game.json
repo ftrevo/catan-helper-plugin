@@ -1,0 +1,198 @@
+{
+  "roomCode": "stone1868",
+  "url": "https://colonist.io/#stone1868",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T14:42:25.374Z",
+  "seats": [
+    "mysticblue",
+    "red",
+    "black",
+    "blue"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-144242.png",
+      "takenAt": "2026-09-13T14:42:47.448Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "red",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-144635.png",
+      "takenAt": "2026-09-13T14:46:41.029Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 11,
+      "colours": [
+        "black",
+        "red",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-145115.png",
+      "takenAt": "2026-09-13T14:51:20.764Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 17,
+      "colours": [
+        "black",
+        "red",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-145502.png",
+      "takenAt": "2026-09-13T14:55:07.687Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 18,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-145817.png",
+      "takenAt": "2026-09-13T14:58:24.631Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 20,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-150133.png",
+      "takenAt": "2026-09-13T15:01:39.221Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 21,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "07-150448.png",
+      "takenAt": "2026-09-13T15:04:53.524Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 20,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "08-150803.png",
+      "takenAt": "2026-09-13T15:08:08.482Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 27,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue",
+        "bronze"
+      ]
+    },
+    {
+      "file": "09-151201.png",
+      "takenAt": "2026-09-13T15:12:07.268Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 29,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "10-151511.png",
+      "takenAt": "2026-09-13T15:15:16.585Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 34,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "11-151748.png",
+      "takenAt": "2026-09-13T15:17:53.873Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 37,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "12-152010.png",
+      "takenAt": "2026-09-13T15:20:16.247Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 28,
+      "roads": 37,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 12 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T15:22:47.935Z"
+}
