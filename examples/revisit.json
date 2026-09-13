@@ -1,0 +1,22 @@
+[
+  {
+    "roomCode": "edge7681",
+    "url": "https://colonist.io/#edge7681",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-edge7681",
+    "seats": [
+      "pink",
+      "red",
+      "black",
+      "blue"
+    ],
+    "wanted": [
+      "pink"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-13T03:40:04.909Z",
+    "nextVisitAt": "2026-09-13T03:42:09.493Z",
+    "visits": 1,
+    "maxVisits": 10,
+    "failures": 0
+  }
+]

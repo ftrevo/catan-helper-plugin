@@ -1,7 +1,7 @@
 /**
  * Focus worker: fills the gaps in the rare player colours. One Chrome window, two tabs.
  *
- * - The scout tab reads the spectate list (every map; base game and Cities & Knights modes), joins a game,
+ * - The scout tab reads the spectate list (base map only; base game and Cities & Knights modes), joins a game,
  *   reads the seat colours from the page and leaves at once unless a player uses a colour that still has
  *   gaps in examples/variants.json (written by `npm run variants -- --min N`). A wanted game gets one
  *   capture and goes into the revisit queue.
@@ -38,8 +38,10 @@ const VARIANTS_FILE = resolve(EXAMPLES_DIR, 'variants.json')
 /** The first capture is retried this many times while the spectator view finishes loading. */
 const FIRST_CAPTURE_ATTEMPTS = 4
 const FIRST_CAPTURE_RETRY_MS = 12_000
-/** Only the lattice geometry matters here, so the locator's own minimum of matched tokens is enough. */
-const MIN_TOKENS = 12
+/** A standard board: most tokens located and nothing token-like outside the lattice (larger maps fail this). */
+const MIN_TOKENS = 15
+const MAX_EXTRA_TOKENS = 2
+const ACCEPTED_MAP = 'Base'
 /** A queued game that cannot be reached this many times in a row is dropped. */
 const MAX_REVISIT_FAILURES = 3
 const PLAYER_COLOUR_NAMES = [
@@ -80,7 +82,7 @@ const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 const VIEWPORT = { width: 1600, height: 900, deviceScaleFactor: 1 }
 const LOG_DIR = resolve(EXAMPLES_DIR, 'logs')
 
-/** Base game and Cities & Knights on any map; Seafarers adds ships and fog, Colonist Rush is too noisy. */
+/** Base game and Cities & Knights; Seafarers adds ships and fog, Colonist Rush is too noisy. */
 const isAcceptedMode = (mode: string) =>
   !/seafarers/i.test(mode) && (/^base(\s*game)?(\s*\d-\dp)?$/i.test(mode) || /cities|c&k/i.test(mode))
 
@@ -234,7 +236,6 @@ type Game = {
   agent: string
   claimedAt: string
   finishedAt?: string
-  anyMap: true
   seats: string[]
   wanted: string[]
   viewport: typeof VIEWPORT
@@ -298,7 +299,8 @@ const captureOnce = async (page: Page, dir: string, game: Game): Promise<Capture
     writeFileSync(json, JSON.stringify(reading, null, 2) + '\n')
   }
   const tokens = reading.location?.tokensFound ?? 0
-  const ok = reading.ok && tokens >= MIN_TOKENS
+  const extra = reading.location?.extraTokens ?? 0
+  const ok = reading.ok && tokens >= MIN_TOKENS && extra <= MAX_EXTRA_TOKENS
   const colours = [
     ...new Set([...(reading.pieces?.buildings ?? []), ...(reading.pieces?.roads ?? [])].map((p) => p.colour)),
   ]
@@ -310,7 +312,13 @@ const captureOnce = async (page: Page, dir: string, game: Game): Promise<Capture
     buildings: reading.pieces?.buildings.length ?? 0,
     roads: reading.pieces?.roads.length ?? 0,
     colours,
-    ...(ok ? {} : { reason: reading.reason ?? `only ${tokens} tokens` }),
+    ...(ok
+      ? {}
+      : {
+          reason:
+            reading.reason ??
+            (tokens < MIN_TOKENS ? `only ${tokens} tokens` : `${extra} stray tokens: not the base map`),
+        }),
   }
   game.captures.push(capture)
   saveGame(dir, game)
@@ -346,8 +354,8 @@ const finishGame = (dir: string, game: Game, why: string) => {
 const scoutOne = async (page: Page): Promise<'queued' | 'skipped' | 'nothing' | 'full'> => {
   if (loadQueue().length >= MAX_QUEUE) return 'full'
   const rows = await openSpectateList(page)
-  const candidates = rows.filter((r) => isAcceptedMode(r.mode))
-  log(`spectate list: ${rows.length} games, ${candidates.length} in accepted modes`)
+  const candidates = rows.filter((r) => r.map === ACCEPTED_MAP && isAcceptedMode(r.mode))
+  log(`spectate list: ${rows.length} games, ${candidates.length} base-map games in accepted modes`)
   if (candidates.length === 0) return 'nothing'
 
   const shuffled = [...candidates].sort(() => Math.random() - 0.5)
@@ -390,7 +398,6 @@ const scoutGame = async (page: Page, roomCode: string, row: Row): Promise<'queue
     turnTimer: row.timer,
     agent: AGENT,
     claimedAt: stamp(),
-    anyMap: true,
     seats: [],
     wanted: [],
     viewport: VIEWPORT,
@@ -543,8 +550,9 @@ const main = async () => {
     if (values.list) {
       const page = await browser.newPage()
       const rows = await openSpectateList(page)
-      console.table(rows.filter((r) => isAcceptedMode(r.mode)).slice(0, 30))
-      console.log(`${rows.length} rows, ${rows.filter((r) => isAcceptedMode(r.mode)).length} in accepted modes`)
+      const accepted = rows.filter((r) => r.map === ACCEPTED_MAP && isAcceptedMode(r.mode))
+      console.table(accepted.slice(0, 30))
+      console.log(`${rows.length} rows, ${accepted.length} base-map games in accepted modes`)
       return
     }
     const pending = loadQueue().length

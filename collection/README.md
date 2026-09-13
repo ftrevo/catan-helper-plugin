@@ -24,16 +24,16 @@ These were set when the collection started and have not changed since. Change th
   workers, and nothing is done to bypass or hide from the check. If the profile stops passing, stop.
 - **Two captures per game**, about 150 s apart, after a 15 s settle. On a "Game Over" overlay the worker
   clicks the "Map" button to reveal the final board and captures that.
-- **Focus phase (from 2026-09-13, 450 games in).** The user relaxed the map rule to fill the gaps in the
-  rare colours; this is a separate script, `src/focus-worker.ts`, so the original worker stays as it was.
-  It accepts every map (a located lattice is enough, since only the pieces on its vertices and edges
-  matter; such rooms carry `anyMap: true`), reads the seat colours from the game page and leaves at once
-  unless a seat uses a colour listed in `../examples/variants.json` (written by
-  `npm run variants -- --min 5`). A wanted game gets one capture and enters the revisit queue
-  (`../examples/revisit.json`): a second tab in the same Chrome returns to it every 5 minutes for another
-  capture, up to 10 visits or until the game ends, because knights get promoted and metropolises appear
-  late. Rooms left for lack of a wanted colour are `skipped` in the registry. Goal: at least 5 sightings
-  of every piece variant for every colour.
+- **Focus phase (from 2026-09-13, 450 games in).** A separate script, `src/focus-worker.ts`, fills the
+  gaps in the rare colours while the original worker stays as it was. It keeps to the **base map** (an
+  all-maps variant was tried for an hour and dropped: smaller pieces and partial coverage add noise), reads
+  the seat colours from the game page and leaves at once unless a seat uses a colour listed in
+  `../examples/variants.json` (written by `npm run variants -- --min 5`). A wanted game gets one capture
+  and enters the revisit queue (`../examples/revisit.json`): a second tab in the same Chrome returns to it
+  every 5 minutes for another capture, up to 10 visits or until the game ends, because knights get
+  promoted and metropolises appear late. Scouting pauses while 8 games wait. Rooms left for lack of a
+  wanted colour are `skipped` in the registry; the few non-base games collected during the trial sit in
+  `../examples/other-maps/` (gitignored). Goal: at least 5 sightings of every piece variant per colour.
 - **Never add tool attribution to commits.** Conventional commits, short messages.
 
 ## How a worker runs

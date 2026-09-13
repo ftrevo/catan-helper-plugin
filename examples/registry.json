@@ -1,6 +1,21 @@
 {
   "target": null,
   "claims": {
+    "256216368": {
+      "roomCode": "256216368",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:38:05.695Z",
+      "heartbeatAt": "2026-09-13T03:38:05.695Z",
+      "seats": [
+        "red",
+        "orange",
+        "blue",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:38:26.480Z"
+    },
     "256411788": {
       "roomCode": "256411788",
       "agent": "w1",
@@ -502,6 +517,29 @@
       "reason": "11 stray tokens: not the base map",
       "finishedAt": "2026-09-13T02:36:11.428Z"
     },
+    "256610044": {
+      "roomCode": "256610044",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-13T03:32:31.669Z",
+      "heartbeatAt": "2026-09-13T03:38:00.531Z",
+      "reason": "non-base map, set aside by policy"
+    },
+    "256613682": {
+      "roomCode": "256613682",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:35:38.262Z",
+      "heartbeatAt": "2026-09-13T03:35:38.262Z",
+      "seats": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:35:55.283Z"
+    },
     "256614126": {
       "roomCode": "256614126",
       "agent": "w1",
@@ -530,6 +568,19 @@
       ],
       "reason": "no wanted colour",
       "finishedAt": "2026-09-13T03:22:04.375Z"
+    },
+    "256614732": {
+      "roomCode": "256614732",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:34:47.179Z",
+      "heartbeatAt": "2026-09-13T03:34:47.179Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:35:04.198Z"
     },
     "256614801": {
       "roomCode": "256614801",
@@ -562,9 +613,64 @@
     "256615754": {
       "roomCode": "256615754",
       "agent": "w1",
-      "status": "watching",
+      "status": "rejected",
       "claimedAt": "2026-09-13T03:28:24.805Z",
-      "heartbeatAt": "2026-09-13T03:31:18.527Z"
+      "heartbeatAt": "2026-09-13T03:31:18.527Z",
+      "reason": "non-base map, set aside by policy"
+    },
+    "256615939": {
+      "roomCode": "256615939",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:33:27.963Z",
+      "heartbeatAt": "2026-09-13T03:33:27.963Z",
+      "seats": [
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:33:44.980Z"
+    },
+    "256616126": {
+      "roomCode": "256616126",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:36:29.387Z",
+      "heartbeatAt": "2026-09-13T03:36:29.387Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:36:46.408Z"
+    },
+    "256617777": {
+      "roomCode": "256617777",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:32:08.686Z",
+      "heartbeatAt": "2026-09-13T03:32:08.686Z",
+      "seats": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:32:25.720Z"
+    },
+    "256619313": {
+      "roomCode": "256619313",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:39:18.372Z",
+      "heartbeatAt": "2026-09-13T03:39:18.372Z",
+      "seats": [
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:39:35.676Z"
     },
     "catan8396": {
       "roomCode": "catan8396",
@@ -7951,10 +8057,9 @@
     "dice9075": {
       "roomCode": "dice9075",
       "agent": "w1",
-      "status": "done",
+      "status": "rejected",
       "claimedAt": "2026-09-13T03:12:28.807Z",
       "heartbeatAt": "2026-09-13T03:18:26.850Z",
-      "captures": 4,
       "colours": [
         "red",
         "black",
@@ -7969,7 +8074,8 @@
         "red",
         "mysticblue"
       ],
-      "finishedAt": "2026-09-13T03:18:33.842Z"
+      "finishedAt": "2026-09-13T03:18:33.842Z",
+      "reason": "non-base map, set aside by policy"
     },
     "green3596": {
       "roomCode": "green3596",
@@ -8114,18 +8220,18 @@
     "sheep9907": {
       "roomCode": "sheep9907",
       "agent": "w1",
-      "status": "done",
+      "status": "rejected",
       "claimedAt": "2026-09-13T03:25:01.315Z",
       "heartbeatAt": "2026-09-13T03:25:01.315Z",
       "finishedAt": "2026-09-13T03:27:38.337Z",
-      "captures": 1,
       "colours": [
         "orange",
         "green",
         "blue"
       ],
       "buildings": 10,
-      "roads": 20
+      "roads": 20,
+      "reason": "non-base map, set aside by policy"
     },
     "trade3685": {
       "roomCode": "trade3685",
@@ -8196,6 +8302,126 @@
       ],
       "reason": "no wanted colour",
       "finishedAt": "2026-09-13T03:28:16.624Z"
+    },
+    "ore5549": {
+      "roomCode": "ore5549",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-13T03:32:59.777Z",
+      "heartbeatAt": "2026-09-13T03:38:39.465Z",
+      "reason": "non-base map, set aside by policy"
+    },
+    "play9532": {
+      "roomCode": "play9532",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-13T03:33:50.915Z",
+      "heartbeatAt": "2026-09-13T03:39:16.605Z",
+      "reason": "non-base map, set aside by policy"
+    },
+    "board9184": {
+      "roomCode": "board9184",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-13T03:34:19.022Z",
+      "heartbeatAt": "2026-09-13T03:39:56.170Z",
+      "reason": "non-base map, set aside by policy"
+    },
+    "grain3047": {
+      "roomCode": "grain3047",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-13T03:35:10.157Z",
+      "heartbeatAt": "2026-09-13T03:40:33.443Z",
+      "reason": "non-base map, set aside by policy"
+    },
+    "luck8605": {
+      "roomCode": "luck8605",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-13T03:36:01.213Z",
+      "heartbeatAt": "2026-09-13T03:41:27.285Z",
+      "reason": "non-base map, set aside by policy"
+    },
+    "wood2124": {
+      "roomCode": "wood2124",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:36:52.394Z",
+      "heartbeatAt": "2026-09-13T03:36:52.394Z",
+      "seats": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:37:09.413Z"
+    },
+    "hand4006": {
+      "roomCode": "hand4006",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:37:42.716Z",
+      "heartbeatAt": "2026-09-13T03:37:42.716Z",
+      "seats": [
+        "blue",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:37:59.749Z"
+    },
+    "grid7457": {
+      "roomCode": "grid7457",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:38:32.438Z",
+      "heartbeatAt": "2026-09-13T03:38:32.438Z",
+      "seats": [
+        "blue",
+        "green",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:38:49.454Z"
+    },
+    "ore7075": {
+      "roomCode": "ore7075",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:38:55.406Z",
+      "heartbeatAt": "2026-09-13T03:38:55.406Z",
+      "seats": [
+        "black",
+        "blue",
+        "green",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:39:12.430Z"
+    },
+    "edge7681": {
+      "roomCode": "edge7681",
+      "agent": "f1",
+      "status": "watching",
+      "claimedAt": "2026-09-13T03:40:04.907Z",
+      "heartbeatAt": "2026-09-13T03:42:31.244Z"
+    },
+    "cost5313": {
+      "roomCode": "cost5313",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-13T03:40:33.128Z",
+      "heartbeatAt": "2026-09-13T03:40:33.128Z",
+      "seats": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-13T03:40:50.155Z"
     }
   }
 }
