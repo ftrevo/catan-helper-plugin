@@ -11,7 +11,9 @@
     "variants": "node --import tsx src/variants.ts",
     "typecheck": "tsc --noEmit -p .",
     "format": "prettier --write src bin README.md",
-    "focus": "node --import tsx src/focus-worker.ts"
+    "focus": "node --import tsx src/focus-worker.ts",
+    "gaps": "node --import tsx src/gaps.ts",
+    "curate": "node --import tsx src/curate.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

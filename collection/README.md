@@ -28,7 +28,7 @@ These were set when the collection started and have not changed since. Change th
   gaps in the rare colours while the original worker stays as it was. It keeps to the **base map** (an
   all-maps variant was tried for an hour and dropped: smaller pieces and partial coverage add noise), reads
   the seat colours from the game page and leaves at once unless a seat uses a colour whose missing variants (from
-  `../examples/variants.json`, written by `npm run variants -- --min 5`) the game's mode can produce: knights and
+  `../examples/variants.json`, written by `npm run gaps` from the curated map) the game's mode can produce: knights and
   metropolises only exist in Cities & Knights, so a base-mode game is skipped for a colour that only lacks those. A wanted game gets one capture
   and enters the revisit queue (`../examples/revisit.json`): a second tab in the same Chrome returns to it
   every 2 to 5 minutes (40 s per queued game) for another capture, up to 20 visits or until the game ends, because knights get
@@ -68,7 +68,9 @@ Run `npm install` here once. Chrome is the system Google Chrome (path in `src/sp
 | `npm run status`                                                 | Progress, per-agent counts, colours seen, rejection reasons, stale claims.                                                                                                                       |
 | `npm run reread -- [--rejected] [--check]`                       | Re-runs the reader on every stored capture, including those curated into `examples/kept`, and refreshes the summaries. Run after retraining; `--check` only reports where each capture resolves. |
 | `npm run recover`                                                | Re-reads `../examples/rejected`; rooms whose captures now pass move back to `games/` as done.                                                                                                    |
-| `npm run variants -- [colour ...]`                               | Counts metropolis types and knight levels per colour by matching atlas sprites at the detected pieces.                                                                                           |
+| `npm run variants -- [colour ...]`                               | Counts metropolis types and knight levels per colour by matching atlas sprites at the detected pieces (raw readings; sightings, not images).                                                     |
+| `npm run curate`                                                 | Rebuilds `../examples/curated/` (copies, map.json, map.md, plain HTML) from the readings corrected by classification 3.                                                                          |
+| `npm run gaps -- [--min N]`                                      | Writes `../examples/variants.json` (the worker's wanted list) from the curated map: images per asset after corrections, gaps below N (default 5).                                                |
 | `bin/snapshot.sh "snapshot at 450 spectated games"`              | Commits the registry and readings (PNGs are gitignored).                                                                                                                                         |
 
 Logs go to `../examples/logs/<agent>.log` (gitignored). A useful watch:
@@ -85,7 +87,7 @@ tail -f ../examples/logs/w1.log | grep -E 'done:|rejected \(|error:|fatal|stop r
 - **After changing `extension-local/src/vision` or the models.** Run the extension tests, then
   `npm run reread` (and `npm run recover` if the change affects the locator), then `bin/restart-worker.sh`.
   The worker only loads code and models at start-up.
-- **Focus phase.** Refresh the gap report at every snapshot (`npm run variants -- --min 5`); the worker
+- **Focus phase.** Refresh the gap report at every snapshot (`npm run curate` then `npm run gaps`); the worker
   reads it before each game, so colours drop out of the wanted list as they fill up. When the report has
   no gaps left, stop the focus run.
 - **Stopping.** Always stop gracefully: create `../examples/STOP` and wait. The worker takes no new games
