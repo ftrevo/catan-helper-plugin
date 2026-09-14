@@ -642,19 +642,30 @@ const main = async () => {
         if (outcome === 'nothing') await sleep(Math.min(120_000, 15_000 * idle))
       }
     }
+    // A stop request ends scouting at once but lets the revisit tab drain its queue, so no game is left
+    // half-collected in the "watching" state: every queued game is visited until it ends or its budget is spent.
     const revisitLoop = async () => {
-      while (!shouldStop()) {
-        const due = dueNow(loadQueue())
+      let draining = false
+      for (;;) {
+        const queue = loadQueue()
+        if (shouldStop()) {
+          if (queue.length === 0) break
+          if (!draining) {
+            draining = true
+            log(`stop requested: finishing ${queue.length} queued game(s) before exiting`)
+          }
+        }
+        const due = dueNow(queue)
         if (due) {
           await revisit(revisitPage, due).catch((error: Error) => {
             log(`revisit error (${due.roomCode}): ${error.message.slice(0, 300)}`)
           })
-        } else if (values.once && loadQueue().length === 0) break
+        } else if (values.once && queue.length === 0) break
         await sleep(15_000)
       }
     }
     await Promise.all([scoutLoop(), revisitLoop()])
-    log(shouldStop() ? 'stop requested' : 'exiting')
+    log(shouldStop() ? 'stopped: no new games were taken and the queue is empty' : 'exiting')
   } finally {
     await browser.close()
   }

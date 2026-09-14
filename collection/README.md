@@ -88,8 +88,11 @@ tail -f ../examples/logs/w1.log | grep -E 'done:|rejected \(|error:|fatal|stop r
 - **Focus phase.** Refresh the gap report at every snapshot (`npm run variants -- --min 5`); the worker
   reads it before each game, so colours drop out of the wanted list as they fill up. When the report has
   no gaps left, stop the focus run.
-- **Stopping.** Create `../examples/STOP` or kill the worker. Stale claims from a killed worker expire on
-  their own.
+- **Stopping.** Always stop gracefully: create `../examples/STOP` and wait. The worker takes no new games
+  from that moment on but keeps revisiting every game already in its queue until each one ends or its visit
+  budget is spent, then exits and closes Chrome; the log ends with `stopped:`. Never kill the worker to stop
+  it: a kill leaves half-collected games in the `watching` state with stale claims. Remove `STOP` before the
+  next start, or the worker exits immediately.
 
 ## Failure modes met so far
 
