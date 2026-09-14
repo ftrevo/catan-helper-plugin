@@ -1,0 +1,99 @@
+{
+  "roomCode": "edge396",
+  "url": "https://colonist.io/#edge396",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T01:48:14.393Z",
+  "seats": [
+    "black",
+    "blue",
+    "red",
+    "gold"
+  ],
+  "wanted": [
+    "gold"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-014831.png",
+      "takenAt": "2026-09-14T01:48:41.580Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "gold",
+        "black"
+      ]
+    },
+    {
+      "file": "02-015423.png",
+      "takenAt": "2026-09-14T01:54:30.038Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "gold",
+        "black"
+      ]
+    },
+    {
+      "file": "03-015857.png",
+      "takenAt": "2026-09-14T01:59:02.598Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 20,
+      "colours": [
+        "red",
+        "blue",
+        "gold",
+        "black"
+      ]
+    },
+    {
+      "file": "04-020323.png",
+      "takenAt": "2026-09-14T02:03:29.078Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 21,
+      "colours": [
+        "red",
+        "blue",
+        "gold",
+        "black"
+      ]
+    },
+    {
+      "file": "05-020720.png",
+      "takenAt": "2026-09-14T02:07:26.021Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 24,
+      "colours": [
+        "red",
+        "blue",
+        "gold",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 5 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T02:11:13.392Z"
+}

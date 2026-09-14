@@ -4,7 +4,7 @@
  *
  *   npm run variants -- [colour ...]
  */
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { resolve } from 'node:path'
 import { vertexCenters } from '../../extension-local/src/vision/layout.ts'
@@ -122,82 +122,93 @@ const counts: Record<string, Record<string, number>> = {}
 const bump = (colour: string, key: string) => ((counts[colour] ??= {})[key] = ((counts[colour] ??= {})[key] ?? 0) + 1)
 
 let captures = 0
-for (const game of readdirSync(GAMES_DIR).sort()) {
-  const dir = resolve(GAMES_DIR, game)
-  for (const file of readdirSync(dir).filter((f) => f.endsWith('.reading.json'))) {
-    const reading = JSON.parse(readFileSync(resolve(dir, file), 'utf8')) as Reading
-    if (!reading.ok || !reading.location || !reading.pieces) continue
-    for (const b of reading.pieces.buildings) {
-      if ((b.kind === 'settlement' || b.kind === 'city') && (only.length === 0 || only.includes(b.colour)))
-        bump(b.colour, b.kind)
-    }
-    for (const r of reading.pieces.roads ?? []) if (only.length === 0 || only.includes(r.colour)) bump(r.colour, 'road')
-    const pieces = reading.pieces.buildings.filter(
-      (b) => (b.kind === 'metropolis' || b.kind === 'knight') && (only.length === 0 || only.includes(b.colour))
-    )
-    if (pieces.length === 0) continue
-    const png = resolve(dir, file.replace(/\.reading\.json$/, '.png'))
-    if (!existsSync(png)) continue
-    captures++
-    const image = await loadImage(png)
-    const canvas = createCanvas(image.width, image.height)
-    const ctx = canvas.getContext('2d')
-    ctx.drawImage(image, 0, 0)
-    const img = ctx.getImageData(0, 0, image.width, image.height)
-    const { spacing } = reading.location
-    const vertices = vertexCenters(reading.location)
-    const pieceScale = (spacing / TILE_SOURCE_WIDTH) * PIECE_SCALE
+const KEPT_DIR = resolve(EXAMPLES_DIR, 'kept')
+const CORNER_DIR = resolve(KEPT_DIR, 'corner-cases')
+/** Game folders live under examples/games, under examples/kept, and under examples/kept/corner-cases/<case>. */
+const ROOTS = [
+  GAMES_DIR,
+  KEPT_DIR,
+  ...(existsSync(CORNER_DIR) ? readdirSync(CORNER_DIR).map((c) => resolve(CORNER_DIR, c)) : []),
+].filter((root) => existsSync(root))
+for (const root of ROOTS)
+  for (const game of readdirSync(root).sort()) {
+    const dir = resolve(root, game)
+    if (!statSync(dir).isDirectory()) continue // examples/kept also holds map.json and map.md
+    for (const file of readdirSync(dir).filter((f) => f.endsWith('.reading.json'))) {
+      const reading = JSON.parse(readFileSync(resolve(dir, file), 'utf8')) as Reading
+      if (!reading.ok || !reading.location || !reading.pieces) continue
+      for (const b of reading.pieces.buildings) {
+        if ((b.kind === 'settlement' || b.kind === 'city') && (only.length === 0 || only.includes(b.colour)))
+          bump(b.colour, b.kind)
+      }
+      for (const r of reading.pieces.roads ?? [])
+        if (only.length === 0 || only.includes(r.colour)) bump(r.colour, 'road')
+      const pieces = reading.pieces.buildings.filter(
+        (b) => (b.kind === 'metropolis' || b.kind === 'knight') && (only.length === 0 || only.includes(b.colour))
+      )
+      if (pieces.length === 0) continue
+      const png = resolve(dir, file.replace(/\.reading\.json$/, '.png'))
+      if (!existsSync(png)) continue
+      captures++
+      const image = await loadImage(png)
+      const canvas = createCanvas(image.width, image.height)
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(image, 0, 0)
+      const img = ctx.getImageData(0, 0, image.width, image.height)
+      const { spacing } = reading.location
+      const vertices = vertexCenters(reading.location)
+      const pieceScale = (spacing / TILE_SOURCE_WIDTH) * PIECE_SCALE
 
-    for (const piece of pieces) {
-      const v = vertices[piece.vertex]!
-      if (piece.kind === 'metropolis') {
-        // Sample the upper tower body, right of the city.
-        const cx = v.x + 0.28 * 154 * pieceScale
-        const cy = v.y + PIECE_ANCHOR_DY * spacing - 20 * pieceScale
-        let r = 0,
-          g = 0,
-          b = 0,
-          n = 0
-        for (let dy = -3; dy <= 3; dy++)
-          for (let dx = -3; dx <= 3; dx++) {
-            const o = (Math.round(cy + dy) * img.width + Math.round(cx + dx)) * 4
-            const lum = (img.data[o]! + img.data[o + 1]! + img.data[o + 2]!) / 3
-            if (lum < 60) continue
-            r += img.data[o]!
-            g += img.data[o + 1]!
-            b += img.data[o + 2]!
-            n++
+      for (const piece of pieces) {
+        const v = vertices[piece.vertex]!
+        if (piece.kind === 'metropolis') {
+          // Sample the upper tower body, right of the city.
+          const cx = v.x + 0.28 * 154 * pieceScale
+          const cy = v.y + PIECE_ANCHOR_DY * spacing - 20 * pieceScale
+          let r = 0,
+            g = 0,
+            b = 0,
+            n = 0
+          for (let dy = -3; dy <= 3; dy++)
+            for (let dx = -3; dx <= 3; dx++) {
+              const o = (Math.round(cy + dy) * img.width + Math.round(cx + dx)) * 4
+              const lum = (img.data[o]! + img.data[o + 1]! + img.data[o + 2]!) / 3
+              if (lum < 60) continue
+              r += img.data[o]!
+              g += img.data[o + 1]!
+              b += img.data[o + 2]!
+              n++
+            }
+          if (n === 0) {
+            bump(piece.colour, 'metropolis ?')
+            continue
           }
-        if (n === 0) {
-          bump(piece.colour, 'metropolis ?')
-          continue
+          r /= n
+          g /= n
+          b /= n
+          const best = towerColours.reduce((a, c) =>
+            Math.hypot(c.r - r, c.g - g, c.b - b) < Math.hypot(a.r - r, a.g - g, a.b - b) ? c : a
+          )
+          bump(piece.colour, `metropolis ${best.type}`)
+        } else {
+          const knightScale = (KNIGHT_DIAMETER * spacing) / 240
+          let best = { name: '?', score: Infinity }
+          for (const level of [1, 2, 3])
+            for (const state of ['active', 'inactive']) {
+              const name = `knight_level${level}_${state}_${piece.colour}`
+              if (!atlas.has(name)) continue
+              const t = template(name, knightScale)
+              for (let dy = -3; dy <= 3; dy += 1)
+                for (let dx = -3; dx <= 3; dx += 1) {
+                  const score = matchScore(img, t, v.x + dx, v.y + dy)
+                  if (score < best.score) best = { name: `knight level ${level} ${state}`, score }
+                }
+            }
+          bump(piece.colour, best.score < 60 ? best.name : 'knight (no close match)')
         }
-        r /= n
-        g /= n
-        b /= n
-        const best = towerColours.reduce((a, c) =>
-          Math.hypot(c.r - r, c.g - g, c.b - b) < Math.hypot(a.r - r, a.g - g, a.b - b) ? c : a
-        )
-        bump(piece.colour, `metropolis ${best.type}`)
-      } else {
-        const knightScale = (KNIGHT_DIAMETER * spacing) / 240
-        let best = { name: '?', score: Infinity }
-        for (const level of [1, 2, 3])
-          for (const state of ['active', 'inactive']) {
-            const name = `knight_level${level}_${state}_${piece.colour}`
-            if (!atlas.has(name)) continue
-            const t = template(name, knightScale)
-            for (let dy = -3; dy <= 3; dy += 1)
-              for (let dx = -3; dx <= 3; dx += 1) {
-                const score = matchScore(img, t, v.x + dx, v.y + dy)
-                if (score < best.score) best = { name: `knight level ${level} ${state}`, score }
-              }
-          }
-        bump(piece.colour, best.score < 60 ? best.name : 'knight (no close match)')
       }
     }
   }
-}
 
 console.log(`scanned ${captures} captures`)
 if (min !== undefined) {

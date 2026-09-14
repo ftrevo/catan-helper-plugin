@@ -395,6 +395,7 @@ Temporary Items
 /extension/build
 /back/output
 examples/games/**/*.png
+examples/kept/**/*.png
 examples/.registry.lock
 examples/STOP
 examples/rejected/

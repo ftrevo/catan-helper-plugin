@@ -1,0 +1,51 @@
+{
+  "roomCode": "isle3902",
+  "url": "https://colonist.io/#isle3902",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T00:54:28.955Z",
+  "seats": [
+    "silver",
+    "red"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-005445.png",
+      "takenAt": "2026-09-14T00:54:51.497Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 16,
+      "colours": [
+        "silver",
+        "red"
+      ]
+    },
+    {
+      "file": "02-005717.png",
+      "takenAt": "2026-09-14T00:57:22.893Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 18,
+      "colours": [
+        "silver",
+        "red"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 2 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T00:59:47.117Z"
+}

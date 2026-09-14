@@ -1,0 +1,66 @@
+{
+  "roomCode": "catan7909",
+  "url": "https://colonist.io/#catan7909",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T04:02:42.732Z",
+  "seats": [
+    "mysticblue",
+    "black",
+    "blue",
+    "red"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-040259.png",
+      "takenAt": "2026-09-14T04:03:04.920Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "red"
+      ]
+    },
+    {
+      "file": "02-040617.png",
+      "takenAt": "2026-09-14T04:06:22.581Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "red",
+        "mysticblue",
+        "blue",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "file": "03-040926.png",
+      "takenAt": "2026-09-14T04:09:31.521Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 8,
+      "colours": [
+        "red",
+        "mysticblue",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

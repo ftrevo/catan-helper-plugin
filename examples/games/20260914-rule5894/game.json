@@ -1,0 +1,85 @@
+{
+  "roomCode": "rule5894",
+  "url": "https://colonist.io/#rule5894",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T03:48:17.477Z",
+  "seats": [
+    "red",
+    "black",
+    "blue",
+    "mysticblue"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-034835.png",
+      "takenAt": "2026-09-14T03:48:46.199Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-035152.png",
+      "takenAt": "2026-09-14T03:51:57.779Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 13,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-035509.png",
+      "takenAt": "2026-09-14T03:55:14.430Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 14,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-035826.png",
+      "takenAt": "2026-09-14T03:58:32.757Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 21,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 4 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T04:01:44.159Z"
+}

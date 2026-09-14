@@ -274,7 +274,38 @@
         "mysticblue",
         "green"
       ]
+    },
+    {
+      "file": "19-004933.png",
+      "takenAt": "2026-09-14T00:49:38.541Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 25,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "20-005206.png",
+      "takenAt": "2026-09-14T00:52:11.243Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 25,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
     }
   ],
-  "notes": []
+  "notes": [
+    "visit budget of 20 spent"
+  ],
+  "finishedAt": "2026-09-14T00:52:11.245Z"
 }

@@ -1774,6 +1774,20 @@
       "reason": "no wanted colour",
       "finishedAt": "2026-09-14T00:11:09.714Z"
     },
+    "256805380": {
+      "roomCode": "256805380",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:06:41.430Z",
+      "heartbeatAt": "2026-09-14T01:06:41.430Z",
+      "seats": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:06:58.612Z"
+    },
     "256807722": {
       "roomCode": "256807722",
       "agent": "f1",
@@ -1801,6 +1815,279 @@
       ],
       "reason": "no wanted colour",
       "finishedAt": "2026-09-14T00:42:45.437Z"
+    },
+    "256814323": {
+      "roomCode": "256814323",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:55:58.472Z",
+      "heartbeatAt": "2026-09-14T00:55:58.472Z",
+      "seats": [
+        "blue",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:56:15.488Z"
+    },
+    "256814545": {
+      "roomCode": "256814545",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:49:43.649Z",
+      "heartbeatAt": "2026-09-14T00:49:43.649Z",
+      "seats": [
+        "black",
+        "orange",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:50:00.673Z"
+    },
+    "256814633": {
+      "roomCode": "256814633",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:16:57.777Z",
+      "heartbeatAt": "2026-09-14T01:16:57.777Z",
+      "seats": [
+        "black",
+        "blue",
+        "orange",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:17:14.801Z"
+    },
+    "256815573": {
+      "roomCode": "256815573",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:45:35.975Z",
+      "heartbeatAt": "2026-09-14T01:45:35.975Z",
+      "seats": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:45:57.373Z"
+    },
+    "256816375": {
+      "roomCode": "256816375",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:04:41.385Z",
+      "heartbeatAt": "2026-09-14T01:04:41.385Z",
+      "seats": [
+        "red",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:04:58.409Z"
+    },
+    "256819514": {
+      "roomCode": "256819514",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:37:00.707Z",
+      "heartbeatAt": "2026-09-14T01:37:00.707Z",
+      "seats": [
+        "blue",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:37:17.728Z"
+    },
+    "256822509": {
+      "roomCode": "256822509",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:54:54.343Z",
+      "heartbeatAt": "2026-09-14T01:54:54.343Z",
+      "seats": [
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:55:11.372Z"
+    },
+    "256822553": {
+      "roomCode": "256822553",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-14T01:56:15.617Z",
+      "heartbeatAt": "2026-09-14T01:56:15.617Z",
+      "reason": "only 12 tokens",
+      "finishedAt": "2026-09-14T01:57:29.976Z"
+    },
+    "256823694": {
+      "roomCode": "256823694",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:09:56.338Z",
+      "heartbeatAt": "2026-09-14T02:09:56.338Z",
+      "seats": [
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:10:13.355Z"
+    },
+    "256824713": {
+      "roomCode": "256824713",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:30:39.089Z",
+      "heartbeatAt": "2026-09-14T02:30:39.089Z",
+      "seats": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:30:56.109Z"
+    },
+    "256828734": {
+      "roomCode": "256828734",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:06:01.028Z",
+      "heartbeatAt": "2026-09-14T03:06:01.028Z",
+      "seats": [
+        "blue",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:06:18.057Z"
+    },
+    "256829575": {
+      "roomCode": "256829575",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:16:36.983Z",
+      "heartbeatAt": "2026-09-14T03:16:36.983Z",
+      "seats": [
+        "black",
+        "green",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:16:54.016Z"
+    },
+    "256832452": {
+      "roomCode": "256832452",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:52:35.832Z",
+      "heartbeatAt": "2026-09-14T02:52:35.832Z",
+      "seats": [
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:52:52.853Z"
+    },
+    "256837679": {
+      "roomCode": "256837679",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:30:16.003Z",
+      "heartbeatAt": "2026-09-14T03:30:16.003Z",
+      "seats": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:30:33.041Z"
+    },
+    "256838725": {
+      "roomCode": "256838725",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:22:00.869Z",
+      "heartbeatAt": "2026-09-14T03:22:00.869Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:22:17.898Z"
+    },
+    "256840536": {
+      "roomCode": "256840536",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:24:58.411Z",
+      "heartbeatAt": "2026-09-14T03:24:58.411Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:25:15.430Z"
+    },
+    "256841073": {
+      "roomCode": "256841073",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:41:23.167Z",
+      "heartbeatAt": "2026-09-14T03:41:23.167Z",
+      "seats": [
+        "black",
+        "red",
+        "white"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:41:40.186Z"
+    },
+    "256841378": {
+      "roomCode": "256841378",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:52:37.727Z",
+      "heartbeatAt": "2026-09-14T03:52:37.727Z",
+      "seats": [
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:52:54.754Z"
+    },
+    "256843474": {
+      "roomCode": "256843474",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:55:22.463Z",
+      "heartbeatAt": "2026-09-14T03:55:22.463Z",
+      "seats": [
+        "red",
+        "black",
+        "white"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:55:39.488Z"
+    },
+    "256844300": {
+      "roomCode": "256844300",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T04:05:55.693Z",
+      "heartbeatAt": "2026-09-14T04:05:55.693Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T04:06:12.708Z"
     },
     "catan8396": {
       "roomCode": "catan8396",
@@ -24045,9 +24332,27 @@
     "path1563": {
       "roomCode": "path1563",
       "agent": "f1",
-      "status": "watching",
+      "status": "done",
       "claimedAt": "2026-09-14T00:01:37.003Z",
-      "heartbeatAt": "2026-09-14T00:46:46.353Z"
+      "heartbeatAt": "2026-09-14T00:51:48.973Z",
+      "captures": 20,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green",
+        "bronze",
+        "silver"
+      ],
+      "buildings": 17,
+      "roads": 25,
+      "seats": [
+        "green",
+        "blue",
+        "red",
+        "mysticblue"
+      ],
+      "finishedAt": "2026-09-14T00:52:11.246Z"
     },
     "mine9069": {
       "roomCode": "mine9069",
@@ -24581,9 +24886,25 @@
     "edge2168": {
       "roomCode": "edge2168",
       "agent": "f1",
-      "status": "watching",
+      "status": "done",
       "claimedAt": "2026-09-14T00:43:38.301Z",
-      "heartbeatAt": "2026-09-14T00:48:38.844Z"
+      "heartbeatAt": "2026-09-14T01:08:26.657Z",
+      "captures": 10,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "bronze"
+      ],
+      "buildings": 21,
+      "roads": 26,
+      "seats": [
+        "blue",
+        "red",
+        "black",
+        "bronze"
+      ],
+      "finishedAt": "2026-09-14T01:08:44.788Z"
     },
     "grid553": {
       "roomCode": "grid553",
@@ -24614,6 +24935,2309 @@
       ],
       "reason": "no wanted colour",
       "finishedAt": "2026-09-14T00:48:50.589Z"
+    },
+    "road1646": {
+      "roomCode": "road1646",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:50:07.388Z",
+      "heartbeatAt": "2026-09-14T00:50:07.388Z",
+      "seats": [
+        "black",
+        "red",
+        "orange",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:50:24.406Z"
+    },
+    "game35": {
+      "roomCode": "game35",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:50:50.354Z",
+      "heartbeatAt": "2026-09-14T00:50:50.354Z",
+      "seats": [
+        "orange",
+        "green",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:51:07.382Z"
+    },
+    "band4353": {
+      "roomCode": "band4353",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:52:48.966Z",
+      "heartbeatAt": "2026-09-14T00:52:48.966Z",
+      "seats": [
+        "black",
+        "orange",
+        "green",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:53:05.997Z"
+    },
+    "trade4439": {
+      "roomCode": "trade4439",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:53:12.282Z",
+      "heartbeatAt": "2026-09-14T00:53:12.282Z",
+      "seats": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:53:29.305Z"
+    },
+    "land959": {
+      "roomCode": "land959",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:53:35.794Z",
+      "heartbeatAt": "2026-09-14T00:53:35.794Z",
+      "seats": [
+        "orange",
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:53:52.815Z"
+    },
+    "isle3902": {
+      "roomCode": "isle3902",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T00:54:28.954Z",
+      "heartbeatAt": "2026-09-14T00:59:30.074Z",
+      "captures": 2,
+      "colours": [
+        "silver",
+        "red"
+      ],
+      "buildings": 13,
+      "roads": 18,
+      "seats": [
+        "silver",
+        "red"
+      ],
+      "finishedAt": "2026-09-14T00:59:47.120Z"
+    },
+    "path3015": {
+      "roomCode": "path3015",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:55:11.288Z",
+      "heartbeatAt": "2026-09-14T00:55:11.288Z",
+      "seats": [
+        "red",
+        "orange",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:55:28.314Z"
+    },
+    "grid6053": {
+      "roomCode": "grid6053",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:55:34.749Z",
+      "heartbeatAt": "2026-09-14T00:55:34.749Z",
+      "seats": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:55:51.773Z"
+    },
+    "spot2464": {
+      "roomCode": "spot2464",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:57:14.907Z",
+      "heartbeatAt": "2026-09-14T00:57:14.907Z",
+      "seats": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:57:31.938Z"
+    },
+    "steal2603": {
+      "roomCode": "steal2603",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:58:06.603Z",
+      "heartbeatAt": "2026-09-14T00:58:06.603Z",
+      "seats": [
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:58:23.622Z"
+    },
+    "red5089": {
+      "roomCode": "red5089",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:58:45.285Z",
+      "heartbeatAt": "2026-09-14T00:58:45.285Z",
+      "seats": [
+        "orange",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:59:02.314Z"
+    },
+    "pact983": {
+      "roomCode": "pact983",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T00:59:37.334Z",
+      "heartbeatAt": "2026-09-14T00:59:37.334Z",
+      "seats": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T00:59:54.360Z"
+    },
+    "road4704": {
+      "roomCode": "road4704",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:00:27.320Z",
+      "heartbeatAt": "2026-09-14T01:00:27.320Z",
+      "seats": [
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:00:44.343Z"
+    },
+    "catan6861": {
+      "roomCode": "catan6861",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:00:50.952Z",
+      "heartbeatAt": "2026-09-14T01:00:50.952Z",
+      "seats": [
+        "blue",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:01:07.975Z"
+    },
+    "white4988": {
+      "roomCode": "white4988",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:01:41.136Z",
+      "heartbeatAt": "2026-09-14T01:41:06.759Z",
+      "captures": 13,
+      "colours": [
+        "purple",
+        "red",
+        "black",
+        "blue",
+        "bronze"
+      ],
+      "buildings": 23,
+      "roads": 27,
+      "seats": [
+        "red",
+        "blue",
+        "black",
+        "purple"
+      ],
+      "finishedAt": "2026-09-14T01:41:23.813Z"
+    },
+    "loot1658": {
+      "roomCode": "loot1658",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:02:29.726Z",
+      "heartbeatAt": "2026-09-14T01:02:29.726Z",
+      "seats": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:02:46.752Z"
+    },
+    "sea4802": {
+      "roomCode": "sea4802",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:02:53.478Z",
+      "heartbeatAt": "2026-09-14T01:02:53.478Z",
+      "seats": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:03:10.500Z"
+    },
+    "brick6957": {
+      "roomCode": "brick6957",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:04:06.667Z",
+      "heartbeatAt": "2026-09-14T01:04:06.667Z",
+      "seats": [
+        "black",
+        "green",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:04:28.767Z"
+    },
+    "band1663": {
+      "roomCode": "band1663",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:05:17.731Z",
+      "heartbeatAt": "2026-09-14T01:05:17.731Z",
+      "seats": [
+        "orange",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:05:34.752Z"
+    },
+    "cost4903": {
+      "roomCode": "cost4903",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:05:47.424Z",
+      "heartbeatAt": "2026-09-14T01:05:47.424Z",
+      "seats": [
+        "black",
+        "blue",
+        "orange",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:06:04.445Z"
+    },
+    "area5545": {
+      "roomCode": "area5545",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:06:10.641Z",
+      "heartbeatAt": "2026-09-14T01:06:10.641Z",
+      "seats": [
+        "black",
+        "red",
+        "orange",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:06:27.676Z"
+    },
+    "path2379": {
+      "roomCode": "path2379",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:07:05.317Z",
+      "heartbeatAt": "2026-09-14T01:07:05.317Z",
+      "seats": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:07:22.344Z"
+    },
+    "crop7856": {
+      "roomCode": "crop7856",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:07:28.906Z",
+      "heartbeatAt": "2026-09-14T01:07:28.906Z",
+      "seats": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:07:45.927Z"
+    },
+    "port9943": {
+      "roomCode": "port9943",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:08:18.479Z",
+      "heartbeatAt": "2026-09-14T01:08:18.479Z",
+      "seats": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:08:35.497Z"
+    },
+    "slop": {
+      "roomCode": "slop",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:10:00.629Z",
+      "heartbeatAt": "2026-09-14T01:10:00.629Z",
+      "seats": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:10:17.660Z"
+    },
+    "band1543": {
+      "roomCode": "band1543",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:11:30.427Z",
+      "heartbeatAt": "2026-09-14T01:11:30.427Z",
+      "seats": [
+        "blue",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:11:47.460Z"
+    },
+    "port2640": {
+      "roomCode": "port2640",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:12:22.626Z",
+      "heartbeatAt": "2026-09-14T01:51:51.036Z",
+      "captures": 11,
+      "colours": [
+        "red",
+        "purple",
+        "blue",
+        "black",
+        "green"
+      ],
+      "buildings": 20,
+      "roads": 21,
+      "seats": [
+        "black",
+        "red",
+        "purple",
+        "blue"
+      ],
+      "finishedAt": "2026-09-14T01:52:08.087Z"
+    },
+    "loot6925": {
+      "roomCode": "loot6925",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:13:10.883Z",
+      "heartbeatAt": "2026-09-14T01:59:17.675Z",
+      "captures": 12,
+      "colours": [
+        "blue",
+        "red",
+        "pink",
+        "black",
+        "silver",
+        "white"
+      ],
+      "buildings": 27,
+      "roads": 26,
+      "seats": [
+        "black",
+        "blue",
+        "pink",
+        "red"
+      ],
+      "finishedAt": "2026-09-14T01:59:35.644Z"
+    },
+    "pack748": {
+      "roomCode": "pack748",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:13:53.842Z",
+      "heartbeatAt": "2026-09-14T01:13:53.842Z",
+      "seats": [
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:14:13.309Z"
+    },
+    "plot3690": {
+      "roomCode": "plot3690",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:15:44.721Z",
+      "heartbeatAt": "2026-09-14T01:15:44.721Z",
+      "seats": [
+        "orange",
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:16:01.755Z"
+    },
+    "plan3378": {
+      "roomCode": "plan3378",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:16:21.826Z",
+      "heartbeatAt": "2026-09-14T02:11:28.404Z",
+      "captures": 14,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "mysticblue"
+      ],
+      "buildings": 21,
+      "roads": 27,
+      "seats": [
+        "blue",
+        "orange",
+        "mysticblue",
+        "red"
+      ],
+      "finishedAt": "2026-09-14T02:11:46.723Z"
+    },
+    "loot4035": {
+      "roomCode": "loot4035",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:21:14.609Z",
+      "heartbeatAt": "2026-09-14T01:21:14.609Z",
+      "seats": [
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:21:31.633Z"
+    },
+    "loot4140": {
+      "roomCode": "loot4140",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:21:38.392Z",
+      "heartbeatAt": "2026-09-14T01:21:38.392Z",
+      "seats": [
+        "red",
+        "green",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:21:55.422Z"
+    },
+    "white1344": {
+      "roomCode": "white1344",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:22:16.255Z",
+      "heartbeatAt": "2026-09-14T01:22:16.255Z",
+      "seats": [
+        "blue",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:22:33.288Z"
+    },
+    "sail2931": {
+      "roomCode": "sail2931",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:22:40.428Z",
+      "heartbeatAt": "2026-09-14T01:22:40.428Z",
+      "seats": [
+        "black",
+        "red",
+        "green",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:22:57.464Z"
+    },
+    "area3946": {
+      "roomCode": "area3946",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:23:23.844Z",
+      "heartbeatAt": "2026-09-14T01:23:23.844Z",
+      "seats": [
+        "blue",
+        "red",
+        "black",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:23:40.871Z"
+    },
+    "road2697": {
+      "roomCode": "road2697",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:26:22.787Z",
+      "heartbeatAt": "2026-09-14T02:17:56.066Z",
+      "captures": 13,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ],
+      "buildings": 24,
+      "roads": 29,
+      "seats": [
+        "orange",
+        "purple",
+        "black",
+        "red"
+      ],
+      "finishedAt": "2026-09-14T02:18:13.132Z"
+    },
+    "catan1906": {
+      "roomCode": "catan1906",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:26:59.873Z",
+      "heartbeatAt": "2026-09-14T01:26:59.873Z",
+      "seats": [
+        "red",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:27:16.892Z"
+    },
+    "card1993": {
+      "roomCode": "card1993",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:27:29.757Z",
+      "heartbeatAt": "2026-09-14T01:27:29.757Z",
+      "seats": [
+        "red",
+        "blue",
+        "green",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:27:46.782Z"
+    },
+    "sea3528": {
+      "roomCode": "sea3528",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:39:10.039Z",
+      "heartbeatAt": "2026-09-14T01:39:10.039Z",
+      "seats": [
+        "green",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:39:27.079Z"
+    },
+    "catan1075": {
+      "roomCode": "catan1075",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:39:53.529Z",
+      "heartbeatAt": "2026-09-14T01:39:53.529Z",
+      "seats": [
+        "green",
+        "blue",
+        "orange",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:40:14.836Z"
+    },
+    "sheep1481": {
+      "roomCode": "sheep1481",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:41:08.248Z",
+      "heartbeatAt": "2026-09-14T01:41:08.248Z",
+      "seats": [
+        "red",
+        "orange",
+        "green",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:41:25.814Z"
+    },
+    "sail4197": {
+      "roomCode": "sail4197",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:41:32.195Z",
+      "heartbeatAt": "2026-09-14T01:41:32.195Z",
+      "seats": [
+        "red",
+        "black",
+        "green",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:41:49.214Z"
+    },
+    "sheep6400": {
+      "roomCode": "sheep6400",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:42:18.493Z",
+      "heartbeatAt": "2026-09-14T01:42:18.493Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:42:35.513Z"
+    },
+    "sheep8029": {
+      "roomCode": "sheep8029",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:43:01.634Z",
+      "heartbeatAt": "2026-09-14T01:43:01.634Z",
+      "seats": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:43:20.170Z"
+    },
+    "port2768": {
+      "roomCode": "port2768",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:44:17.080Z",
+      "heartbeatAt": "2026-09-14T02:19:13.249Z",
+      "captures": 9,
+      "colours": [
+        "blue",
+        "purple",
+        "red",
+        "black",
+        "bronze"
+      ],
+      "buildings": 24,
+      "roads": 20,
+      "seats": [
+        "red",
+        "black",
+        "blue",
+        "purple"
+      ],
+      "finishedAt": "2026-09-14T02:19:31.260Z"
+    },
+    "hill7074": {
+      "roomCode": "hill7074",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:45:05.671Z",
+      "heartbeatAt": "2026-09-14T01:45:05.671Z",
+      "seats": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:45:22.697Z"
+    },
+    "loot8849": {
+      "roomCode": "loot8849",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:46:04.433Z",
+      "heartbeatAt": "2026-09-14T02:19:46.271Z",
+      "captures": 9,
+      "colours": [
+        "purple",
+        "green",
+        "red",
+        "black",
+        "bronze"
+      ],
+      "buildings": 21,
+      "roads": 21,
+      "seats": [
+        "red",
+        "green",
+        "black",
+        "purple"
+      ],
+      "finishedAt": "2026-09-14T02:20:03.316Z"
+    },
+    "road440": {
+      "roomCode": "road440",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:47:45.440Z",
+      "heartbeatAt": "2026-09-14T01:52:53.113Z",
+      "captures": 1,
+      "colours": [
+        "red",
+        "silver",
+        "pink"
+      ],
+      "buildings": 10,
+      "roads": 9,
+      "seats": [
+        "silver",
+        "red"
+      ],
+      "finishedAt": "2026-09-14T01:53:13.957Z"
+    },
+    "edge396": {
+      "roomCode": "edge396",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T01:48:14.391Z",
+      "heartbeatAt": "2026-09-14T02:10:56.352Z",
+      "captures": 5,
+      "colours": [
+        "red",
+        "blue",
+        "gold",
+        "black"
+      ],
+      "buildings": 23,
+      "roads": 24,
+      "seats": [
+        "black",
+        "blue",
+        "red",
+        "gold"
+      ],
+      "finishedAt": "2026-09-14T02:11:13.394Z"
+    },
+    "luck8024": {
+      "roomCode": "luck8024",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:54:00.411Z",
+      "heartbeatAt": "2026-09-14T01:54:00.411Z",
+      "seats": [
+        "red",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:54:17.433Z"
+    },
+    "turn4867": {
+      "roomCode": "turn4867",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:55:37.804Z",
+      "heartbeatAt": "2026-09-14T01:55:37.804Z",
+      "seats": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:55:54.841Z"
+    },
+    "farm7166": {
+      "roomCode": "farm7166",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:57:43.577Z",
+      "heartbeatAt": "2026-09-14T01:57:43.577Z",
+      "seats": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:58:00.599Z"
+    },
+    "gold1807": {
+      "roomCode": "gold1807",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:58:08.277Z",
+      "heartbeatAt": "2026-09-14T01:58:08.277Z",
+      "seats": [
+        "orange",
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:58:27.453Z"
+    },
+    "sail9122": {
+      "roomCode": "sail9122",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T01:58:54.015Z",
+      "heartbeatAt": "2026-09-14T01:58:54.015Z",
+      "seats": [
+        "green",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T01:59:11.045Z"
+    },
+    "event838": {
+      "roomCode": "event838",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:00:23.812Z",
+      "heartbeatAt": "2026-09-14T02:00:23.812Z",
+      "seats": [
+        "blue",
+        "black",
+        "green",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:00:40.835Z"
+    },
+    "port9420": {
+      "roomCode": "port9420",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:01:33.437Z",
+      "heartbeatAt": "2026-09-14T02:01:33.437Z",
+      "seats": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:01:50.459Z"
+    },
+    "map2323": {
+      "roomCode": "map2323",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:02:17.995Z",
+      "heartbeatAt": "2026-09-14T02:02:17.995Z",
+      "seats": [
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:02:35.014Z"
+    },
+    "grain9348": {
+      "roomCode": "grain9348",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:03:35.472Z",
+      "heartbeatAt": "2026-09-14T02:03:35.472Z",
+      "seats": [
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:03:52.498Z"
+    },
+    "wall4281": {
+      "roomCode": "wall4281",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:03:59.084Z",
+      "heartbeatAt": "2026-09-14T02:03:59.084Z",
+      "seats": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:04:16.116Z"
+    },
+    "city2172": {
+      "roomCode": "city2172",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:04:23.419Z",
+      "heartbeatAt": "2026-09-14T02:04:23.419Z",
+      "seats": [
+        "red",
+        "green",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:04:40.675Z"
+    },
+    "board8544": {
+      "roomCode": "board8544",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:05:37.305Z",
+      "heartbeatAt": "2026-09-14T02:05:37.305Z",
+      "seats": [
+        "orange",
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:05:54.332Z"
+    },
+    "hill9701": {
+      "roomCode": "hill9701",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:06:01.304Z",
+      "heartbeatAt": "2026-09-14T02:06:01.304Z",
+      "seats": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:06:18.323Z"
+    },
+    "town6736": {
+      "roomCode": "town6736",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:07:58.603Z",
+      "heartbeatAt": "2026-09-14T02:07:58.603Z",
+      "seats": [
+        "black",
+        "red",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:08:15.638Z"
+    },
+    "ore3701": {
+      "roomCode": "ore3701",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:09:24.921Z",
+      "heartbeatAt": "2026-09-14T02:09:24.921Z",
+      "seats": [
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:09:41.946Z"
+    },
+    "road4792": {
+      "roomCode": "road4792",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:11:05.535Z",
+      "heartbeatAt": "2026-09-14T02:11:05.535Z",
+      "seats": [
+        "orange",
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:11:22.568Z"
+    },
+    "turn2112": {
+      "roomCode": "turn2112",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:15:07.912Z",
+      "heartbeatAt": "2026-09-14T02:15:07.912Z",
+      "seats": [
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:15:24.936Z"
+    },
+    "luck7820": {
+      "roomCode": "luck7820",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:18:39.872Z",
+      "heartbeatAt": "2026-09-14T02:18:39.872Z",
+      "seats": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:18:56.896Z"
+    },
+    "sheep3359": {
+      "roomCode": "sheep3359",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:19:04.048Z",
+      "heartbeatAt": "2026-09-14T02:19:04.048Z",
+      "seats": [
+        "blue",
+        "red",
+        "black",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:19:21.069Z"
+    },
+    "cost8874": {
+      "roomCode": "cost8874",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:19:54.114Z",
+      "heartbeatAt": "2026-09-14T02:19:54.114Z",
+      "seats": [
+        "blue",
+        "red",
+        "green",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:20:11.142Z"
+    },
+    "army3053": {
+      "roomCode": "army3053",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:20:25.027Z",
+      "heartbeatAt": "2026-09-14T02:20:25.027Z",
+      "seats": [
+        "black",
+        "orange",
+        "green",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:20:42.043Z"
+    },
+    "coin230": {
+      "roomCode": "coin230",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:21:03.248Z",
+      "heartbeatAt": "2026-09-14T02:21:03.248Z",
+      "seats": [
+        "blue",
+        "black",
+        "red",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:21:20.268Z"
+    },
+    "sail4115": {
+      "roomCode": "sail4115",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:22:02.553Z",
+      "heartbeatAt": "2026-09-14T02:22:02.553Z",
+      "seats": [
+        "green",
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:22:19.573Z"
+    },
+    "coin8612": {
+      "roomCode": "coin8612",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:22:33.349Z",
+      "heartbeatAt": "2026-09-14T02:22:33.349Z",
+      "seats": [
+        "blue",
+        "green",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:22:50.367Z"
+    },
+    "band160": {
+      "roomCode": "band160",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:23:11.273Z",
+      "heartbeatAt": "2026-09-14T02:23:11.273Z",
+      "seats": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:23:28.289Z"
+    },
+    "trade700": {
+      "roomCode": "trade700",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:24:52.569Z",
+      "heartbeatAt": "2026-09-14T02:24:52.569Z",
+      "seats": [
+        "green",
+        "orange",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:25:09.590Z"
+    },
+    "ship361": {
+      "roomCode": "ship361",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:25:16.497Z",
+      "heartbeatAt": "2026-09-14T02:25:16.497Z",
+      "seats": [
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:25:33.519Z"
+    },
+    "king8326": {
+      "roomCode": "king8326",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:26:01.412Z",
+      "heartbeatAt": "2026-09-14T02:26:01.412Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:26:18.436Z"
+    },
+    "brick750": {
+      "roomCode": "brick750",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:26:39.360Z",
+      "heartbeatAt": "2026-09-14T02:26:39.360Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:26:56.384Z"
+    },
+    "green9914": {
+      "roomCode": "green9914",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:27:10.755Z",
+      "heartbeatAt": "2026-09-14T02:27:10.755Z",
+      "seats": [
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:27:27.777Z"
+    },
+    "game4562": {
+      "roomCode": "game4562",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:27:41.903Z",
+      "heartbeatAt": "2026-09-14T02:27:41.903Z",
+      "seats": [
+        "blue",
+        "red",
+        "black",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:27:58.926Z"
+    },
+    "task3400": {
+      "roomCode": "task3400",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:28:40.952Z",
+      "heartbeatAt": "2026-09-14T02:28:40.952Z",
+      "seats": [
+        "black",
+        "green",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:28:57.976Z"
+    },
+    "turn6084": {
+      "roomCode": "turn6084",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:29:28.428Z",
+      "heartbeatAt": "2026-09-14T02:29:28.428Z",
+      "seats": [
+        "black",
+        "green",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:29:45.451Z"
+    },
+    "band8584": {
+      "roomCode": "band8584",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:30:15.157Z",
+      "heartbeatAt": "2026-09-14T02:30:15.157Z",
+      "seats": [
+        "orange",
+        "red",
+        "green",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:30:32.176Z"
+    },
+    "pack3499": {
+      "roomCode": "pack3499",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:31:26.965Z",
+      "heartbeatAt": "2026-09-14T02:31:26.965Z",
+      "seats": [
+        "orange",
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:31:43.994Z"
+    },
+    "bank9969": {
+      "roomCode": "bank9969",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T02:34:53.787Z",
+      "heartbeatAt": "2026-09-14T02:51:37.697Z",
+      "captures": 7,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ],
+      "buildings": 20,
+      "roads": 27,
+      "seats": [
+        "black",
+        "gold",
+        "purple",
+        "red"
+      ],
+      "finishedAt": "2026-09-14T02:52:00.087Z"
+    },
+    "tile5580": {
+      "roomCode": "tile5580",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:35:33.468Z",
+      "heartbeatAt": "2026-09-14T02:35:33.468Z",
+      "seats": [
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:35:50.502Z"
+    },
+    "pack5103": {
+      "roomCode": "pack5103",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:35:57.601Z",
+      "heartbeatAt": "2026-09-14T02:35:57.601Z",
+      "seats": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:36:14.631Z"
+    },
+    "port8530": {
+      "roomCode": "port8530",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:36:28.823Z",
+      "heartbeatAt": "2026-09-14T02:36:28.823Z",
+      "seats": [
+        "red",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:36:45.852Z"
+    },
+    "gold820": {
+      "roomCode": "gold820",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:37:00.356Z",
+      "heartbeatAt": "2026-09-14T02:37:00.356Z",
+      "seats": [
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:37:17.382Z"
+    },
+    "grid125": {
+      "roomCode": "grid125",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:37:31.960Z",
+      "heartbeatAt": "2026-09-14T02:37:31.960Z",
+      "seats": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:37:48.994Z"
+    },
+    "win8100": {
+      "roomCode": "win8100",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:41:14.997Z",
+      "heartbeatAt": "2026-09-14T02:41:14.997Z",
+      "seats": [
+        "orange",
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:41:32.031Z"
+    },
+    "board6715": {
+      "roomCode": "board6715",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:42:09.358Z",
+      "heartbeatAt": "2026-09-14T02:42:09.358Z",
+      "seats": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:42:29.679Z"
+    },
+    "plan6008": {
+      "roomCode": "plan6008",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:42:51.675Z",
+      "heartbeatAt": "2026-09-14T02:42:51.675Z",
+      "seats": [
+        "black",
+        "red",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:43:08.706Z"
+    },
+    "hill4395": {
+      "roomCode": "hill4395",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:44:42.222Z",
+      "heartbeatAt": "2026-09-14T02:44:42.222Z",
+      "seats": [
+        "blue",
+        "black",
+        "red",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:44:59.258Z"
+    },
+    "sail6583": {
+      "roomCode": "sail6583",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:45:24.555Z",
+      "heartbeatAt": "2026-09-14T02:45:24.555Z",
+      "seats": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:45:41.579Z"
+    },
+    "land2404": {
+      "roomCode": "land2404",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:45:56.149Z",
+      "heartbeatAt": "2026-09-14T02:45:56.149Z",
+      "seats": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:46:13.172Z"
+    },
+    "steal3908": {
+      "roomCode": "steal3908",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:46:28.510Z",
+      "heartbeatAt": "2026-09-14T02:46:28.510Z",
+      "seats": [
+        "blue",
+        "black",
+        "red",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:46:45.538Z"
+    },
+    "steal4695": {
+      "roomCode": "steal4695",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-14T02:50:09.021Z",
+      "heartbeatAt": "2026-09-14T02:50:09.021Z",
+      "reason": "only 13 tokens",
+      "finishedAt": "2026-09-14T02:51:22.687Z"
+    },
+    "card6326": {
+      "roomCode": "card6326",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:51:54.713Z",
+      "heartbeatAt": "2026-09-14T02:51:54.713Z",
+      "seats": [
+        "blue",
+        "red",
+        "orange",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:52:11.737Z"
+    },
+    "bank9125": {
+      "roomCode": "bank9125",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:53:15.176Z",
+      "heartbeatAt": "2026-09-14T02:53:15.176Z",
+      "seats": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:53:32.197Z"
+    },
+    "sheep7370": {
+      "roomCode": "sheep7370",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:53:39.854Z",
+      "heartbeatAt": "2026-09-14T02:53:39.854Z",
+      "seats": [
+        "red",
+        "orange",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:53:56.875Z"
+    },
+    "ore2937": {
+      "roomCode": "ore2937",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:54:04.424Z",
+      "heartbeatAt": "2026-09-14T02:54:04.424Z",
+      "seats": [
+        "black",
+        "white",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:54:21.444Z"
+    },
+    "town3774": {
+      "roomCode": "town3774",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:54:36.086Z",
+      "heartbeatAt": "2026-09-14T02:54:36.086Z",
+      "seats": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:54:53.109Z"
+    },
+    "town4779": {
+      "roomCode": "town4779",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:55:07.702Z",
+      "heartbeatAt": "2026-09-14T02:55:07.702Z",
+      "seats": [
+        "green",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:55:24.725Z"
+    },
+    "edge2962": {
+      "roomCode": "edge2962",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:57:15.721Z",
+      "heartbeatAt": "2026-09-14T02:57:15.721Z",
+      "seats": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T02:57:32.745Z"
+    },
+    "gold2088": {
+      "roomCode": "gold2088",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T02:57:40.357Z",
+      "heartbeatAt": "2026-09-14T03:44:34.743Z",
+      "captures": 19,
+      "colours": [
+        "black",
+        "blue",
+        "gold",
+        "red",
+        "bronze"
+      ],
+      "buildings": 23,
+      "roads": 24,
+      "seats": [
+        "red",
+        "black",
+        "blue",
+        "gold"
+      ],
+      "finishedAt": "2026-09-14T03:44:52.881Z"
+    },
+    "isle9953": {
+      "roomCode": "isle9953",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-14T02:58:26.594Z",
+      "heartbeatAt": "2026-09-14T02:58:26.594Z",
+      "reason": "17 stray tokens: not the base map",
+      "finishedAt": "2026-09-14T02:59:40.994Z"
+    },
+    "green914": {
+      "roomCode": "green914",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T02:59:56.635Z",
+      "heartbeatAt": "2026-09-14T02:59:56.635Z",
+      "seats": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:00:13.668Z"
+    },
+    "game9891": {
+      "roomCode": "game9891",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-14T03:02:47.370Z",
+      "heartbeatAt": "2026-09-14T03:02:47.370Z",
+      "reason": "Could not find the Catan board in the screenshot (best lattice fit explains 9 of 18 tokens)",
+      "finishedAt": "2026-09-14T03:03:56.270Z"
+    },
+    "blue6059": {
+      "roomCode": "blue6059",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:04:19.443Z",
+      "heartbeatAt": "2026-09-14T03:04:19.443Z",
+      "seats": [
+        "green",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:04:36.469Z"
+    },
+    "pact1172": {
+      "roomCode": "pact1172",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:05:00.005Z",
+      "heartbeatAt": "2026-09-14T03:05:00.005Z",
+      "seats": [
+        "red",
+        "orange",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:05:20.987Z"
+    },
+    "fort8051": {
+      "roomCode": "fort8051",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:06:25.929Z",
+      "heartbeatAt": "2026-09-14T03:06:25.929Z",
+      "seats": [
+        "black",
+        "red",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:06:42.952Z"
+    },
+    "task7332": {
+      "roomCode": "task7332",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:06:50.819Z",
+      "heartbeatAt": "2026-09-14T03:06:50.819Z",
+      "seats": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:07:07.841Z"
+    },
+    "wall4726": {
+      "roomCode": "wall4726",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:10:06.729Z",
+      "heartbeatAt": "2026-09-14T03:10:06.729Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:10:23.755Z"
+    },
+    "play1360": {
+      "roomCode": "play1360",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:10:45.176Z",
+      "heartbeatAt": "2026-09-14T03:10:45.176Z",
+      "seats": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:11:02.198Z"
+    },
+    "cost4084": {
+      "roomCode": "cost4084",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:11:23.231Z",
+      "heartbeatAt": "2026-09-14T03:11:23.231Z",
+      "seats": [
+        "black",
+        "red",
+        "green"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:11:40.254Z"
+    },
+    "edge8874": {
+      "roomCode": "edge8874",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:11:47.486Z",
+      "heartbeatAt": "2026-09-14T03:11:47.486Z",
+      "seats": [
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:12:04.512Z"
+    },
+    "brick4782": {
+      "roomCode": "brick4782",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:13:12.340Z",
+      "heartbeatAt": "2026-09-14T03:13:12.340Z",
+      "seats": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:13:29.364Z"
+    },
+    "plan6019": {
+      "roomCode": "plan6019",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:13:52.611Z",
+      "heartbeatAt": "2026-09-14T03:13:52.611Z",
+      "seats": [
+        "blue",
+        "orange",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:14:09.576Z"
+    },
+    "bank8861": {
+      "roomCode": "bank8861",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:15:09.116Z",
+      "heartbeatAt": "2026-09-14T03:15:09.116Z",
+      "seats": [
+        "green",
+        "orange",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:15:26.150Z"
+    },
+    "wheat8472": {
+      "roomCode": "wheat8472",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:15:40.371Z",
+      "heartbeatAt": "2026-09-14T03:15:40.371Z",
+      "seats": [
+        "blue",
+        "orange",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:15:57.391Z"
+    },
+    "deck1121": {
+      "roomCode": "deck1121",
+      "agent": "f1",
+      "status": "rejected",
+      "claimedAt": "2026-09-14T03:17:09.414Z",
+      "heartbeatAt": "2026-09-14T03:17:09.414Z",
+      "reason": "16 stray tokens: not the base map",
+      "finishedAt": "2026-09-14T03:18:23.782Z"
+    },
+    "turn5398": {
+      "roomCode": "turn5398",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:18:52.652Z",
+      "heartbeatAt": "2026-09-14T03:18:52.652Z",
+      "seats": [
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:19:09.676Z"
+    },
+    "game4273": {
+      "roomCode": "game4273",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:20:32.708Z",
+      "heartbeatAt": "2026-09-14T03:20:32.708Z",
+      "seats": [
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:20:49.732Z"
+    },
+    "rule6045": {
+      "roomCode": "rule6045",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:21:03.919Z",
+      "heartbeatAt": "2026-09-14T03:21:03.919Z",
+      "seats": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:21:20.943Z"
+    },
+    "sail4048": {
+      "roomCode": "sail4048",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:21:27.887Z",
+      "heartbeatAt": "2026-09-14T03:21:27.887Z",
+      "seats": [
+        "orange",
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:21:44.908Z"
+    },
+    "mine2129": {
+      "roomCode": "mine2129",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T03:22:32.351Z",
+      "heartbeatAt": "2026-09-14T04:07:14.881Z",
+      "captures": 16,
+      "colours": [
+        "purple",
+        "blue",
+        "red",
+        "green",
+        "bronze"
+      ],
+      "buildings": 21,
+      "roads": 22,
+      "seats": [
+        "red",
+        "purple",
+        "blue",
+        "green"
+      ],
+      "finishedAt": "2026-09-14T04:07:31.907Z"
+    },
+    "catan1363": {
+      "roomCode": "catan1363",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:24:16.484Z",
+      "heartbeatAt": "2026-09-14T03:24:16.484Z",
+      "seats": [
+        "blue",
+        "orange",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:24:36.664Z"
+    },
+    "wool8998": {
+      "roomCode": "wool8998",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:27:31.890Z",
+      "heartbeatAt": "2026-09-14T03:27:31.890Z",
+      "seats": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:27:48.921Z"
+    },
+    "port3189": {
+      "roomCode": "port3189",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:28:16.062Z",
+      "heartbeatAt": "2026-09-14T03:28:16.062Z",
+      "seats": [
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:28:33.087Z"
+    },
+    "steal5582": {
+      "roomCode": "steal5582",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:29:21.600Z",
+      "heartbeatAt": "2026-09-14T03:29:21.600Z",
+      "seats": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:29:38.627Z"
+    },
+    "turn7624": {
+      "roomCode": "turn7624",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:30:55.612Z",
+      "heartbeatAt": "2026-09-14T03:30:55.612Z",
+      "seats": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:31:12.631Z"
+    },
+    "map7778": {
+      "roomCode": "map7778",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:31:43.372Z",
+      "heartbeatAt": "2026-09-14T03:31:43.372Z",
+      "seats": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:32:00.402Z"
+    },
+    "event659": {
+      "roomCode": "event659",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T03:36:56.972Z",
+      "heartbeatAt": "2026-09-14T04:09:46.525Z",
+      "captures": 11,
+      "colours": [
+        "mysticblue",
+        "orange",
+        "green",
+        "white",
+        "black"
+      ],
+      "buildings": 22,
+      "roads": 20,
+      "seats": [
+        "white",
+        "green",
+        "orange",
+        "mysticblue"
+      ],
+      "finishedAt": "2026-09-14T04:10:04.465Z"
+    },
+    "bank4562": {
+      "roomCode": "bank4562",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:38:19.634Z",
+      "heartbeatAt": "2026-09-14T03:38:19.634Z",
+      "seats": [
+        "green",
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:38:36.655Z"
+    },
+    "grain4549": {
+      "roomCode": "grain4549",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:38:58.747Z",
+      "heartbeatAt": "2026-09-14T03:38:58.747Z",
+      "seats": [
+        "blue",
+        "red",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:39:15.765Z"
+    },
+    "blue2021": {
+      "roomCode": "blue2021",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:42:04.169Z",
+      "heartbeatAt": "2026-09-14T03:42:04.169Z",
+      "seats": [
+        "orange",
+        "red",
+        "black",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:42:22.087Z"
+    },
+    "steal2639": {
+      "roomCode": "steal2639",
+      "agent": "f1",
+      "status": "watching",
+      "claimedAt": "2026-09-14T03:46:11.860Z",
+      "heartbeatAt": "2026-09-14T04:10:19.476Z"
+    },
+    "rule5894": {
+      "roomCode": "rule5894",
+      "agent": "f1",
+      "status": "done",
+      "claimedAt": "2026-09-14T03:48:17.475Z",
+      "heartbeatAt": "2026-09-14T04:01:27.122Z",
+      "captures": 4,
+      "colours": [
+        "red",
+        "black",
+        "mysticblue",
+        "blue"
+      ],
+      "buildings": 19,
+      "roads": 21,
+      "seats": [
+        "red",
+        "black",
+        "blue",
+        "mysticblue"
+      ],
+      "finishedAt": "2026-09-14T04:01:44.163Z"
+    },
+    "coin7624": {
+      "roomCode": "coin7624",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:53:17.665Z",
+      "heartbeatAt": "2026-09-14T03:53:17.665Z",
+      "seats": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:53:34.688Z"
+    },
+    "steal6088": {
+      "roomCode": "steal6088",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:57:06.552Z",
+      "heartbeatAt": "2026-09-14T03:57:06.552Z",
+      "seats": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:57:23.591Z"
+    },
+    "blue5340": {
+      "roomCode": "blue5340",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:57:30.422Z",
+      "heartbeatAt": "2026-09-14T03:57:30.422Z",
+      "seats": [
+        "blue",
+        "red",
+        "orange",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:57:47.454Z"
+    },
+    "fort6894": {
+      "roomCode": "fort6894",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:57:54.601Z",
+      "heartbeatAt": "2026-09-14T03:57:54.601Z",
+      "seats": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:58:11.621Z"
+    },
+    "band565": {
+      "roomCode": "band565",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T03:58:57.058Z",
+      "heartbeatAt": "2026-09-14T03:58:57.058Z",
+      "seats": [
+        "black",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T03:59:14.086Z"
+    },
+    "dice9803": {
+      "roomCode": "dice9803",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T04:01:15.032Z",
+      "heartbeatAt": "2026-09-14T04:01:15.032Z",
+      "seats": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T04:01:32.055Z"
+    },
+    "hill5737": {
+      "roomCode": "hill5737",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T04:01:39.312Z",
+      "heartbeatAt": "2026-09-14T04:01:39.312Z",
+      "seats": [
+        "black",
+        "red",
+        "blue"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T04:01:56.336Z"
+    },
+    "pact2870": {
+      "roomCode": "pact2870",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T04:02:11.089Z",
+      "heartbeatAt": "2026-09-14T04:02:11.089Z",
+      "seats": [
+        "blue",
+        "green",
+        "red",
+        "orange"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T04:02:28.110Z"
+    },
+    "catan7909": {
+      "roomCode": "catan7909",
+      "agent": "f1",
+      "status": "watching",
+      "claimedAt": "2026-09-14T04:02:42.731Z",
+      "heartbeatAt": "2026-09-14T04:11:41.860Z"
+    },
+    "clay9399": {
+      "roomCode": "clay9399",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T04:04:45.419Z",
+      "heartbeatAt": "2026-09-14T04:04:45.419Z",
+      "seats": [
+        "green",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T04:05:02.442Z"
+    },
+    "roll4297": {
+      "roomCode": "roll4297",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T04:05:09.554Z",
+      "heartbeatAt": "2026-09-14T04:05:09.554Z",
+      "seats": [
+        "blue",
+        "orange",
+        "black",
+        "red"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T04:05:26.575Z"
+    },
+    "plot4744": {
+      "roomCode": "plot4744",
+      "agent": "f1",
+      "status": "skipped",
+      "claimedAt": "2026-09-14T04:07:06.537Z",
+      "heartbeatAt": "2026-09-14T04:07:06.537Z",
+      "seats": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ],
+      "reason": "no wanted colour",
+      "finishedAt": "2026-09-14T04:07:23.558Z"
     }
   }
 }
