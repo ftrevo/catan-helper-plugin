@@ -3,8 +3,8 @@
  * and renders labelled contact sheets so a human can judge A vs B on fresh pieces (not the report's own
  * picks). Read-only with respect to examples/games.
  *
- *   node --import tsx src/classify-b-audit.ts sample <out-dir> [--seed 7] [--n 12]
- *   node --import tsx src/classify-b-audit.ts sheets <out-dir>            # renders every manifest in out-dir
+ *   node --import tsx src/classify-b-audit.ts sample <out-dir> [--seed 7] [--n 12] [--dir classification-v3]
+ *   node --import tsx src/classify-b-audit.ts sheets <out-dir> [--dir ...]  # renders every manifest in out-dir
  *   node --import tsx src/classify-b-audit.ts boards <out-dir> <name> <game>/<capture>...   # board thumbnails
  *
  * Sheets: <out-dir>/<class>.png (4 x 3 cells, each a crop with A / B labels) and <class>.json (the sample).
@@ -20,7 +20,12 @@ const { createCanvas, loadImage } = createRequire(resolve(TRAINING_DIR, 'src/atl
   '@napi-rs/canvas'
 ) as typeof import('@napi-rs/canvas')
 
-const B_DIR = resolve(EXAMPLES_DIR, 'classification-v2')
+/** Which classification run to sample from: --dir <name>, $CLASSIFY_B_OUT, else the current one. */
+const dirFlag = (() => {
+  const i = process.argv.indexOf('--dir')
+  return i >= 0 ? process.argv[i + 1] : undefined
+})()
+const B_DIR = resolve(EXAMPLES_DIR, process.env.CLASSIFY_B_OUT ?? dirFlag ?? 'classification-v3')
 
 type Piece = {
   vertex?: number
@@ -59,7 +64,9 @@ const loadCaptures = (): Capture[] => {
   for (const game of readdirSync(B_DIR).sort()) {
     const dir = resolve(B_DIR, game)
     if (!/^\d{8}-/.test(game) || !statSync(dir).isDirectory()) continue
-    for (const f of readdirSync(dir).filter((f) => f.endsWith('.b.json')).sort()) {
+    for (const f of readdirSync(dir)
+      .filter((f) => f.endsWith('.b.json'))
+      .sort()) {
       const c = JSON.parse(readFileSync(resolve(dir, f), 'utf8')) as Capture
       if (!c.skipped) out.push(c)
     }
@@ -128,21 +135,19 @@ const toSample = (c: Capture, p: Piece): Sample => ({
 })
 
 /* ------------------------------------------------------------------------------------ report's rules */
-const seatSource = (c: Capture) => (c.seats ? (c.seats.inferred ? 'inferred' : 'registry') : 'none')
-const isRelabel = (c: Capture, p: Piece) => {
+/** Kept in step with classify-b-report.ts, so the samples are drawn from the same candidate sets. */
+const isSeatFix = (p: Piece) =>
+  p.flags.includes('phantom-colour') && p.A.colour !== null && p.B.colour === p.A.colour && (p.B.scores.best ?? 99) < 20
+const isRelabel = (_c: Capture, p: Piece) => {
   const score = p.B.scores.best ?? 99
   if (p.flags.includes('missed-by-a')) return false
-  if (p.flags.includes('phantom-colour')) {
-    if (seatSource(c) === 'inferred' && p.A.colour !== null && p.B.colour === p.A.colour && score < 20) return false
-    return score < 20 && p.B.colour !== p.A.colour
-  }
+  if (p.flags.includes('phantom-colour')) return !isSeatFix(p) && score < 20 && p.B.colour !== p.A.colour
   return p.flags.includes('colour-mismatch') && score < 20
 }
-const isDrop = (c: Capture, p: Piece) => {
+const isDrop = (_c: Capture, p: Piece) => {
   const score = p.B.scores.best ?? 99
-  if (p.flags.includes('missed-by-a') || !p.flags.includes('phantom-colour')) return false
-  if (seatSource(c) === 'inferred' && p.A.colour !== null && p.B.colour === p.A.colour && score < 20) return false
-  return !(score < 20 && p.B.colour !== p.A.colour) && score >= 45
+  if (p.flags.includes('missed-by-a') || !p.flags.includes('phantom-colour') || isSeatFix(p)) return false
+  return !(score < 20 && p.B.colour !== p.A.colour) && (score >= 45 || p.B.kind === 'none')
 }
 
 const CLASSES: { name: string; match: (p: Piece, c: Capture) => boolean; n?: number; stratify?: boolean }[] = [
@@ -156,7 +161,10 @@ const CLASSES: { name: string; match: (p: Piece, c: Capture) => boolean; n?: num
   { name: 'relabel-candidates', match: (p, c) => isRelabel(c, p) },
   { name: 'drop-candidates', match: (p, c) => isDrop(c, p) },
   { name: 'agree', match: (p) => p.A.kind !== 'none' && p.flags.length === 0, n: 24, stratify: true },
-  { name: 'colour-mismatch-only', match: (p) => p.flags.includes('colour-mismatch') && !p.flags.includes('phantom-colour') },
+  {
+    name: 'colour-mismatch-only',
+    match: (p) => p.flags.includes('colour-mismatch') && !p.flags.includes('phantom-colour'),
+  },
 ]
 
 const sample = (outDir: string, seed: number, n: number) => {
@@ -173,17 +181,42 @@ const sample = (outDir: string, seed: number, n: number) => {
       const quota: Record<string, number> = { road: 8, settlement: 6, city: 4, knight: 4, metropolis: 2 }
       picked = []
       for (const [kind, q] of Object.entries(quota))
-        picked.push(...sampleN(hits.filter((h) => h.p.A.kind === kind), q, rand))
+        picked.push(
+          ...sampleN(
+            hits.filter((h) => h.p.A.kind === kind),
+            q,
+            rand
+          )
+        )
     } else picked = sampleN(hits, cls.n ?? n, rand)
     picked.sort((x, y) => `${x.c.game}/${x.c.capture}`.localeCompare(`${y.c.game}/${y.c.capture}`))
     summary[cls.name] = { population: hits.length, sampled: picked.length }
-    writeFileSync(resolve(outDir, `${cls.name}.json`), JSON.stringify(picked.map(({ c, p }) => toSample(c, p)), null, 1))
+    writeFileSync(
+      resolve(outDir, `${cls.name}.json`),
+      JSON.stringify(
+        picked.map(({ c, p }) => toSample(c, p)),
+        null,
+        1
+      )
+    )
   }
   // Capture-level samples: overlay-flagged and not, and robber checks.
   const rand = rng(seed + 99)
-  const flagged = sampleN(captures.filter((c) => c.overlaySuspected), n, rand)
-  const clean = sampleN(captures.filter((c) => !c.overlaySuspected), n, rand)
-  const robber = sampleN(captures.filter((c) => c.robberDetection.tile !== null), 10, rand)
+  const flagged = sampleN(
+    captures.filter((c) => c.overlaySuspected),
+    n,
+    rand
+  )
+  const clean = sampleN(
+    captures.filter((c) => !c.overlaySuspected),
+    n,
+    rand
+  )
+  const robber = sampleN(
+    captures.filter((c) => c.robberDetection.tile !== null),
+    10,
+    rand
+  )
   const capInfo = (c: Capture) => ({
     game: c.game,
     capture: c.capture,
@@ -195,9 +228,18 @@ const sample = (outDir: string, seed: number, n: number) => {
   writeFileSync(resolve(outDir, 'overlay-flagged.json'), JSON.stringify(flagged.map(capInfo), null, 1))
   writeFileSync(resolve(outDir, 'overlay-clean.json'), JSON.stringify(clean.map(capInfo), null, 1))
   writeFileSync(resolve(outDir, 'robber.json'), JSON.stringify(robber.map(capInfo), null, 1))
-  summary['overlay-flagged'] = { population: captures.filter((c) => c.overlaySuspected).length, sampled: flagged.length }
-  summary['overlay-clean'] = { population: captures.length - summary['overlay-flagged'].population, sampled: clean.length }
-  summary['robber'] = { population: captures.filter((c) => c.robberDetection.tile !== null).length, sampled: robber.length }
+  summary['overlay-flagged'] = {
+    population: captures.filter((c) => c.overlaySuspected).length,
+    sampled: flagged.length,
+  }
+  summary['overlay-clean'] = {
+    population: captures.length - summary['overlay-flagged'].population,
+    sampled: clean.length,
+  }
+  summary['robber'] = {
+    population: captures.filter((c) => c.robberDetection.tile !== null).length,
+    sampled: robber.length,
+  }
   writeFileSync(resolve(outDir, 'summary.json'), JSON.stringify({ seed, summary }, null, 1))
   console.log(JSON.stringify(summary, null, 1))
 }
@@ -255,12 +297,20 @@ const pieceSheet = async (samples: Sample[], out: string) => {
     ctx.fillRect(cx, cy + CELL, CELL, CAP)
     ctx.fillStyle = '#fff'
     ctx.font = 'bold 12px sans-serif'
-    ctx.fillText(`#${i + 1} ${s.pos}  ${s.game.replace(/^\d{8}-/, '')}/${s.capture.slice(0, 2)}`, cx + 4, cy + CELL + 13)
+    ctx.fillText(
+      `#${i + 1} ${s.pos}  ${s.game.replace(/^\d{8}-/, '')}/${s.capture.slice(0, 2)}`,
+      cx + 4,
+      cy + CELL + 13
+    )
     ctx.font = '12px sans-serif'
     ctx.fillStyle = '#ffd27f'
     ctx.fillText(`A: ${s.a}`, cx + 4, cy + CELL + 27)
     ctx.fillStyle = '#9fd9ff'
-    ctx.fillText(`B: ${s.b} ${s.score ?? ''}${s.bSeat && s.bSeat !== s.b.split('-')[0] ? ` seat:${s.bSeat}` : ''}`, cx + 4, cy + CELL + 40)
+    ctx.fillText(
+      `B: ${s.b} ${s.score ?? ''}${s.bSeat && s.bSeat !== s.b.split('-')[0] ? ` seat:${s.bSeat}` : ''}`,
+      cx + 4,
+      cy + CELL + 40
+    )
     ctx.fillStyle = '#aaa'
     ctx.font = '10px sans-serif'
     ctx.fillText(`seats: ${s.seats ?? '?'}`.slice(0, 44), cx + 4, cy + CELL + 51)
@@ -312,14 +362,26 @@ export const boardSheet = async (
         const c = tiles[b.robberDetection.tile]!
         ctx.strokeStyle = 'rgba(255,255,0,0.95)'
         ctx.beginPath()
-        ctx.arc(cx + (c.x - 0.3 * g.spacing - sx) * k, cy + (c.y - 0.26 * g.spacing - sy) * k, 0.24 * g.spacing * k, 0, Math.PI * 2)
+        ctx.arc(
+          cx + (c.x - 0.3 * g.spacing - sx) * k,
+          cy + (c.y - 0.26 * g.spacing - sy) * k,
+          0.24 * g.spacing * k,
+          0,
+          Math.PI * 2
+        )
         ctx.stroke()
       }
       if (b.merchantDetection.tile !== null) {
         const c = tiles[b.merchantDetection.tile]!
         ctx.strokeStyle = 'rgba(0,255,255,0.95)'
         ctx.beginPath()
-        ctx.arc(cx + (c.x + 0.25 * g.spacing - sx) * k, cy + (c.y - 0.28 * g.spacing - sy) * k, 0.16 * g.spacing * k, 0, Math.PI * 2)
+        ctx.arc(
+          cx + (c.x + 0.25 * g.spacing - sx) * k,
+          cy + (c.y - 0.28 * g.spacing - sy) * k,
+          0.16 * g.spacing * k,
+          0,
+          Math.PI * 2
+        )
         ctx.stroke()
       }
     }

@@ -397,6 +397,7 @@ Temporary Items
 examples/games/**/*.png
 examples/kept/**/*.png
 examples/classification-v2/**/*.png
+examples/classification-v3/**/*.png
 examples/.registry.lock
 examples/STOP
 examples/rejected/

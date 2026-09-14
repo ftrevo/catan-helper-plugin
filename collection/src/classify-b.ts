@@ -4,9 +4,11 @@
  * of running the CNN piece classifier. Used to audit classification A (the stored *.reading.json).
  *
  *   node --import tsx src/classify-b.ts [--shard i/n] [--list <file>] [--debug <game>/<file>] [--limit n]
+ *                                        [--out <dir>]
  *
- * Writes examples/classification-v2/<game>/<capture>.b.json, one per capture. Read-only with respect to
- * examples/games.
+ * Writes <out>/<game>/<capture>.b.json (default examples/classification-v3), one per capture. Read-only
+ * with respect to examples/games. Captures are processed a whole game at a time, because the seat list a
+ * capture is judged against is inferred from the whole game (see seatsForGame).
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
@@ -22,7 +24,14 @@ const { createCanvas, loadImage } = createRequire(resolve(TRAINING_DIR, 'src/atl
   '@napi-rs/canvas'
 ) as typeof import('@napi-rs/canvas')
 
-export const OUT_DIR = resolve(EXAMPLES_DIR, 'classification-v2')
+/** Output root: `--out <dir>` or $CLASSIFY_B_OUT, taken relative to examples/ unless it is absolute. */
+const outFlag = (() => {
+  const i = process.argv.indexOf('--out')
+  return i >= 0 ? process.argv[i + 1] : undefined
+})()
+export const OUT_DIR = resolve(EXAMPLES_DIR, process.env.CLASSIFY_B_OUT ?? outFlag ?? 'classification-v3')
+/** Bumped when the decisions change; written into every .b.json. 3 = the audit fixes B1-B7. */
+export const VERSION = 3
 
 /* ------------------------------------------------------------------ geometry constants (see renderer.ts) */
 const TILE_SOURCE_WIDTH = 416
@@ -66,8 +75,17 @@ export const THRESHOLDS = {
   none: 78,
   /** A metropolis tower is present when the best tower template scores below this. */
   tower: 35,
-  /** Roads are thin and sit on varied artwork, so they need a looser "nothing there" bar than buildings. */
-  roadNone: 95,
+  /**
+   * Edges get a "nothing here" hypothesis of their own (B4). An edge carries no road when the best road
+   * template is worse than `roadNone` *and* the colour it picked wins by less than `roadNoneMargin` (a real
+   * road is either a sharp match or at least an unambiguous colour), or when even the best template is
+   * hopeless (`roadNoneAbsolute`). Calibrated on 120 overlay-free captures - 1,664 edges A reports a road
+   * on, 6,976 it leaves empty: the rule calls 1.5% of A's roads nothing, 76% of the empty edges nothing,
+   * and fires on 95% of the edge-5 "roads" that sit under the trade-offer panel.
+   */
+  roadNone: 40,
+  roadNoneMargin: 12,
+  roadNoneAbsolute: 80,
   /** A knight only beats a building when it is this much better (guards the cross-shape comparison). */
   knightMargin: 6,
   /** Robber accepted when its best tile beats the runner-up by this much and scores below robberMax. */
@@ -76,8 +94,16 @@ export const THRESHOLDS = {
   /** The Cities & Knights merchant, same rule. It is optional, so a miss just means "no merchant seen". */
   merchantMargin: 6,
   merchantMax: 25,
-  /** A number token that matches worse than this is hidden, which means something is drawn over the tile. */
-  token: 25,
+  /**
+   * A number token that matches worse than this is hidden, which means something is drawn over the tile.
+   * Recalibrated (B5) against the score distributions: tokens in captures with no panel at all score p50
+   * 6.4, p99 13.7, p99.9 16.4 (n = 32,617), but a piece, a card or a tree clipping the corner of a plainly
+   * visible token reaches 47, while tokens genuinely covered by a "+1 point" banner, a card or a panel run
+   * 28-54 in the 35 tiles I labelled by eye. The two populations overlap between 30 and 50, so there is no
+   * clean cut; 40 keeps the false "hidden" rate low (the 25 of v2 fired on plainly visible tokens) at the
+   * cost of missing the lightest covers, which the panel rectangles catch anyway.
+   */
+  token: 40,
   /**
    * Above these, the artwork B matched is not really there. The 99th percentile of scores where A and B
    * agree is 13-17 for buildings and 57 for roads, which are thin and sit on varied tile artwork.
@@ -327,7 +353,10 @@ export type VertexDecision = {
   kind: 'settlement' | 'city' | 'metropolis' | 'knight' | 'none'
   shape?: string
   colour: string | null
+  /** Always null here; applySeats fills it in once the game's seat list is known. */
   colourSeatConstrained: string | null
+  /** Unrounded scores per colour for the hypothesis family B settled on, so seats can be applied later. */
+  family: Record<string, number>
   wall?: boolean
   type?: string
   level?: number
@@ -350,7 +379,7 @@ export type VertexDecision = {
 const argmin = <T extends string>(entries: [T, number][]): [T, number] =>
   entries.reduce((a, e) => (e[1] < a[1] ? e : a), ['' as T, Infinity])
 
-export const decideVertex = (s: VertexScores, seats: readonly string[] | null, aColour?: string): VertexDecision => {
+export const decideVertex = (s: VertexScores, aColour?: string): VertexDecision => {
   const buildingBest: [string, number][] = []
   for (const c of COLOURS)
     buildingBest.push(
@@ -370,6 +399,7 @@ export const decideVertex = (s: VertexScores, seats: readonly string[] | null, a
       kind: 'none',
       colour: null,
       colourSeatConstrained: null,
+      family: {},
       scores: {
         best: round1(Math.min(bScore, kScore)),
         runnerUp: null,
@@ -385,6 +415,7 @@ export const decideVertex = (s: VertexScores, seats: readonly string[] | null, a
 
   if (isKnight) {
     const perColour: Record<string, number | null> = {}
+    const family: Record<string, number> = {}
     for (const c of COLOURS) {
       const best = argmin(
         Object.entries(s.knight)
@@ -392,10 +423,9 @@ export const decideVertex = (s: VertexScores, seats: readonly string[] | null, a
           .map(([k, v]) => [k, v] as [string, number])
       )
       perColour[c] = round1(best[1])
+      family[c] = best[1]
     }
     const [colour, level, state] = kKey.split('|')
-    const seatKeys = seats ? Object.entries(s.knight).filter(([k]) => seats.includes(k.split('|')[0]!)) : []
-    const seatBest = seatKeys.length ? argmin(seatKeys as [string, number][]) : null
     const runnerUpColour = argmin(
       Object.entries(perColour)
         .filter(([c]) => c !== colour)
@@ -411,7 +441,8 @@ export const decideVertex = (s: VertexScores, seats: readonly string[] | null, a
     return {
       kind: 'knight',
       colour: colour!,
-      colourSeatConstrained: seatBest ? seatBest[0].split('|')[0]! : null,
+      colourSeatConstrained: null,
+      family,
       level: Number(level),
       state,
       levelWithAColour: aBest && aBest[0] ? Number(aBest[0].split('|')[1]) : undefined,
@@ -424,7 +455,7 @@ export const decideVertex = (s: VertexScores, seats: readonly string[] | null, a
         bestKnight: round1(kScore),
         bestTower: round1(tScore),
         perColour,
-        seatBest: seatBest ? round1(seatBest[1]) : null,
+        seatBest: null,
       },
     }
   }
@@ -443,14 +474,12 @@ export const decideVertex = (s: VertexScores, seats: readonly string[] | null, a
   for (const c of COLOURS) perColour[c] = round1(family[c]!)
   const [colour, colourScore] = argmin(COLOURS.map((c) => [c, family[c]!] as [string, number]))
   const runnerUp = argmin(COLOURS.filter((c) => c !== colour).map((c) => [c, family[c]!] as [string, number]))
-  const seatBest = seats?.length
-    ? argmin(seats.filter((c) => c in family).map((c) => [c, family[c]!] as [string, number]))
-    : null
   return {
     kind: hasTower ? 'metropolis' : shape === 'settlement' ? 'settlement' : 'city',
     shape,
     colour,
-    colourSeatConstrained: seatBest && seatBest[0] ? seatBest[0] : null,
+    colourSeatConstrained: null,
+    family,
     wall: shape === 'cityWall' ? true : undefined,
     type: hasTower ? tType : undefined,
     scores: {
@@ -461,7 +490,7 @@ export const decideVertex = (s: VertexScores, seats: readonly string[] | null, a
       bestKnight: round1(kScore),
       bestTower: round1(tScore),
       perColour,
-      seatBest: seatBest ? round1(seatBest[1]) : null,
+      seatBest: null,
     },
   }
 }
@@ -487,24 +516,28 @@ export const scoreEdge = (img: Img, ex: number, ey: number, angle: number, spaci
   return scores
 }
 
-export const decideEdge = (scores: Record<string, number>, seats: readonly string[] | null) => {
+/**
+ * An edge is a road of some colour, or nothing at all. Without the second hypothesis (B4) every UI element
+ * that happens to lie on an edge became "a road of some colour", because the argmin over twelve templates
+ * always returns one.
+ */
+export const decideEdge = (scores: Record<string, number>) => {
   const [colour, best] = argmin(COLOURS.map((c) => [c, scores[c]!] as [string, number]))
   const runnerUp = argmin(COLOURS.filter((c) => c !== colour).map((c) => [c, scores[c]!] as [string, number]))
-  const seatBest = seats?.length
-    ? argmin(seats.filter((c) => c in scores).map((c) => [c, scores[c]!] as [string, number]))
-    : null
+  const margin = runnerUp[1] - best
+  const none = best > THRESHOLDS.roadNoneAbsolute || (best > THRESHOLDS.roadNone && margin < THRESHOLDS.roadNoneMargin)
   const perColour: Record<string, number | null> = {}
   for (const c of COLOURS) perColour[c] = round1(scores[c]!)
   return {
-    kind: best > THRESHOLDS.roadNone ? ('none' as const) : ('road' as const),
-    colour: best > THRESHOLDS.roadNone ? null : colour,
-    colourSeatConstrained: seatBest && seatBest[0] ? seatBest[0] : null,
+    kind: none ? ('none' as const) : ('road' as const),
+    colour: none ? null : colour,
+    colourSeatConstrained: null,
     scores: {
       best: round1(best),
       runnerUp: round1(runnerUp[1]),
-      margin: round1(runnerUp[1] - best),
+      margin: round1(margin),
       perColour,
-      seatBest: seatBest ? round1(seatBest[1]) : null,
+      seatBest: null,
     },
   }
 }
@@ -575,9 +608,27 @@ export const findMerchant = (img: Img, geometry: { center: { x: number; y: numbe
 /* -------------------------------------------------------------------------------------------- overlay */
 /**
  * UI panels (trade offers, dice, banners, the "answering trade" strip) drawn over the board are large
- * areas of flat, light, unsaturated pixels; the board artwork under them never is, apart from the number
- * tokens, which are far too small to survive the size filter. Blocks are 8 px.
+ * areas of flat, light, unsaturated pixels. The board artwork is not - with one exception that broke v2
+ * (B1): the white pasture sheep also read as flat, light and unsaturated, and the two-block closing below
+ * welds a sheep to the neighbouring number token into a 0.6-0.8 spacing blob that used to clear the size
+ * filter. Those blobs are sparse (fill 0.27-0.51 in every labelled case) where a real panel is a solid
+ * rectangle (fill 0.55-1.0), so a blob is only kept as a panel when it is solid or big, and never when it
+ * is a small blob sitting on a tile whose number token is still plainly visible.
+ * Blocks are 8 px.
  */
+/** A panel is a solid rectangle... */
+const PANEL_FILL = 0.55
+/** ...or longer than anything the board artwork draws (spacings, longest side)... */
+const PANEL_LONG_SIDE = 1.3
+/**
+ * ...and then not too sparse either: the five long-rather-than-solid panels the audit labelled have fill
+ * 0.42-0.48, while a chain of number tokens and sheep that happens to stretch over a spacing and a half has
+ * 0.28-0.33. A long hollow blob is still a panel when it covers a tile whose number token B cannot read -
+ * something is demonstrably drawn over the board there.
+ */
+const PANEL_LONG_MIN_FILL = 0.38
+/** A long but sparse blob centred this close to a tile whose token is readable is sheep, not a panel. */
+const SHEEP_BLOB_TILE_DISTANCE = 0.35
 const closeMask = (mask: Uint8Array, cols: number, rows: number, radius: number): Uint8Array => {
   const grow = (src: Uint8Array, want: number) => {
     const out = new Uint8Array(cols * rows)
@@ -601,7 +652,12 @@ const closeMask = (mask: Uint8Array, cols: number, rows: number, radius: number)
   return grow(grow(mask, 1), 0)
 }
 
-export const findOverlays = (img: Img, geometry: { center: { x: number; y: number }; spacing: number }) => {
+export const findOverlays = (
+  img: Img,
+  geometry: { center: { x: number; y: number }; spacing: number },
+  /** Which tiles B can still read the number token of, and which it cannot (see findCoveredTiles). */
+  tokens: { visible: readonly number[]; covered: readonly number[] } = { visible: [], covered: [] }
+) => {
   const { spacing } = geometry
   const centers = tileCenters(geometry)
   const faces = centers.map((c) => ({ x: c.x, y: c.y - 0.18 * spacing }))
@@ -613,7 +669,8 @@ export const findOverlays = (img: Img, geometry: { center: { x: number; y: numbe
   const B = 8
   const cols = Math.max(0, Math.floor((maxX - minX) / B))
   const rows = Math.max(0, Math.floor((maxY - minY) / B))
-  if (cols === 0 || rows === 0) return { overlays: [], uiFraction: 0, boardBox: { minX, minY, maxX, maxY } }
+  if (cols === 0 || rows === 0)
+    return { overlays: [], rejected: [], uiFraction: 0, boardBox: { minX, minY, maxX, maxY } }
   const ui = new Uint8Array(cols * rows)
   let uiCount = 0
   for (let by = 0; by < rows; by++)
@@ -662,7 +719,9 @@ export const findOverlays = (img: Img, geometry: { center: { x: number; y: numbe
   // which stand a whole spacing apart.
   const closed = closeMask(ui, cols, rows, 2)
   const seen = new Uint8Array(cols * rows)
-  const overlays: { x: number; y: number; width: number; height: number; blocks: number; fill: number }[] = []
+  type Blob = { x: number; y: number; width: number; height: number; blocks: number; fill: number }
+  const overlays: Blob[] = []
+  const rejected: (Blob & { reason: string })[] = []
   const stack: number[] = []
   for (let i = 0; i < cols * rows; i++) {
     if (!closed[i] || seen[i]) continue
@@ -696,19 +755,39 @@ export const findOverlays = (img: Img, geometry: { center: { x: number; y: numbe
     }
     const w = (x1 - x0 + 1) * B
     const h = (y1 - y0 + 1) * B
-    // A number token is about 0.23 spacings across, so anything half a spacing wide and tall is a panel.
-    if (w >= spacing * 0.45 && h >= spacing * 0.45 && n >= 25)
-      overlays.push({
-        x: minX + x0 * B,
-        y: minY + y0 * B,
-        width: w,
-        height: h,
-        blocks: n,
-        fill: Math.round((n / ((x1 - x0 + 1) * (y1 - y0 + 1))) * 100) / 100,
-      })
+    // A number token is about 0.23 spacings across, so anything half a spacing wide and tall could be a
+    // panel; the shape tests below decide whether it really is one.
+    if (w < spacing * 0.45 || h < spacing * 0.45 || n < 25) continue
+    const blob: Blob = {
+      x: minX + x0 * B,
+      y: minY + y0 * B,
+      width: w,
+      height: h,
+      blocks: n,
+      fill: Math.round((n / ((x1 - x0 + 1) * (y1 - y0 + 1))) * 100) / 100,
+    }
+    const long = Math.max(w, h) / spacing
+    const bcx = blob.x + w / 2
+    const bcy = blob.y + h / 2
+    const solid = blob.fill >= PANEL_FILL
+    const onVisibleToken = tokens.visible.some((t) => {
+      const c = centers[t]
+      return c ? Math.hypot(c.x - bcx, c.y - bcy) < SHEEP_BLOB_TILE_DISTANCE * spacing : false
+    })
+    const overCoveredToken = tokens.covered.some((t) => {
+      const c = centers[t]
+      return c ? c.x >= blob.x && c.x <= blob.x + w && c.y >= blob.y && c.y <= blob.y + h : false
+    })
+    if (!solid && long < PANEL_LONG_SIDE) rejected.push({ ...blob, reason: 'sparse-and-small' })
+    else if (!solid && blob.fill < PANEL_LONG_MIN_FILL && !overCoveredToken)
+      rejected.push({ ...blob, reason: 'long-but-hollow' })
+    else if (!solid && onVisibleToken && !overCoveredToken)
+      rejected.push({ ...blob, reason: 'sparse-on-visible-token' })
+    else overlays.push(blob)
   }
   return {
     overlays: overlays.sort((a, b) => b.blocks - a.blocks),
+    rejected: rejected.sort((a, b) => b.blocks - a.blocks),
     uiFraction: cols * rows ? Math.round((uiCount / (cols * rows)) * 1000) / 1000 : 0,
     boardBox: { minX, minY, maxX, maxY },
   }
@@ -767,7 +846,46 @@ const EDGE_TILES: number[][] = EDGES.map(([a, b]) => {
   return (TILES_OF_VERTEX[b] ?? []).filter((t) => ta.has(t))
 })
 
-export const classifyCapture = async (dir: string, file: string, seats: string[] | null, seatsInferred: boolean) => {
+export type BPiece = {
+  vertex?: number
+  edge?: number
+  A: { kind: string; colour: string | null }
+  B: {
+    kind: string
+    shape?: string
+    colour: string | null
+    colourSeatConstrained: string | null
+    wall?: boolean
+    type?: string
+    level?: number
+    state?: string
+    levelWithAColour?: number
+    stateWithAColour?: string
+    scores: {
+      best: number | null
+      runnerUp: number | null
+      margin: number | null
+      bestBuilding?: number | null
+      bestKnight?: number | null
+      bestTower?: number | null
+      perColour: Record<string, number | null>
+      seatBest: number | null
+    }
+    offset?: { dx: number; dy: number }
+  }
+  flags: string[]
+}
+
+/**
+ * A piece before the game's seat list is known. Seats change nothing about what B sees; they only add the
+ * seat-constrained colour and the two seat flags. Keeping the unrounded per-colour scores of the family B
+ * settled on lets the seat constraint be applied afterwards, which is what makes the game-wide seat
+ * inference of B3 possible.
+ */
+type RawPiece = { piece: BPiece; family: Record<string, number>; underOverlay: boolean }
+
+/** Reads one capture without any seat knowledge. */
+export const classifyCapture = async (dir: string, file: string) => {
   const readingPath = resolve(dir, file)
   const png = resolve(dir, file.replace(/\.reading\.json$/, '.png'))
   const reading = JSON.parse(readFileSync(readingPath, 'utf8')) as Reading
@@ -780,10 +898,16 @@ export const classifyCapture = async (dir: string, file: string, seats: string[]
 
   const robber = findRobber(img, geometry)
   const merchant = findMerchant(img, geometry)
-  const overlayInfo = findOverlays(img, geometry)
   const numbers: (string | null)[] = Array.from({ length: 19 }, () => null)
   for (const t of reading.board ?? []) numbers[t.position] = t.number
+  // The tokens are read first: a blob of flat light pixels sitting on a tile whose number token is still
+  // plainly readable cannot be a panel covering that tile (B1).
   const tokens = findCoveredTiles(img, geometry, numbers)
+  const visibleTokenTiles: number[] = []
+  tokens.scores.forEach((s, tile) => {
+    if (s !== null && !tokens.covered.includes(tile)) visibleTokenTiles.push(tile)
+  })
+  const overlayInfo = findOverlays(img, geometry, { visible: visibleTokenTiles, covered: tokens.covered })
   const tokensFound = reading.location.tokensFound ?? null
   const overlayRules: string[] = []
   if (tokensFound !== null && tokensFound < 18) overlayRules.push(`tokensFound=${tokensFound}<18`)
@@ -801,17 +925,15 @@ export const classifyCapture = async (dir: string, file: string, seats: string[]
 
   const robberTiles = robber.tile === null ? [] : [robber.tile]
   const merchantTiles = merchant.tile === null ? [] : [merchant.tile]
-  const pieces: unknown[] = []
+  const pieces: RawPiece[] = []
 
   for (const b of reading.pieces.buildings) {
     const v = vertices[b.vertex]
     if (!v) continue
     const s = scoreVertex(img, v.x, v.y, geometry.spacing)
-    const d = decideVertex(s, seats, b.colour)
+    const d = decideVertex(s, b.colour)
     const flags: string[] = []
-    if (seats && !seats.includes(b.colour)) flags.push('phantom-colour')
     if (d.colour && d.colour !== b.colour) flags.push('colour-mismatch')
-    if (seats && d.colourSeatConstrained && d.colourSeatConstrained !== b.colour) flags.push('colour-mismatch-seat')
     if (d.kind !== 'none' && d.kind !== b.kind) flags.push('kind-mismatch')
     if (d.kind === 'none') flags.push('unreadable')
     if (d.scores.best !== null && d.kind !== 'none' && d.scores.best > (THRESHOLDS.weak[d.kind] ?? 25))
@@ -822,25 +944,30 @@ export const classifyCapture = async (dir: string, file: string, seats: string[]
       flags.push('near-robber')
     if (merchantTiles.length && (TILES_OF_VERTEX[b.vertex] ?? []).some((t) => merchantTiles.includes(t)))
       flags.push('near-merchant')
-    if (inOverlay(v.x, v.y) || coveredTile(TILES_OF_VERTEX[b.vertex] ?? [])) flags.push('under-overlay')
+    const underOverlay = inOverlay(v.x, v.y) || coveredTile(TILES_OF_VERTEX[b.vertex] ?? [])
+    if (underOverlay) flags.push('under-overlay')
     pieces.push({
-      vertex: b.vertex,
-      A: { kind: b.kind, colour: b.colour },
-      B: {
-        kind: d.kind,
-        shape: d.shape,
-        colour: d.colour,
-        colourSeatConstrained: d.colourSeatConstrained,
-        wall: d.wall,
-        type: d.type,
-        level: d.level,
-        state: d.state,
-        levelWithAColour: d.levelWithAColour,
-        stateWithAColour: d.stateWithAColour,
-        scores: d.scores,
-        offset: s.offset,
+      piece: {
+        vertex: b.vertex,
+        A: { kind: b.kind, colour: b.colour },
+        B: {
+          kind: d.kind,
+          shape: d.shape,
+          colour: d.colour,
+          colourSeatConstrained: null,
+          wall: d.wall,
+          type: d.type,
+          level: d.level,
+          state: d.state,
+          levelWithAColour: d.levelWithAColour,
+          stateWithAColour: d.stateWithAColour,
+          scores: d.scores,
+          offset: s.offset,
+        },
+        flags,
       },
-      flags,
+      family: d.family,
+      underOverlay,
     })
   }
 
@@ -849,32 +976,36 @@ export const classifyCapture = async (dir: string, file: string, seats: string[]
   vertices.forEach((v, vertex) => {
     if (reported.has(vertex)) return
     const s = scoreVertex(img, v.x, v.y, geometry.spacing)
-    const d = decideVertex(s, seats)
+    const d = decideVertex(s)
     if (d.kind === 'none' || d.colour === null) return
     if ((d.scores.best ?? 99) > THRESHOLDS.extra || (d.scores.margin ?? 0) < THRESHOLDS.extraMargin) return
     const flags = ['missed-by-a']
-    if (seats && !seats.includes(d.colour)) flags.push('phantom-colour')
     if (robberTiles.length && (TILES_OF_VERTEX[vertex] ?? []).some((t) => robberTiles.includes(t)))
       flags.push('near-robber')
     if (merchantTiles.length && (TILES_OF_VERTEX[vertex] ?? []).some((t) => merchantTiles.includes(t)))
       flags.push('near-merchant')
-    if (inOverlay(v.x, v.y) || coveredTile(TILES_OF_VERTEX[vertex] ?? [])) flags.push('under-overlay')
+    const underOverlay = inOverlay(v.x, v.y) || coveredTile(TILES_OF_VERTEX[vertex] ?? [])
+    if (underOverlay) flags.push('under-overlay')
     pieces.push({
-      vertex,
-      A: { kind: 'none', colour: null },
-      B: {
-        kind: d.kind,
-        shape: d.shape,
-        colour: d.colour,
-        colourSeatConstrained: d.colourSeatConstrained,
-        wall: d.wall,
-        type: d.type,
-        level: d.level,
-        state: d.state,
-        scores: d.scores,
-        offset: s.offset,
+      piece: {
+        vertex,
+        A: { kind: 'none', colour: null },
+        B: {
+          kind: d.kind,
+          shape: d.shape,
+          colour: d.colour,
+          colourSeatConstrained: null,
+          wall: d.wall,
+          type: d.type,
+          level: d.level,
+          state: d.state,
+          scores: d.scores,
+          offset: s.offset,
+        },
+        flags,
       },
-      flags,
+      family: d.family,
+      underOverlay,
     })
   })
 
@@ -886,22 +1017,25 @@ export const classifyCapture = async (dir: string, file: string, seats: string[]
     const q = vertices[pair[1]]!
     const angle = Math.atan2(q.y - p.y, q.x - p.x) + Math.PI / 2
     const s = scoreEdge(img, m.x, m.y, angle, geometry.spacing)
-    const d = decideEdge(s, seats)
+    const d = decideEdge(s)
     const flags: string[] = []
-    if (seats && !seats.includes(r.colour)) flags.push('phantom-colour')
     if (d.colour && d.colour !== r.colour) flags.push('colour-mismatch')
-    if (seats && d.colourSeatConstrained && d.colourSeatConstrained !== r.colour) flags.push('colour-mismatch-seat')
     if (d.kind === 'none') flags.push('unreadable')
     if (d.scores.best !== null && d.kind !== 'none' && d.scores.best > THRESHOLDS.weak.road!) flags.push('weak-match')
     if (robberTiles.length && (EDGE_TILES[r.edge] ?? []).some((t) => robberTiles.includes(t))) flags.push('near-robber')
     if (merchantTiles.length && (EDGE_TILES[r.edge] ?? []).some((t) => merchantTiles.includes(t)))
       flags.push('near-merchant')
-    if (inOverlay(m.x, m.y) || coveredTile(EDGE_TILES[r.edge] ?? [])) flags.push('under-overlay')
+    const underOverlay = inOverlay(m.x, m.y) || coveredTile(EDGE_TILES[r.edge] ?? [])
+    if (underOverlay) flags.push('under-overlay')
     pieces.push({
-      edge: r.edge,
-      A: { kind: 'road', colour: r.colour },
-      B: { kind: d.kind, colour: d.colour, colourSeatConstrained: d.colourSeatConstrained, scores: d.scores },
-      flags,
+      piece: {
+        edge: r.edge,
+        A: { kind: 'road', colour: r.colour },
+        B: { kind: d.kind, colour: d.colour, colourSeatConstrained: null, scores: d.scores },
+        flags,
+      },
+      family: s,
+      underOverlay,
     })
   }
 
@@ -912,7 +1046,6 @@ export const classifyCapture = async (dir: string, file: string, seats: string[]
       tokensFound,
       extraTokens: reading.location.extraTokens ?? null,
     },
-    seats: seats ? { colours: seats, inferred: seatsInferred } : null,
     robber:
       robber.tile === null
         ? null
@@ -942,9 +1075,52 @@ export const classifyCapture = async (dir: string, file: string, seats: string[]
     overlaySuspected,
     overlayRules,
     overlays: overlayInfo.overlays,
+    rejectedBlobs: overlayInfo.rejected,
     uiFraction: overlayInfo.uiFraction,
     coveredTiles: tokens.covered,
     tokenScores: tokens.scores,
+    pieces,
+  }
+}
+
+export type RawCapture = NonNullable<Awaited<ReturnType<typeof classifyCapture>>>
+export type SeatInfo = { seats: string[] | null; inferred: boolean; evidence: Record<string, string> }
+
+/**
+ * Applies the game's seat list to one capture: the seat-constrained colour, and the two flags that depend
+ * on seats. `colour-mismatch-seat` now means what it says (B2) - A's colour *is* one of the seated colours
+ * and B's best seated colour is a different one. For a colour nobody is seated as, the seat-constrained
+ * answer can never equal A, so those pieces carry `phantom-colour` alone.
+ */
+export const applySeats = (raw: RawCapture, seatInfo: SeatInfo) => {
+  const seats = seatInfo.seats
+  const pieces = raw.pieces.map(({ piece, family }) => {
+    let colourSeatConstrained: string | null = null
+    let seatBest: number | null = null
+    if (seats?.length && piece.B.kind !== 'none') {
+      const available = seats.filter((c) => c in family)
+      if (available.length) {
+        const [colour, value] = argmin(available.map((c) => [c, family[c]!] as [string, number]))
+        colourSeatConstrained = colour
+        seatBest = round1(value)
+      }
+    }
+    const seatFlags: string[] = []
+    if (seats) {
+      const aColour = piece.A.kind === 'none' ? piece.B.colour : piece.A.colour
+      if (aColour && !seats.includes(aColour)) seatFlags.push('phantom-colour')
+      else if (piece.A.colour && colourSeatConstrained && colourSeatConstrained !== piece.A.colour)
+        seatFlags.push('colour-mismatch-seat')
+    }
+    return {
+      ...piece,
+      B: { ...piece.B, colourSeatConstrained, scores: { ...piece.B.scores, seatBest } },
+      flags: [...seatFlags, ...piece.flags],
+    }
+  })
+  return {
+    ...raw,
+    seats: seats ? { colours: seats, inferred: seatInfo.inferred, evidence: seatInfo.evidence } : null,
     pieces,
   }
 }
@@ -956,35 +1132,48 @@ const arg = (name: string) => {
   return i >= 0 ? args[i + 1] : undefined
 }
 
-/** Seats from the registry when the room was recorded with them, else inferred from A across the game. */
+/**
+ * Which colours are playing, inferred from the whole game when the registry does not say (B3). v2 wanted a
+ * colour to have a building *and* a road in at least two frames, so a two-frame game lost a seat whenever
+ * one piece was dropped; that produced 186 "phantom colour" pieces that are real pieces B agrees with A on.
+ * A colour is seated now when it has a building and a road anywhere in the game, or when at least three of
+ * its pieces are matched strongly by B (B's own colour equals A's, score < 20). Pieces sitting under an
+ * overlay never count as evidence: they are the ones most likely to be UI read as a piece.
+ */
+export const inferSeats = (raws: readonly RawCapture[]): SeatInfo => {
+  const withBuilding = new Set<string>()
+  const withRoad = new Set<string>()
+  const strong: Record<string, number> = {}
+  for (const raw of raws)
+    for (const { piece, underOverlay } of raw.pieces) {
+      const colour = piece.A.colour
+      if (!colour || underOverlay) continue
+      if (piece.A.kind === 'road') withRoad.add(colour)
+      else withBuilding.add(colour)
+      if (piece.B.colour === colour && (piece.B.scores.best ?? 99) < THRESHOLDS.extra)
+        strong[colour] = (strong[colour] ?? 0) + 1
+    }
+  const evidence: Record<string, string> = {}
+  for (const colour of new Set([...withBuilding, ...withRoad, ...Object.keys(strong)]).values()) {
+    const byPieces = withBuilding.has(colour) && withRoad.has(colour)
+    const byMatch = (strong[colour] ?? 0) >= 3
+    if (byPieces || byMatch)
+      evidence[colour] = byPieces && byMatch ? 'building+road,strong-b' : byPieces ? 'building+road' : 'strong-b'
+  }
+  const seats = Object.keys(evidence).sort()
+  return seats.length ? { seats, inferred: true, evidence } : { seats: null, inferred: false, evidence: {} }
+}
+
+/** Seats from the registry when the room was recorded with them, else inferred from the game. */
 export const seatsForGame = (
   game: string,
-  registry: ReturnType<typeof readRegistry>
-): { seats: string[] | null; inferred: boolean } => {
+  registry: ReturnType<typeof readRegistry>,
+  raws: readonly RawCapture[]
+): SeatInfo => {
   const room = game.replace(/^\d{8}-/, '')
   const claim = registry.claims[room]
-  if (claim?.seats?.length) return { seats: [...claim.seats], inferred: false }
-  // Inference: a colour is seated when it has at least one building and one road, in at least two frames.
-  const dir = resolve(GAMES_DIR, game)
-  if (!existsSync(dir)) return { seats: null, inferred: false }
-  const frames: Record<string, number> = {}
-  for (const f of readdirSync(dir).filter((n) => n.endsWith('.reading.json'))) {
-    let reading: Reading
-    try {
-      reading = JSON.parse(readFileSync(resolve(dir, f), 'utf8')) as Reading
-    } catch {
-      continue
-    }
-    if (!reading.ok || !reading.pieces) continue
-    const withBuilding = new Set(reading.pieces.buildings.map((b) => b.colour))
-    const withRoad = new Set((reading.pieces.roads ?? []).map((r) => r.colour))
-    for (const c of withBuilding) if (withRoad.has(c)) frames[c] = (frames[c] ?? 0) + 1
-  }
-  const seats = Object.entries(frames)
-    .filter(([, n]) => n >= 2)
-    .map(([c]) => c)
-    .sort()
-  return seats.length ? { seats, inferred: true } : { seats: null, inferred: false }
+  if (claim?.seats?.length) return { seats: [...claim.seats], inferred: false, evidence: {} }
+  return inferSeats(raws)
 }
 
 const main = async () => {
@@ -993,71 +1182,84 @@ const main = async () => {
   const [shardIndex = 0, shardCount = 1] = shardArg ? shardArg.split('/').map(Number) : [0, 1]
   const limit = arg('--limit') ? Number(arg('--limit')) : Infinity
   const debug = arg('--debug')
-
   const list = arg('--list')
-  const captures: { game: string; file: string }[] = []
+
+  // Captures are grouped by game because the seat list is a property of the game, not of the capture.
+  const byGame = new Map<string, string[]>()
+  const add = (game: string, file: string) => {
+    const files = byGame.get(game) ?? []
+    files.push(file.endsWith('.reading.json') ? file : `${file}.reading.json`)
+    byGame.set(game, files)
+  }
   if (debug) {
     const [game, file] = debug.split('/')
-    captures.push({ game: game!, file: file!.endsWith('.reading.json') ? file! : `${file}.reading.json` })
+    add(game!, file!)
   } else if (list) {
     for (const line of readFileSync(list, 'utf8').split('\n').filter(Boolean)) {
       const [game, file] = line.split('/')
-      captures.push({ game: game!, file: file! })
+      add(game!, file!)
     }
   } else {
+    // B7: every game folder that has readings, whatever the registry says. v2 skipped the games left
+    // `watching` when the worker stopped, which silently dropped three captures.
     for (const game of readdirSync(GAMES_DIR).sort()) {
       const dir = resolve(GAMES_DIR, game)
       if (!statSync(dir).isDirectory()) continue
-      const room = game.replace(/^\d{8}-/, '')
-      const status = registry.claims[room]?.status
-      if (status === 'watching') continue
       for (const file of readdirSync(dir)
         .filter((f) => f.endsWith('.reading.json'))
         .sort())
-        captures.push({ game, file })
+        add(game, file)
     }
   }
 
-  const seatsCache = new Map<string, { seats: string[] | null; inferred: boolean }>()
   let done = 0
+  let games = 0
   const started = Date.now()
-  for (const [i, { game, file }] of captures.entries()) {
+  for (const [i, game] of [...byGame.keys()].sort().entries()) {
     if (i % shardCount !== shardIndex) continue
     if (done >= limit) break
     const dir = resolve(GAMES_DIR, game)
-    let seatInfo = seatsCache.get(game)
-    if (!seatInfo) seatsCache.set(game, (seatInfo = seatsForGame(game, registry)))
-    let result
-    try {
-      result = await classifyCapture(dir, file, seatInfo.seats, seatInfo.inferred)
-    } catch (error) {
-      result = null
-      console.error(`${game}/${file}: ${(error as Error).message}`)
+    const raws: { file: string; raw: RawCapture | null }[] = []
+    for (const file of byGame.get(game)!) {
+      let raw: RawCapture | null = null
+      try {
+        raw = await classifyCapture(dir, file)
+      } catch (error) {
+        console.error(`${game}/${file}: ${(error as Error).message}`)
+      }
+      raws.push({ file, raw })
     }
+    const seatInfo = seatsForGame(
+      game,
+      registry,
+      raws.flatMap(({ raw }) => (raw ? [raw] : []))
+    )
     const outDir = resolve(OUT_DIR, game)
     mkdirSync(outDir, { recursive: true })
-    const out = resolve(outDir, file.replace(/\.reading\.json$/, '.b.json'))
-    if (result === null) {
-      writeFileSync(
-        out,
-        JSON.stringify({
-          game,
-          capture: file.replace(/\.reading\.json$/, ''),
-          skipped: 'reading-not-ok-or-png-missing',
-        }) + '\n'
-      )
-    } else {
-      writeFileSync(
-        out,
-        JSON.stringify({ game, capture: file.replace(/\.reading\.json$/, ''), ...result }, null, debug ? 2 : 0) + '\n'
-      )
+    for (const { file, raw } of raws) {
+      const capture = file.replace(/\.reading\.json$/, '')
+      const out = resolve(outDir, `${capture}.b.json`)
+      if (raw === null) {
+        writeFileSync(
+          out,
+          JSON.stringify({ version: VERSION, game, capture, skipped: 'reading-not-ok-or-png-missing' }) + '\n'
+        )
+      } else {
+        const result = applySeats(raw, seatInfo)
+        writeFileSync(out, JSON.stringify({ version: VERSION, game, capture, ...result }, null, debug ? 2 : 0) + '\n')
+        if (debug) console.log(JSON.stringify(result, null, 2))
+      }
+      done++
     }
-    if (debug) console.log(JSON.stringify(result, null, 2))
-    done++
-    if (done % 20 === 0)
-      console.error(`shard ${shardIndex}: ${done} captures in ${Math.round((Date.now() - started) / 1000)}s`)
+    games++
+    if (games % 25 === 0)
+      console.error(
+        `shard ${shardIndex}: ${games} games, ${done} captures in ${Math.round((Date.now() - started) / 1000)}s`
+      )
   }
-  console.error(`shard ${shardIndex}: wrote ${done} captures in ${Math.round((Date.now() - started) / 1000)}s`)
+  console.error(
+    `shard ${shardIndex}: wrote ${done} captures from ${games} games in ${Math.round((Date.now() - started) / 1000)}s`
+  )
 }
 
 if (!process.env.CLASSIFY_B_LIB) await main()
