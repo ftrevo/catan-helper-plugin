@@ -146,5 +146,8 @@
       ]
     }
   ],
-  "notes": []
+  "notes": [
+    "game over after 9 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T04:13:06.185Z"
 }

@@ -1,0 +1,307 @@
+{
+  "roomCode": "roll728",
+  "url": "https://colonist.io/#roll728",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T04:14:19.111Z",
+  "seats": [
+    "orange",
+    "red",
+    "gold",
+    "black"
+  ],
+  "wanted": [
+    "gold"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-041436.png",
+      "takenAt": "2026-09-14T04:14:41.336Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 0,
+      "roads": 0,
+      "colours": []
+    },
+    {
+      "file": "02-041735.png",
+      "takenAt": "2026-09-14T04:17:40.965Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 6,
+      "roads": 6,
+      "colours": [
+        "black",
+        "red",
+        "gold",
+        "orange"
+      ]
+    },
+    {
+      "file": "03-042012.png",
+      "takenAt": "2026-09-14T04:20:20.857Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "04-042255.png",
+      "takenAt": "2026-09-14T04:23:00.877Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "05-042532.png",
+      "takenAt": "2026-09-14T04:25:37.660Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "06-042758.png",
+      "takenAt": "2026-09-14T04:28:03.868Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "07-043035.png",
+      "takenAt": "2026-09-14T04:30:41.532Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 16,
+      "roads": 20,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "gold",
+        "bronze",
+        "white",
+        "green"
+      ]
+    },
+    {
+      "file": "08-043259.png",
+      "takenAt": "2026-09-14T04:33:04.679Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 15,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "09-043521.png",
+      "takenAt": "2026-09-14T04:35:27.387Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 15,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "10-043759.png",
+      "takenAt": "2026-09-14T04:38:04.499Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 16,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "11-044022.png",
+      "takenAt": "2026-09-14T04:40:27.414Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 16,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "12-044259.png",
+      "takenAt": "2026-09-14T04:43:04.508Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 19,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "13-044531.png",
+      "takenAt": "2026-09-14T04:45:36.631Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 20,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "14-044802.png",
+      "takenAt": "2026-09-14T04:48:07.715Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 20,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "15-045031.png",
+      "takenAt": "2026-09-14T04:50:37.233Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 20,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "16-045319.png",
+      "takenAt": "2026-09-14T04:53:24.713Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 23,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "17-045556.png",
+      "takenAt": "2026-09-14T04:56:01.608Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 25,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "18-045818.png",
+      "takenAt": "2026-09-14T04:58:23.915Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 25,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "19-050040.png",
+      "takenAt": "2026-09-14T05:00:46.257Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 27,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "file": "20-050320.png",
+      "takenAt": "2026-09-14T05:03:25.699Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 29,
+      "roads": 29,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "gold"
+      ]
+    }
+  ],
+  "notes": [
+    "visit budget of 20 spent"
+  ],
+  "finishedAt": "2026-09-14T05:03:25.699Z"
+}
