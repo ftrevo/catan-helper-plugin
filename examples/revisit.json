@@ -1,41 +1,41 @@
 [
   {
-    "roomCode": "turn9715",
-    "url": "https://colonist.io/#turn9715",
-    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-turn9715",
+    "roomCode": "path1563",
+    "url": "https://colonist.io/#path1563",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260914-path1563",
     "seats": [
-      "red",
+      "green",
       "blue",
-      "orange",
-      "white"
+      "red",
+      "mysticblue"
     ],
     "wanted": [
-      "white"
+      "mysticblue"
     ],
     "agent": "f1",
-    "addedAt": "2026-09-13T20:11:53.428Z",
-    "nextVisitAt": "2026-09-13T20:29:19.990Z",
-    "visits": 7,
+    "addedAt": "2026-09-14T00:01:59.220Z",
+    "nextVisitAt": "2026-09-14T00:49:08.607Z",
+    "visits": 18,
     "maxVisits": 20,
     "failures": 0
   },
   {
-    "roomCode": "land5194",
-    "url": "https://colonist.io/#land5194",
-    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260913-land5194",
+    "roomCode": "edge2168",
+    "url": "https://colonist.io/#edge2168",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260914-edge2168",
     "seats": [
-      "black",
-      "red",
       "blue",
-      "white"
+      "red",
+      "black",
+      "bronze"
     ],
     "wanted": [
-      "white"
+      "bronze"
     ],
     "agent": "f1",
-    "addedAt": "2026-09-13T20:20:31.089Z",
-    "nextVisitAt": "2026-09-13T20:29:57.297Z",
-    "visits": 4,
+    "addedAt": "2026-09-14T00:44:00.563Z",
+    "nextVisitAt": "2026-09-14T00:51:01.171Z",
+    "visits": 3,
     "maxVisits": 20,
     "failures": 0
   }
