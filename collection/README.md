@@ -60,16 +60,16 @@ The folder and file pattern is documented in `../examples/README.md`.
 
 Run `npm install` here once. Chrome is the system Google Chrome (path in `src/spectate-worker.ts`).
 
-| Command                                                          | What it does                                                                                                |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `bin/run-worker.sh w1 <profile-dir>`                             | Runs a worker in the foreground with the dataset's settings (2 captures, 150 s apart, 15 s settle).         |
-| `bin/restart-worker.sh w1 <profile-dir>`                         | Kills running workers and their Chrome, starts one in the background. Use after any vision or model change. |
-| `npm run worker -- --agent w1 --profile <dir> [--once] [--list]` | The worker itself. `--list` only prints the lobby; `--once` watches a single game.                          |
-| `npm run status`                                                 | Progress, per-agent counts, colours seen, rejection reasons, stale claims.                                  |
-| `npm run reread -- [--rejected]`                                 | Re-runs the reader on every stored capture and refreshes the summaries. Run after retraining.               |
-| `npm run recover`                                                | Re-reads `../examples/rejected`; rooms whose captures now pass move back to `games/` as done.               |
-| `npm run variants -- [colour ...]`                               | Counts metropolis types and knight levels per colour by matching atlas sprites at the detected pieces.      |
-| `bin/snapshot.sh "snapshot at 450 spectated games"`              | Commits the registry and readings (PNGs are gitignored).                                                    |
+| Command                                                          | What it does                                                                                                                                                                                     |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `bin/run-worker.sh w1 <profile-dir>`                             | Runs a worker in the foreground with the dataset's settings (2 captures, 150 s apart, 15 s settle).                                                                                              |
+| `bin/restart-worker.sh w1 <profile-dir>`                         | Kills running workers and their Chrome, starts one in the background. Use after any vision or model change.                                                                                      |
+| `npm run worker -- --agent w1 --profile <dir> [--once] [--list]` | The worker itself. `--list` only prints the lobby; `--once` watches a single game.                                                                                                               |
+| `npm run status`                                                 | Progress, per-agent counts, colours seen, rejection reasons, stale claims.                                                                                                                       |
+| `npm run reread -- [--rejected] [--check]`                       | Re-runs the reader on every stored capture, including those curated into `examples/kept`, and refreshes the summaries. Run after retraining; `--check` only reports where each capture resolves. |
+| `npm run recover`                                                | Re-reads `../examples/rejected`; rooms whose captures now pass move back to `games/` as done.                                                                                                    |
+| `npm run variants -- [colour ...]`                               | Counts metropolis types and knight levels per colour by matching atlas sprites at the detected pieces.                                                                                           |
+| `bin/snapshot.sh "snapshot at 450 spectated games"`              | Commits the registry and readings (PNGs are gitignored).                                                                                                                                         |
 
 Logs go to `../examples/logs/<agent>.log` (gitignored). A useful watch:
 
