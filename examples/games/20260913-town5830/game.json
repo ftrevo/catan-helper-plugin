@@ -1,0 +1,88 @@
+{
+  "roomCode": "town5830",
+  "url": "https://colonist.io/#town5830",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "200m",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T18:14:36.930Z",
+  "seats": [
+    "silver",
+    "blue"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-181459.png",
+      "takenAt": "2026-09-13T18:15:04.621Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 6,
+      "colours": [
+        "blue",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-181759.png",
+      "takenAt": "2026-09-13T18:18:04.286Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "silver"
+      ]
+    },
+    {
+      "file": "03-182031.png",
+      "takenAt": "2026-09-13T18:20:36.839Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "silver"
+      ]
+    },
+    {
+      "file": "04-182302.png",
+      "takenAt": "2026-09-13T18:23:08.124Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "silver"
+      ]
+    },
+    {
+      "file": "05-182532.png",
+      "takenAt": "2026-09-13T18:25:38.299Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "silver",
+        "white"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 5 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T18:28:52.555Z"
+}

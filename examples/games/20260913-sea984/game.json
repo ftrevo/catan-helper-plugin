@@ -1,0 +1,63 @@
+{
+  "roomCode": "sea984",
+  "url": "https://colonist.io/#sea984",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T17:04:37.536Z",
+  "seats": [
+    "red",
+    "purple"
+  ],
+  "wanted": [
+    "purple"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-170454.png",
+      "takenAt": "2026-09-13T17:04:59.738Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "02-170800.png",
+      "takenAt": "2026-09-13T17:08:06.503Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "03-171110.png",
+      "takenAt": "2026-09-13T17:11:15.672Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "red",
+        "purple"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 3 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T17:13:49.296Z"
+}

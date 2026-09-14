@@ -1,0 +1,41 @@
+{
+  "roomCode": "roll3575",
+  "url": "https://colonist.io/#roll3575",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:54:42.269Z",
+  "finishedAt": "2026-09-12T05:57:35.528Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-055458.png",
+      "takenAt": "2026-09-12T05:55:01.804Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 0,
+      "roads": 0,
+      "colours": []
+    },
+    {
+      "file": "02-055731.png",
+      "takenAt": "2026-09-12T05:57:35.527Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 6,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

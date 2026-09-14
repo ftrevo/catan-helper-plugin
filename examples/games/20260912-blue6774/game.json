@@ -1,0 +1,49 @@
+{
+  "roomCode": "blue6774",
+  "url": "https://colonist.io/#blue6774",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:48:44.696Z",
+  "finishedAt": "2026-09-12T11:51:38.628Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-114900.png",
+      "takenAt": "2026-09-12T11:49:04.843Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 11,
+      "roads": 17,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "orange",
+        "bronze",
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "02-115134.png",
+      "takenAt": "2026-09-12T11:51:38.628Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 12,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

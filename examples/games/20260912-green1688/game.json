@@ -1,0 +1,47 @@
+{
+  "roomCode": "green1688",
+  "url": "https://colonist.io/#green1688",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:20:19.260Z",
+  "finishedAt": "2026-09-12T15:23:12.748Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-152035.png",
+      "takenAt": "2026-09-12T15:20:38.912Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-152308.png",
+      "takenAt": "2026-09-12T15:23:12.748Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

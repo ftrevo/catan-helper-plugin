@@ -1,0 +1,46 @@
+{
+  "roomCode": "bank1524",
+  "url": "https://colonist.io/#bank1524",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:44:45.762Z",
+  "finishedAt": "2026-09-12T20:47:39.303Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-204501.png",
+      "takenAt": "2026-09-12T20:45:05.435Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 18,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-204735.png",
+      "takenAt": "2026-09-12T20:47:39.303Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 23,
+      "roads": 18,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

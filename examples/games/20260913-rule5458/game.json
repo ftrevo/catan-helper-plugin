@@ -1,0 +1,47 @@
+{
+  "roomCode": "rule5458",
+  "url": "https://colonist.io/#rule5458",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:13:43.566Z",
+  "finishedAt": "2026-09-13T01:16:37.421Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-011359.png",
+      "takenAt": "2026-09-13T01:14:03.258Z",
+      "ok": true,
+      "tokens": 15,
+      "buildings": 17,
+      "roads": 19,
+      "colours": [
+        "red",
+        "blue",
+        "green",
+        "black",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-011633.png",
+      "takenAt": "2026-09-13T01:16:37.421Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 20,
+      "colours": [
+        "red",
+        "blue",
+        "green",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

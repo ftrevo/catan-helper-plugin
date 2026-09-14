@@ -1,0 +1,46 @@
+{
+  "roomCode": "roll4542",
+  "url": "https://colonist.io/#roll4542",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:29:41.749Z",
+  "finishedAt": "2026-09-12T05:32:35.019Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-052957.png",
+      "takenAt": "2026-09-12T05:30:01.281Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-053231.png",
+      "takenAt": "2026-09-12T05:32:35.018Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

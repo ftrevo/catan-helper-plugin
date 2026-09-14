@@ -1,0 +1,46 @@
+{
+  "roomCode": "army855",
+  "url": "https://colonist.io/#army855",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:42:30.408Z",
+  "finishedAt": "2026-09-12T17:45:23.942Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-174246.png",
+      "takenAt": "2026-09-12T17:42:50.079Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "blue",
+        "green",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-174520.png",
+      "takenAt": "2026-09-12T17:45:23.941Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 22,
+      "colours": [
+        "blue",
+        "green",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

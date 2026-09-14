@@ -88,3 +88,18 @@
   position: absolute;
   z-index: 3;
 }
+
+.building-metropolis {
+  border-radius: 5px;
+  box-shadow:
+    0 0 0 2px var(--vertex-3),
+    0 0 0 4px rgba(0, 0, 0, 0.55),
+    0 1px 3px rgba(0, 0, 0, 0.45);
+  height: 22px;
+  min-width: 26px;
+}
+
+.building-knight {
+  border-radius: 999px;
+  border-style: dashed;
+}

@@ -1,0 +1,44 @@
+{
+  "roomCode": "sail3862",
+  "url": "https://colonist.io/#sail3862",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:57:33.667Z",
+  "finishedAt": "2026-09-12T15:00:27.162Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-145749.png",
+      "takenAt": "2026-09-12T14:57:53.320Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-150023.png",
+      "takenAt": "2026-09-12T15:00:27.162Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

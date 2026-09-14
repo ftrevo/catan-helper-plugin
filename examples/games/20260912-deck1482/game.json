@@ -1,0 +1,43 @@
+{
+  "roomCode": "deck1482",
+  "url": "https://colonist.io/#deck1482",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:54:00.264Z",
+  "finishedAt": "2026-09-12T18:56:53.777Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-185416.png",
+      "takenAt": "2026-09-12T18:54:19.923Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 9,
+      "colours": [
+        "red",
+        "black",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-185649.png",
+      "takenAt": "2026-09-12T18:56:53.777Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

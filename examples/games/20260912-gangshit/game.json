@@ -1,0 +1,46 @@
+{
+  "roomCode": "gangshit",
+  "url": "https://colonist.io/#gangshit",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T04:30:01.210Z",
+  "finishedAt": "2026-09-12T04:32:55.658Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-043017.png",
+      "takenAt": "2026-09-12T04:30:21.145Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 28,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-043251.png",
+      "takenAt": "2026-09-12T04:32:55.658Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 38,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

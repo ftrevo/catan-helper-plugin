@@ -1,0 +1,33 @@
+{
+  "roomCode": "roll9167",
+  "url": "https://colonist.io/#roll9167",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:47:33.178Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-064836.png",
+      "takenAt": "2026-09-12T06:48:40.646Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 21,
+      "colours": [
+        "red",
+        "black",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "deal829",
+  "url": "https://colonist.io/#deal829",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:03:05.691Z",
+  "finishedAt": "2026-09-12T19:05:59.314Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-190321.png",
+      "takenAt": "2026-09-12T19:03:25.434Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 21,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-190555.png",
+      "takenAt": "2026-09-12T19:05:59.314Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 22,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

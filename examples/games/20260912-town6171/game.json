@@ -1,0 +1,46 @@
+{
+  "roomCode": "town6171",
+  "url": "https://colonist.io/#town6171",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:52:04.989Z",
+  "finishedAt": "2026-09-12T17:54:58.469Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-175220.png",
+      "takenAt": "2026-09-12T17:52:24.627Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "green",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-175454.png",
+      "takenAt": "2026-09-12T17:54:58.469Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "green",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

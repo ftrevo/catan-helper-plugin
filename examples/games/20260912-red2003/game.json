@@ -1,0 +1,46 @@
+{
+  "roomCode": "red2003",
+  "url": "https://colonist.io/#red2003",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:45:32.265Z",
+  "finishedAt": "2026-09-12T19:48:25.720Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-194548.png",
+      "takenAt": "2026-09-12T19:45:51.875Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "mysticblue",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-194821.png",
+      "takenAt": "2026-09-12T19:48:25.720Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 10,
+      "colours": [
+        "black",
+        "red",
+        "mysticblue",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

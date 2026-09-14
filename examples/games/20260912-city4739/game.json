@@ -1,0 +1,42 @@
+{
+  "roomCode": "city4739",
+  "url": "https://colonist.io/#city4739",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:38:03.749Z",
+  "finishedAt": "2026-09-12T14:40:57.136Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-143819.png",
+      "takenAt": "2026-09-12T14:38:23.369Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 5,
+      "colours": [
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-144053.png",
+      "takenAt": "2026-09-12T14:40:57.135Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 5,
+      "colours": [
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

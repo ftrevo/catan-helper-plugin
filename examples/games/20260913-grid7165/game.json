@@ -1,0 +1,48 @@
+{
+  "roomCode": "grid7165",
+  "url": "https://colonist.io/#grid7165",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:36:20.362Z",
+  "finishedAt": "2026-09-13T02:37:17.299Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-023636.png",
+      "takenAt": "2026-09-13T02:36:40.423Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 23,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-023713.png",
+      "takenAt": "2026-09-13T02:37:17.298Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 24,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "cost9078",
+  "url": "https://colonist.io/#cost9078",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:24:05.088Z",
+  "finishedAt": "2026-09-12T18:26:58.622Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-182420.png",
+      "takenAt": "2026-09-12T18:24:24.751Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-182654.png",
+      "takenAt": "2026-09-12T18:26:58.622Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

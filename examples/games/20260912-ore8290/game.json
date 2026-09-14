@@ -1,0 +1,46 @@
+{
+  "roomCode": "ore8290",
+  "url": "https://colonist.io/#ore8290",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:39:28.820Z",
+  "finishedAt": "2026-09-12T19:42:22.431Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-193944.png",
+      "takenAt": "2026-09-12T19:39:48.494Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "orange",
+        "green",
+        "red"
+      ]
+    },
+    {
+      "file": "02-194218.png",
+      "takenAt": "2026-09-12T19:42:22.431Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "orange",
+        "green",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

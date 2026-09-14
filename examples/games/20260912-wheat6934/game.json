@@ -1,0 +1,46 @@
+{
+  "roomCode": "wheat6934",
+  "url": "https://colonist.io/#wheat6934",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:07:13.585Z",
+  "finishedAt": "2026-09-12T18:10:07.205Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-180729.png",
+      "takenAt": "2026-09-12T18:07:33.183Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 21,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-181003.png",
+      "takenAt": "2026-09-12T18:10:07.204Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 25,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "sea2356",
+  "url": "https://colonist.io/#sea2356",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:19:26.366Z",
+  "finishedAt": "2026-09-12T18:22:19.987Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-181942.png",
+      "takenAt": "2026-09-12T18:19:46.134Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 26,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-182216.png",
+      "takenAt": "2026-09-12T18:22:19.987Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 28,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

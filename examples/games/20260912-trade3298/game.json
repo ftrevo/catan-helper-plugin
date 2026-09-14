@@ -1,0 +1,46 @@
+{
+  "roomCode": "trade3298",
+  "url": "https://colonist.io/#trade3298",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T08:05:11.523Z",
+  "finishedAt": "2026-09-12T08:08:04.850Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-080527.png",
+      "takenAt": "2026-09-12T08:05:31.086Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-080801.png",
+      "takenAt": "2026-09-12T08:08:04.849Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

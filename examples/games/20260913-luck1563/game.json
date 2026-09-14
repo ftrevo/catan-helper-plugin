@@ -1,0 +1,46 @@
+{
+  "roomCode": "luck1563",
+  "url": "https://colonist.io/#luck1563",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:29:59.366Z",
+  "finishedAt": "2026-09-13T00:32:53.215Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-003015.png",
+      "takenAt": "2026-09-13T00:30:19.369Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 24,
+      "colours": [
+        "green",
+        "black",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-003249.png",
+      "takenAt": "2026-09-13T00:32:53.215Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 26,
+      "colours": [
+        "green",
+        "black",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

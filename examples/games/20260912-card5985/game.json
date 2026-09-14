@@ -1,0 +1,46 @@
+{
+  "roomCode": "card5985",
+  "url": "https://colonist.io/#card5985",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:52:03.045Z",
+  "finishedAt": "2026-09-12T06:54:56.645Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-065218.png",
+      "takenAt": "2026-09-12T06:52:22.619Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 17,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-065452.png",
+      "takenAt": "2026-09-12T06:54:56.645Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 19,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

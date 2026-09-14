@@ -1,0 +1,46 @@
+{
+  "roomCode": "king5845",
+  "url": "https://colonist.io/#king5845",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T22:36:16.461Z",
+  "finishedAt": "2026-09-12T22:39:09.848Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-223632.png",
+      "takenAt": "2026-09-12T22:36:36.057Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "orange",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-223906.png",
+      "takenAt": "2026-09-12T22:39:09.848Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "red",
+        "orange",
+        "black",
+        "white"
+      ]
+    }
+  ],
+  "notes": []
+}

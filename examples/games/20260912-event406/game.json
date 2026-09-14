@@ -1,0 +1,34 @@
+{
+  "roomCode": "event406",
+  "url": "https://colonist.io/#event406",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:16:04.429Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-201707.png",
+      "takenAt": "2026-09-12T20:17:11.575Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "black",
+        "mysticblue",
+        "blue",
+        "gold",
+        "green"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}

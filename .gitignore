@@ -394,3 +394,16 @@ Temporary Items
 
 /extension/build
 /back/output
+examples/games/**/*.png
+examples/kept/**/*.png
+examples/curated/**/*.png
+examples/classification-v2/**/*.png
+examples/classification-v3/**/*.png
+examples/.registry.lock
+examples/STOP
+examples/rejected/
+examples/logs/
+
+# Chrome profiles of the collection workers
+collection/.profiles/
+examples/other-maps/

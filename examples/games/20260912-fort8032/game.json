@@ -1,0 +1,46 @@
+{
+  "roomCode": "fort8032",
+  "url": "https://colonist.io/#fort8032",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:03:48.509Z",
+  "finishedAt": "2026-09-12T06:06:41.806Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-060404.png",
+      "takenAt": "2026-09-12T06:04:08.096Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 8,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-060638.png",
+      "takenAt": "2026-09-12T06:06:41.805Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

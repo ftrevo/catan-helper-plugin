@@ -1,0 +1,42 @@
+{
+  "roomCode": "map4356",
+  "url": "https://colonist.io/#map4356",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:38:59.421Z",
+  "finishedAt": "2026-09-13T01:41:52.884Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-013915.png",
+      "takenAt": "2026-09-13T01:39:19.068Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-014149.png",
+      "takenAt": "2026-09-13T01:41:52.884Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

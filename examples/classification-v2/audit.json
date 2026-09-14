@@ -1,0 +1,163 @@
+{
+  "auditedAt": "2026-09-14",
+  "auditor": "independent audit of classification B (collection/src/classify-b.ts, classify-b-report.ts)",
+  "reportAudited": "examples/classification-v2/report.md generated 2026-09-14T11:02:01.864Z",
+  "coverage": {
+    "readingsUnderExamplesGames": 2158,
+    "readingsNotOkOrPngMissing": 3,
+    "bJsonBeforeAudit": 2155,
+    "bJsonOkBeforeAudit": 2152,
+    "capturesMissingBBeforeAudit": [
+      "20260912-ore3646/01-124626 (registry status watching)",
+      "20260912-roll1690/01-193258 (registry status watching)",
+      "20260913-deal1997/01-030208 (registry status watching)"
+    ],
+    "addedByAudit": 3,
+    "addedSummary": {
+      "20260912-ore3646/01-124626": { "pieces": 17, "flags": {}, "seats": null, "robberTile": 13 },
+      "20260912-roll1690/01-193258": { "pieces": 17, "flags": {}, "seats": null, "robberTile": 5 },
+      "20260913-deal1997/01-030208": { "pieces": 25, "flags": { "under-overlay": 3 }, "seats": null, "robberTile": 14, "overlaySuspected": true }
+    },
+    "newImagesAfterBRan": 0,
+    "newestPngMtime": "2026-09-14T07:44:16Z",
+    "reportMtime": "2026-09-14T11:02Z"
+  },
+  "recount": {
+    "note": "Recomputed from the .b.json files with examples/classification-v2/audit-scripts/recount.mjs and queries.mjs. 'original2152' excludes the 3 captures added by the audit and is what report.json should match; 'all2155' includes them.",
+    "original2152": {
+      "captures": 2152,
+      "pieces": 65786,
+      "colourAgree": 65503,
+      "colourAgreePct": 99.57,
+      "kindAgree": 65757,
+      "kindAgreePct": 99.96,
+      "bothAgree": 65483,
+      "flags": { "near-robber": 7693, "near-merchant": 5766, "under-overlay": 1479, "colour-mismatch-seat": 559, "phantom-colour": 531, "weak-match": 415, "colour-mismatch": 283, "missed-by-a": 87, "kind-mismatch": 29, "level-mismatch": 0, "unreadable": 0 },
+      "diffVsReportJson": "none: totals, flags, rare-colour table and full colour x variant table are identical cell for cell"
+    },
+    "all2155": {
+      "captures": 2155,
+      "pieces": 65845,
+      "byKindA": { "settlement": 12252, "city": 9318, "knight": 11133, "road": 32046, "metropolis": 1096 },
+      "colourAgree": 65562,
+      "kindAgree": 65816,
+      "bothAgree": 65542,
+      "missedByA": 87,
+      "seats": { "registry": 1263, "inferred": 860, "unknown": 32 },
+      "flags": { "under-overlay": 1482, "colour-mismatch": 283, "colour-mismatch-seat": 559, "weak-match": 415, "near-robber": 7693, "near-merchant": 5766, "phantom-colour": 531, "kind-mismatch": 29, "missed-by-a": 87 },
+      "robber": { "detected": 2143, "missed": 12, "marginMin": 14.1, "marginP10": 22.4, "marginMedian": 24.5, "worstAcceptedScore": 19.1 },
+      "merchantDetected": 1119,
+      "overlay": { "capturesSuspected": 348, "byRule": { "tokensFound": 92, "hidden-token": 92, "ui-panel": 284 }, "tokensFoundAndHiddenTokenBoth": 84 },
+      "mismatchRates": {
+        "nearRobber": { "with": 7661, "withMismatch": 22, "without": 58184, "withoutMismatch": 261 },
+        "nearMerchant": { "with": 5758, "withMismatch": 6, "without": 60087, "withoutMismatch": 277 },
+        "underOverlay": { "with": 1480, "withMismatch": 164, "without": 64365, "withoutMismatch": 119 }
+      }
+    },
+    "decompositions": {
+      "colourMismatchSeat": { "total": 559, "alsoPhantomColour": 531, "genuine": 28, "note": "every phantom-colour piece is a colour-mismatch-seat by construction (A's colour is not in the seat list, so the seat-constrained answer can never equal it)" },
+      "phantomColour": { "total": 531, "inRegistrySeatGames": 178, "inRegistrySeatGamesWithStrongBAgreementOnAColour": 0, "inInferredSeatGames": 353, "inInferredSeatGamesWithStrongBAgreementOnAColour": 186 },
+      "colourMismatch": { "total": 283, "alsoSeatMismatch": 243, "seatConstrainedAgreesWithA": 40, "notPhantom": 68 },
+      "kindAgreement": { "vertexPieces": 33770, "vertexKindMismatch": 29, "vertexKindAgreePct": 99.91, "roads": 32046, "roadKindMismatch": 0, "note": "B has no non-road hypothesis for an edge except 'none' above score 95, which never fired; road kind agreement is structural" },
+      "missedByA": { "total": 87, "allKnights": true, "byVariant": { "knight level 1 inactive": 61, "knight level 2 inactive": 26 }, "underOverlay": 2, "phantom": 0, "worstBest": 14.9 }
+    },
+    "rareColourTable": {
+      "note": "A / B counts, identical to report.md",
+      "bronze": { "settlement": "11/11", "city": "29/27", "road": "180/59", "metropolis politics": "7/7", "knight level 1 active": "6/5", "knight level 1 inactive": "6/6", "knight level 2 active": "4/4", "knight level 2 inactive": "6/6", "knight level 3 active": "3/3", "knight level 3 inactive": "5/5" },
+      "silver": { "settlement": "114/113", "city": "109/108", "road": "357/357", "metropolis science": "9/9", "metropolis politics": "5/5", "metropolis trade": "1/1", "knight level 1 active": "30/33", "knight level 1 inactive": "40/41", "knight level 2 active": "35/35", "knight level 2 inactive": "16/18", "knight level 3 active": "6/7", "knight level 3 inactive": "1/1" },
+      "gold": { "settlement": "135/135", "city": "110/109", "road": "419/427", "metropolis science": "12/12", "metropolis trade": "4/4", "knight level 1 active": "51/50", "knight level 1 inactive": "27/34", "knight level 2 active": "50/49", "knight level 2 inactive": "27/28" },
+      "purple": { "settlement": "235/234", "city": "155/155", "road": "557/558", "metropolis science": "8/8", "metropolis politics": "1/1", "metropolis trade": "4/4", "knight level 1 active": "48/48", "knight level 1 inactive": "100/100", "knight level 2 active": "25/25", "knight level 2 inactive": "8/8", "knight level 3 inactive": "3/3" },
+      "pink": { "settlement": "490/491", "city": "275/275", "road": "1193/1239", "metropolis science": "18/18", "metropolis politics": "5/5", "metropolis trade": "10/10", "knight level 1 active": "136/136", "knight level 1 inactive": "160/172", "knight level 2 active": "87/87", "knight level 2 inactive": "84/88", "knight level 3 active": "3/3", "knight level 3 inactive": "1/1" },
+      "mysticblue": { "settlement": "480/481", "city": "453/454", "road": "1406/1455", "metropolis science": "23/23", "metropolis politics": "27/27", "metropolis trade": "11/14", "knight level 1 active": "159/161", "knight level 1 inactive": "198/216", "knight level 2 active": "131/131", "knight level 2 inactive": "63/70", "knight level 3 active": "37/40", "knight level 3 inactive": "14/14" },
+      "white": { "settlement": "563/565", "city": "472/468", "road": "1625/1534", "metropolis science": "48/48", "metropolis politics": "7/7", "metropolis trade": "19/16", "knight level 1 active": "175/170", "knight level 1 inactive": "179/180", "knight level 2 active": "158/158", "knight level 2 inactive": "83/82", "knight level 3 active": "18/14", "knight level 3 inactive": "5/5" }
+    },
+    "bronzeRoad": {
+      "A": 180,
+      "AOnEdge5": 117,
+      "AInGamesNotSeatingBronze": 129,
+      "AInGamesSeatingBronze": 51,
+      "AInGamesSeatingBronzeThatBAlsoCallsBronze": 51,
+      "B": 59,
+      "BByGame": { "20260912-land5766": 4, "20260912-wool8372": 10, "20260914-edge2168": 45 },
+      "BGamesSeatBronze": { "20260912-land5766": "inferred seats include bronze", "20260912-wool8372": "inferred seats include bronze", "20260914-edge2168": "registry seats blue,red,black,bronze" },
+      "extraBBronzeNotInA": { "count": 8, "where": "20260914-edge2168 edge 47, A=black in 8 frames", "verifiedByEye": "copper-brown road next to a bronze-ring knight: B right, A wrong" }
+    }
+  },
+  "headlineClaims": [
+    { "claim": "colour agreement 99.57%", "verdict": "confirmed as computed; interpretation corrected", "evidence": "recount 65503/65786; computed with B's unconstrained colour, A's colour is not fed to the decision. But the number is relative to B, and B's unconstrained road colour at weak scores is itself wrong often (audit sample: A right in 6/12 colour-mismatch-only pieces), so it is a lower bound on A-vs-B agreement, not an A error rate." },
+    { "claim": "kind agreement 99.96%", "verdict": "confirmed as computed; misleading", "evidence": "roads (49% of pieces) cannot disagree on kind in B (only 'none' above 95, never fired). Vertex-only kind agreement is 33741/33770 = 99.91%." },
+    { "claim": "559 seat-constrained colour mismatches", "verdict": "corrected", "evidence": "531 of them are the phantom-colour pieces (tautological), 28 are genuine. Of 12 genuine sampled: B right 4 (all the edge2168 e47 bronze road), A right 1, neither 4 (UI/robber), unclear 3." },
+    { "claim": "531 phantom-colour pieces", "verdict": "confirmed count; interpretation corrected", "evidence": "186 of the 353 in inferred-seat games are pieces B strongly agrees with A on (score < 20, same colour), i.e. the seat inference is wrong, not A. Sample of 12: 4 real pieces with a missing inferred seat, 7 UI/no piece, 1 unclear. 0 of 178 phantom pieces in registry-seat games have strong B agreement, so registry seats look reliable." },
+    { "claim": "283 colour mismatches", "verdict": "confirmed count; overstates A errors", "evidence": "40 of the 283 have B's seat-constrained colour equal to A. Sample of 12 non-phantom colour mismatches: A right 6 (white/silver, black/bronze, blue/black confusions in B at scores 55-70), B right 2, neither 2, unclear 2." },
+    { "claim": "87 knights missed by A", "verdict": "confirmed", "evidence": "all 87 are inactive knights (61 level 1, 26 level 2), none phantom, worst score 14.9; 12/12 sampled are real knight badges A reported nothing for." },
+    { "claim": "29 kind mismatches", "verdict": "confirmed count; mostly UI", "evidence": "sample of 12: B right 3 (knight badges A read as settlements), neither 7 (trade cards / avatars / robber at the vertex), unclear 2, A right 0." },
+    { "claim": "0 knight level/state mismatches", "verdict": "confirmed as computed; says nothing about A", "evidence": "the flag compares B's variant under A's colour with B's variant under B's colour. A carries no level/state; the report's A-side variant columns are B's templates." },
+    { "claim": "UI overlays raise the mismatch rate ~60x; robber/merchant adjacency does not", "verdict": "direction confirmed, magnitude imprecise", "evidence": "recount 164/1480 = 11.1% vs 119/64365 = 0.18%; robber 0.29% vs 0.45%; merchant 0.10% vs 0.46%. But roughly 45% of overlay-suspected captures are false positives (see overlay claim), so the 'with overlay' population is diluted." },
+    { "claim": "bronze road A=180 vs B=59, 117 of A's on edge 5", "verdict": "confirmed", "evidence": "recount 180 / 117 / 59; edge 5 lies under the trade-offer panel (11 of 12 drop-candidate crops at e5 show the panel; 3 board views show the panel over tiles 2 and 6). All 59 B bronze roads are in games that seat bronze; 51 coincide with A, 8 are A=black roads at edge2168 e47 that are bronze by eye." },
+    { "claim": "robber found in 2140/2152 with margin >= 14", "verdict": "confirmed", "evidence": "recount 2140/2152 (2143/2155), min margin 14.1; 10/10 random captures and 4/4 white3776 frames show the grey pawn inside the detected tile's robber circle. B's robber offset (-0.3, -0.26, 0.43 sp) differs from renderer.ts (-0.2, -0.05, 0.45) and B's is the one that matches real captures." },
+    { "claim": "white3776 02-04 vertex 25 is caused by the black merchant moving to the tile below, not the robber", "verdict": "confirmed", "evidence": "board views: robber t16, t16, t17, t1 in frames 01-04; merchant t14 then t10 (below v25) from frame 02. A said mysticblue in frame 01 and white in 02-04; B says mysticblue in all four with byte-identical per-colour scores (16.2-16.3 vs white 30.6); registry seats mysticblue,gold,red,black. Whether the merchant caused A's flip is plausible but not provable from these data." },
+    { "claim": "347 captures overlay-contaminated", "verdict": "corrected", "evidence": "sample precision 4/12 on the flag as a whole; 3/12 in captures resting only on small ui-panel rectangles, 10/12 (+1 unclear) in captures with tokensFound<18, a hidden token >= 40 or a rectangle >= 1 spacing. The false positives are a number token welded to the white pasture sheep by the 16 px closing." }
+  ],
+  "bugsAndLimitations": [
+    { "id": "B1", "where": "collection/src/classify-b.ts:655-663 and 699-700 (findOverlays)", "what": "The flat-light-block test passes the white pasture sheep artwork; the two-block closing welds sheep + number token into a 0.6-0.8 spacing blob that clears the 0.45 spacing size filter. The comment 'Number tokens are far too small to pass' is true only for a token alone.", "impact": "about 45% of the 348 overlay-suspected captures and 617 of the 1482 under-overlay piece flags are false positives; mark-capture-overlay-contaminated is not safe as-is." },
+    { "id": "B2", "where": "collection/src/classify-b.ts:814 and 893", "what": "colour-mismatch-seat is set whenever the seat-constrained colour differs from A, which is automatic for every phantom-colour piece.", "impact": "the 559 headline is 531 phantom + 28 genuine; the flag adds no information for phantom pieces." },
+    { "id": "B3", "where": "collection/src/classify-b.ts:967-987 (seatsForGame)", "what": "Seat inference needs a building and a road of the colour in at least two frames; games with two frames where A dropped one piece lose a seat.", "impact": ">= 186 false phantom-colour flags, 4/12 phantom samples were real pieces, 23 drop candidates are pieces B agrees with A on (one verified real: 20260912-spot2638/02 e15 black road)." },
+    { "id": "B4", "where": "collection/src/classify-b.ts:490-510 (decideEdge) and THRESHOLDS.roadNone", "what": "B always returns the argmin colour for an edge; there is no 'nothing here' hypothesis below 95. At scores above ~45 the colour is close to arbitrary (white/silver, black/bronze, blue/black).", "impact": "colour-mismatch (283) overstates A's road errors; kind agreement on roads is structural; the seat-constrained colour should be preferred for roads." },
+    { "id": "B5", "where": "collection/src/classify-b.ts:79 THRESHOLDS.token = 25", "what": "Visible tokens score up to 24.8 (p99 13.7) and false hidden-token hits occur at 31.9 (king3990/01 t5) and 32.7 (ship4971/02 t3) on fully visible tokens; a true hit occurs at 27.9 (win9397/01 t15).", "impact": "hidden-token alone in the 25-40 band is unreliable; the rule contributed 8 sole-rule overlay flags." },
+    { "id": "B6", "where": "collection/src/classify-b-report.ts:79-85 (variantOfA)", "what": "A's metropolis type and knight level/state in the colour x variant table are taken from B's templates (A has neither).", "impact": "the A/B cells for those variants compare B with B on the variant axis; only the colour axis is an A-vs-B comparison." },
+    { "id": "B7", "where": "collection/src/classify-b.ts:1013", "what": "The default run skips games whose registry status is 'watching'.", "impact": "3 captures had no B result; added by this audit." },
+    { "id": "N1", "where": "training/src/renderer.ts:189-198", "what": "Not a B bug: the synthetic renderer draws the robber at (-0.2, -0.05) spacings, height 0.45; B's calibration on real captures (-0.3, -0.26, 0.43) is verified correct on 14 boards.", "impact": "training data places the robber lower and further right than the real game." }
+  ],
+  "codeReviewChecks": {
+    "vertexEdgeToPixel": "identical to A by construction: B imports vertexCenters/edgeCenters/tileCenters from extension-local/src/vision/layout.ts, the same functions pieceReader.ts uses",
+    "spriteScaleAnchor": "PIECE_SCALE 1.2, PIECE_ANCHOR_DY -0.065, METROPOLIS_DX 0.28 x city width x pieceScale, WALL_DY 0.04, KNIGHT_DIAMETER 0.35, road rotation atan2 + pi/2: all match training/src/renderer.ts; drawSprite is centre-anchored in both",
+    "colourCandidates": "all 12 colours scored for every hypothesis; knights only where the atlas has the sprite",
+    "seatConstraintNotInflatingAgreement": "agreement uses B.colour (unconstrained); aColour is only used for levelWithAColour; seats only affect colourSeatConstrained and the phantom/seat flags",
+    "thresholds": "none=78 and roadNone=95 never fire on A-reported pieces (0 'unreadable'); extra=20/extraMargin=8 for missed-by-a verified sound (12/12)",
+    "aggregation": "report.json totals, flags, rates, robber margins and the full colour x variant table reproduced exactly"
+  },
+  "sampleTallies": {
+    "seed": 7,
+    "sheets": "examples/classification-v2/audit-crops/*.png (contact sheets, 4 columns, A/B labels under each crop), manifests *.json",
+    "relabel-candidates": { "population": 15, "sampled": 12, "aRight": 0, "bRight": 12, "both": 0, "neither": 0, "unclear": 0, "note": "all white->silver/mysticblue or gold->green knights plus white3776 v25; the 3 unsampled are later frames of sampled pieces" },
+    "missed-by-a": { "population": 87, "sampled": 12, "aRight": 0, "bRight": 12, "both": 0, "neither": 0, "unclear": 0 },
+    "kind-mismatch": { "population": 29, "sampled": 12, "aRight": 0, "bRight": 3, "both": 0, "neither": 7, "unclear": 2 },
+    "colour-mismatch-seat-genuine": { "population": 28, "sampled": 12, "aRight": 1, "bRight": 4, "both": 0, "neither": 4, "unclear": 3 },
+    "colour-mismatch-only (not phantom)": { "population": 68, "sampled": 12, "aRight": 6, "bRight": 2, "both": 0, "neither": 2, "unclear": 2, "note": "in all 6 A-right cases B's seat-constrained colour equals A" },
+    "phantom-colour": { "population": 531, "sampled": 12, "aRight": 0, "bRight": 0, "both": 4, "neither": 7, "unclear": 1, "note": "the 4 'both' are real pieces whose colour the seat inference missed" },
+    "drop-candidates": { "population": 247, "sampled": 12, "dropCorrect": 11, "dropWrong": 1, "note": "wrong: 20260912-spot2638/02 e15, a real black road in an inferred-seat game" },
+    "agree": { "population": 51585, "sampled": 24, "stratified": { "road": 8, "settlement": 6, "city": 4, "knight": 4, "metropolis": 2 }, "both": 24, "note": "metropolis type: both towers seen are the lime metropolis_trade sprite, consistent with B" },
+    "overlay-flagged": { "population": 348, "sampled": 12, "trueUi": 4, "falsePositive": 8 },
+    "overlay-clean": { "population": 1807, "sampled": 12, "trueNegative": 12, "missedUi": 0 },
+    "overlay-second-sample-narrowed": { "sampled": 12, "trueUi": 10, "falsePositive": 1, "unclear": 1 },
+    "overlay-second-sample-excluded-by-narrowing": { "sampled": 12, "trueUi": 3, "falsePositive": 9 },
+    "overlay-ruleE-only-fresh": { "sampled": 8, "trueUi": 8, "falsePositive": 0 },
+    "robber": { "sampled": 10, "correct": 10, "plusWhite3776Frames": 4 }
+  },
+  "overlayNarrowing": {
+    "ruleE": "overlaySuspected AND (tokensFound < 18 OR any hidden token with score >= 40 OR any ui-panel rectangle with fill >= 0.55 OR max side >= 1.3 spacings)",
+    "firesOn": 190,
+    "of": 348,
+    "labelledTruePositivesKept": "15/15",
+    "labelledFalsePositivesKept": "0/17",
+    "freshCheck": "8/8 small solid rectangles it keeps are the trade panel",
+    "keptList": "examples/classification-v2/audit-crops/overlay2/ruleE-kept.txt",
+    "underOverlayPiecesInKept": 865,
+    "underOverlayPiecesInRejected": 617,
+    "caveat": "tuned on 32 eye-labelled captures plus 8 fresh; expect a residual few percent of false positives and a small loss of panels that only show a low-fill fragment inside the board box"
+  },
+  "proposedActions": {
+    "relabel-piece (15)": "safe as-is",
+    "fix-kind (5)": "safe as-is",
+    "add-piece (87)": "safe as-is (optionally view the 2 under-overlay ones first)",
+    "complete-registry-seats (29 games, 47 colours)": "safe for additions supported by >= 3 strong pieces; check by eye hill4380 blue/orange (2 each), wall2349 blue (2), fort4077 blue (2) and purple (1)",
+    "drop-piece (247)": "needs narrowing: exclude the 23 pieces in inferred-seat games where B's colour equals A's (one verified real), and review by eye the 43 that are neither on edge 5 nor under-overlay; the remaining ~181-200 are the trade-panel/chat positions and safe",
+    "mark-capture-overlay-contaminated (347)": "do not apply as-is; apply rule E (190 captures, list in audit-crops/overlay2/ruleE-kept.txt) or fix findOverlays to reject blobs centred on a visible token / require fill"
+  },
+  "filesAdded": [
+    "collection/src/classify-b-audit.ts (sampler + contact sheets)",
+    "examples/classification-v2/audit-scripts/{recount.mjs,queries.mjs,narrow.mts,rules.mts,rects.mts,recount-2155.json}",
+    "examples/classification-v2/audit-crops/** (sheets, manifests, zooms, overlay2/)",
+    "examples/classification-v2/{20260912-ore3646,20260912-roll1690,20260913-deal1997}/*.b.json"
+  ]
+}

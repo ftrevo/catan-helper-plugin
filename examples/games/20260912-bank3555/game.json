@@ -1,0 +1,42 @@
+{
+  "roomCode": "bank3555",
+  "url": "https://colonist.io/#bank3555",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:41:06.092Z",
+  "finishedAt": "2026-09-12T07:43:59.362Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-074121.png",
+      "takenAt": "2026-09-12T07:41:25.613Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-074355.png",
+      "takenAt": "2026-09-12T07:43:59.361Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

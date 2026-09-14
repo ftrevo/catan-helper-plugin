@@ -1,0 +1,68 @@
+{
+  "roomCode": "play8700",
+  "url": "https://colonist.io/#play8700",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T23:30:17.863Z",
+  "seats": [
+    "red",
+    "white",
+    "black"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-233034.png",
+      "takenAt": "2026-09-13T23:30:40.068Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "white",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-233503.png",
+      "takenAt": "2026-09-13T23:35:08.569Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 12,
+      "colours": [
+        "white",
+        "black",
+        "red",
+        "bronze"
+      ]
+    },
+    {
+      "file": "03-233900.png",
+      "takenAt": "2026-09-13T23:39:05.220Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "black",
+        "white",
+        "red"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 3 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T23:42:25.903Z"
+}

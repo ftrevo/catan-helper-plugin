@@ -1,0 +1,44 @@
+{
+  "roomCode": "town8064",
+  "url": "https://colonist.io/#town8064",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:03:09.127Z",
+  "finishedAt": "2026-09-12T13:06:02.620Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-130324.png",
+      "takenAt": "2026-09-12T13:03:28.781Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-130558.png",
+      "takenAt": "2026-09-12T13:06:02.619Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 15,
+      "colours": [
+        "blue",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

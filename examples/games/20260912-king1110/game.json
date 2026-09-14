@@ -1,0 +1,46 @@
+{
+  "roomCode": "king1110",
+  "url": "https://colonist.io/#king1110",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:30:46.271Z",
+  "finishedAt": "2026-09-12T23:33:39.825Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-233102.png",
+      "takenAt": "2026-09-12T23:31:06.015Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-233336.png",
+      "takenAt": "2026-09-12T23:33:39.825Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 18,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

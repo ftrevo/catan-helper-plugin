@@ -1,0 +1,46 @@
+{
+  "roomCode": "bank7122",
+  "url": "https://colonist.io/#bank7122",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:41:40.571Z",
+  "finishedAt": "2026-09-12T21:44:34.029Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-214156.png",
+      "takenAt": "2026-09-12T21:42:00.235Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-214430.png",
+      "takenAt": "2026-09-12T21:44:34.029Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

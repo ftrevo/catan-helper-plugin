@@ -1,0 +1,903 @@
+{
+ "auditedAt": "2026-09-14",
+ "auditor": "independent audit of classification B v3 (Fable)",
+ "reportAudited": "examples/classification-v3/report.md generated 2026-09-14T15:06:23.991Z, 2,158 .b.json version 3",
+ "seed": 41,
+ "recount": {
+  "note": "recomputed from the .b.json with audit-crops-fable/scripts/recount.py; every headline number, flag count, colour x kind cell, mismatchByKind row, seat count, overlay rule count, class count and action count matched report.json exactly (0 differences)",
+  "totals": {
+   "captures": 2155,
+   "skipped": 3,
+   "pieces": 65845,
+   "extraPieces": 87,
+   "colourAgree": 65071,
+   "kindAgree": 65097,
+   "both": 65051,
+   "answered": 65126,
+   "colourAgreeAnswered": 65071,
+   "byKindA": {
+    "settlement": 12252,
+    "city": 9318,
+    "knight": 11133,
+    "road": 32046,
+    "metropolis": 1096
+   },
+   "byKindB": {
+    "settlement": 12260,
+    "city": 9312,
+    "knight": 11142,
+    "road": 31327,
+    "metropolis": 1085,
+    "none": 719
+   },
+   "flags": {
+    "under-overlay": 564,
+    "colour-mismatch-seat": 8,
+    "colour-mismatch": 55,
+    "weak-match": 143,
+    "near-robber": 7693,
+    "near-merchant": 5766,
+    "phantom-colour": 338,
+    "unreadable": 719,
+    "kind-mismatch": 29,
+    "missed-by-a": 87
+   }
+  },
+  "seats": {
+   "captures": {
+    "registry": 1263,
+    "inferred": 892,
+    "unknown": 0
+   },
+   "games": {
+    "registry": 132,
+    "inferred": 459,
+    "unknown": 0
+   },
+   "evidence": {
+    "building+road,strong-b": 1678,
+    "building+road": 15
+   }
+  },
+  "actions": {
+   "relabel-piece": 15,
+   "drop-piece": 257,
+   "fix-kind": 6,
+   "add-piece": 87,
+   "mark-capture-overlay-contaminated": 168,
+   "complete-seats": 1
+  },
+  "dropBreakdown": {
+   "none | overlay | e5 | inferred": 44,
+   "none | no-overlay | edge | inferred": 33,
+   "none | overlay | edge | inferred": 26,
+   "score>=45 | overlay | vertex | inferred": 4,
+   "none | no-overlay | e5 | inferred": 13,
+   "score>=45 | no-overlay | edge | inferred": 4,
+   "score>=45 | overlay | edge | inferred": 5,
+   "score>=45 | no-overlay | e5 | inferred": 1,
+   "none | overlay | e5 | registry": 53,
+   "none | overlay | edge | registry": 27,
+   "score>=45 | overlay | vertex | registry": 5,
+   "score>=45 | overlay | edge | registry": 4,
+   "none | no-overlay | edge | registry": 22,
+   "none | no-overlay | e5 | registry": 9,
+   "score>=45 | overlay | e5 | registry": 2,
+   "score>=45 | no-overlay | e5 | registry": 2,
+   "score>=45 | no-overlay | vertex | registry": 2,
+   "score>=45 | no-overlay | edge | registry": 1
+  },
+  "dropNoneScoreBand": {
+   "45-60": 150,
+   "60-80": 97,
+   "40-45": 10
+  },
+  "addPiecePhantom": 0,
+  "addPieceUnderOverlay": []
+ },
+ "regressionVsV2": {
+  "piecesWithChangedFlagState": 1898,
+  "piecesWhereBAnswerChanged": 719,
+  "bAnswerChanges": {
+   "bestScoreChanged": 13576,
+   "('road', 'none')": 719
+  },
+  "note": "flag state ignores near-robber/near-merchant; the only B answer that ever changes between v2 and v3 is road -> none (719); all other changes are flags/seats",
+  "transitions": [
+   {
+    "v2": "under-overlay",
+    "v3": "none",
+    "n": 864
+   },
+   {
+    "v2": "none",
+    "v3": "unreadable",
+    "n": 271
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour",
+    "v3": "none",
+    "n": 190
+   },
+   {
+    "v2": "weak-match",
+    "v3": "unreadable",
+    "n": 137
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "phantom-colour+under-overlay+unreadable",
+    "n": 69
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "phantom-colour+under-overlay",
+    "n": 51
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+under-overlay+weak-match",
+    "v3": "phantom-colour+under-overlay+unreadable",
+    "n": 43
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "phantom-colour+under-overlay+unreadable",
+    "n": 34
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+weak-match",
+    "v3": "phantom-colour+unreadable",
+    "n": 28
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour",
+    "v3": "phantom-colour+unreadable",
+    "n": 22
+   },
+   {
+    "v2": "colour-mismatch+weak-match",
+    "v3": "unreadable",
+    "n": 20
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour",
+    "v3": "colour-mismatch+phantom-colour",
+    "n": 14
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "colour-mismatch+phantom-colour+under-overlay",
+    "n": 11
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+weak-match",
+    "v3": "unreadable",
+    "n": 10
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+under-overlay+weak-match",
+    "v3": "phantom-colour+unreadable",
+    "n": 9
+   },
+   {
+    "v2": "under-overlay",
+    "v3": "under-overlay+unreadable",
+    "n": 9
+   },
+   {
+    "v2": "under-overlay",
+    "v3": "unreadable",
+    "n": 9
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour",
+    "v3": "phantom-colour",
+    "n": 8
+   },
+   {
+    "v2": "under-overlay+weak-match",
+    "v3": "unreadable",
+    "n": 8
+   },
+   {
+    "v2": "colour-mismatch",
+    "v3": "unreadable",
+    "n": 7
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour",
+    "v3": "phantom-colour+unreadable",
+    "n": 6
+   },
+   {
+    "v2": "under-overlay+weak-match",
+    "v3": "under-overlay+unreadable",
+    "n": 6
+   },
+   {
+    "v2": "under-overlay+weak-match",
+    "v3": "weak-match",
+    "n": 6
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat",
+    "v3": "unreadable",
+    "n": 6
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "phantom-colour+unreadable",
+    "n": 5
+   },
+   {
+    "v2": "colour-mismatch-seat+kind-mismatch+phantom-colour+under-overlay+weak-match",
+    "v3": "kind-mismatch+phantom-colour+under-overlay+weak-match",
+    "n": 5
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+under-overlay+weak-match",
+    "v3": "colour-mismatch+phantom-colour+under-overlay+weak-match",
+    "n": 5
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay+weak-match",
+    "v3": "phantom-colour+under-overlay+unreadable",
+    "n": 4
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+kind-mismatch+phantom-colour+under-overlay+weak-match",
+    "v3": "colour-mismatch+kind-mismatch+phantom-colour+under-overlay+weak-match",
+    "n": 3
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+weak-match",
+    "v3": "colour-mismatch+phantom-colour+weak-match",
+    "n": 3
+   },
+   {
+    "v2": "colour-mismatch+under-overlay",
+    "v3": "under-overlay+unreadable",
+    "n": 3
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "phantom-colour+unreadable",
+    "n": 3
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+weak-match",
+    "v3": "phantom-colour+unreadable",
+    "n": 2
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "under-overlay",
+    "n": 2
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "colour-mismatch+phantom-colour",
+    "n": 2
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "phantom-colour",
+    "n": 2
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay+weak-match",
+    "v3": "phantom-colour+under-overlay+weak-match",
+    "n": 2
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay+weak-match",
+    "v3": "phantom-colour+unreadable",
+    "n": 2
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+under-overlay+weak-match",
+    "v3": "under-overlay+unreadable",
+    "n": 2
+   },
+   {
+    "v2": "missed-by-a+under-overlay",
+    "v3": "missed-by-a",
+    "n": 2
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+weak-match",
+    "v3": "phantom-colour+weak-match",
+    "n": 2
+   },
+   {
+    "v2": "none",
+    "v3": "phantom-colour",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+under-overlay",
+    "v3": "unreadable",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch+under-overlay+weak-match",
+    "v3": "under-overlay+unreadable",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch-seat+phantom-colour+under-overlay",
+    "v3": "none",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch-seat+kind-mismatch+phantom-colour",
+    "v3": "kind-mismatch",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+kind-mismatch+phantom-colour+under-overlay+weak-match",
+    "v3": "colour-mismatch+kind-mismatch+phantom-colour+weak-match",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch+under-overlay",
+    "v3": "unreadable",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch-seat+kind-mismatch+phantom-colour+weak-match",
+    "v3": "kind-mismatch+phantom-colour+weak-match",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+kind-mismatch+under-overlay+weak-match",
+    "v3": "colour-mismatch+colour-mismatch-seat+kind-mismatch+weak-match",
+    "n": 1
+   },
+   {
+    "v2": "none",
+    "v3": "weak-match",
+    "n": 1
+   },
+   {
+    "v2": "colour-mismatch+colour-mismatch-seat+under-overlay+weak-match",
+    "v3": "unreadable",
+    "n": 1
+   }
+  ]
+ },
+ "specificChecks": {
+  "list186": {
+   "n": 186,
+   "stillPhantomV3": [
+    "20260913-fort4077/02-020959 e59"
+   ]
+  },
+  "genuine28Fate": {
+   "n": 28,
+   "fate": {
+    "still": 8,
+    "none": 20
+   }
+  },
+  "overlayLists": {
+   "TPflagged": 15,
+   "TPmissing": [],
+   "FPflagged": []
+  },
+  "overlayVsRuleE": {
+   "ruleE": 190,
+   "v3": 168,
+   "both": 168,
+   "v3only": [],
+   "v3NotInV2": [],
+   "ruleEonlyCount": 22,
+   "ruleEonlyViewed": "12 of 22 viewed, 12/12 have no UI on the board: v3 is right to reject them"
+  },
+  "sheepCases": {
+   "gold2088/12": {
+    "key": "20260914-gold2088/12-032429",
+    "suspected": false,
+    "rules": [],
+    "rejected": [
+     [
+      "long-but-hollow",
+      0.28,
+      1.32,
+      1.19
+     ]
+    ],
+    "v2suspected": true,
+    "v2rules": [
+     "ui-panel x1"
+    ]
+   },
+   "town353/08": {
+    "key": "20260913-town353/08-091822",
+    "suspected": false,
+    "rules": [],
+    "rejected": [
+     [
+      "long-but-hollow",
+      0.32,
+      0.84,
+      1.46
+     ]
+    ],
+    "v2suspected": true,
+    "v2rules": [
+     "ui-panel x1"
+    ]
+   },
+   "map7182/03": {
+    "key": "20260914-map7182/03-070154",
+    "suspected": true,
+    "rules": [
+     "tokensFound=16<18",
+     "ui-panel x2",
+     "hidden-token tiles 2"
+    ],
+    "rejected": [],
+    "v2suspected": true,
+    "v2rules": [
+     "tokensFound=16<18",
+     "ui-panel x2",
+     "hidden-token tiles 2,6"
+    ]
+   }
+  },
+  "fort4077": {
+   "frame02SeatsInferred": [
+    "black",
+    "blue",
+    "red"
+   ],
+   "purpleEvidence": "v41 purple settlement (B purple 22.7, under-overlay because tile 15's token is hidden by a real '+2' banner) and e59 purple road (B purple 17.8): both real by eye; add purple is correct",
+   "whiteRoadsE44E60": "UI ('+2' banner over a blue city; sheep card) - both correctly none/drop"
+  },
+  "seatsGrew": {
+   "games": 58,
+   "coloursAdded": 151,
+   "byEvidence": {
+    "building+road,strong-b": 137,
+    "building+road": 14
+   }
+  },
+  "gamesWith5plusSeats": [
+   [
+    "20260913-white7201",
+    [
+     "white",
+     "orange",
+     "green",
+     "blue",
+     "red"
+    ],
+    {}
+   ]
+  ],
+  "buildingRoadOnlySeats": {
+   "n": 15,
+   "viewed": 15,
+   "realPieces": 15
+  },
+  "watchingCaptures": "ore3646/01, roll1690/01, deal1997/01 all classified (ok, seats inferred, no overlay)",
+  "unreadableRoads": {
+   "n": 719,
+   "roadsTotal": 32046,
+   "knightAdjacentAmongAllRoads": 18749,
+   "knightAdjacentAmongUnreadable": 478,
+   "seatedNoOverlay": 471,
+   "seatedNoOverlayKnightAdjacent": 454,
+   "phantom": 227,
+   "phantomKnightAdjacent": 16,
+   "unreadableRateKnightAdjacentRoads": 0.0255,
+   "unreadableRateOtherRoads": 0.0181,
+   "v2BcolourEqualsA": 491,
+   "byAbsolute80": 12,
+   "byMargin": 707,
+   "bestBand": {
+    "50-60": 243,
+    "40-50": 203,
+    "60-80": 261,
+    ">80": 12
+   }
+  },
+  "unreadableSeatedNoOverlayEndpointKinds": {
+   "knight+metropolis": 221,
+   "knight+settlement": 100,
+   "city+knight": 74,
+   "knight+knight": 53,
+   "city+empty": 6,
+   "empty+empty": 6,
+   "empty+settlement": 5,
+   "empty+knight": 3,
+   "metropolis+none": 2,
+   "empty+metropolis": 1
+  },
+  "drops": {
+   "n": 257,
+   "vertex": 11,
+   "edgeKnightAdjacentNoOverlay": 7,
+   "noOverlayNotE5": 62,
+   "e5": 124,
+   "underOverlay": 170,
+   "spot2638_e15_in_drop": false,
+   "byAColour": {
+    "bronze": 132,
+    "white": 73,
+    "green": 22,
+    "pink": 6,
+    "gold": 3,
+    "mysticblue": 2,
+    "silver": 8,
+    "purple": 1,
+    "black": 5,
+    "orange": 5
+   },
+   "byPos": {
+    "e5": 124,
+    "e9": 18,
+    "e21": 14,
+    "e16": 9,
+    "e22": 9,
+    "e17": 8,
+    "e52": 5,
+    "v10": 4,
+    "e37": 4,
+    "e57": 3,
+    "e31": 3,
+    "e44": 3
+   }
+  },
+  "dropV2vsV3": {
+   "v2": 247,
+   "v3": 257,
+   "both": 246,
+   "v2only": 1,
+   "v3only": 11,
+   "v3onlyBand40-45": 10
+  },
+  "hiddenToken": {
+   "bands": {
+    "25-30": 12,
+    "30-40": 43,
+    "40-50": 37,
+    ">50": 43
+   },
+   "band30-40inOverlaySuspectedCapture": 40,
+   "coveredTiles": {
+    "n": 79,
+    "equalsRobberTile": 3,
+    "equalsMerchantTile": 1,
+    "capturesWithOnlyHiddenTokenRule": 1
+   },
+   "overlayRuleCombos": {
+    "hidden-token+tokensFound": 38,
+    "ui-panel": 75,
+    "tokensFound": 26,
+    "tokensFound+ui-panel": 6,
+    "hidden-token+tokensFound+ui-panel": 22,
+    "hidden-token": 1
+   }
+  }
+ },
+ "sampleTallies": {
+  "note": "seed 41, sheets in audit-crops-fable/*.png (A / B3 / B2 labels under each crop), manifests in audit-crops-fable/manifests*/",
+  "transitions": {
+   "under-overlay -> none (864)": {
+    "n": 12,
+    "v3Right": 12,
+    "v2Right": 0,
+    "note": "all real pieces on pasture tiles next to sheep; no UI"
+   },
+   "colour-mismatch-seat+phantom -> none (191, B3)": {
+    "n": 12,
+    "v3Right": 12,
+    "v2Right": 0,
+    "note": "all real pieces of a colour v2 had failed to seat"
+   },
+   "none -> unreadable (271, B4)": {
+    "n": 12,
+    "v2Right": 11,
+    "v3Right": 1,
+    "note": "11 real roads ending at a knight badge (A colour right); 1 trade panel (brick4698/01 e5)"
+   },
+   "weak-match -> unreadable (151, B4)": {
+    "n": 12,
+    "v2Right": 12,
+    "v3Right": 0,
+    "note": "all real roads ending at a knight badge"
+   },
+   "colour-mismatch (not phantom) -> unreadable (52)": {
+    "n": 12,
+    "aRight": 5,
+    "v3Right": 4,
+    "neither": 2,
+    "unclear": 1,
+    "note": "neither = edge2168 e47 bronze road A calls black (v2 right); v3 right ones are cards/panels"
+   },
+   "phantom -> phantom+unreadable (227)": {
+    "n": 12,
+    "v3Right": 11,
+    "unclear": 1,
+    "note": "trade panels, banners, harbour card; unclear gold7090/02 e4 next to the merchant"
+   }
+  },
+  "fresh": {
+   "drop-candidates (257)": {
+    "n": 12,
+    "correct": 12,
+    "wrong": 0,
+    "unclear": 0
+   },
+   "drop vertex pieces (11, all)": {
+    "n": 11,
+    "correct": 11
+   },
+   "drop knight-adjacent no-overlay edges (7, all)": {
+    "n": 7,
+    "correct": 5,
+    "unclear": 2,
+    "unclearPieces": [
+     "20260912-crop490/01-... e26 gold-road 74.9 (two frames)",
+     "20260913-event659/03 e37 black-road 56.9"
+    ]
+   },
+   "drop no-overlay not-e5 (62)": {
+    "n": 12,
+    "correct": 10,
+    "unclear": 2,
+    "unclearPieces": [
+     "crop490/01 e26",
+     "ore1633/07 e57 pink-road (a white settlement/road nearby)"
+    ]
+   },
+   "drop v3-only (11, B4 40-45 band)": {
+    "n": 11,
+    "correct": 10,
+    "unclear": 1,
+    "unclearPieces": [
+     "army4015/13 e21 black-road 42.6"
+    ]
+   },
+   "overlay-flagged captures (168)": {
+    "n": 12,
+    "realUI": 11,
+    "anomalyNoUI": 1,
+    "note": "fort9510/03 flagged by tokensFound=16 only: one tile has no token drawn at all (render/animation), no UI"
+   },
+   "overlay flagged by tokensFound only (26)": {
+    "n": 12,
+    "realUI": 9,
+    "unclear": 3,
+    "note": "unclear = displaced/missing tokens (256548064/01, king5484/11) or robber only (trade5728/11)"
+   },
+   "not-flagged captures with tokensFound<18": {
+    "population": 0,
+    "note": "empty by construction: tokensFound<18 always sets overlaySuspected"
+   },
+   "not-flagged captures with rejected blobs (176)": {
+    "n": 12,
+    "noUIMissed": 12
+   },
+   "not-flagged random (1987)": {
+    "n": 12,
+    "noUIMissed": 12
+   },
+   "ruleE-kept but v3-rejected (22)": {
+    "n": 12,
+    "v3Right": 12
+   },
+   "unreadable roads, all (719)": {
+    "n": 12,
+    "realRoad": 6,
+    "ui": 5,
+    "unclear": 1
+   },
+   "unreadable roads, seated colour, no overlay (471)": {
+    "n": 12,
+    "realRoad": 12,
+    "ui": 0
+   },
+   "relabel-candidates (15)": {
+    "n": 12,
+    "bRight": 12,
+    "aRight": 0,
+    "note": "3 unsampled are the same pieces in other frames (map4938 v13, white3776/03 v25, map7182/11 v11)"
+   },
+   "fix-kind (6, all)": {
+    "n": 6,
+    "bRight": 6
+   },
+   "add-piece (87)": {
+    "n": 12,
+    "bRight": 12,
+    "note": "all inactive knight badges; 0 phantom, 0 under-overlay in the 87"
+   },
+   "agree (52,275; 8 road/6 settlement/4 city/4 knight/2 metropolis)": {
+    "n": 24,
+    "both": 24
+   },
+   "colour-mismatch-seat (8, all)": {
+    "n": 8,
+    "bRight": 3,
+    "aRight": 0,
+    "neither": 4,
+    "unclear": 1,
+    "note": "bRight = event263 e21 red road x2, edge2168/03 e47 bronze road; neither = knight badge read as settlement, cards, merchant, robber over a green settlement"
+   },
+   "colour-mismatch only, seat colour equals A (8, all)": {
+    "n": 8,
+    "aRight": 4,
+    "neither": 1,
+    "unclear": 3
+   },
+   "hidden-token tiles 40-50": {
+    "n": 6,
+    "covered": 6,
+    "note": "one covered by the robber, not UI"
+   },
+   "hidden-token tiles 30-40": {
+    "n": 12,
+    "covered": 10,
+    "visible": 2,
+    "note": "covers are '+1/+2' banners, trade panels, resource cards; visible = knight badge clipping a corner (ship4971/02 t3), card clipping a corner (road2697/05 t14)"
+   },
+   "hidden-token tiles 25-30": {
+    "n": 6,
+    "covered": 3,
+    "visible": 3
+   },
+   "seats newly inferred, 5 random games (58)": {
+    "n": 5,
+    "coloursChecked": 13,
+    "real": 13
+   },
+   "seats by building+road only (15)": {
+    "n": 15,
+    "real": 15
+   },
+   "fort4077 purple": {
+    "real": true
+   }
+  }
+ },
+ "bugsAndLimitations": [
+  {
+   "id": "F1",
+   "severity": "high for metrics, low for actions",
+   "where": "collection/src/classify-b.ts:499-517 (scoreEdge: full-length road template), 524-528 (decideEdge), 86-88 (roadNone/roadNoneMargin)",
+   "what": "The 'nothing here' hypothesis (B4) fires on real roads whose endpoint vertex carries a knight badge (or a metropolis tower): the badge covers the end of the full-length road template, the error rises to 40-75 and the colour margin collapses below 12. 454 of the 471 unreadable roads with a seated colour and no overlay are knight-adjacent (96%; baseline 58% of all roads); 35 of 36 sampled were real roads with A's colour. v2 had the colour right on 491 of the 719.",
+   "impact": "colour agreement 65,562 -> 65,071 (-491) is B's loss, not A's error; kind agreement 98.86% likewise. No action is built on these (drop needs phantom-colour), so the actions are unaffected, but 'unreadable' must not be read as 'A hallucinated a road'. 16 of the 227 phantom+unreadable drops are knight-adjacent; 7 of them have no overlay and 2 are unclear by eye.",
+   "fix": "score roads on the middle ~60% of the edge (drop samples within KNIGHT_DIAMETER/2 of either vertex when a knight or tower is detected there), or only call 'none' when best > roadNone and margin < roadNoneMargin AND no endpoint carries a knight/metropolis."
+  },
+  {
+   "id": "F2",
+   "severity": "medium",
+   "where": "collection/src/classify-b.ts:106 (THRESHOLDS.token = 40), 800-821",
+   "what": "40 buys precision (6/6 tiles at 40-50 covered) at a large recall cost: 10 of 12 sampled tiles in the 30-40 band are covered by banners, trade panels or cards, and 3 of 6 in 25-30. The v2 audit's two false hits (31.9, 32.7) are real but the band is mostly true covers.",
+   "impact": "capture level: small, 40 of the 43 tiles in 30-40 sit in captures already flagged by tokensFound<18. Piece level: the ~35 covered tiles in 30-40 give no under-overlay flag to the pieces on them.",
+   "fix": "30 as the threshold with the knight-clip exception (a knight badge at a vertex of the tile explains a 30-35 score), or keep 40 and add 'token in a tokensFound<18 capture scoring > 30'."
+  },
+  {
+   "id": "F3",
+   "severity": "low (design risk, not observed)",
+   "where": "collection/src/classify-b.ts:1147-1158 (inferSeats: withBuilding/withRoad from piece.A.colour)",
+   "what": "The building+road path seats a colour from A's own labels alone; two hallucinated pieces of one colour (a 'white road' under an undetected panel plus a 'white settlement' under a card) would seat that colour and exempt every later white phantom from drop. The under-overlay exclusion is only as good as findOverlays. The strong-b path is safe (needs A==B, score<20, x3).",
+   "impact": "none observed: 15/15 colours seated by building+road only are real; 13/13 colours of 5 random newly inferred games are real; no game has more than 4 seats except white7201 (5, registry). Also the cause of the one remaining complete-seats: fort4077 v41 is excluded because tile 15's token is hidden by a real '+2' banner.",
+   "fix": "require the building+road pair to come from pieces B does not call 'none' and scoring < weak, or require two captures for building+road-only seats when the game has >= 2 frames."
+  },
+  {
+   "id": "F4",
+   "severity": "low",
+   "where": "collection/src/classify-b.ts:911-913 (tokensFound<18 rule)",
+   "what": "tokensFound<18 alone flags 26 captures; 9/12 viewed have real UI (cards, small banners), 3 are render anomalies (a token missing or displaced: fort9510/03, 256548064/01, king5484/11) or the robber. Those boards are not cleanly readable either, so the flag is defensible, but they are not 'UI panels'.",
+   "impact": "mark-capture-overlay-contaminated precision about 20/24 by eye; the 4 misses are unreadable boards anyway."
+  },
+  {
+   "id": "F5",
+   "severity": "low",
+   "where": "collection/src/classify-b.ts:1194-1201, 1232-1236",
+   "what": "--list/--debug runs infer seats from the listed subset of a game only; a partial rerun of one capture is not comparable with the full run (the full run is fine).",
+   "impact": "reproducibility footnote only."
+  },
+  {
+   "id": "F6",
+   "severity": "low (presentation)",
+   "where": "collection/src/classify-b-report.ts:840-842, 843",
+   "what": "'colour agreement over pieces B has an answer for' (99.92%) removes B's own failures from the denominator, so it flatters B; 'kind agreement' 98.86% counts the 719 'none' as kind disagreements although (F1) most are B's.",
+   "impact": "numbers are computed correctly; the interpretation in report.md is one-sided."
+  },
+  {
+   "id": "F7",
+   "severity": "negligible",
+   "where": "collection/src/classify-b.ts:816-818",
+   "what": "The robber (3 tiles) and merchant (1) hide a token and count as covers -> under-overlay for their pieces.",
+   "impact": "4 tiles."
+  },
+  {
+   "id": "F8",
+   "severity": "negligible",
+   "where": "collection/src/classify-b-report.ts:467-474",
+   "what": "v2 action counts are hard-coded rather than read from classification-v2/report.json.",
+   "impact": "correct today, brittle."
+  }
+ ],
+ "codeReviewChecks": {
+  "B1": "fixed: PANEL_FILL/PANEL_LONG_SIDE/PANEL_LONG_MIN_FILL/SHEEP_BLOB_TILE_DISTANCE at classify-b.ts:620-631, tests at 772-786; tokens scored before overlays (905-910). 15/15 true-UI still flagged, 0/17 false positives, v3 set is a strict subset of the auditor's rule E (168 of 190); the 22 rule-E-only captures have no UI (12 viewed).",
+  "B2": "fixed: applySeats 1109-1114 flags colour-mismatch-seat only when A's colour is seated; phantom pieces get phantom-colour alone.",
+  "B3": "fixed as described (inferSeats 1143-1165: building+road anywhere, or >=3 strong A==B matches; underOverlay excluded). Seats are applied after classification from the stored per-colour family scores (applySeats 1095-1126), so seats never change what B sees. See F3 for the A-only evidence path.",
+  "B4": "implemented without any use of A (decideEdge 524-543 sees only the twelve road scores); see F1 for why it is harmful in practice.",
+  "B5": "25 -> 40 at line 106; see F2.",
+  "B6": "fixed: colour x kind table uses A colour/kind vs B seat-constrained colour/kind (report.ts:157-159), variants in a B-only table (103-107, 906-917).",
+  "B7": "fixed: main() walks every game directory (1203-1212); the three watching captures are present and ok.",
+  "tautologies": "none new: seat inference never seats a colour on B's answer alone; 'nothing here' never reads A; missed-by-a pieces are excluded from seat evidence (A colour null) and from relabel/drop; add-piece has 0 phantom and 0 under-overlay.",
+  "restructure": "per-game grouping and sharding by game index are correct; template cache keys include scale (and spacing/angle where relevant); the cache is unbounded but only costs memory."
+ },
+ "claimVerdicts": [
+  {
+   "claim": "headline numbers in report.json",
+   "verdict": "confirmed exactly (0 diffs)"
+  },
+  {
+   "claim": "B1 sheep/token chains no longer panels; 15/15 and 0/17",
+   "verdict": "confirmed; 864 under-overlay flags cleared, 12/12 real pieces; clean samples 24/24 free of UI"
+  },
+  {
+   "claim": "B2 559 -> 8",
+   "verdict": "confirmed; of the 8: B right 3, neither 4, unclear 1"
+  },
+  {
+   "claim": "B3 58 games / 151 colours; 185 of 186 cleared",
+   "verdict": "confirmed; 12/12 cleared pieces real; 13/13 newly seated colours in 5 games real; fort4077 purple real"
+  },
+  {
+   "claim": "B4: 719 roads unreadable, ~1.5% of real roads lost",
+   "verdict": "count confirmed, but the loss is systematic, not noise: 454 of 471 seated no-overlay unreadables end at a knight badge and 35/36 sampled are real roads; on UI edges of unseated colours B4 works (11/12, 10/11 in the 40-45 band). See F1."
+  },
+  {
+   "claim": "B5 hidden-token 40",
+   "verdict": "precision confirmed (6/6), recall poor (10/12 covered tiles in 30-40 missed). See F2."
+  },
+  {
+   "claim": "B6 tables split",
+   "verdict": "confirmed"
+  },
+  {
+   "claim": "B7 watching games",
+   "verdict": "confirmed (3 captures present)"
+  },
+  {
+   "claim": "white3776 02-04 v25 mysticblue metropolis trade",
+   "verdict": "confirmed by eye (relabel sheet #6-#7)"
+  },
+  {
+   "claim": "map7182/03 6/6 phantom+overlay",
+   "verdict": "confirmed in data; e21 is the trade panel by eye"
+  },
+  {
+   "claim": "gold2088/12 and town353/08 clean, map7182/03 flagged",
+   "verdict": "confirmed (rejected as long-but-hollow, fill 0.28/0.32; boards show no UI)"
+  },
+  {
+   "claim": "drop sample 12/12, overlay sample 12/12",
+   "verdict": "drop confirmed (12/12 fresh, 0 wrong in 47 unique viewed, 5 unclear); overlay 11/12 real UI + 1 render anomaly"
+  }
+ ],
+ "proposedActions": {
+  "relabel-piece (15)": "safe: 12/12 by eye, 3 unsampled are other frames of the same pieces",
+  "fix-kind (6)": "safe: 6/6 knight badges read as settlements",
+  "add-piece (87)": "safe: 12/12 inactive knight badges; none phantom or under overlay",
+  "drop-piece (257)": "safe with a narrow eye-check: 0 wrong among 47 unique pieces viewed; review the 7 'none' drops on edges with a knight at an endpoint and no overlay (crop490/01+02 e26, event659/03 e37 unclear) plus ore1633/07 e57 and army4015/13 e21; the 124 e5 pieces and 170 under-overlay pieces are trade panels/banners/cards",
+  "mark-capture-overlay-contaminated (168)": "safe as an exclusion list: 20/24 viewed have real UI, the other 4 have a missing/displaced token or the robber and are not clean training frames either; the weakest subset is the 26 flagged by tokensFound only",
+  "complete-seats (fort4077 add purple)": "safe: purple settlement v41 and road e59 are real in frame 02",
+  "not proposed but important": "do not treat 'unreadable' (719) or the -491 colour agreement as evidence against A; fix F1 and rerun before using B's road agreement as a metric"
+ },
+ "filesAdded": [
+  "collection/src/classify-b-audit-fable.ts (contact-sheet renderer for the audit manifests)",
+  "examples/classification-v3/audit.md",
+  "examples/classification-v3/audit.json",
+  "examples/classification-v3/audit-crops-fable/** (sheets, manifests, scripts)"
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "ore4222",
+  "url": "https://colonist.io/#ore4222",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:01:04.512Z",
+  "finishedAt": "2026-09-13T01:03:57.929Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-010120.png",
+      "takenAt": "2026-09-13T01:01:24.134Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "red",
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-010354.png",
+      "takenAt": "2026-09-13T01:03:57.929Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "red",
+        "green",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

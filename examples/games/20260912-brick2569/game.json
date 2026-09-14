@@ -1,0 +1,47 @@
+{
+  "roomCode": "brick2569",
+  "url": "https://colonist.io/#brick2569",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:49:27.964Z",
+  "finishedAt": "2026-09-12T23:52:21.449Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-234943.png",
+      "takenAt": "2026-09-12T23:49:47.604Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 10,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-235217.png",
+      "takenAt": "2026-09-12T23:52:21.449Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

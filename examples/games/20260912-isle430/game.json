@@ -1,0 +1,46 @@
+{
+  "roomCode": "isle430",
+  "url": "https://colonist.io/#isle430",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:39:15.218Z",
+  "finishedAt": "2026-09-12T05:42:08.609Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-053931.png",
+      "takenAt": "2026-09-12T05:39:34.805Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 28,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-054204.png",
+      "takenAt": "2026-09-12T05:42:08.608Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 29,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

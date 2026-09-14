@@ -1,0 +1,46 @@
+{
+  "roomCode": "fort2461",
+  "url": "https://colonist.io/#fort2461",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:59:37.126Z",
+  "finishedAt": "2026-09-12T14:02:30.704Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-135952.png",
+      "takenAt": "2026-09-12T13:59:56.792Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "orange",
+        "black",
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-140226.png",
+      "takenAt": "2026-09-12T14:02:30.704Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "black",
+        "orange",
+        "green",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

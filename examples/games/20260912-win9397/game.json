@@ -1,0 +1,47 @@
+{
+  "roomCode": "win9397",
+  "url": "https://colonist.io/#win9397",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:58:13.161Z",
+  "finishedAt": "2026-09-12T07:01:06.420Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-065828.png",
+      "takenAt": "2026-09-12T06:58:32.695Z",
+      "ok": true,
+      "tokens": 15,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "green",
+        "mysticblue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-070102.png",
+      "takenAt": "2026-09-12T07:01:06.419Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "green",
+        "mysticblue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

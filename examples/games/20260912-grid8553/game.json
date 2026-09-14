@@ -1,0 +1,46 @@
+{
+  "roomCode": "grid8553",
+  "url": "https://colonist.io/#grid8553",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:54:45.568Z",
+  "finishedAt": "2026-09-12T07:57:39.188Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-075501.png",
+      "takenAt": "2026-09-12T07:55:05.391Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-075735.png",
+      "takenAt": "2026-09-12T07:57:39.188Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 18,
+      "colours": [
+        "orange",
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

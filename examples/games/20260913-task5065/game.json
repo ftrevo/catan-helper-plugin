@@ -1,0 +1,63 @@
+{
+  "roomCode": "task5065",
+  "url": "https://colonist.io/#task5065",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T12:31:32.595Z",
+  "seats": [
+    "red",
+    "silver"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-123149.png",
+      "takenAt": "2026-09-13T12:31:54.736Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "silver",
+        "red"
+      ]
+    },
+    {
+      "file": "02-123411.png",
+      "takenAt": "2026-09-13T12:34:17.004Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "silver",
+        "red"
+      ]
+    },
+    {
+      "file": "03-123641.png",
+      "takenAt": "2026-09-13T12:36:46.508Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "silver",
+        "red"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 3 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T12:39:10.849Z"
+}

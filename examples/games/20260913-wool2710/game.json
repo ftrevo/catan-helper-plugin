@@ -1,0 +1,80 @@
+{
+  "roomCode": "wool2710",
+  "url": "https://colonist.io/#wool2710",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T07:34:17.553Z",
+  "seats": [
+    "red",
+    "white",
+    "blue"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-073434.png",
+      "takenAt": "2026-09-13T07:34:39.784Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 9,
+      "colours": [
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-073657.png",
+      "takenAt": "2026-09-13T07:37:02.556Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-073927.png",
+      "takenAt": "2026-09-13T07:39:32.635Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 17,
+      "colours": [
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-074157.png",
+      "takenAt": "2026-09-13T07:42:02.280Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 21,
+      "colours": [
+        "white",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "revisits stopped: game unreachable after 4 visits"
+  ],
+  "finishedAt": "2026-09-13T07:49:08.068Z"
+}

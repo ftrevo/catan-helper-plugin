@@ -1,0 +1,80 @@
+{
+  "roomCode": "wall480",
+  "url": "https://colonist.io/#wall480",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T17:25:46.879Z",
+  "seats": [
+    "black",
+    "red",
+    "white"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-172603.png",
+      "takenAt": "2026-09-13T17:26:09.502Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "02-172844.png",
+      "takenAt": "2026-09-13T17:28:49.337Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 14,
+      "colours": [
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "03-173120.png",
+      "takenAt": "2026-09-13T17:31:26.608Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 18,
+      "colours": [
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "04-173450.png",
+      "takenAt": "2026-09-13T17:34:56.321Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 24,
+      "colours": [
+        "red",
+        "white",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 4 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T17:38:00.201Z"
+}

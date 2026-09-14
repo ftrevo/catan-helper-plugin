@@ -1,0 +1,46 @@
+{
+  "roomCode": "brick9758",
+  "url": "https://colonist.io/#brick9758",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:28:41.879Z",
+  "finishedAt": "2026-09-12T10:31:35.437Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-102857.png",
+      "takenAt": "2026-09-12T10:29:01.514Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 25,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-103131.png",
+      "takenAt": "2026-09-12T10:31:35.436Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 27,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

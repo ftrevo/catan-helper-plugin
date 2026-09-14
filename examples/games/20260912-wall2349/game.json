@@ -1,0 +1,43 @@
+{
+  "roomCode": "wall2349",
+  "url": "https://colonist.io/#wall2349",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:09:58.228Z",
+  "finishedAt": "2026-09-12T06:12:51.486Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-061014.png",
+      "takenAt": "2026-09-12T06:10:17.762Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "black"
+      ]
+    },
+    {
+      "file": "02-061247.png",
+      "takenAt": "2026-09-12T06:12:51.485Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 6,
+      "colours": [
+        "red",
+        "orange",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

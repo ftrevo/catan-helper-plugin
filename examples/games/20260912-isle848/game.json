@@ -1,0 +1,46 @@
+{
+  "roomCode": "isle848",
+  "url": "https://colonist.io/#isle848",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:11:23.161Z",
+  "finishedAt": "2026-09-12T17:14:16.715Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-171138.png",
+      "takenAt": "2026-09-12T17:11:42.852Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-171412.png",
+      "takenAt": "2026-09-12T17:14:16.715Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

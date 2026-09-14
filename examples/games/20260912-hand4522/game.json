@@ -1,0 +1,46 @@
+{
+  "roomCode": "hand4522",
+  "url": "https://colonist.io/#hand4522",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T16:53:06.910Z",
+  "finishedAt": "2026-09-12T16:56:00.311Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-165322.png",
+      "takenAt": "2026-09-12T16:53:26.532Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-165556.png",
+      "takenAt": "2026-09-12T16:56:00.311Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

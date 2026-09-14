@@ -1,0 +1,47 @@
+{
+  "roomCode": "board4923",
+  "url": "https://colonist.io/#board4923",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:17:12.034Z",
+  "finishedAt": "2026-09-12T23:20:05.452Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-231727.png",
+      "takenAt": "2026-09-12T23:17:31.657Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "green",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-232001.png",
+      "takenAt": "2026-09-12T23:20:05.451Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

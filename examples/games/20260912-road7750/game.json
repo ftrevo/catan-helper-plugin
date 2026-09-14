@@ -1,0 +1,46 @@
+{
+  "roomCode": "road7750",
+  "url": "https://colonist.io/#road7750",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:33:54.094Z",
+  "finishedAt": "2026-09-12T23:36:47.555Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-233409.png",
+      "takenAt": "2026-09-12T23:34:13.739Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-233643.png",
+      "takenAt": "2026-09-12T23:36:47.554Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

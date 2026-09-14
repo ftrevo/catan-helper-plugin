@@ -1,0 +1,211 @@
+{
+  "roomCode": "town353",
+  "url": "https://colonist.io/#town353",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T08:58:52.951Z",
+  "seats": [
+    "red",
+    "black",
+    "blue",
+    "white"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-085909.png",
+      "takenAt": "2026-09-13T08:59:15.154Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "black",
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-090221.png",
+      "takenAt": "2026-09-13T09:02:27.155Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "black",
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-090531.png",
+      "takenAt": "2026-09-13T09:05:36.321Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 13,
+      "colours": [
+        "black",
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-090808.png",
+      "takenAt": "2026-09-13T09:08:13.859Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "black",
+        "red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-091040.png",
+      "takenAt": "2026-09-13T09:10:45.456Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 18,
+      "colours": [
+        "red",
+        "black",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-091311.png",
+      "takenAt": "2026-09-13T09:13:17.319Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 18,
+      "colours": [
+        "red",
+        "black",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "07-091545.png",
+      "takenAt": "2026-09-13T09:15:50.672Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 20,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "08-091822.png",
+      "takenAt": "2026-09-13T09:18:27.290Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 20,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "09-092059.png",
+      "takenAt": "2026-09-13T09:21:04.307Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 23,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "10-092336.png",
+      "takenAt": "2026-09-13T09:23:41.446Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 25,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "11-092706.png",
+      "takenAt": "2026-09-13T09:27:12.137Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 26,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "12-093021.png",
+      "takenAt": "2026-09-13T09:30:26.409Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 26,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "13-093433.png",
+      "takenAt": "2026-09-13T09:34:38.985Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 30,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    }
+  ],
+  "notes": [
+    "revisits stopped: game unreachable after 13 visits"
+  ],
+  "finishedAt": "2026-09-13T09:44:08.402Z"
+}

@@ -1,0 +1,44 @@
+{
+  "roomCode": "grid7399",
+  "url": "https://colonist.io/#grid7399",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:32:01.199Z",
+  "finishedAt": "2026-09-12T07:34:54.473Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-073217.png",
+      "takenAt": "2026-09-12T07:32:20.717Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 8,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-073450.png",
+      "takenAt": "2026-09-12T07:34:54.472Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

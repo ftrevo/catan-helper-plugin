@@ -1,0 +1,153 @@
+{
+  "roomCode": "loot8849",
+  "url": "https://colonist.io/#loot8849",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T01:46:04.435Z",
+  "seats": [
+    "red",
+    "green",
+    "black",
+    "purple"
+  ],
+  "wanted": [
+    "purple"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-014621.png",
+      "takenAt": "2026-09-14T01:46:26.589Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "purple"
+      ]
+    },
+    {
+      "file": "02-015053.png",
+      "takenAt": "2026-09-14T01:50:58.762Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 8,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "03-015616.png",
+      "takenAt": "2026-09-14T01:56:21.811Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "04-020045.png",
+      "takenAt": "2026-09-14T02:00:50.441Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "bronze",
+        "black"
+      ]
+    },
+    {
+      "file": "05-020438.png",
+      "takenAt": "2026-09-14T02:04:47.078Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 14,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "06-020835.png",
+      "takenAt": "2026-09-14T02:08:40.617Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 18,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "07-021218.png",
+      "takenAt": "2026-09-14T02:12:23.888Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 18,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "08-021510.png",
+      "takenAt": "2026-09-14T02:15:16.254Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 18,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "09-021735.png",
+      "takenAt": "2026-09-14T02:17:41.057Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "green",
+        "purple",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 9 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T02:20:03.313Z"
+}

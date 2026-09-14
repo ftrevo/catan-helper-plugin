@@ -1,0 +1,2076 @@
+{
+  "generatedAt": "2026-09-14T11:02:01.864Z",
+  "thresholds": {
+    "none": 78,
+    "tower": 35,
+    "roadNone": 95,
+    "knightMargin": 6,
+    "robberMargin": 6,
+    "robberMax": 25,
+    "merchantMargin": 6,
+    "merchantMax": 25,
+    "token": 25,
+    "weak": {
+      "settlement": 25,
+      "city": 25,
+      "knight": 25,
+      "metropolis": 30,
+      "road": 60
+    },
+    "extra": 20,
+    "extraMargin": 8
+  },
+  "classCounts": {
+    "phantom-colour": 531,
+    "phantom-colour-strong-b": 201,
+    "colour-mismatch": 283,
+    "colour-mismatch-seat": 316,
+    "kind-mismatch": 29,
+    "level-mismatch": 0,
+    "weak-match": 178,
+    "under-overlay": 480,
+    "near-robber-mismatch": 29,
+    "near-merchant-mismatch": 8,
+    "missed-by-a": 87,
+    "agreement-sample": 35670
+  },
+  "mismatchByKind": {
+    "settlement": {
+      "pieces": 12238,
+      "colourMismatch": 4,
+      "phantom": 55,
+      "weak": 11
+    },
+    "city": {
+      "pieces": 9307,
+      "colourMismatch": 5,
+      "phantom": 52,
+      "weak": 22
+    },
+    "knight": {
+      "pieces": 11129,
+      "colourMismatch": 16,
+      "phantom": 21,
+      "weak": 7
+    },
+    "road": {
+      "pieces": 32016,
+      "colourMismatch": 250,
+      "phantom": 397,
+      "weak": 342
+    },
+    "metropolis": {
+      "pieces": 1096,
+      "colourMismatch": 8,
+      "phantom": 6,
+      "weak": 33
+    }
+  },
+  "totals": {
+    "captures": 2152,
+    "skipped": 3,
+    "pieces": 65786,
+    "byKindA": {
+      "settlement": 12238,
+      "city": 9307,
+      "knight": 11129,
+      "road": 32016,
+      "metropolis": 1096
+    },
+    "byKindB": {
+      "settlement": 12246,
+      "city": 9301,
+      "knight": 11138,
+      "road": 32016,
+      "metropolis": 1085
+    },
+    "extraPieces": 87,
+    "agreements": {
+      "colour": 65503,
+      "kind": 65757,
+      "both": 65483
+    },
+    "flags": {
+      "under-overlay": 1479,
+      "colour-mismatch": 283,
+      "colour-mismatch-seat": 559,
+      "weak-match": 415,
+      "near-robber": 7693,
+      "near-merchant": 5766,
+      "phantom-colour": 531,
+      "kind-mismatch": 29,
+      "missed-by-a": 87
+    }
+  },
+  "seats": {
+    "fromRegistry": 1263,
+    "inferred": 860,
+    "unknown": 29
+  },
+  "robber": {
+    "detected": 2140,
+    "missed": 12,
+    "medianScore": 7.9,
+    "worstAcceptedScore": 19.1,
+    "missReasons": {
+      "no-close-match": 12
+    },
+    "stabilityBetweenFrames": {
+      "pairs": 1547,
+      "same": 704
+    },
+    "marginOverRunnerUp": {
+      "min": 14.1,
+      "p10": 22.4,
+      "median": 24.5
+    }
+  },
+  "merchant": {
+    "detected": 1119,
+    "byColour": {
+      "red": 281,
+      "orange": 109,
+      "black": 260,
+      "blue": 204,
+      "green": 70,
+      "pink": 28,
+      "silver": 29,
+      "white": 61,
+      "purple": 21,
+      "mysticblue": 41,
+      "gold": 11,
+      "bronze": 4
+    }
+  },
+  "overlay": {
+    "capturesSuspected": 347,
+    "byRule": {
+      "tokensFound": 92,
+      "hidden-token": 92,
+      "ui-panel": 283
+    }
+  },
+  "mismatchRates": {
+    "nearRobber": {
+      "withIt": 7661,
+      "withItMismatch": 22,
+      "without": 58125,
+      "withoutMismatch": 261
+    },
+    "nearMerchant": {
+      "withIt": 5758,
+      "withItMismatch": 6,
+      "without": 60028,
+      "withoutMismatch": 277
+    },
+    "underOverlay": {
+      "withIt": 1477,
+      "withItMismatch": 164,
+      "without": 64309,
+      "withoutMismatch": 119
+    }
+  },
+  "colourVariantTable": {
+    "black": {
+      "settlement": {
+        "a": 2462,
+        "b": 2483
+      },
+      "city": {
+        "a": 1998,
+        "b": 2010
+      },
+      "knight level 1 inactive": {
+        "a": 832,
+        "b": 839
+      },
+      "road": {
+        "a": 6563,
+        "b": 6614
+      },
+      "metropolis science": {
+        "a": 112,
+        "b": 112
+      },
+      "knight level 1 active": {
+        "a": 612,
+        "b": 609
+      },
+      "knight level 2 active": {
+        "a": 490,
+        "b": 491
+      },
+      "knight level 2 inactive": {
+        "a": 391,
+        "b": 392
+      },
+      "metropolis trade": {
+        "a": 72,
+        "b": 72
+      },
+      "knight level 3 active": {
+        "a": 69,
+        "b": 69
+      },
+      "metropolis politics": {
+        "a": 80,
+        "b": 80
+      },
+      "knight level 3 inactive": {
+        "a": 34,
+        "b": 34
+      }
+    },
+    "blue": {
+      "knight level 1 inactive": {
+        "a": 752,
+        "b": 757
+      },
+      "city": {
+        "a": 1943,
+        "b": 1936
+      },
+      "settlement": {
+        "a": 2630,
+        "b": 2617
+      },
+      "road": {
+        "a": 6737,
+        "b": 6739
+      },
+      "knight level 2 active": {
+        "a": 442,
+        "b": 442
+      },
+      "knight level 2 inactive": {
+        "a": 325,
+        "b": 327
+      },
+      "metropolis science": {
+        "a": 109,
+        "b": 109
+      },
+      "knight level 1 active": {
+        "a": 554,
+        "b": 557
+      },
+      "metropolis trade": {
+        "a": 57,
+        "b": 57
+      },
+      "knight level 3 active": {
+        "a": 53,
+        "b": 53
+      },
+      "knight level 3 inactive": {
+        "a": 35,
+        "b": 35
+      },
+      "metropolis politics": {
+        "a": 47,
+        "b": 47
+      },
+      "metropolis ?": {
+        "a": 3,
+        "b": 0
+      }
+    },
+    "orange": {
+      "city": {
+        "a": 1048,
+        "b": 1053
+      },
+      "settlement": {
+        "a": 1253,
+        "b": 1256
+      },
+      "road": {
+        "a": 3258,
+        "b": 3338
+      },
+      "knight level 2 active": {
+        "a": 251,
+        "b": 251
+      },
+      "knight level 2 inactive": {
+        "a": 187,
+        "b": 193
+      },
+      "knight level 1 active": {
+        "a": 253,
+        "b": 256
+      },
+      "knight level 3 inactive": {
+        "a": 16,
+        "b": 16
+      },
+      "knight level 1 inactive": {
+        "a": 356,
+        "b": 363
+      },
+      "metropolis trade": {
+        "a": 25,
+        "b": 25
+      },
+      "metropolis politics": {
+        "a": 19,
+        "b": 19
+      },
+      "metropolis science": {
+        "a": 32,
+        "b": 32
+      },
+      "knight level 3 active": {
+        "a": 33,
+        "b": 33
+      },
+      "knight ?": {
+        "a": 1,
+        "b": 0
+      },
+      "metropolis ?": {
+        "a": 2,
+        "b": 0
+      }
+    },
+    "red": {
+      "settlement": {
+        "a": 3116,
+        "b": 3112
+      },
+      "city": {
+        "a": 2130,
+        "b": 2126
+      },
+      "road": {
+        "a": 7660,
+        "b": 7660
+      },
+      "knight level 1 active": {
+        "a": 652,
+        "b": 650
+      },
+      "knight level 1 inactive": {
+        "a": 847,
+        "b": 858
+      },
+      "knight level 2 active": {
+        "a": 542,
+        "b": 541
+      },
+      "metropolis trade": {
+        "a": 105,
+        "b": 105
+      },
+      "metropolis science": {
+        "a": 115,
+        "b": 115
+      },
+      "knight level 3 active": {
+        "a": 57,
+        "b": 57
+      },
+      "knight level 3 inactive": {
+        "a": 46,
+        "b": 46
+      },
+      "knight level 2 inactive": {
+        "a": 407,
+        "b": 409
+      },
+      "metropolis politics": {
+        "a": 24,
+        "b": 24
+      },
+      "metropolis ?": {
+        "a": 2,
+        "b": 0
+      }
+    },
+    "green": {
+      "city": {
+        "a": 585,
+        "b": 580
+      },
+      "knight level 1 inactive": {
+        "a": 222,
+        "b": 224
+      },
+      "settlement": {
+        "a": 749,
+        "b": 748
+      },
+      "road": {
+        "a": 2061,
+        "b": 2036
+      },
+      "knight level 2 active": {
+        "a": 133,
+        "b": 134
+      },
+      "knight level 2 inactive": {
+        "a": 120,
+        "b": 124
+      },
+      "knight level 1 active": {
+        "a": 166,
+        "b": 167
+      },
+      "knight level 3 active": {
+        "a": 41,
+        "b": 41
+      },
+      "metropolis trade": {
+        "a": 27,
+        "b": 27
+      },
+      "knight level 3 inactive": {
+        "a": 20,
+        "b": 20
+      },
+      "metropolis science": {
+        "a": 27,
+        "b": 27
+      },
+      "metropolis politics": {
+        "a": 15,
+        "b": 15
+      },
+      "knight ?": {
+        "a": 1,
+        "b": 0
+      }
+    },
+    "bronze": {
+      "road": {
+        "a": 180,
+        "b": 59
+      },
+      "city": {
+        "a": 29,
+        "b": 27
+      },
+      "knight level 1 active": {
+        "a": 6,
+        "b": 5
+      },
+      "knight level 2 active": {
+        "a": 4,
+        "b": 4
+      },
+      "knight level 2 inactive": {
+        "a": 6,
+        "b": 6
+      },
+      "knight level 1 inactive": {
+        "a": 6,
+        "b": 6
+      },
+      "settlement": {
+        "a": 11,
+        "b": 11
+      },
+      "metropolis ?": {
+        "a": 1,
+        "b": 0
+      },
+      "metropolis politics": {
+        "a": 7,
+        "b": 7
+      },
+      "knight level 3 active": {
+        "a": 3,
+        "b": 3
+      },
+      "knight level 3 inactive": {
+        "a": 5,
+        "b": 5
+      }
+    },
+    "white": {
+      "road": {
+        "a": 1625,
+        "b": 1534
+      },
+      "settlement": {
+        "a": 563,
+        "b": 565
+      },
+      "knight level 1 active": {
+        "a": 175,
+        "b": 170
+      },
+      "knight level 1 inactive": {
+        "a": 179,
+        "b": 180
+      },
+      "knight level 2 active": {
+        "a": 158,
+        "b": 158
+      },
+      "city": {
+        "a": 472,
+        "b": 468
+      },
+      "knight level 2 inactive": {
+        "a": 83,
+        "b": 82
+      },
+      "knight ?": {
+        "a": 1,
+        "b": 0
+      },
+      "knight level 3 inactive": {
+        "a": 5,
+        "b": 5
+      },
+      "knight level 3 active": {
+        "a": 18,
+        "b": 14
+      },
+      "metropolis science": {
+        "a": 48,
+        "b": 48
+      },
+      "metropolis trade": {
+        "a": 19,
+        "b": 16
+      },
+      "metropolis ?": {
+        "a": 2,
+        "b": 0
+      },
+      "metropolis politics": {
+        "a": 7,
+        "b": 7
+      }
+    },
+    "pink": {
+      "settlement": {
+        "a": 490,
+        "b": 491
+      },
+      "city": {
+        "a": 275,
+        "b": 275
+      },
+      "knight level 2 active": {
+        "a": 87,
+        "b": 87
+      },
+      "knight level 2 inactive": {
+        "a": 84,
+        "b": 88
+      },
+      "road": {
+        "a": 1193,
+        "b": 1239
+      },
+      "knight level 1 active": {
+        "a": 136,
+        "b": 136
+      },
+      "knight level 3 active": {
+        "a": 3,
+        "b": 3
+      },
+      "metropolis science": {
+        "a": 18,
+        "b": 18
+      },
+      "knight level 1 inactive": {
+        "a": 160,
+        "b": 172
+      },
+      "metropolis politics": {
+        "a": 5,
+        "b": 5
+      },
+      "metropolis trade": {
+        "a": 10,
+        "b": 10
+      },
+      "knight level 3 inactive": {
+        "a": 1,
+        "b": 1
+      }
+    },
+    "purple": {
+      "settlement": {
+        "a": 235,
+        "b": 234
+      },
+      "road": {
+        "a": 557,
+        "b": 558
+      },
+      "city": {
+        "a": 155,
+        "b": 155
+      },
+      "knight level 1 active": {
+        "a": 48,
+        "b": 48
+      },
+      "knight level 2 inactive": {
+        "a": 8,
+        "b": 8
+      },
+      "knight level 1 inactive": {
+        "a": 100,
+        "b": 100
+      },
+      "knight level 2 active": {
+        "a": 25,
+        "b": 25
+      },
+      "metropolis science": {
+        "a": 8,
+        "b": 8
+      },
+      "knight level 3 inactive": {
+        "a": 3,
+        "b": 3
+      },
+      "metropolis politics": {
+        "a": 1,
+        "b": 1
+      },
+      "metropolis trade": {
+        "a": 4,
+        "b": 4
+      }
+    },
+    "mysticblue": {
+      "settlement": {
+        "a": 480,
+        "b": 481
+      },
+      "knight level 1 active": {
+        "a": 159,
+        "b": 161
+      },
+      "city": {
+        "a": 453,
+        "b": 454
+      },
+      "road": {
+        "a": 1406,
+        "b": 1455
+      },
+      "knight level 1 inactive": {
+        "a": 198,
+        "b": 216
+      },
+      "knight level 2 active": {
+        "a": 131,
+        "b": 131
+      },
+      "knight level 2 inactive": {
+        "a": 63,
+        "b": 70
+      },
+      "metropolis science": {
+        "a": 23,
+        "b": 23
+      },
+      "metropolis ?": {
+        "a": 1,
+        "b": 0
+      },
+      "metropolis politics": {
+        "a": 27,
+        "b": 27
+      },
+      "knight level 3 inactive": {
+        "a": 14,
+        "b": 14
+      },
+      "knight level 3 active": {
+        "a": 37,
+        "b": 40
+      },
+      "metropolis trade": {
+        "a": 11,
+        "b": 14
+      }
+    },
+    "gold": {
+      "road": {
+        "a": 419,
+        "b": 427
+      },
+      "city": {
+        "a": 110,
+        "b": 109
+      },
+      "settlement": {
+        "a": 135,
+        "b": 135
+      },
+      "knight level 1 active": {
+        "a": 51,
+        "b": 50
+      },
+      "knight level 1 inactive": {
+        "a": 27,
+        "b": 34
+      },
+      "knight level 2 inactive": {
+        "a": 27,
+        "b": 28
+      },
+      "knight level 2 active": {
+        "a": 50,
+        "b": 49
+      },
+      "metropolis science": {
+        "a": 12,
+        "b": 12
+      },
+      "metropolis trade": {
+        "a": 4,
+        "b": 4
+      }
+    },
+    "silver": {
+      "knight level 1 inactive": {
+        "a": 40,
+        "b": 41
+      },
+      "road": {
+        "a": 357,
+        "b": 357
+      },
+      "settlement": {
+        "a": 114,
+        "b": 113
+      },
+      "city": {
+        "a": 109,
+        "b": 108
+      },
+      "knight level 1 active": {
+        "a": 30,
+        "b": 33
+      },
+      "knight level 2 active": {
+        "a": 35,
+        "b": 35
+      },
+      "knight level 2 inactive": {
+        "a": 16,
+        "b": 18
+      },
+      "knight level 3 active": {
+        "a": 6,
+        "b": 7
+      },
+      "metropolis politics": {
+        "a": 5,
+        "b": 5
+      },
+      "knight level 3 inactive": {
+        "a": 1,
+        "b": 1
+      },
+      "metropolis trade": {
+        "a": 1,
+        "b": 1
+      },
+      "metropolis science": {
+        "a": 9,
+        "b": 9
+      }
+    }
+  },
+  "topGames": [
+    {
+      "game": "20260913-event140",
+      "pieces": 481,
+      "mismatch": 18,
+      "phantom": 15,
+      "kind": 0,
+      "overlay": 2,
+      "extra": 4,
+      "seats": [
+        "black",
+        "pink",
+        "red",
+        "gold"
+      ]
+    },
+    {
+      "game": "20260912-roll1100",
+      "pieces": 20,
+      "mismatch": 13,
+      "phantom": 13,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260913-land9050",
+      "pieces": 18,
+      "mismatch": 13,
+      "phantom": 13,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260912-256479510",
+      "pieces": 21,
+      "mismatch": 12,
+      "phantom": 12,
+      "kind": 0,
+      "overlay": 1,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260912-tile4001",
+      "pieces": 17,
+      "mismatch": 12,
+      "phantom": 12,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260913-town7315",
+      "pieces": 16,
+      "mismatch": 12,
+      "phantom": 12,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260912-pack5873",
+      "pieces": 74,
+      "mismatch": 11,
+      "phantom": 11,
+      "kind": 1,
+      "overlay": 1,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260912-play7857",
+      "pieces": 66,
+      "mismatch": 11,
+      "phantom": 11,
+      "kind": 1,
+      "overlay": 1,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260913-fort4077",
+      "pieces": 15,
+      "mismatch": 11,
+      "phantom": 11,
+      "kind": 0,
+      "overlay": 1,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260913-task1956",
+      "pieces": 550,
+      "mismatch": 11,
+      "phantom": 11,
+      "kind": 3,
+      "overlay": 3,
+      "extra": 1,
+      "seats": [
+        "red",
+        "mysticblue",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "game": "20260912-event263",
+      "pieces": 68,
+      "mismatch": 11,
+      "phantom": 9,
+      "kind": 0,
+      "overlay": 2,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260912-wall2349",
+      "pieces": 14,
+      "mismatch": 10,
+      "phantom": 10,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260913-army4015",
+      "pieces": 525,
+      "mismatch": 10,
+      "phantom": 10,
+      "kind": 0,
+      "overlay": 8,
+      "extra": 0,
+      "seats": [
+        "pink",
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "game": "20260913-bank7927",
+      "pieces": 18,
+      "mismatch": 10,
+      "phantom": 10,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260913-mine2890",
+      "pieces": 284,
+      "mismatch": 10,
+      "phantom": 10,
+      "kind": 1,
+      "overlay": 2,
+      "extra": 0,
+      "seats": [
+        "blue",
+        "red",
+        "black",
+        "pink"
+      ]
+    },
+    {
+      "game": "20260912-pack1321",
+      "pieces": 29,
+      "mismatch": 9,
+      "phantom": 9,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260912-steal1992",
+      "pieces": 20,
+      "mismatch": 9,
+      "phantom": 9,
+      "kind": 0,
+      "overlay": 1,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260914-map7182",
+      "pieces": 720,
+      "mismatch": 9,
+      "phantom": 8,
+      "kind": 1,
+      "overlay": 7,
+      "extra": 0,
+      "seats": [
+        "black",
+        "orange",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "game": "20260912-area3745",
+      "pieces": 20,
+      "mismatch": 8,
+      "phantom": 8,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    },
+    {
+      "game": "20260912-sheep2141",
+      "pieces": 16,
+      "mismatch": 8,
+      "phantom": 8,
+      "kind": 0,
+      "overlay": 0,
+      "extra": 0,
+      "seats": null
+    }
+  ],
+  "examples": {
+    "phantom-colour": [
+      {
+        "game": "20260912-256421756",
+        "capture": "02-052308",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "white-road",
+        "score": 58.2,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour__20260912-256421756__02-052308__e5__A-bronze-road__B-white-road.png"
+      },
+      {
+        "game": "20260912-256427922",
+        "capture": "01-061640",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour__20260912-256427922__01-061640__e5__A-bronze-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-256457718",
+        "capture": "02-104304",
+        "pos": "e52",
+        "a": "white-road",
+        "b": "pink-road",
+        "score": 58.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour__20260912-256457718__02-104304__e52__A-white-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-256472762",
+        "capture": "01-125702",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59.3,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour__20260912-256472762__01-125702__e5__A-bronze-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-256479510",
+        "capture": "01-131538",
+        "pos": "v41",
+        "a": "red-settlement",
+        "b": "red-settlement",
+        "score": 5.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour__20260912-256479510__01-131538__v41__A-red-settlement__B-red-settlement.png"
+      }
+    ],
+    "phantom-colour-strong-b": [
+      {
+        "game": "20260912-256479510",
+        "capture": "01-131538",
+        "pos": "v41",
+        "a": "red-settlement",
+        "b": "red-settlement",
+        "score": 5.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour-strong-b__20260912-256479510__01-131538__v41__A-red-settlement__B-red-settlement.png"
+      },
+      {
+        "game": "20260912-256554405",
+        "capture": "02-214128",
+        "pos": "v19",
+        "a": "blue-settlement",
+        "b": "blue-settlement",
+        "score": 7.8,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour-strong-b__20260912-256554405__02-214128__v19__A-blue-settlement__B-blue-settlement.png"
+      },
+      {
+        "game": "20260912-area3745",
+        "capture": "02-112659",
+        "pos": "v24",
+        "a": "blue-settlement",
+        "b": "blue-settlement",
+        "score": 5,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour-strong-b__20260912-area3745__02-112659__v24__A-blue-settlement__B-blue-settlement.png"
+      },
+      {
+        "game": "20260912-card5605",
+        "capture": "02-103824",
+        "pos": "v14",
+        "a": "blue-settlement",
+        "b": "blue-settlement",
+        "score": 6.2,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour-strong-b__20260912-card5605__02-103824__v14__A-blue-settlement__B-blue-settlement.png"
+      },
+      {
+        "game": "20260912-deal6312",
+        "capture": "02-225439",
+        "pos": "v12",
+        "a": "red-settlement",
+        "b": "red-settlement",
+        "score": 4.9,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/phantom-colour-strong-b__20260912-deal6312__02-225439__v12__A-red-settlement__B-red-settlement.png"
+      }
+    ],
+    "colour-mismatch": [
+      {
+        "game": "20260912-256414712",
+        "capture": "01-051425",
+        "pos": "v11",
+        "a": "red-settlement",
+        "b": "black-settlement",
+        "score": 55.6,
+        "flags": [
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "weak-match"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch__20260912-256414712__01-051425__v11__A-red-settlement__B-black-settlement.png"
+      },
+      {
+        "game": "20260912-256421756",
+        "capture": "02-052308",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "white-road",
+        "score": 58.2,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch__20260912-256421756__02-052308__e5__A-bronze-road__B-white-road.png"
+      },
+      {
+        "game": "20260912-256427922",
+        "capture": "01-061640",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch__20260912-256427922__01-061640__e5__A-bronze-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-256457718",
+        "capture": "02-104304",
+        "pos": "e52",
+        "a": "white-road",
+        "b": "pink-road",
+        "score": 58.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch__20260912-256457718__02-104304__e52__A-white-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-256472762",
+        "capture": "01-125702",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59.3,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch__20260912-256472762__01-125702__e5__A-bronze-road__B-pink-road.png"
+      }
+    ],
+    "colour-mismatch-seat": [
+      {
+        "game": "20260912-256479510",
+        "capture": "01-131538",
+        "pos": "v41",
+        "a": "red-settlement",
+        "b": "red-settlement",
+        "score": 5.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch-seat__20260912-256479510__01-131538__v41__A-red-settlement__B-red-settlement.png"
+      },
+      {
+        "game": "20260912-256548064",
+        "capture": "01-205818",
+        "pos": "e27",
+        "a": "white-road",
+        "b": "white-road",
+        "score": 44.1,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch-seat__20260912-256548064__01-205818__e27__A-white-road__B-white-road.png"
+      },
+      {
+        "game": "20260912-256554405",
+        "capture": "02-214128",
+        "pos": "v19",
+        "a": "blue-settlement",
+        "b": "blue-settlement",
+        "score": 7.8,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch-seat__20260912-256554405__02-214128__v19__A-blue-settlement__B-blue-settlement.png"
+      },
+      {
+        "game": "20260912-area3745",
+        "capture": "02-112659",
+        "pos": "v24",
+        "a": "blue-settlement",
+        "b": "blue-settlement",
+        "score": 5,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch-seat__20260912-area3745__02-112659__v24__A-blue-settlement__B-blue-settlement.png"
+      },
+      {
+        "game": "20260912-brick7193",
+        "capture": "02-212315",
+        "pos": "v6",
+        "a": "green-city",
+        "b": "green-settlement",
+        "score": 45.8,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat",
+          "kind-mismatch",
+          "weak-match",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/colour-mismatch-seat__20260912-brick7193__02-212315__v6__A-green-city__B-green-settlement.png"
+      }
+    ],
+    "kind-mismatch": [
+      {
+        "game": "20260912-board8606",
+        "capture": "01-195800",
+        "pos": "v49",
+        "a": "black-settlement",
+        "b": "black-knight-level-1-inactive",
+        "score": 4.9,
+        "flags": [
+          "kind-mismatch"
+        ],
+        "crop": "examples/classification-v2/crops/kind-mismatch__20260912-board8606__01-195800__v49__A-black-settlement__B-black-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-brick7193",
+        "capture": "02-212315",
+        "pos": "v6",
+        "a": "green-city",
+        "b": "green-settlement",
+        "score": 45.8,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat",
+          "kind-mismatch",
+          "weak-match",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/kind-mismatch__20260912-brick7193__02-212315__v6__A-green-city__B-green-settlement.png"
+      },
+      {
+        "game": "20260912-card5569",
+        "capture": "02-162107",
+        "pos": "v48",
+        "a": "red-settlement",
+        "b": "red-knight-level-1-inactive",
+        "score": 6.9,
+        "flags": [
+          "kind-mismatch"
+        ],
+        "crop": "examples/classification-v2/crops/kind-mismatch__20260912-card5569__02-162107__v48__A-red-settlement__B-red-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-pack5873",
+        "capture": "02-000135",
+        "pos": "v39",
+        "a": "blue-metropolis-?",
+        "b": "blue-city",
+        "score": 49.2,
+        "flags": [
+          "kind-mismatch",
+          "weak-match",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/kind-mismatch__20260912-pack5873__02-000135__v39__A-blue-metropolis-?__B-blue-city.png"
+      },
+      {
+        "game": "20260912-play7857",
+        "capture": "02-085036",
+        "pos": "v20",
+        "a": "white-knight-?",
+        "b": "white-settlement",
+        "score": 59.3,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat",
+          "kind-mismatch",
+          "weak-match",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/kind-mismatch__20260912-play7857__02-085036__v20__A-white-knight-?__B-white-settlement.png"
+      }
+    ],
+    "level-mismatch": [],
+    "weak-match": [
+      {
+        "game": "20260912-256431162",
+        "capture": "01-071041",
+        "pos": "e13",
+        "a": "red-road",
+        "b": "red-road",
+        "score": 69.4,
+        "flags": [
+          "weak-match"
+        ],
+        "crop": "examples/classification-v2/crops/weak-match__20260912-256431162__01-071041__e13__A-red-road__B-red-road.png"
+      },
+      {
+        "game": "20260912-256435701",
+        "capture": "02-071918",
+        "pos": "e25",
+        "a": "red-road",
+        "b": "red-road",
+        "score": 62.6,
+        "flags": [
+          "weak-match"
+        ],
+        "crop": "examples/classification-v2/crops/weak-match__20260912-256435701__02-071918__e25__A-red-road__B-red-road.png"
+      },
+      {
+        "game": "20260912-256452649",
+        "capture": "01-115823",
+        "pos": "e42",
+        "a": "red-road",
+        "b": "red-road",
+        "score": 63.6,
+        "flags": [
+          "weak-match"
+        ],
+        "crop": "examples/classification-v2/crops/weak-match__20260912-256452649__01-115823__e42__A-red-road__B-red-road.png"
+      },
+      {
+        "game": "20260912-256546411",
+        "capture": "01-200706",
+        "pos": "e59",
+        "a": "red-road",
+        "b": "red-road",
+        "score": 71.6,
+        "flags": [
+          "weak-match"
+        ],
+        "crop": "examples/classification-v2/crops/weak-match__20260912-256546411__01-200706__e59__A-red-road__B-red-road.png"
+      },
+      {
+        "game": "20260912-256548064",
+        "capture": "01-205818",
+        "pos": "v18",
+        "a": "orange-city",
+        "b": "orange-city",
+        "score": 26.1,
+        "flags": [
+          "weak-match"
+        ],
+        "crop": "examples/classification-v2/crops/weak-match__20260912-256548064__01-205818__v18__A-orange-city__B-orange-city.png"
+      }
+    ],
+    "under-overlay": [
+      {
+        "game": "20260912-256421756",
+        "capture": "02-052308",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "white-road",
+        "score": 58.2,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/under-overlay__20260912-256421756__02-052308__e5__A-bronze-road__B-white-road.png"
+      },
+      {
+        "game": "20260912-256427922",
+        "capture": "01-061640",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59.4,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/under-overlay__20260912-256427922__01-061640__e5__A-bronze-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-256472762",
+        "capture": "01-125702",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59.3,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/under-overlay__20260912-256472762__01-125702__e5__A-bronze-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-256479510",
+        "capture": "01-131538",
+        "pos": "e42",
+        "a": "white-road",
+        "b": "orange-road",
+        "score": 56,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/under-overlay__20260912-256479510__01-131538__e42__A-white-road__B-orange-road.png"
+      },
+      {
+        "game": "20260912-area5876",
+        "capture": "01-074550",
+        "pos": "v41",
+        "a": "black-city",
+        "b": "black-city",
+        "score": 28.9,
+        "flags": [
+          "weak-match",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/under-overlay__20260912-area5876__01-074550__v41__A-black-city__B-black-city.png"
+      }
+    ],
+    "near-robber-mismatch": [
+      {
+        "game": "20260912-256479510",
+        "capture": "02-131812",
+        "pos": "v44",
+        "a": "red-city",
+        "b": "red-city",
+        "score": 6.7,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat",
+          "near-robber",
+          "near-merchant"
+        ],
+        "crop": "examples/classification-v2/crops/near-robber-mismatch__20260912-256479510__02-131812__v44__A-red-city__B-red-city.png"
+      },
+      {
+        "game": "20260912-cost1293",
+        "capture": "02-145715",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 61.1,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "weak-match",
+          "near-robber",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/near-robber-mismatch__20260912-cost1293__02-145715__e5__A-bronze-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-deck1482",
+        "capture": "01-185416",
+        "pos": "v34",
+        "a": "silver-knight-level-1-inactive",
+        "b": "black-knight-level-1-inactive",
+        "score": 10.5,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "near-robber"
+        ],
+        "crop": "examples/classification-v2/crops/near-robber-mismatch__20260912-deck1482__01-185416__v34__A-silver-knight-level-1-inactive__B-black-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-hand3383",
+        "capture": "02-091058",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "near-robber",
+          "under-overlay"
+        ],
+        "crop": "examples/classification-v2/crops/near-robber-mismatch__20260912-hand3383__02-091058__e5__A-bronze-road__B-pink-road.png"
+      },
+      {
+        "game": "20260912-path1279",
+        "capture": "02-181304",
+        "pos": "e5",
+        "a": "bronze-road",
+        "b": "pink-road",
+        "score": 59.9,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "near-robber"
+        ],
+        "crop": "examples/classification-v2/crops/near-robber-mismatch__20260912-path1279__02-181304__e5__A-bronze-road__B-pink-road.png"
+      }
+    ],
+    "near-merchant-mismatch": [
+      {
+        "game": "20260912-256479510",
+        "capture": "02-131812",
+        "pos": "v44",
+        "a": "red-city",
+        "b": "red-city",
+        "score": 6.7,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch-seat",
+          "near-robber",
+          "near-merchant"
+        ],
+        "crop": "examples/classification-v2/crops/near-merchant-mismatch__20260912-256479510__02-131812__v44__A-red-city__B-red-city.png"
+      },
+      {
+        "game": "20260913-tile5627",
+        "capture": "06-142243",
+        "pos": "e47",
+        "a": "white-road",
+        "b": "silver-road",
+        "score": 65.6,
+        "flags": [
+          "colour-mismatch",
+          "weak-match",
+          "near-merchant"
+        ],
+        "crop": "examples/classification-v2/crops/near-merchant-mismatch__20260913-tile5627__06-142243__e47__A-white-road__B-silver-road.png"
+      },
+      {
+        "game": "20260913-wall6069",
+        "capture": "14-223525",
+        "pos": "e25",
+        "a": "black-road",
+        "b": "bronze-road",
+        "score": 74.2,
+        "flags": [
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "weak-match",
+          "near-merchant"
+        ],
+        "crop": "examples/classification-v2/crops/near-merchant-mismatch__20260913-wall6069__14-223525__e25__A-black-road__B-bronze-road.png"
+      },
+      {
+        "game": "20260913-white3776",
+        "capture": "02-035427",
+        "pos": "v25",
+        "a": "white-metropolis-trade",
+        "b": "mysticblue-metropolis-trade",
+        "score": 16.2,
+        "flags": [
+          "phantom-colour",
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "near-merchant"
+        ],
+        "crop": "examples/classification-v2/crops/near-merchant-mismatch__20260913-white3776__02-035427__v25__A-white-metropolis-trade__B-mysticblue-metropolis-trade.png"
+      },
+      {
+        "game": "20260914-edge2168",
+        "capture": "10-010613",
+        "pos": "e47",
+        "a": "black-road",
+        "b": "bronze-road",
+        "score": 55.3,
+        "flags": [
+          "colour-mismatch",
+          "colour-mismatch-seat",
+          "near-merchant"
+        ],
+        "crop": "examples/classification-v2/crops/near-merchant-mismatch__20260914-edge2168__10-010613__e47__A-black-road__B-bronze-road.png"
+      }
+    ],
+    "missed-by-a": [
+      {
+        "game": "20260912-coin9063",
+        "capture": "02-221228",
+        "pos": "v21",
+        "a": "none-nothing",
+        "b": "orange-knight-level-1-inactive",
+        "score": 9,
+        "flags": [
+          "missed-by-a"
+        ],
+        "crop": "examples/classification-v2/crops/missed-by-a__20260912-coin9063__02-221228__v21__A-none-nothing__B-orange-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-cost7714",
+        "capture": "02-215655",
+        "pos": "v14",
+        "a": "none-nothing",
+        "b": "green-knight-level-1-inactive",
+        "score": 5.9,
+        "flags": [
+          "missed-by-a"
+        ],
+        "crop": "examples/classification-v2/crops/missed-by-a__20260912-cost7714__02-215655__v14__A-none-nothing__B-green-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-dice9461",
+        "capture": "01-231050",
+        "pos": "v25",
+        "a": "none-nothing",
+        "b": "blue-knight-level-1-inactive",
+        "score": 12.2,
+        "flags": [
+          "missed-by-a",
+          "near-robber"
+        ],
+        "crop": "examples/classification-v2/crops/missed-by-a__20260912-dice9461__01-231050__v25__A-none-nothing__B-blue-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-farm4368",
+        "capture": "01-230123",
+        "pos": "v35",
+        "a": "none-nothing",
+        "b": "pink-knight-level-2-inactive",
+        "score": 11.7,
+        "flags": [
+          "missed-by-a",
+          "near-robber"
+        ],
+        "crop": "examples/classification-v2/crops/missed-by-a__20260912-farm4368__01-230123__v35__A-none-nothing__B-pink-knight-level-2-inactive.png"
+      },
+      {
+        "game": "20260912-hand4271",
+        "capture": "01-201010",
+        "pos": "v36",
+        "a": "none-nothing",
+        "b": "orange-knight-level-2-inactive",
+        "score": 12.1,
+        "flags": [
+          "missed-by-a",
+          "near-robber",
+          "near-merchant"
+        ],
+        "crop": "examples/classification-v2/crops/missed-by-a__20260912-hand4271__01-201010__v36__A-none-nothing__B-orange-knight-level-2-inactive.png"
+      }
+    ],
+    "agreement-sample": [
+      {
+        "game": "20260912-256411788",
+        "capture": "01-041123",
+        "pos": "v8",
+        "a": "black-settlement",
+        "b": "black-settlement",
+        "score": 3.7,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256411788__01-041123__v8__A-black-settlement__B-black-settlement.png"
+      },
+      {
+        "game": "20260912-256414712",
+        "capture": "01-051425",
+        "pos": "v9",
+        "a": "blue-settlement",
+        "b": "blue-settlement",
+        "score": 4.2,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256414712__01-051425__v9__A-blue-settlement__B-blue-settlement.png"
+      },
+      {
+        "game": "20260912-256418147",
+        "capture": "01-045504",
+        "pos": "v12",
+        "a": "black-metropolis-science",
+        "b": "black-metropolis-science",
+        "score": 9.1,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256418147__01-045504__v12__A-black-metropolis-science__B-black-metropolis-science.png"
+      },
+      {
+        "game": "20260912-256421756",
+        "capture": "01-052035",
+        "pos": "v9",
+        "a": "black-city",
+        "b": "black-city",
+        "score": 4.3,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256421756__01-052035__v9__A-black-city__B-black-city.png"
+      },
+      {
+        "game": "20260912-256427922",
+        "capture": "01-061640",
+        "pos": "v7",
+        "a": "blue-knight-level-1-inactive",
+        "b": "blue-knight-level-1-inactive",
+        "score": 6.9,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256427922__01-061640__v7__A-blue-knight-level-1-inactive__B-blue-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-256428444",
+        "capture": "01-060706",
+        "pos": "v8",
+        "a": "black-knight-level-1-inactive",
+        "b": "black-knight-level-1-inactive",
+        "score": 3.5,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256428444__01-060706__v8__A-black-knight-level-1-inactive__B-black-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-256431162",
+        "capture": "01-071041",
+        "pos": "v8",
+        "a": "red-knight-level-1-inactive",
+        "b": "red-knight-level-1-inactive",
+        "score": 5.2,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256431162__01-071041__v8__A-red-knight-level-1-inactive__B-red-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-256435701",
+        "capture": "01-071644",
+        "pos": "v13",
+        "a": "red-settlement",
+        "b": "red-settlement",
+        "score": 3.4,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256435701__01-071644__v13__A-red-settlement__B-red-settlement.png"
+      },
+      {
+        "game": "20260912-256440276",
+        "capture": "01-082013",
+        "pos": "v8",
+        "a": "green-settlement",
+        "b": "green-settlement",
+        "score": 7.9,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256440276__01-082013__v8__A-green-settlement__B-green-settlement.png"
+      },
+      {
+        "game": "20260912-256452338",
+        "capture": "01-095735",
+        "pos": "v10",
+        "a": "red-settlement",
+        "b": "red-settlement",
+        "score": 4.5,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256452338__01-095735__v10__A-red-settlement__B-red-settlement.png"
+      },
+      {
+        "game": "20260912-256452649",
+        "capture": "01-115823",
+        "pos": "v8",
+        "a": "red-knight-level-1-inactive",
+        "b": "red-knight-level-1-inactive",
+        "score": 5.2,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256452649__01-115823__v8__A-red-knight-level-1-inactive__B-red-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-256457718",
+        "capture": "01-104031",
+        "pos": "v9",
+        "a": "orange-city",
+        "b": "orange-city",
+        "score": 4.7,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256457718__01-104031__v9__A-orange-city__B-orange-city.png"
+      },
+      {
+        "game": "20260912-256472762",
+        "capture": "01-125702",
+        "pos": "v0",
+        "a": "green-settlement",
+        "b": "green-settlement",
+        "score": 5.4,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256472762__01-125702__v0__A-green-settlement__B-green-settlement.png"
+      },
+      {
+        "game": "20260912-256476858",
+        "capture": "01-132229",
+        "pos": "v24",
+        "a": "red-settlement",
+        "b": "red-settlement",
+        "score": 3.5,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256476858__01-132229__v24__A-red-settlement__B-red-settlement.png"
+      },
+      {
+        "game": "20260912-256479510",
+        "capture": "01-131538",
+        "pos": "v9",
+        "a": "blue-settlement",
+        "b": "blue-settlement",
+        "score": 4.1,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256479510__01-131538__v9__A-blue-settlement__B-blue-settlement.png"
+      },
+      {
+        "game": "20260912-256487432",
+        "capture": "01-141641",
+        "pos": "v17",
+        "a": "black-city",
+        "b": "black-city",
+        "score": 9,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256487432__01-141641__v17__A-black-city__B-black-city.png"
+      },
+      {
+        "game": "20260912-256489236",
+        "capture": "01-143518",
+        "pos": "v8",
+        "a": "black-city",
+        "b": "black-city",
+        "score": 8.3,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256489236__01-143518__v8__A-black-city__B-black-city.png"
+      },
+      {
+        "game": "20260912-256537837",
+        "capture": "01-193642",
+        "pos": "v7",
+        "a": "orange-knight-level-1-inactive",
+        "b": "orange-knight-level-1-inactive",
+        "score": 6.4,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256537837__01-193642__v7__A-orange-knight-level-1-inactive__B-orange-knight-level-1-inactive.png"
+      },
+      {
+        "game": "20260912-256540820",
+        "capture": "01-203248",
+        "pos": "v5",
+        "a": "black-city",
+        "b": "black-city",
+        "score": 3.7,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256540820__01-203248__v5__A-black-city__B-black-city.png"
+      },
+      {
+        "game": "20260912-256546411",
+        "capture": "01-200706",
+        "pos": "v7",
+        "a": "black-settlement",
+        "b": "black-settlement",
+        "score": 6.6,
+        "flags": [],
+        "crop": "examples/classification-v2/crops/agreement-sample__20260912-256546411__01-200706__v7__A-black-settlement__B-black-settlement.png"
+      }
+    ]
+  },
+  "validations": [
+    {
+      "name": "white3776 frame 02 vertex 25",
+      "expected": "mysticblue metropolis trade",
+      "got": "mysticblue metropolis trade (score 16.2, A said white metropolis)",
+      "pass": true
+    },
+    {
+      "name": "white3776 frame 03 vertex 25",
+      "expected": "mysticblue metropolis trade",
+      "got": "mysticblue metropolis trade (score 16.3, A said white metropolis)",
+      "pass": true
+    },
+    {
+      "name": "white3776 frame 04 vertex 25",
+      "expected": "mysticblue metropolis trade",
+      "got": "mysticblue metropolis trade (score 16.3, A said white metropolis)",
+      "pass": true
+    },
+    {
+      "name": "map7182 frame 03 gold/silver/white pieces",
+      "expected": "all flagged phantom-colour and under-overlay",
+      "got": "6/6 flagged; capture overlaySuspected=true rules=tokensFound=16<18; ui-panel x2; hidden-token tiles 2,6",
+      "pass": true
+    },
+    {
+      "name": "white3776 robber and merchant tiles per frame",
+      "expected": "robber moves; merchant on the tile below vertex 25 (tile 10) from frame 02",
+      "got": "f01: robber=16 merchant=14(black), f02: robber=16 merchant=10(black), f03: robber=17 merchant=10(black), f04: robber=1 merchant=10(black)",
+      "pass": true
+    }
+  ],
+  "proposedActions": [
+    {
+      "action": "relabel-piece",
+      "count": 15,
+      "detail": "A reads a colour B rejects and B has a strong match (best < 20) for a different colour. Change the piece colour in the reading to B, keeping the original as a backup.",
+      "sample": [
+        "20260912-deck1482/01-185416 vertex 34: silver-knight-level-1-inactive -> black-knight-level-1-inactive (B score 10.5)",
+        "20260912-farm8303/02-215956 vertex 38: gold-knight-level-1-active -> green-knight-level-1-active (B score 6.6)",
+        "20260913-map4938/02-231036 vertex 13: white-knight-level-1-active -> silver-knight-level-1-active (B score 11.1)",
+        "20260913-town5830/05-182532 vertex 35: white-knight-level-2-inactive -> silver-knight-level-2-inactive (B score 11.2)",
+        "20260913-trade5728/06-162324 vertex 24: gold-knight-level-2-active -> green-knight-level-2-active (B score 16.3)",
+        "20260913-turn1449/08-185235 vertex 45: white-knight-level-3-active -> silver-knight-level-3-active (B score 12)",
+        "20260913-white3776/02-035427 vertex 25: white-metropolis-trade -> mysticblue-metropolis-trade (B score 16.2)",
+        "20260913-white3776/03-035950 vertex 25: white-metropolis-trade -> mysticblue-metropolis-trade (B score 16.3)",
+        "20260913-white3776/04-040527 vertex 25: white-metropolis-trade -> mysticblue-metropolis-trade (B score 16.3)",
+        "20260914-card7322/05-065830 vertex 41: white-knight-level-1-active -> silver-knight-level-1-active (B score 8.4)",
+        "20260914-card7322/06-070100 vertex 41: white-knight-level-1-active -> silver-knight-level-1-active (B score 8.4)",
+        "20260914-catan7909/13-043429 vertex 36: white-knight-level-3-active -> mysticblue-knight-level-3-active (B score 14.8)"
+      ]
+    },
+    {
+      "action": "drop-piece",
+      "count": 247,
+      "detail": "A reads a piece whose colour is not seated and no template matches the pixels (best >= 45): almost always UI drawn over the board. Remove the piece from the reading.",
+      "sample": [
+        "20260912-256421756/02-052308 edge 5: bronze-road -> white-road (B score 58.2)",
+        "20260912-256427922/01-061640 edge 5: bronze-road -> pink-road (B score 59.4)",
+        "20260912-256457718/02-104304 edge 52: white-road -> pink-road (B score 58.4)",
+        "20260912-256472762/01-125702 edge 5: bronze-road -> pink-road (B score 59.3)",
+        "20260912-256472762/02-125936 edge 18: white-road -> mysticblue-road (B score 70.8)",
+        "20260912-256479510/01-131538 edge 42: white-road -> orange-road (B score 56)",
+        "20260912-256479510/01-131538 edge 52: white-road -> red-road (B score 71.1)",
+        "20260912-256479510/01-131538 edge 57: white-road -> silver-road (B score 49.6)",
+        "20260912-256479510/01-131538 edge 63: white-road -> silver-road (B score 72)",
+        "20260912-256479510/01-131538 edge 67: green-road -> gold-road (B score 62.5)",
+        "20260912-256479510/01-131538 edge 69: green-road -> gold-road (B score 59.4)",
+        "20260912-256548064/01-205818 edge 35: white-road -> white-road (B score 71.1)"
+      ]
+    },
+    {
+      "action": "fix-kind",
+      "count": 5,
+      "detail": "A and B disagree on the kind and B matches strongly (best < 20) outside any overlay.",
+      "sample": [
+        "20260912-board8606/01-195800 vertex 49: black-settlement -> black-knight-level-1-inactive (B score 4.9)",
+        "20260912-card5569/02-162107 vertex 48: red-settlement -> red-knight-level-1-inactive (B score 6.9)",
+        "20260913-white3776/01-034830 vertex 48: red-settlement -> red-knight-level-1-inactive (B score 6.7)",
+        "20260913-white3776/02-035427 vertex 48: red-settlement -> red-knight-level-1-inactive (B score 6.8)",
+        "20260913-white3776/04-040527 vertex 48: red-settlement -> red-knight-level-1-inactive (B score 6.7)"
+      ]
+    },
+    {
+      "action": "add-piece",
+      "count": 87,
+      "detail": "A reports nothing at a vertex where B matches a piece as well as it matches the pieces both agree on (best < 20, colour margin >= 8). Add the piece to the reading.",
+      "sample": [
+        "20260912-coin9063/02-221228 vertex 21: nothing -> orange-knight-level-1-inactive (B score 9)",
+        "20260912-cost7714/02-215655 vertex 14: nothing -> green-knight-level-1-inactive (B score 5.9)",
+        "20260912-dice9461/01-231050 vertex 25: nothing -> blue-knight-level-1-inactive (B score 12.2)",
+        "20260912-farm4368/01-230123 vertex 35: nothing -> pink-knight-level-2-inactive (B score 11.7)",
+        "20260912-hand4271/01-201010 vertex 36: nothing -> orange-knight-level-2-inactive (B score 12.1)",
+        "20260912-hand4271/02-201244 vertex 36: nothing -> orange-knight-level-2-inactive (B score 12.1)",
+        "20260912-hill6424/01-104936 vertex 45: nothing -> orange-knight-level-2-inactive (B score 11.4)",
+        "20260912-hill9622/02-053538 vertex 14: nothing -> orange-knight-level-2-inactive (B score 10.6)",
+        "20260912-land872/02-153231 vertex 22: nothing -> red-knight-level-1-inactive (B score 11.5)",
+        "20260912-red3090/01-112111 vertex 14: nothing -> orange-knight-level-2-inactive (B score 6.9)",
+        "20260912-red3090/01-112111 vertex 23: nothing -> orange-knight-level-1-inactive (B score 9.8)",
+        "20260912-red3090/02-112345 vertex 14: nothing -> orange-knight-level-2-inactive (B score 6.9)"
+      ]
+    },
+    {
+      "action": "mark-capture-overlay-contaminated",
+      "count": 347,
+      "detail": "Captures where a UI panel covers part of the board (hidden number token, or a large flat light rectangle inside the hex area). Exclude them from training sets, or at least exclude the covered positions.",
+      "sample": [
+        "20260912-256414712/01-051425",
+        "20260912-256421756/02-052308",
+        "20260912-256427922/01-061640",
+        "20260912-256472762/01-125702",
+        "20260912-256479510/01-131538",
+        "20260912-256537837/01-193642",
+        "20260912-256537837/02-193916",
+        "20260912-256546411/01-200706",
+        "20260912-256548064/01-205818",
+        "20260912-256548064/02-210052",
+        "20260912-area5876/01-074550",
+        "20260912-bank1524/02-204735"
+      ]
+    },
+    {
+      "action": "complete-registry-seats",
+      "count": 29,
+      "detail": "Games without registry seats where the inferred seat list is missing a colour that B matches strongly. Fix the seat list rather than the pieces.",
+      "sample": [
+        "20260912-256479510: add red",
+        "20260912-256554405: add blue",
+        "20260912-area3745: add blue, orange",
+        "20260912-card5605: add blue",
+        "20260912-deal6312: add red",
+        "20260912-hill4380: add blue, orange",
+        "20260912-king5845: add blue",
+        "20260912-land3994: add orange",
+        "20260912-pack1321: add blue",
+        "20260912-path1279: add green",
+        "20260912-roll1100: add red, black, blue",
+        "20260912-sheep2141: add black, blue"
+      ]
+    }
+  ]
+}

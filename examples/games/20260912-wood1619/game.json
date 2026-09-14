@@ -1,0 +1,48 @@
+{
+  "roomCode": "wood1619",
+  "url": "https://colonist.io/#wood1619",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T22:54:58.248Z",
+  "finishedAt": "2026-09-12T22:57:52.223Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-225514.png",
+      "takenAt": "2026-09-12T22:55:18.050Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-225748.png",
+      "takenAt": "2026-09-12T22:57:52.223Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

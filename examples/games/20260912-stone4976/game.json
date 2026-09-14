@@ -1,0 +1,42 @@
+{
+  "roomCode": "stone4976",
+  "url": "https://colonist.io/#stone4976",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T09:43:40.452Z",
+  "finishedAt": "2026-09-12T09:46:33.869Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-094356.png",
+      "takenAt": "2026-09-12T09:44:00.057Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 14,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-094630.png",
+      "takenAt": "2026-09-12T09:46:33.869Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 15,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

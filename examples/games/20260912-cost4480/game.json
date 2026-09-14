@@ -1,0 +1,46 @@
+{
+  "roomCode": "cost4480",
+  "url": "https://colonist.io/#cost4480",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:55:05.256Z",
+  "finishedAt": "2026-09-12T06:57:58.610Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-065521.png",
+      "takenAt": "2026-09-12T06:55:24.860Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-065754.png",
+      "takenAt": "2026-09-12T06:57:58.610Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 12,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

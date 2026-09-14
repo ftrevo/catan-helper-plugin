@@ -1,0 +1,44 @@
+{
+  "roomCode": "fort6741",
+  "url": "https://colonist.io/#fort6741",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:04:22.736Z",
+  "finishedAt": "2026-09-12T07:07:16.097Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-070438.png",
+      "takenAt": "2026-09-12T07:04:42.325Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-070712.png",
+      "takenAt": "2026-09-12T07:07:16.097Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "black",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

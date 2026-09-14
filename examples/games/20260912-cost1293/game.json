@@ -1,0 +1,47 @@
+{
+  "roomCode": "cost1293",
+  "url": "https://colonist.io/#cost1293",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:54:25.503Z",
+  "finishedAt": "2026-09-12T14:57:19.127Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-145441.png",
+      "takenAt": "2026-09-12T14:54:45.133Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-145715.png",
+      "takenAt": "2026-09-12T14:57:19.126Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 9,
+      "roads": 16,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "bronze",
+        "white",
+        "pink"
+      ]
+    }
+  ],
+  "notes": []
+}

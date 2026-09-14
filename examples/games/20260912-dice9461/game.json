@@ -1,0 +1,33 @@
+{
+  "roomCode": "dice9461",
+  "url": "https://colonist.io/#dice9461",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:09:46.849Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-231050.png",
+      "takenAt": "2026-09-12T23:10:54.406Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 18,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}

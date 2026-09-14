@@ -1,0 +1,47 @@
+{
+  "roomCode": "deck9983",
+  "url": "https://colonist.io/#deck9983",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:19:30.195Z",
+  "finishedAt": "2026-09-12T14:22:23.636Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-141946.png",
+      "takenAt": "2026-09-12T14:19:49.763Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-142219.png",
+      "takenAt": "2026-09-12T14:22:23.635Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 10,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

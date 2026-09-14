@@ -1,0 +1,44 @@
+{
+  "roomCode": "fort4077",
+  "url": "https://colonist.io/#fort4077",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:07:09.185Z",
+  "finishedAt": "2026-09-13T02:10:02.968Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-020725.png",
+      "takenAt": "2026-09-13T02:07:29.168Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "black"
+      ]
+    },
+    {
+      "file": "02-020959.png",
+      "takenAt": "2026-09-13T02:10:02.968Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 6,
+      "roads": 7,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "purple",
+        "white"
+      ]
+    }
+  ],
+  "notes": []
+}

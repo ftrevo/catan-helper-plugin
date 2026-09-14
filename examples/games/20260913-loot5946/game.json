@@ -1,0 +1,85 @@
+{
+  "roomCode": "loot5946",
+  "url": "https://colonist.io/#loot5946",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T03:46:53.211Z",
+  "seats": [
+    "white",
+    "green",
+    "black",
+    "blue"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-034710.png",
+      "takenAt": "2026-09-13T03:47:15.727Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 5,
+      "roads": 5,
+      "colours": [
+        "black",
+        "green",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-035243.png",
+      "takenAt": "2026-09-13T03:52:48.410Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 10,
+      "colours": [
+        "black",
+        "green",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-035821.png",
+      "takenAt": "2026-09-13T03:58:26.342Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 15,
+      "colours": [
+        "black",
+        "green",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-040357.png",
+      "takenAt": "2026-09-13T04:04:03.058Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "black",
+        "green",
+        "white",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "revisits stopped: game unreachable after 4 visits"
+  ],
+  "finishedAt": "2026-09-13T04:20:08.534Z"
+}

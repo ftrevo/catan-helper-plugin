@@ -1,0 +1,42 @@
+[
+  {
+    "roomCode": "steal2639",
+    "url": "https://colonist.io/#steal2639",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260914-steal2639",
+    "seats": [
+      "orange",
+      "gold",
+      "white",
+      "black"
+    ],
+    "wanted": [
+      "gold"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-14T03:46:34.296Z",
+    "nextVisitAt": "2026-09-14T04:12:41.832Z",
+    "visits": 9,
+    "maxVisits": 20,
+    "failures": 0
+  },
+  {
+    "roomCode": "catan7909",
+    "url": "https://colonist.io/#catan7909",
+    "dir": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260914-catan7909",
+    "seats": [
+      "mysticblue",
+      "black",
+      "blue",
+      "red"
+    ],
+    "wanted": [
+      "mysticblue"
+    ],
+    "agent": "f1",
+    "addedAt": "2026-09-14T04:03:04.921Z",
+    "nextVisitAt": "2026-09-14T04:11:31.521Z",
+    "visits": 3,
+    "maxVisits": 20,
+    "failures": 0
+  }
+]

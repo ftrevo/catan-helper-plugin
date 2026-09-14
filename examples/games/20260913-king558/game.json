@@ -1,0 +1,41 @@
+{
+  "roomCode": "king558",
+  "url": "https://colonist.io/#king558",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:42:07.455Z",
+  "finishedAt": "2026-09-13T01:45:00.706Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-014223.png",
+      "takenAt": "2026-09-13T01:42:26.990Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "black"
+      ]
+    },
+    {
+      "file": "02-014456.png",
+      "takenAt": "2026-09-13T01:45:00.706Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 4,
+      "colours": [
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

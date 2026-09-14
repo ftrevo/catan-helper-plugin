@@ -1,0 +1,46 @@
+{
+  "roomCode": "steal756",
+  "url": "https://colonist.io/#steal756",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:14:15.507Z",
+  "finishedAt": "2026-09-12T15:17:09.182Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-151431.png",
+      "takenAt": "2026-09-12T15:14:35.221Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 18,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-151705.png",
+      "takenAt": "2026-09-12T15:17:09.182Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 19,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

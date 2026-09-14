@@ -1,0 +1,46 @@
+{
+  "roomCode": "coin1609",
+  "url": "https://colonist.io/#coin1609",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:48:58.047Z",
+  "finishedAt": "2026-09-12T20:51:51.589Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-204913.png",
+      "takenAt": "2026-09-12T20:49:17.722Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-205147.png",
+      "takenAt": "2026-09-12T20:51:51.588Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

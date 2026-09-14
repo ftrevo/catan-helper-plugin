@@ -1,0 +1,44 @@
+{
+  "roomCode": "red1107",
+  "url": "https://colonist.io/#red1107",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:13:47.731Z",
+  "finishedAt": "2026-09-12T13:15:14.165Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-131403.png",
+      "takenAt": "2026-09-12T13:14:07.410Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "black",
+        "green"
+      ]
+    },
+    {
+      "file": "02-131510.png",
+      "takenAt": "2026-09-12T13:15:14.165Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "black",
+        "green"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

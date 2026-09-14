@@ -1,0 +1,46 @@
+{
+  "roomCode": "catan3383",
+  "url": "https://colonist.io/#catan3383",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "200m",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:20:19.743Z",
+  "finishedAt": "2026-09-12T12:23:14.139Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-122035.png",
+      "takenAt": "2026-09-12T12:20:39.383Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 14,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-122309.png",
+      "takenAt": "2026-09-12T12:23:14.139Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 16,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

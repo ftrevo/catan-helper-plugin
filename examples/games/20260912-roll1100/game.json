@@ -1,0 +1,43 @@
+{
+  "roomCode": "roll1100",
+  "url": "https://colonist.io/#roll1100",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:34:50.160Z",
+  "finishedAt": "2026-09-12T06:37:43.445Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-063505.png",
+      "takenAt": "2026-09-12T06:35:09.699Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "orange"
+      ]
+    },
+    {
+      "file": "02-063739.png",
+      "takenAt": "2026-09-12T06:37:43.445Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "red",
+        "black",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

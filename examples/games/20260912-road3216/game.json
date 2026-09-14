@@ -1,0 +1,46 @@
+{
+  "roomCode": "road3216",
+  "url": "https://colonist.io/#road3216",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T22:06:13.401Z",
+  "finishedAt": "2026-09-12T22:09:06.848Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-220629.png",
+      "takenAt": "2026-09-12T22:06:32.997Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 14,
+      "colours": [
+        "black",
+        "blue",
+        "green",
+        "red"
+      ]
+    },
+    {
+      "file": "02-220903.png",
+      "takenAt": "2026-09-12T22:09:06.847Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 14,
+      "colours": [
+        "black",
+        "blue",
+        "green",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "tile1490",
+  "url": "https://colonist.io/#tile1490",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:37:51.542Z",
+  "finishedAt": "2026-09-12T06:40:44.956Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-063807.png",
+      "takenAt": "2026-09-12T06:38:11.148Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 22,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-064041.png",
+      "takenAt": "2026-09-12T06:40:44.956Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 24,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

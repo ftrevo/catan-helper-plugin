@@ -1,0 +1,45 @@
+{
+  "roomCode": "card5605",
+  "url": "https://colonist.io/#card5605",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:35:34.953Z",
+  "finishedAt": "2026-09-12T10:38:28.336Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-103550.png",
+      "takenAt": "2026-09-12T10:35:54.538Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "red",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-103824.png",
+      "takenAt": "2026-09-12T10:38:28.336Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 8,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

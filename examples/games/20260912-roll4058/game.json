@@ -1,0 +1,44 @@
+{
+  "roomCode": "roll4058",
+  "url": "https://colonist.io/#roll4058",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:01:14.761Z",
+  "finishedAt": "2026-09-12T07:04:07.990Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-070130.png",
+      "takenAt": "2026-09-12T07:01:34.336Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-070404.png",
+      "takenAt": "2026-09-12T07:04:07.989Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 8,
+      "colours": [
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

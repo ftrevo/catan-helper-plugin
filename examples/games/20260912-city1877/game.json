@@ -1,0 +1,46 @@
+{
+  "roomCode": "city1877",
+  "url": "https://colonist.io/#city1877",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:48:38.144Z",
+  "finishedAt": "2026-09-12T05:51:31.531Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-054853.png",
+      "takenAt": "2026-09-12T05:48:57.714Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 19,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-055127.png",
+      "takenAt": "2026-09-12T05:51:31.531Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 20,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

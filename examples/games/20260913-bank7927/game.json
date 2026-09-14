@@ -1,0 +1,42 @@
+{
+  "roomCode": "bank7927",
+  "url": "https://colonist.io/#bank7927",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:48:44.802Z",
+  "finishedAt": "2026-09-13T00:51:38.124Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-004900.png",
+      "takenAt": "2026-09-13T00:49:04.338Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "orange"
+      ]
+    },
+    {
+      "file": "02-005134.png",
+      "takenAt": "2026-09-13T00:51:38.124Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 7,
+      "colours": [
+        "red",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

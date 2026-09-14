@@ -1,0 +1,46 @@
+{
+  "roomCode": "land853",
+  "url": "https://colonist.io/#land853",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:36:07.168Z",
+  "finishedAt": "2026-09-13T00:39:00.579Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-003622.png",
+      "takenAt": "2026-09-13T00:36:26.748Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-003856.png",
+      "takenAt": "2026-09-13T00:39:00.579Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

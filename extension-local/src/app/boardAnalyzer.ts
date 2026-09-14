@@ -30,7 +30,11 @@ export const createBoardAnalyzer = ({ captureScreenshot, resolveModelUrl }: Depe
       reader = createBoardReader({
         resources: resolveModelUrl(paths.resources),
         numbers: resolveModelUrl(paths.numbers),
-        pieces: { buildings: resolveModelUrl(pieces.buildings), roads: resolveModelUrl(pieces.roads) },
+        pieces: {
+          buildings: resolveModelUrl(pieces.buildings),
+          colours: resolveModelUrl(pieces.colours),
+          roads: resolveModelUrl(pieces.roads),
+        },
       }).catch((error: unknown) => {
         readers.delete(modelSet)
         throw error

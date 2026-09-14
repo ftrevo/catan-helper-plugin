@@ -1,0 +1,46 @@
+{
+  "roomCode": "steal5122",
+  "url": "https://colonist.io/#steal5122",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:57:44.034Z",
+  "finishedAt": "2026-09-12T06:00:37.479Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-055759.png",
+      "takenAt": "2026-09-12T05:58:03.641Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 24,
+      "colours": [
+        "green",
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-060033.png",
+      "takenAt": "2026-09-12T06:00:37.479Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 25,
+      "colours": [
+        "green",
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

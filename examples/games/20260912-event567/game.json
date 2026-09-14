@@ -1,0 +1,46 @@
+{
+  "roomCode": "event567",
+  "url": "https://colonist.io/#event567",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:23:28.175Z",
+  "finishedAt": "2026-09-12T21:26:21.567Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-212343.png",
+      "takenAt": "2026-09-12T21:23:47.797Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 6,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "gold"
+      ]
+    },
+    {
+      "file": "02-212617.png",
+      "takenAt": "2026-09-12T21:26:21.567Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "gold"
+      ]
+    }
+  ],
+  "notes": []
+}

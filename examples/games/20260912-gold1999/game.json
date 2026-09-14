@@ -1,0 +1,44 @@
+{
+  "roomCode": "gold1999",
+  "url": "https://colonist.io/#gold1999",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:13:14.497Z",
+  "finishedAt": "2026-09-12T10:16:08.051Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-101330.png",
+      "takenAt": "2026-09-12T10:13:34.183Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 22,
+      "colours": [
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-101604.png",
+      "takenAt": "2026-09-12T10:16:08.050Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 29,
+      "colours": [
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

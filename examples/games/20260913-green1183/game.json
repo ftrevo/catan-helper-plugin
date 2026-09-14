@@ -1,0 +1,113 @@
+{
+  "roomCode": "green1183",
+  "url": "https://colonist.io/#green1183",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T18:24:02.644Z",
+  "seats": [
+    "red",
+    "black",
+    "mysticblue",
+    "blue"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-182419.png",
+      "takenAt": "2026-09-13T18:24:24.882Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-182647.png",
+      "takenAt": "2026-09-13T18:26:53.096Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "03-183004.png",
+      "takenAt": "2026-09-13T18:30:09.774Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "blue",
+        "red",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "04-183344.png",
+      "takenAt": "2026-09-13T18:33:49.807Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "red",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "05-183715.png",
+      "takenAt": "2026-09-13T18:37:20.469Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "red",
+        "mysticblue",
+        "black"
+      ]
+    },
+    {
+      "file": "06-184030.png",
+      "takenAt": "2026-09-13T18:40:36.091Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "red",
+        "mysticblue",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 6 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T18:43:46.506Z"
+}

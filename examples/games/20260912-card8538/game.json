@@ -1,0 +1,42 @@
+{
+  "roomCode": "card8538",
+  "url": "https://colonist.io/#card8538",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:35:03.076Z",
+  "finishedAt": "2026-09-12T07:37:56.360Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-073518.png",
+      "takenAt": "2026-09-12T07:35:22.606Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-073752.png",
+      "takenAt": "2026-09-12T07:37:56.360Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 12,
+      "colours": [
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

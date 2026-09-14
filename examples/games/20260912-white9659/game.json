@@ -1,0 +1,46 @@
+{
+  "roomCode": "white9659",
+  "url": "https://colonist.io/#white9659",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:59:48.774Z",
+  "finishedAt": "2026-09-12T13:02:42.600Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-130004.png",
+      "takenAt": "2026-09-12T13:00:08.680Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 20,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-130238.png",
+      "takenAt": "2026-09-12T13:02:42.600Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 25,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

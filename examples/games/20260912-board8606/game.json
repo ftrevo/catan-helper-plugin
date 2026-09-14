@@ -1,0 +1,46 @@
+{
+  "roomCode": "board8606",
+  "url": "https://colonist.io/#board8606",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T19:57:44.406Z",
+  "finishedAt": "2026-09-12T20:00:37.952Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-195800.png",
+      "takenAt": "2026-09-12T19:58:04.067Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 15,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-200034.png",
+      "takenAt": "2026-09-12T20:00:37.952Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 16,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

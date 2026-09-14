@@ -38,8 +38,20 @@ export const Players = ({ board, pieces }: PlayersProps) => {
                 <span className="player-swatch" style={{ background: palette.fill }} />
                 <span className="player-name">{colourName(player.colour)}</span>
                 <span className="player-pieces">
-                  {player.settlements} <small>settl.</small> · {player.cities} <small>cities</small> · {player.roads}{' '}
-                  <small>roads</small>
+                  {player.settlements} <small>settl.</small> · {player.cities} <small>cities</small>
+                  {player.metropolises > 0 && (
+                    <>
+                      {' '}
+                      ({player.metropolises} <small>metro.</small>)
+                    </>
+                  )}{' '}
+                  · {player.roads} <small>roads</small>
+                  {player.knights > 0 && (
+                    <>
+                      {' '}
+                      · {player.knights} <small>knights</small>
+                    </>
+                  )}
                 </span>
                 <span className="player-points" title="Visible victory points">
                   {player.visiblePoints} <small>VP</small>

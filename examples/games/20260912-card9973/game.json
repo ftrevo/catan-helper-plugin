@@ -1,0 +1,42 @@
+{
+  "roomCode": "card9973",
+  "url": "https://colonist.io/#card9973",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T10:59:04.350Z",
+  "finishedAt": "2026-09-12T11:01:57.733Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-105920.png",
+      "takenAt": "2026-09-12T10:59:23.914Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 5,
+      "colours": [
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-110153.png",
+      "takenAt": "2026-09-12T11:01:57.733Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 6,
+      "colours": [
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

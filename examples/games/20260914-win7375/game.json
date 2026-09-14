@@ -1,0 +1,202 @@
+{
+  "roomCode": "win7375",
+  "url": "https://colonist.io/#win7375",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T05:50:55.761Z",
+  "seats": [
+    "mysticblue",
+    "orange",
+    "red",
+    "blue"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-055112.png",
+      "takenAt": "2026-09-14T05:51:17.966Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-055342.png",
+      "takenAt": "2026-09-14T05:53:47.816Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 8,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-055605.png",
+      "takenAt": "2026-09-14T05:56:11.100Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-055830.png",
+      "takenAt": "2026-09-14T05:58:35.677Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 8,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-060053.png",
+      "takenAt": "2026-09-14T06:00:58.760Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-060318.png",
+      "takenAt": "2026-09-14T06:03:23.304Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "07-060542.png",
+      "takenAt": "2026-09-14T06:05:47.820Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 15,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "08-060805.png",
+      "takenAt": "2026-09-14T06:08:10.310Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 16,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "09-061030.png",
+      "takenAt": "2026-09-14T06:10:36.183Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 17,
+      "colours": [
+        "red",
+        "mysticblue",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "10-061255.png",
+      "takenAt": "2026-09-14T06:13:01.230Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 20,
+      "roads": 18,
+      "colours": [
+        "mysticblue",
+        "red",
+        "orange",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "11-061518.png",
+      "takenAt": "2026-09-14T06:15:24.169Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 20,
+      "colours": [
+        "mysticblue",
+        "red",
+        "orange",
+        "blue"
+      ]
+    },
+    {
+      "file": "12-061741.png",
+      "takenAt": "2026-09-14T06:17:47.143Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 22,
+      "roads": 25,
+      "colours": [
+        "mysticblue",
+        "red",
+        "orange",
+        "blue",
+        "white",
+        "green"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 12 visits"
+  ],
+  "finishedAt": "2026-09-14T06:20:12.338Z"
+}

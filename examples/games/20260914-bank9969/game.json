@@ -1,0 +1,129 @@
+{
+  "roomCode": "bank9969",
+  "url": "https://colonist.io/#bank9969",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T02:34:53.788Z",
+  "seats": [
+    "black",
+    "gold",
+    "purple",
+    "red"
+  ],
+  "wanted": [
+    "gold",
+    "purple"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-023510.png",
+      "takenAt": "2026-09-14T02:35:16.046Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 14,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ]
+    },
+    {
+      "file": "02-023737.png",
+      "takenAt": "2026-09-14T02:37:42.499Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 18,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ]
+    },
+    {
+      "file": "03-023959.png",
+      "takenAt": "2026-09-14T02:40:04.886Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 19,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ]
+    },
+    {
+      "file": "04-024222.png",
+      "takenAt": "2026-09-14T02:42:27.657Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 22,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ]
+    },
+    {
+      "file": "05-024445.png",
+      "takenAt": "2026-09-14T02:44:50.967Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 22,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ]
+    },
+    {
+      "file": "06-024708.png",
+      "takenAt": "2026-09-14T02:47:14.748Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 22,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ]
+    },
+    {
+      "file": "07-024931.png",
+      "takenAt": "2026-09-14T02:49:37.065Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 27,
+      "colours": [
+        "red",
+        "purple",
+        "black",
+        "gold"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 7 visits"
+  ],
+  "finishedAt": "2026-09-14T02:52:00.085Z"
+}

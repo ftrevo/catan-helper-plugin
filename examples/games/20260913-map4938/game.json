@@ -1,0 +1,76 @@
+{
+  "roomCode": "map4938",
+  "url": "https://colonist.io/#map4938",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T23:07:54.316Z",
+  "seats": [
+    "silver",
+    "orange"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-230811.png",
+      "takenAt": "2026-09-13T23:08:16.428Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 5,
+      "roads": 4,
+      "colours": [
+        "silver",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-231036.png",
+      "takenAt": "2026-09-13T23:10:41.400Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 5,
+      "colours": [
+        "silver",
+        "white",
+        "orange"
+      ]
+    },
+    {
+      "file": "03-231258.png",
+      "takenAt": "2026-09-13T23:13:03.694Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 7,
+      "colours": [
+        "silver",
+        "orange"
+      ]
+    },
+    {
+      "file": "04-231523.png",
+      "takenAt": "2026-09-13T23:15:29.294Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "silver",
+        "orange"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 4 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T23:18:00.817Z"
+}

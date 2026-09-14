@@ -1,0 +1,64 @@
+{
+  "roomCode": "land5958",
+  "url": "https://colonist.io/#land5958",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T16:07:10.728Z",
+  "seats": [
+    "silver",
+    "black"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-160727.png",
+      "takenAt": "2026-09-13T16:07:32.955Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "silver",
+        "black"
+      ]
+    },
+    {
+      "file": "02-160952.png",
+      "takenAt": "2026-09-13T16:09:57.328Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "silver",
+        "black"
+      ]
+    },
+    {
+      "file": "03-161215.png",
+      "takenAt": "2026-09-13T16:12:21.039Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "silver",
+        "black",
+        "mysticblue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 3 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T16:14:45.310Z"
+}

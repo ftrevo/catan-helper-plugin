@@ -1,0 +1,42 @@
+{
+  "roomCode": "task3696",
+  "url": "https://colonist.io/#task3696",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:01:05.141Z",
+  "finishedAt": "2026-09-13T02:03:58.645Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-020120.png",
+      "takenAt": "2026-09-13T02:01:24.775Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 10,
+      "roads": 8,
+      "colours": [
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-020354.png",
+      "takenAt": "2026-09-13T02:03:58.645Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

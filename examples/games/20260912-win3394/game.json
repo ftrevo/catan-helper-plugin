@@ -1,0 +1,45 @@
+{
+  "roomCode": "win3394",
+  "url": "https://colonist.io/#win3394",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:59:11.744Z",
+  "finishedAt": "2026-09-12T12:02:05.080Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-115927.png",
+      "takenAt": "2026-09-12T11:59:31.331Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-120201.png",
+      "takenAt": "2026-09-12T12:02:05.079Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "black",
+        "red",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

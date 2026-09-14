@@ -1,0 +1,124 @@
+{
+  "roomCode": "spot2148",
+  "url": "https://colonist.io/#spot2148",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T09:51:49.897Z",
+  "seats": [
+    "green",
+    "pink"
+  ],
+  "wanted": [
+    "pink"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-095206.png",
+      "takenAt": "2026-09-13T09:52:12.043Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 4,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "02-095437.png",
+      "takenAt": "2026-09-13T09:54:42.989Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 5,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "03-095700.png",
+      "takenAt": "2026-09-13T09:57:05.580Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 6,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "04-095922.png",
+      "takenAt": "2026-09-13T09:59:27.782Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 7,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "05-100144.png",
+      "takenAt": "2026-09-13T10:01:50.057Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "06-100407.png",
+      "takenAt": "2026-09-13T10:04:12.268Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "07-100629.png",
+      "takenAt": "2026-09-13T10:06:34.558Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    },
+    {
+      "file": "08-100851.png",
+      "takenAt": "2026-09-13T10:08:56.772Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 12,
+      "colours": [
+        "green",
+        "pink"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 8 visits"
+  ],
+  "finishedAt": "2026-09-13T10:11:19.198Z"
+}

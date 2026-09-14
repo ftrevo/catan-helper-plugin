@@ -1,0 +1,44 @@
+{
+  "roomCode": "path6296",
+  "url": "https://colonist.io/#path6296",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:22:32.307Z",
+  "finishedAt": "2026-09-12T07:25:25.636Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-072248.png",
+      "takenAt": "2026-09-12T07:22:51.885Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 8,
+      "colours": [
+        "green",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-072521.png",
+      "takenAt": "2026-09-12T07:25:25.635Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "green",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,45 @@
+{
+  "roomCode": "green918",
+  "url": "https://colonist.io/#green918",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:40:00.887Z",
+  "finishedAt": "2026-09-12T12:42:54.740Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-124016.png",
+      "takenAt": "2026-09-12T12:40:20.689Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 6,
+      "roads": 7,
+      "colours": [
+        "black",
+        "orange",
+        "red",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-124250.png",
+      "takenAt": "2026-09-12T12:42:54.740Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 6,
+      "roads": 10,
+      "colours": [
+        "black",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

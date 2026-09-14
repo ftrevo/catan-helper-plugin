@@ -1,0 +1,114 @@
+{
+  "roomCode": "tile5627",
+  "url": "https://colonist.io/#tile5627",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T14:10:25.265Z",
+  "seats": [
+    "black",
+    "blue",
+    "red",
+    "white"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-141042.png",
+      "takenAt": "2026-09-13T14:10:47.456Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "white"
+      ]
+    },
+    {
+      "file": "02-141312.png",
+      "takenAt": "2026-09-13T14:13:17.684Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 12,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "white"
+      ]
+    },
+    {
+      "file": "03-141535.png",
+      "takenAt": "2026-09-13T14:15:40.887Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 17,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "white"
+      ]
+    },
+    {
+      "file": "04-141757.png",
+      "takenAt": "2026-09-13T14:18:03.533Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 18,
+      "colours": [
+        "black",
+        "blue",
+        "red",
+        "white"
+      ]
+    },
+    {
+      "file": "05-142020.png",
+      "takenAt": "2026-09-13T14:20:26.033Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 22,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "06-142243.png",
+      "takenAt": "2026-09-13T14:22:48.735Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 22,
+      "colours": [
+        "black",
+        "red",
+        "blue",
+        "white"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: the Map button left the room",
+    "game over after 6 visits"
+  ],
+  "finishedAt": "2026-09-13T14:25:11.296Z"
+}

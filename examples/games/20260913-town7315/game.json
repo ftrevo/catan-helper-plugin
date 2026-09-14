@@ -1,0 +1,43 @@
+{
+  "roomCode": "town7315",
+  "url": "https://colonist.io/#town7315",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T01:48:16.885Z",
+  "finishedAt": "2026-09-13T01:51:10.260Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-014832.png",
+      "takenAt": "2026-09-13T01:48:36.481Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 1,
+      "roads": 1,
+      "colours": [
+        "black"
+      ]
+    },
+    {
+      "file": "02-015106.png",
+      "takenAt": "2026-09-13T01:51:10.260Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

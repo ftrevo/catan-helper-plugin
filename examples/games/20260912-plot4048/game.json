@@ -1,0 +1,46 @@
+{
+  "roomCode": "plot4048",
+  "url": "https://colonist.io/#plot4048",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T18:33:11.970Z",
+  "finishedAt": "2026-09-12T18:36:05.522Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-183327.png",
+      "takenAt": "2026-09-12T18:33:31.660Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 22,
+      "colours": [
+        "blue",
+        "orange",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-183601.png",
+      "takenAt": "2026-09-12T18:36:05.522Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 23,
+      "colours": [
+        "blue",
+        "orange",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

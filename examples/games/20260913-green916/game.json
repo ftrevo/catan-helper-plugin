@@ -1,0 +1,100 @@
+{
+  "roomCode": "green916",
+  "url": "https://colonist.io/#green916",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T05:17:10.755Z",
+  "seats": [
+    "green",
+    "blue"
+  ],
+  "wanted": [
+    "green"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-051727.png",
+      "takenAt": "2026-09-13T05:17:32.894Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-052004.png",
+      "takenAt": "2026-09-13T05:20:10.046Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 16,
+      "colours": [
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-052241.png",
+      "takenAt": "2026-09-13T05:22:46.928Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 15,
+      "roads": 17,
+      "colours": [
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-052513.png",
+      "takenAt": "2026-09-13T05:25:18.523Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 21,
+      "colours": [
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-052744.png",
+      "takenAt": "2026-09-13T05:27:50.515Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 22,
+      "colours": [
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-053016.png",
+      "takenAt": "2026-09-13T05:30:21.996Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 24,
+      "colours": [
+        "green",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button",
+    "final board captured on visit 7"
+  ],
+  "finishedAt": "2026-09-13T05:32:57.141Z"
+}

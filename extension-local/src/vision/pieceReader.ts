@@ -1,11 +1,15 @@
 import { type Building, type Pieces, type PlayerColour, type Road, isPlayerColour } from '../domain/pieces'
 import { type ModelSource, TileClassifier } from './classifier'
-import { BUILDING_LABELS, type BuildingLabel, ROAD_LABELS, type RoadLabel } from './labels'
+import { BUILDING_KIND_LABELS, COLOUR_LABELS, ROAD_LABELS, type RoadLabel } from './labels'
 import { BUILDING_PATCH, type BoardGeometry, ROAD_PATCH, edgeCenters, patchRect, vertexCenters } from './layout'
 import { type RgbaImage, cropAndResize, rectFitsIn } from './pixels'
 
 export type PieceModelSources = {
+  /** Vertex patch → kind (none, settlement, city, metropolis, knight). */
   readonly buildings: ModelSource
+  /** Vertex patch holding a piece → player colour. */
+  readonly colours: ModelSource
+  /** Edge patch → none or road colour. */
   readonly roads: ModelSource
 }
 
@@ -23,12 +27,6 @@ export type PieceReader = {
 /** Below this the classifier's guess is treated as an empty spot rather than a piece. */
 const MIN_CONFIDENCE = 0.6
 
-const parseBuilding = (label: BuildingLabel): Omit<Building, 'vertex'> | undefined => {
-  const [kind, colour] = label.split('_') as [string, string]
-  if ((kind !== 'settlement' && kind !== 'city') || !isPlayerColour(colour)) return undefined
-  return { kind, colour: colour as PlayerColour }
-}
-
 const parseRoad = (label: RoadLabel): Omit<Road, 'edge'> | undefined => {
   const [kind, colour] = label.split('_') as [string, string]
   if (kind !== 'road' || !isPlayerColour(colour)) return undefined
@@ -40,8 +38,9 @@ const parseRoad = (label: RoadLabel): Omit<Road, 'edge'> | undefined => {
  * classified in two batched inferences. Patches that leave the screenshot are treated as empty.
  */
 export const createPieceReader = async (sources: PieceModelSources): Promise<PieceReader> => {
-  const [buildings, roads] = await Promise.all([
-    TileClassifier.load('building', sources.buildings, BUILDING_LABELS),
+  const [kinds, colours, roads] = await Promise.all([
+    TileClassifier.load('building kind', sources.buildings, BUILDING_KIND_LABELS),
+    TileClassifier.load('piece colour', sources.colours, COLOUR_LABELS),
     TileClassifier.load('road', sources.roads, ROAD_LABELS),
   ])
 
@@ -60,8 +59,9 @@ export const createPieceReader = async (sources: PieceModelSources): Promise<Pie
             : blank(spec)
         })
 
-      const [buildingPredictions, roadPredictions] = await Promise.all([
-        buildings.predict(crop(vertexCenters(geometry), BUILDING_PATCH)),
+      const vertexPatches = crop(vertexCenters(geometry), BUILDING_PATCH)
+      const [kindPredictions, roadPredictions] = await Promise.all([
+        kinds.predict(vertexPatches),
         roads.predict(crop(edgeCenters(geometry), ROAD_PATCH)),
       ])
 
@@ -69,12 +69,16 @@ export const createPieceReader = async (sources: PieceModelSources): Promise<Pie
       const foundRoads: Road[] = []
       let minConfidence = 1
 
-      buildingPredictions.forEach((p, vertex) => {
-        if (p.label === 'none' || p.confidence < MIN_CONFIDENCE) return
-        const parsed = parseBuilding(p.label)
-        if (!parsed) return
-        found.push({ vertex, ...parsed })
-        minConfidence = Math.min(minConfidence, p.confidence)
+      // Only patches that hold a piece go to the colour model.
+      const occupied = kindPredictions
+        .map((p, vertex) => ({ p, vertex }))
+        .filter(({ p }) => p.label !== 'none' && p.confidence >= MIN_CONFIDENCE)
+      const colourPredictions = await colours.predict(occupied.map(({ vertex }) => vertexPatches[vertex] as RgbaImage))
+      occupied.forEach(({ p, vertex }, i) => {
+        const colour = colourPredictions[i]
+        if (!colour || p.label === 'none' || !isPlayerColour(colour.label)) return
+        found.push({ vertex, kind: p.label, colour: colour.label as PlayerColour })
+        minConfidence = Math.min(minConfidence, p.confidence, colour.confidence)
       })
       roadPredictions.forEach((p, edge) => {
         if (p.label === 'none' || p.confidence < MIN_CONFIDENCE) return
@@ -87,7 +91,8 @@ export const createPieceReader = async (sources: PieceModelSources): Promise<Pie
       return { pieces: { buildings: found, roads: foundRoads }, minConfidence }
     },
     dispose() {
-      buildings.dispose()
+      kinds.dispose()
+      colours.dispose()
       roads.dispose()
     },
   }

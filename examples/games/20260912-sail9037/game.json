@@ -1,0 +1,46 @@
+{
+  "roomCode": "sail9037",
+  "url": "https://colonist.io/#sail9037",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:02:23.834Z",
+  "finishedAt": "2026-09-12T11:05:17.221Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-110239.png",
+      "takenAt": "2026-09-12T11:02:43.455Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 9,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-110513.png",
+      "takenAt": "2026-09-12T11:05:17.221Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 11,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

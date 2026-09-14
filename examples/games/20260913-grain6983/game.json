@@ -1,0 +1,211 @@
+{
+  "roomCode": "grain6983",
+  "url": "https://colonist.io/#grain6983",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T16:37:21.827Z",
+  "seats": [
+    "black",
+    "white",
+    "red",
+    "blue"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-163738.png",
+      "takenAt": "2026-09-13T16:37:43.958Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "02-164011.png",
+      "takenAt": "2026-09-13T16:40:16.587Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "03-164243.png",
+      "takenAt": "2026-09-13T16:42:49.254Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 8,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "04-164514.png",
+      "takenAt": "2026-09-13T16:45:19.448Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 8,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "05-164744.png",
+      "takenAt": "2026-09-13T16:47:50.043Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "06-165010.png",
+      "takenAt": "2026-09-13T16:50:15.429Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "07-165232.png",
+      "takenAt": "2026-09-13T16:52:38.452Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "08-165455.png",
+      "takenAt": "2026-09-13T16:55:00.701Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "09-165717.png",
+      "takenAt": "2026-09-13T16:57:23.011Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "10-165947.png",
+      "takenAt": "2026-09-13T16:59:52.483Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "11-170216.png",
+      "takenAt": "2026-09-13T17:02:22.042Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "12-170446.png",
+      "takenAt": "2026-09-13T17:04:51.917Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "13-170723.png",
+      "takenAt": "2026-09-13T17:07:28.928Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 18,
+      "colours": [
+        "blue",
+        "red",
+        "white",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 13 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T17:10:38.040Z"
+}

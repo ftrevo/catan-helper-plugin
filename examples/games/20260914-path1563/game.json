@@ -1,0 +1,311 @@
+{
+  "roomCode": "path1563",
+  "url": "https://colonist.io/#path1563",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T00:01:37.004Z",
+  "seats": [
+    "green",
+    "blue",
+    "red",
+    "mysticblue"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-000154.png",
+      "takenAt": "2026-09-14T00:01:59.219Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 15,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-000554.png",
+      "takenAt": "2026-09-14T00:05:59.504Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "03-000939.png",
+      "takenAt": "2026-09-14T00:09:44.980Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green",
+        "bronze"
+      ]
+    },
+    {
+      "file": "04-001212.png",
+      "takenAt": "2026-09-14T00:12:17.998Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 17,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "05-001440.png",
+      "takenAt": "2026-09-14T00:14:45.824Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "06-001704.png",
+      "takenAt": "2026-09-14T00:17:09.610Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "07-001927.png",
+      "takenAt": "2026-09-14T00:19:35.198Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "08-002207.png",
+      "takenAt": "2026-09-14T00:22:12.780Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "09-002434.png",
+      "takenAt": "2026-09-14T00:24:40.129Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "10-002707.png",
+      "takenAt": "2026-09-14T00:27:12.746Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "11-002930.png",
+      "takenAt": "2026-09-14T00:29:35.264Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "12-003209.png",
+      "takenAt": "2026-09-14T00:32:14.953Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 16,
+      "roads": 20,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green",
+        "silver"
+      ]
+    },
+    {
+      "file": "13-003442.png",
+      "takenAt": "2026-09-14T00:34:47.682Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 21,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "14-003712.png",
+      "takenAt": "2026-09-14T00:37:17.502Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 23,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "15-003942.png",
+      "takenAt": "2026-09-14T00:39:48.320Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 22,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "16-004207.png",
+      "takenAt": "2026-09-14T00:42:12.733Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 22,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "17-004432.png",
+      "takenAt": "2026-09-14T00:44:38.008Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 24,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "18-004703.png",
+      "takenAt": "2026-09-14T00:47:08.607Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 24,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "19-004933.png",
+      "takenAt": "2026-09-14T00:49:38.541Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 25,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    },
+    {
+      "file": "20-005206.png",
+      "takenAt": "2026-09-14T00:52:11.243Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 25,
+      "colours": [
+        "red",
+        "blue",
+        "mysticblue",
+        "green"
+      ]
+    }
+  ],
+  "notes": [
+    "visit budget of 20 spent"
+  ],
+  "finishedAt": "2026-09-14T00:52:11.245Z"
+}

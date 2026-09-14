@@ -1,0 +1,39 @@
+{
+  "roomCode": "play7049",
+  "url": "https://colonist.io/#play7049",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T05:52:24.358Z",
+  "seats": [
+    "blue",
+    "green",
+    "red",
+    "black"
+  ],
+  "wanted": [
+    "green"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-055241.png",
+      "takenAt": "2026-09-13T05:52:46.527Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "red",
+        "black",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

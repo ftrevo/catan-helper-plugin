@@ -1,0 +1,54 @@
+{
+  "roomCode": "green993",
+  "url": "https://colonist.io/#green993",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T05:48:14.188Z",
+  "seats": [
+    "red",
+    "green",
+    "blue",
+    "black"
+  ],
+  "wanted": [
+    "green"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-054831.png",
+      "takenAt": "2026-09-13T05:48:36.327Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 12,
+      "colours": [
+        "black",
+        "green",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-055303.png",
+      "takenAt": "2026-09-13T05:53:08.760Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "green",
+        "black",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

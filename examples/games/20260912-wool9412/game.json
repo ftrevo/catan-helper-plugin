@@ -1,0 +1,47 @@
+{
+  "roomCode": "wool9412",
+  "url": "https://colonist.io/#wool9412",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:01:04.729Z",
+  "finishedAt": "2026-09-12T21:03:58.420Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-210120.png",
+      "takenAt": "2026-09-12T21:01:24.384Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "green",
+        "black",
+        "red",
+        "white"
+      ]
+    },
+    {
+      "file": "02-210354.png",
+      "takenAt": "2026-09-12T21:03:58.419Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 14,
+      "colours": [
+        "blue",
+        "green",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

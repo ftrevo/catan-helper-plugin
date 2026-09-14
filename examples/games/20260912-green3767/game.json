@@ -1,0 +1,46 @@
+{
+  "roomCode": "green3767",
+  "url": "https://colonist.io/#green3767",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:41:05.170Z",
+  "finishedAt": "2026-09-12T14:43:58.896Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-144120.png",
+      "takenAt": "2026-09-12T14:41:24.971Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "02-144354.png",
+      "takenAt": "2026-09-12T14:43:58.896Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 10,
+      "colours": [
+        "red",
+        "blue",
+        "white",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

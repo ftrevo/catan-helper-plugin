@@ -1,0 +1,48 @@
+{
+  "roomCode": "wheat3936",
+  "url": "https://colonist.io/#wheat3936",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:51:59.775Z",
+  "finishedAt": "2026-09-12T20:54:53.319Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-205215.png",
+      "takenAt": "2026-09-12T20:52:19.433Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "black",
+        "red",
+        "pink",
+        "blue",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-205449.png",
+      "takenAt": "2026-09-12T20:54:53.319Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "black",
+        "red",
+        "pink",
+        "blue",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

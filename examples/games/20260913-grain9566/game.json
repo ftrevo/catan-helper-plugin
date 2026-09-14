@@ -1,0 +1,99 @@
+{
+  "roomCode": "grain9566",
+  "url": "https://colonist.io/#grain9566",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T05:26:04.761Z",
+  "seats": [
+    "red",
+    "blue",
+    "black",
+    "mysticblue"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-052621.png",
+      "takenAt": "2026-09-13T05:26:27.005Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 16,
+      "colours": [
+        "black",
+        "blue",
+        "mysticblue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-053413.png",
+      "takenAt": "2026-09-13T05:34:18.387Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 17,
+      "colours": [
+        "black",
+        "blue",
+        "mysticblue",
+        "red"
+      ]
+    },
+    {
+      "file": "03-053724.png",
+      "takenAt": "2026-09-13T05:37:30.126Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 18,
+      "colours": [
+        "black",
+        "blue",
+        "mysticblue",
+        "red"
+      ]
+    },
+    {
+      "file": "04-054110.png",
+      "takenAt": "2026-09-13T05:41:16.131Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 18,
+      "colours": [
+        "black",
+        "blue",
+        "mysticblue",
+        "red"
+      ]
+    },
+    {
+      "file": "05-054608.png",
+      "takenAt": "2026-09-13T05:46:13.480Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 18,
+      "colours": [
+        "black",
+        "blue",
+        "mysticblue",
+        "red"
+      ]
+    }
+  ],
+  "notes": [
+    "revisits stopped: game unreachable after 5 visits"
+  ],
+  "finishedAt": "2026-09-13T06:00:19.349Z"
+}

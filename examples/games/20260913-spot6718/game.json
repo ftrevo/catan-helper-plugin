@@ -1,0 +1,214 @@
+{
+  "roomCode": "spot6718",
+  "url": "https://colonist.io/#spot6718",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T14:31:01.032Z",
+  "seats": [
+    "red",
+    "blue",
+    "black",
+    "white"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-143118.png",
+      "takenAt": "2026-09-13T14:31:23.244Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 11,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-143346.png",
+      "takenAt": "2026-09-13T14:33:52.398Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 12,
+      "roads": 16,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue",
+        "bronze",
+        "orange"
+      ]
+    },
+    {
+      "file": "03-143647.png",
+      "takenAt": "2026-09-13T14:36:52.785Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-143920.png",
+      "takenAt": "2026-09-13T14:39:25.324Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-144212.png",
+      "takenAt": "2026-09-13T14:42:17.354Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 17,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "06-144526.png",
+      "takenAt": "2026-09-13T14:45:32.388Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 19,
+      "colours": [
+        "white",
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "07-144915.png",
+      "takenAt": "2026-09-13T14:49:20.636Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 22,
+      "colours": [
+        "white",
+        "black",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "08-145302.png",
+      "takenAt": "2026-09-13T14:53:07.794Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 25,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "09-145616.png",
+      "takenAt": "2026-09-13T14:56:22.614Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 27,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "10-145933.png",
+      "takenAt": "2026-09-13T14:59:39.579Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 29,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "11-150248.png",
+      "takenAt": "2026-09-13T15:02:53.973Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 31,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "12-150603.png",
+      "takenAt": "2026-09-13T15:06:08.947Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 28,
+      "roads": 32,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "13-150918.png",
+      "takenAt": "2026-09-13T15:09:23.758Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 29,
+      "roads": 34,
+      "colours": [
+        "black",
+        "white",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 13 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T15:13:16.661Z"
+}

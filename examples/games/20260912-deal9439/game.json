@@ -1,0 +1,33 @@
+{
+  "roomCode": "deal9439",
+  "url": "https://colonist.io/#deal9439",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T09:26:41.622Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-092744.png",
+      "takenAt": "2026-09-12T09:27:48.578Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "red",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}

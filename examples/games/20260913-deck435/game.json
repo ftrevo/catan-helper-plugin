@@ -1,0 +1,57 @@
+{
+  "roomCode": "deck435",
+  "url": "https://colonist.io/#deck435",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T23:59:52.181Z",
+  "seats": [
+    "blue",
+    "white",
+    "black",
+    "red"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-000009.png",
+      "takenAt": "2026-09-14T00:00:14.390Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 18,
+      "colours": [
+        "blue",
+        "white",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-000324.png",
+      "takenAt": "2026-09-14T00:03:29.518Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 18,
+      "colours": [
+        "blue",
+        "white",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 2 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T00:07:17.369Z"
+}

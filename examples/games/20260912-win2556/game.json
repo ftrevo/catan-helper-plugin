@@ -1,0 +1,46 @@
+{
+  "roomCode": "win2556",
+  "url": "https://colonist.io/#win2556",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T05:42:16.711Z",
+  "finishedAt": "2026-09-12T05:45:10.140Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-054232.png",
+      "takenAt": "2026-09-12T05:42:36.325Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 14,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    },
+    {
+      "file": "02-054506.png",
+      "takenAt": "2026-09-12T05:45:10.139Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 16,
+      "colours": [
+        "orange",
+        "blue",
+        "black",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

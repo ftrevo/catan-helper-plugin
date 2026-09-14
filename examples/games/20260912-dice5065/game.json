@@ -1,0 +1,46 @@
+{
+  "roomCode": "dice5065",
+  "url": "https://colonist.io/#dice5065",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:47:12.689Z",
+  "finishedAt": "2026-09-12T13:50:06.215Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-134728.png",
+      "takenAt": "2026-09-12T13:47:32.380Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-135002.png",
+      "takenAt": "2026-09-12T13:50:06.215Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 14,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

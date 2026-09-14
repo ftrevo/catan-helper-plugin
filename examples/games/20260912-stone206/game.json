@@ -1,0 +1,42 @@
+{
+  "roomCode": "stone206",
+  "url": "https://colonist.io/#stone206",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T06:48:55.047Z",
+  "finishedAt": "2026-09-12T06:51:48.416Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-064910.png",
+      "takenAt": "2026-09-12T06:49:14.649Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 19,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-065144.png",
+      "takenAt": "2026-09-12T06:51:48.416Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 20,
+      "colours": [
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,45 @@
+{
+  "roomCode": "spot2638",
+  "url": "https://colonist.io/#spot2638",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T14:31:49.183Z",
+  "finishedAt": "2026-09-12T14:34:42.552Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-143204.png",
+      "takenAt": "2026-09-12T14:32:08.758Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "orange",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-143438.png",
+      "takenAt": "2026-09-12T14:34:42.551Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "black",
+        "orange",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

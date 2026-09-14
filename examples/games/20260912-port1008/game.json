@@ -1,0 +1,46 @@
+{
+  "roomCode": "port1008",
+  "url": "https://colonist.io/#port1008",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T20:12:56.754Z",
+  "finishedAt": "2026-09-12T20:15:50.317Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-201312.png",
+      "takenAt": "2026-09-12T20:13:16.442Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "black",
+        "blue",
+        "pink",
+        "red"
+      ]
+    },
+    {
+      "file": "02-201546.png",
+      "takenAt": "2026-09-12T20:15:50.317Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "black",
+        "blue",
+        "pink",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

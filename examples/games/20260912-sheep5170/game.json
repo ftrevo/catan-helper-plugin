@@ -1,0 +1,46 @@
+{
+  "roomCode": "sheep5170",
+  "url": "https://colonist.io/#sheep5170",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T17:14:30.837Z",
+  "finishedAt": "2026-09-12T17:17:24.450Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-171446.png",
+      "takenAt": "2026-09-12T17:14:50.544Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 17,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red"
+      ]
+    },
+    {
+      "file": "02-171720.png",
+      "takenAt": "2026-09-12T17:17:24.449Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "black",
+        "blue",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

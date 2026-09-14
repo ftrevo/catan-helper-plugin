@@ -1,0 +1,44 @@
+{
+  "roomCode": "dice8714",
+  "url": "https://colonist.io/#dice8714",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:13:27.050Z",
+  "finishedAt": "2026-09-12T07:16:20.408Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-071342.png",
+      "takenAt": "2026-09-12T07:13:46.607Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 14,
+      "colours": [
+        "black",
+        "red",
+        "green"
+      ]
+    },
+    {
+      "file": "02-071616.png",
+      "takenAt": "2026-09-12T07:16:20.407Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 14,
+      "colours": [
+        "red",
+        "black",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,46 @@
+{
+  "roomCode": "game5852",
+  "url": "https://colonist.io/#game5852",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:05:35.350Z",
+  "finishedAt": "2026-09-13T00:08:28.977Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-000551.png",
+      "takenAt": "2026-09-13T00:05:55.005Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 19,
+      "colours": [
+        "blue",
+        "black",
+        "green",
+        "red"
+      ]
+    },
+    {
+      "file": "02-000825.png",
+      "takenAt": "2026-09-13T00:08:28.977Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "blue",
+        "black",
+        "red",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

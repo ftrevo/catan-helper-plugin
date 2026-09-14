@@ -1,0 +1,44 @@
+{
+  "roomCode": "city741",
+  "url": "https://colonist.io/#city741",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "200m",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T02:52:47.092Z",
+  "finishedAt": "2026-09-13T02:55:40.513Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-025302.png",
+      "takenAt": "2026-09-13T02:53:06.709Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "blue",
+        "orange",
+        "green"
+      ]
+    },
+    {
+      "file": "02-025536.png",
+      "takenAt": "2026-09-13T02:55:40.513Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "blue",
+        "orange",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

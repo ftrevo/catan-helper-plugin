@@ -1,0 +1,33 @@
+{
+  "roomCode": "land8308",
+  "url": "https://colonist.io/#land8308",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T13:06:10.599Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-130713.png",
+      "takenAt": "2026-09-12T13:07:17.902Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": [
+    "recovered: re-read after a locator fix"
+  ]
+}

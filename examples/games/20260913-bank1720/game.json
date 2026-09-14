@@ -1,0 +1,132 @@
+{
+  "roomCode": "bank1720",
+  "url": "https://colonist.io/#bank1720",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T19:40:11.994Z",
+  "seats": [
+    "green",
+    "black",
+    "silver"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-194029.png",
+      "takenAt": "2026-09-13T19:40:33.952Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 5,
+      "roads": 5,
+      "colours": [
+        "black",
+        "green",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-194454.png",
+      "takenAt": "2026-09-13T19:44:59.234Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "black",
+        "silver",
+        "green"
+      ]
+    },
+    {
+      "file": "03-194845.png",
+      "takenAt": "2026-09-13T19:48:50.553Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "black",
+        "silver",
+        "green"
+      ]
+    },
+    {
+      "file": "04-195236.png",
+      "takenAt": "2026-09-13T19:52:41.576Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 9,
+      "colours": [
+        "black",
+        "silver",
+        "green"
+      ]
+    },
+    {
+      "file": "05-195629.png",
+      "takenAt": "2026-09-13T19:56:34.566Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "black",
+        "silver",
+        "green"
+      ]
+    },
+    {
+      "file": "06-200125.png",
+      "takenAt": "2026-09-13T20:01:30.526Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 12,
+      "colours": [
+        "black",
+        "silver",
+        "green"
+      ]
+    },
+    {
+      "file": "07-200555.png",
+      "takenAt": "2026-09-13T20:06:00.339Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 17,
+      "colours": [
+        "black",
+        "silver",
+        "green"
+      ]
+    },
+    {
+      "file": "08-200833.png",
+      "takenAt": "2026-09-13T20:08:38.098Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 20,
+      "colours": [
+        "black",
+        "silver",
+        "green"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 8 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T20:11:09.321Z"
+}

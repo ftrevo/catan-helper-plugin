@@ -1,0 +1,46 @@
+{
+  "roomCode": "win1129",
+  "url": "https://colonist.io/#win1129",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T21:47:44.205Z",
+  "finishedAt": "2026-09-12T21:50:37.640Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-214800.png",
+      "takenAt": "2026-09-12T21:48:03.812Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 9,
+      "colours": [
+        "pink",
+        "red",
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-215033.png",
+      "takenAt": "2026-09-12T21:50:37.640Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "pink",
+        "red",
+        "blue",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

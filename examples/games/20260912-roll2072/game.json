@@ -1,0 +1,47 @@
+{
+  "roomCode": "roll2072",
+  "url": "https://colonist.io/#roll2072",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T22:42:32.482Z",
+  "finishedAt": "2026-09-12T22:45:26.047Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-224248.png",
+      "takenAt": "2026-09-12T22:42:52.170Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 14,
+      "colours": [
+        "red",
+        "green",
+        "black",
+        "blue",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-224522.png",
+      "takenAt": "2026-09-12T22:45:26.046Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 13,
+      "colours": [
+        "red",
+        "green",
+        "black",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

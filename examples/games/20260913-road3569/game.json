@@ -1,0 +1,71 @@
+{
+  "roomCode": "road3569",
+  "url": "https://colonist.io/#road3569",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T21:12:27.930Z",
+  "seats": [
+    "white",
+    "green",
+    "orange",
+    "blue"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-211244.png",
+      "takenAt": "2026-09-13T21:12:50.635Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "white",
+        "green",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-211530.png",
+      "takenAt": "2026-09-13T21:15:35.629Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 22,
+      "colours": [
+        "white",
+        "green",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "03-211808.png",
+      "takenAt": "2026-09-13T21:18:13.684Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 22,
+      "colours": [
+        "white",
+        "green",
+        "blue",
+        "orange"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 3 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T21:20:30.878Z"
+}

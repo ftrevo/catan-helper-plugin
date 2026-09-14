@@ -1,0 +1,46 @@
+{
+  "roomCode": "green5703",
+  "url": "https://colonist.io/#green5703",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T15:42:01.171Z",
+  "finishedAt": "2026-09-12T15:44:54.722Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-154216.png",
+      "takenAt": "2026-09-12T15:42:20.854Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 14,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "02-154450.png",
+      "takenAt": "2026-09-12T15:44:54.722Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 16,
+      "colours": [
+        "orange",
+        "red",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

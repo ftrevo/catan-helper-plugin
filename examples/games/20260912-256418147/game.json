@@ -1,0 +1,42 @@
+{
+  "roomCode": "256418147",
+  "url": "https://colonist.io/#256418147",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T04:54:48.432Z",
+  "finishedAt": "2026-09-12T04:57:41.877Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-045504.png",
+      "takenAt": "2026-09-12T04:55:08.078Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-045738.png",
+      "takenAt": "2026-09-12T04:57:41.877Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

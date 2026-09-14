@@ -1,0 +1,10 @@
+{
+  "ok": false,
+  "capture": {
+    "file": "/Users/felipetrevisan/workspace/pessoal/catan-helper-plugin/examples/games/20260912-loot8435/02-041042.png",
+    "width": 1600,
+    "height": 900
+  },
+  "reason": "Could not find the Catan board in the screenshot (only 7 token-like shapes found)",
+  "readAt": "2026-09-12T12:37:05.658Z"
+}

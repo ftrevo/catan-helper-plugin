@@ -1,0 +1,313 @@
+{
+  "roomCode": "map7182",
+  "url": "https://colonist.io/#map7182",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T06:56:29.086Z",
+  "seats": [
+    "black",
+    "orange",
+    "mysticblue",
+    "green"
+  ],
+  "wanted": [
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-065646.png",
+      "takenAt": "2026-09-14T06:56:51.610Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 3,
+      "roads": 3,
+      "colours": [
+        "mysticblue",
+        "orange",
+        "green"
+      ]
+    },
+    {
+      "file": "02-065923.png",
+      "takenAt": "2026-09-14T06:59:28.636Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 5,
+      "roads": 4,
+      "colours": [
+        "mysticblue",
+        "black",
+        "orange",
+        "green"
+      ]
+    },
+    {
+      "file": "03-070154.png",
+      "takenAt": "2026-09-14T07:02:00.219Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 12,
+      "roads": 13,
+      "colours": [
+        "gold",
+        "mysticblue",
+        "green",
+        "silver",
+        "orange",
+        "black",
+        "white"
+      ]
+    },
+    {
+      "file": "04-070419.png",
+      "takenAt": "2026-09-14T07:04:24.774Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 9,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "05-070642.png",
+      "takenAt": "2026-09-14T07:06:48.058Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "06-070906.png",
+      "takenAt": "2026-09-14T07:09:11.412Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "07-071136.png",
+      "takenAt": "2026-09-14T07:11:42.191Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "08-071406.png",
+      "takenAt": "2026-09-14T07:14:12.114Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 14,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "09-071639.png",
+      "takenAt": "2026-09-14T07:16:44.823Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 15,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "10-071909.png",
+      "takenAt": "2026-09-14T07:19:14.844Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 15,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "11-072140.png",
+      "takenAt": "2026-09-14T07:21:45.449Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 19,
+      "colours": [
+        "mysticblue",
+        "green",
+        "white",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "12-072409.png",
+      "takenAt": "2026-09-14T07:24:15.082Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 21,
+      "colours": [
+        "mysticblue",
+        "green",
+        "white",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "13-072644.png",
+      "takenAt": "2026-09-14T07:26:49.814Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 22,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "14-072916.png",
+      "takenAt": "2026-09-14T07:29:21.755Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 24,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "15-073147.png",
+      "takenAt": "2026-09-14T07:31:52.745Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 25,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "16-073420.png",
+      "takenAt": "2026-09-14T07:34:25.346Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 27,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "17-073649.png",
+      "takenAt": "2026-09-14T07:36:54.953Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 27,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "18-073919.png",
+      "takenAt": "2026-09-14T07:39:25.368Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 27,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "19-074150.png",
+      "takenAt": "2026-09-14T07:41:55.590Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 27,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    },
+    {
+      "file": "20-074414.png",
+      "takenAt": "2026-09-14T07:44:20.065Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 27,
+      "roads": 27,
+      "colours": [
+        "mysticblue",
+        "green",
+        "black",
+        "orange"
+      ]
+    }
+  ],
+  "notes": [
+    "visit budget of 20 spent"
+  ],
+  "finishedAt": "2026-09-14T07:44:20.065Z"
+}

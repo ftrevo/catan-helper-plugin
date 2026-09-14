@@ -1,0 +1,47 @@
+{
+  "roomCode": "edge7877",
+  "url": "https://colonist.io/#edge7877",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T09:57:47.315Z",
+  "finishedAt": "2026-09-12T10:00:40.756Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-095803.png",
+      "takenAt": "2026-09-12T09:58:06.942Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "red",
+        "green",
+        "black",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-100036.png",
+      "takenAt": "2026-09-12T10:00:40.756Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "blue",
+        "red",
+        "green",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

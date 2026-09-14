@@ -1,0 +1,48 @@
+{
+  "roomCode": "brick5791",
+  "url": "https://colonist.io/#brick5791",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:04:10.333Z",
+  "finishedAt": "2026-09-12T23:06:36.778Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-230426.png",
+      "takenAt": "2026-09-12T23:04:29.993Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 23,
+      "colours": [
+        "orange",
+        "mysticblue",
+        "blue",
+        "red"
+      ]
+    },
+    {
+      "file": "02-230632.png",
+      "takenAt": "2026-09-12T23:06:36.778Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 23,
+      "colours": [
+        "orange",
+        "mysticblue",
+        "blue",
+        "red"
+      ]
+    }
+  ],
+  "notes": [
+    "game over: captured the final board via the Map button"
+  ]
+}

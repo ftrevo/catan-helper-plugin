@@ -1,0 +1,46 @@
+{
+  "roomCode": "crop7518",
+  "url": "https://colonist.io/#crop7518",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:06:45.314Z",
+  "finishedAt": "2026-09-12T23:09:38.724Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-230701.png",
+      "takenAt": "2026-09-12T23:07:04.911Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    },
+    {
+      "file": "02-230934.png",
+      "takenAt": "2026-09-12T23:09:38.723Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "orange",
+        "blue",
+        "red",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}

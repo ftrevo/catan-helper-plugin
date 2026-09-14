@@ -77,7 +77,9 @@ describe('piece geometry', () => {
 
   test('patches scale with the spacing', () => {
     const rect = patchRect({ x: 50, y: 50 }, BUILDING_PATCH, 100)
-    expect(rect.width).toBeCloseTo(42)
-    expect(rect.x).toBeCloseTo(29)
+    expect(rect.width).toBeCloseTo(50)
+    expect(rect.x).toBeCloseTo(25)
+    // Shifted up so the patch holds a building drawn above the vertex.
+    expect(rect.y).toBeCloseTo(20)
   })
 })

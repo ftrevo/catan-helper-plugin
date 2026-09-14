@@ -1,0 +1,211 @@
+{
+  "roomCode": "road2697",
+  "url": "https://colonist.io/#road2697",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T01:26:22.788Z",
+  "seats": [
+    "orange",
+    "purple",
+    "black",
+    "red"
+  ],
+  "wanted": [
+    "purple"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-012639.png",
+      "takenAt": "2026-09-14T01:26:45.008Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 9,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "02-013139.png",
+      "takenAt": "2026-09-14T01:31:45.058Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 11,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "03-013534.png",
+      "takenAt": "2026-09-14T01:35:39.256Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "04-013930.png",
+      "takenAt": "2026-09-14T01:39:35.531Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "05-014318.png",
+      "takenAt": "2026-09-14T01:43:26.908Z",
+      "ok": true,
+      "tokens": 17,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "06-014629.png",
+      "takenAt": "2026-09-14T01:46:35.053Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 17,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "07-015130.png",
+      "takenAt": "2026-09-14T01:51:36.027Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 18,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "08-015656.png",
+      "takenAt": "2026-09-14T01:57:02.599Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 19,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "09-020122.png",
+      "takenAt": "2026-09-14T02:01:27.669Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 20,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "10-020519.png",
+      "takenAt": "2026-09-14T02:05:24.409Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 22,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "11-020912.png",
+      "takenAt": "2026-09-14T02:09:17.950Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 22,
+      "roads": 24,
+      "colours": [
+        "red",
+        "orange",
+        "black",
+        "purple"
+      ]
+    },
+    {
+      "file": "12-021255.png",
+      "takenAt": "2026-09-14T02:13:01.195Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 29,
+      "colours": [
+        "red",
+        "orange",
+        "purple",
+        "black"
+      ]
+    },
+    {
+      "file": "13-021549.png",
+      "takenAt": "2026-09-14T02:15:55.287Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 29,
+      "colours": [
+        "red",
+        "orange",
+        "purple",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 13 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T02:18:13.129Z"
+}

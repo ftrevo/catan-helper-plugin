@@ -1,0 +1,225 @@
+{
+  "roomCode": "king5855",
+  "url": "https://colonist.io/#king5855",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T04:58:35.035Z",
+  "seats": [
+    "black",
+    "white",
+    "green",
+    "blue"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-045852.png",
+      "takenAt": "2026-09-13T04:58:57.237Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "02-050143.png",
+      "takenAt": "2026-09-13T05:01:48.974Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 13,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "03-050420.png",
+      "takenAt": "2026-09-13T05:04:25.923Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 14,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "04-050652.png",
+      "takenAt": "2026-09-13T05:06:57.447Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 15,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "05-050926.png",
+      "takenAt": "2026-09-13T05:09:31.779Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "06-051158.png",
+      "takenAt": "2026-09-13T05:12:03.341Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "07-051427.png",
+      "takenAt": "2026-09-13T05:14:32.912Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 17,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "08-051657.png",
+      "takenAt": "2026-09-13T05:17:02.808Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 17,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "09-051927.png",
+      "takenAt": "2026-09-13T05:19:32.428Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 18,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "10-052204.png",
+      "takenAt": "2026-09-13T05:22:09.690Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 19,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "11-052436.png",
+      "takenAt": "2026-09-13T05:24:41.258Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 22,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "12-052707.png",
+      "takenAt": "2026-09-13T05:27:12.898Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 24,
+      "roads": 22,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "13-052939.png",
+      "takenAt": "2026-09-13T05:29:44.758Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 23,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "14-053212.png",
+      "takenAt": "2026-09-13T05:32:17.420Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 23,
+      "colours": [
+        "green",
+        "blue",
+        "white",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "revisits stopped: game unreachable after 14 visits"
+  ],
+  "finishedAt": "2026-09-13T05:43:05.849Z"
+}

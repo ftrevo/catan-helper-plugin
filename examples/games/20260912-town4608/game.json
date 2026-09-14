@@ -1,0 +1,46 @@
+{
+  "roomCode": "town4608",
+  "url": "https://colonist.io/#town4608",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T23:43:18.238Z",
+  "finishedAt": "2026-09-12T23:46:11.711Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-234334.png",
+      "takenAt": "2026-09-12T23:43:37.866Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 15,
+      "colours": [
+        "white",
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-234607.png",
+      "takenAt": "2026-09-12T23:46:11.711Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 17,
+      "colours": [
+        "white",
+        "red",
+        "orange",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

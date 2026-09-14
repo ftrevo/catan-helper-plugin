@@ -1,0 +1,183 @@
+{
+  "roomCode": "win6872",
+  "url": "https://colonist.io/#win6872",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T08:41:23.089Z",
+  "seats": [
+    "blue",
+    "pink",
+    "black",
+    "green"
+  ],
+  "wanted": [
+    "pink"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-084140.png",
+      "takenAt": "2026-09-13T08:41:45.269Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 7,
+      "colours": [
+        "green",
+        "blue",
+        "pink",
+        "black"
+      ]
+    },
+    {
+      "file": "02-084402.png",
+      "takenAt": "2026-09-13T08:44:07.808Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 8,
+      "colours": [
+        "green",
+        "blue",
+        "pink",
+        "black"
+      ]
+    },
+    {
+      "file": "03-084632.png",
+      "takenAt": "2026-09-13T08:46:37.246Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "green",
+        "blue",
+        "pink",
+        "black"
+      ]
+    },
+    {
+      "file": "04-084901.png",
+      "takenAt": "2026-09-13T08:49:07.070Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 12,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "05-085131.png",
+      "takenAt": "2026-09-13T08:51:36.663Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "06-085401.png",
+      "takenAt": "2026-09-13T08:54:06.538Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 14,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "07-085631.png",
+      "takenAt": "2026-09-13T08:56:36.427Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 14,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "08-085858.png",
+      "takenAt": "2026-09-13T08:59:03.382Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 13,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "09-090144.png",
+      "takenAt": "2026-09-13T09:01:49.897Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "10-090453.png",
+      "takenAt": "2026-09-13T09:04:59.118Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 20,
+      "roads": 17,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    },
+    {
+      "file": "11-090730.png",
+      "takenAt": "2026-09-13T09:07:36.561Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 18,
+      "colours": [
+        "green",
+        "pink",
+        "blue",
+        "black"
+      ]
+    }
+  ],
+  "notes": [
+    "revisits stopped: game unreachable after 11 visits"
+  ],
+  "finishedAt": "2026-09-13T09:15:13.442Z"
+}

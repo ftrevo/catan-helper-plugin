@@ -1,6 +1,6 @@
 import { TILE_COUNT } from '../domain/board'
 import { BoardNotFoundError } from './errors'
-import { type BoardGeometry, TILE_OFFSETS } from './layout'
+import { type BoardGeometry, TILE_OFFSETS, vertexCenters } from './layout'
 import { type Point, type RgbaImage } from './pixels'
 
 /**
@@ -12,6 +12,11 @@ import { type Point, type RgbaImage } from './pixels'
 export type LocatedBoard = BoardGeometry & {
   /** How many of the 18 tokens (the desert has none) matched the fitted lattice. */
   readonly tokensFound: number
+  /**
+   * Token-sized discs near the board that are not on any of the 19 slots. A standard board has none or
+   * one (a knight badge); larger maps show many, since only part of them fits the lattice.
+   */
+  readonly extraTokens: number
 }
 
 type Blob = {
@@ -38,6 +43,11 @@ const TOKEN_DIAMETER_MAX = 0.48
 
 /** A token counts as matching a lattice slot when it lies within this fraction of the spacing. */
 const MATCH_TOLERANCE = 0.2
+/**
+ * A stray disc this close to a board vertex is a white player's building, not a token: the tokens of a
+ * larger map sit at tile centres, which are at least 0.57 spacing from any vertex.
+ */
+const VERTEX_TOLERANCE = 0.2
 const MIN_TOKENS = 12
 const MAX_TOKENS = TILE_COUNT - 1
 
@@ -122,14 +132,41 @@ const looksLikeToken = (blob: Blob): boolean => {
 
 const distance = (a: Point, b: Point): number => Math.hypot(a.x - b.x, a.y - b.y)
 
-const median = (values: number[]): number => {
-  const sorted = [...values].sort((a, b) => a - b)
-  return sorted[Math.floor(sorted.length / 2)] ?? 0
+/** Sea and shallow water are distinctly blue; every tile colour has at least as much red or green as blue. */
+const isSea = (r: number, g: number, b: number): boolean => b > r + 40 && b > g + 10
+
+/** Share of sample points on a circle around `center` that show sea. */
+const seaFraction = (image: RgbaImage, center: Point, radius: number): number => {
+  const samples = 16
+  let sea = 0
+  for (let i = 0; i < samples; i++) {
+    const angle = (i / samples) * 2 * Math.PI
+    const x = Math.round(center.x + Math.cos(angle) * radius)
+    const y = Math.round(center.y + Math.sin(angle) * radius)
+    if (x < 0 || y < 0 || x >= image.width || y >= image.height) continue
+    const o = (y * image.width + x) * 4
+    if (isSea(image.data[o] ?? 0, image.data[o + 1] ?? 0, image.data[o + 2] ?? 0)) sea++
+  }
+  return sea / samples
 }
 
-/** Adjacent tokens are exactly one spacing apart, so the typical nearest-neighbour distance is the spacing. */
-const estimateSpacing = (centers: readonly Point[]): number =>
-  median(centers.map((c) => Math.min(...centers.filter((other) => other !== c).map((other) => distance(c, other)))))
+/**
+ * Adjacent tokens are exactly one spacing apart, so the spacing is a typical nearest-neighbour distance.
+ * Other white discs (Cities & Knights knight badges, harbour labels) sit closer to a token than a spacing
+ * and drag a plain median down, so several quantiles are tried and the lattice fit picks the winner.
+ */
+const spacingCandidates = (centers: readonly Point[]): number[] => {
+  const nearest = centers
+    .map((c) => Math.min(...centers.filter((other) => other !== c).map((other) => distance(c, other))))
+    .sort((a, b) => a - b)
+  const quantile = (q: number) => nearest[Math.min(nearest.length - 1, Math.floor(q * nearest.length))] ?? 0
+  const raw = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9].flatMap((q) => [quantile(q), quantile(q) * 2])
+  const distinct: number[] = []
+  for (const value of raw.sort((a, b) => a - b)) {
+    if (value > 0 && !distinct.some((d) => Math.abs(d - value) / value < 0.05)) distinct.push(value)
+  }
+  return distinct
+}
 
 type Fit = { geometry: BoardGeometry; matches: Array<{ token: Point; offset: Point }> }
 
@@ -190,28 +227,59 @@ export const locateBoard = (image: RgbaImage): LocatedBoard => {
     throw new BoardNotFoundError(`only ${candidates.length} token-like shapes found`)
   }
 
-  const roughSpacing = estimateSpacing(candidates.map((c) => c.center))
-  const tokens = candidates
-    .filter((c) => {
-      const diameter = (c.width + c.height) / 2 / roughSpacing
-      return diameter >= TOKEN_DIAMETER_MIN && diameter <= TOKEN_DIAMETER_MAX
-    })
-    .map((c) => c.center)
-
-  // Try every token as the centre tile and keep the hypothesis that explains the most tokens.
-  let best: Fit | undefined
-  for (const token of tokens) {
-    const fit = matchLattice(tokens, { center: token, spacing: roughSpacing })
-    if (!best || fit.matches.length > best.matches.length) best = fit
+  // For each plausible spacing, keep only discs of token size, then hypothesise every centre at which one
+  // of them sits on a lattice slot: the centre tile itself may carry no token (the desert, the robber or a
+  // card sprite on it). The hypothesis explaining the most tokens wins across all spacings; ties go to the
+  // centre nearest the tokens' centroid, since a lattice shifted by a tile can explain as many tokens.
+  let best: { fit: Fit; tokens: Point[]; offCentre: number } | undefined
+  for (const roughSpacing of spacingCandidates(candidates.map((c) => c.center))) {
+    const tokens = candidates
+      .filter((c) => {
+        const diameter = (c.width + c.height) / 2 / roughSpacing
+        return diameter >= TOKEN_DIAMETER_MIN && diameter <= TOKEN_DIAMETER_MAX
+      })
+      .map((c) => c.center)
+    const centroid = {
+      x: tokens.reduce((sum, t) => sum + t.x, 0) / tokens.length,
+      y: tokens.reduce((sum, t) => sum + t.y, 0) / tokens.length,
+    }
+    for (const token of tokens) {
+      for (const slot of TILE_OFFSETS) {
+        const center = { x: token.x - slot.x * roughSpacing, y: token.y - slot.y * roughSpacing }
+        const fit = matchLattice(tokens, { center, spacing: roughSpacing })
+        const offCentre = distance(center, centroid)
+        if (
+          !best ||
+          fit.matches.length > best.fit.matches.length ||
+          (fit.matches.length === best.fit.matches.length && offCentre < best.offCentre)
+        ) {
+          best = { fit, tokens, offCentre }
+        }
+      }
+    }
   }
 
-  if (!best || best.matches.length < MIN_TOKENS) {
-    throw new BoardNotFoundError(`best lattice fit explains ${best?.matches.length ?? 0} of ${MAX_TOKENS} tokens`)
+  if (!best || best.fit.matches.length < MIN_TOKENS) {
+    throw new BoardNotFoundError(`best lattice fit explains ${best?.fit.matches.length ?? 0} of ${MAX_TOKENS} tokens`)
   }
 
-  const refined = refine(best)
+  const refined = refine(best.fit)
   // Re-match with the refined geometry: the desert or a covered token may now be resolved correctly.
-  const finalFit = matchLattice(tokens, refined)
+  const finalFit = matchLattice(best.tokens, refined)
+  const geometry = refine(finalFit)
 
-  return { ...refine(finalFit), tokensFound: Math.min(finalFit.matches.length, MAX_TOKENS) }
+  // Stray discs: token-sized, not on a slot, near the board, standing on land and not on a vertex.
+  // Harbour ships are token-sized too, but they float on the sea; white settlements and cities pass the
+  // colour filter, but they stand on vertices.
+  const matched = new Set(finalFit.matches.map((m) => m.token))
+  const vertices = vertexCenters(geometry)
+  const extraTokens = best.tokens.filter(
+    (t) =>
+      !matched.has(t) &&
+      distance(t, geometry.center) < geometry.spacing * 4 &&
+      seaFraction(image, t, geometry.spacing * 0.3) < 0.5 &&
+      !vertices.some((v) => distance(t, v) < geometry.spacing * VERTEX_TOLERANCE)
+  ).length
+
+  return { ...geometry, tokensFound: Math.min(finalFit.matches.length, MAX_TOKENS), extraTokens }
 }

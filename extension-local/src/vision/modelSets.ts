@@ -34,5 +34,6 @@ export const PIECE_MODEL_SET = 'pieces-v1'
 
 export const pieceModelPaths = () => ({
   buildings: `models/${PIECE_MODEL_SET}/buildings/model.json`,
+  colours: `models/${PIECE_MODEL_SET}/colours/model.json`,
   roads: `models/${PIECE_MODEL_SET}/roads/model.json`,
 })

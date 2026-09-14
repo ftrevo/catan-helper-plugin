@@ -1,0 +1,47 @@
+{
+  "roomCode": "area5876",
+  "url": "https://colonist.io/#area5876",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T07:45:34.562Z",
+  "finishedAt": "2026-09-12T07:48:27.981Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-074550.png",
+      "takenAt": "2026-09-12T07:45:54.175Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red",
+        "green"
+      ]
+    },
+    {
+      "file": "02-074824.png",
+      "takenAt": "2026-09-12T07:48:27.981Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 13,
+      "colours": [
+        "blue",
+        "black",
+        "orange",
+        "red"
+      ]
+    }
+  ],
+  "notes": []
+}

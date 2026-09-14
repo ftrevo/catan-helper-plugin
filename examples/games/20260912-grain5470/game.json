@@ -1,0 +1,48 @@
+{
+  "roomCode": "grain5470",
+  "url": "https://colonist.io/#grain5470",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T04:33:04.478Z",
+  "finishedAt": "2026-09-12T04:35:59.075Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-043320.png",
+      "takenAt": "2026-09-12T04:33:25.100Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 13,
+      "colours": [
+        "mysticblue",
+        "red",
+        "blue",
+        "black",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-043555.png",
+      "takenAt": "2026-09-12T04:35:59.075Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 15,
+      "colours": [
+        "mysticblue",
+        "red",
+        "blue",
+        "black",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

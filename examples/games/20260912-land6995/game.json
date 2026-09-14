@@ -1,0 +1,44 @@
+{
+  "roomCode": "land6995",
+  "url": "https://colonist.io/#land6995",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T22:45:40.339Z",
+  "finishedAt": "2026-09-12T22:48:33.856Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-224556.png",
+      "takenAt": "2026-09-12T22:46:00.100Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 7,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "red",
+        "orange"
+      ]
+    },
+    {
+      "file": "02-224830.png",
+      "takenAt": "2026-09-12T22:48:33.856Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 9,
+      "colours": [
+        "blue",
+        "red",
+        "orange"
+      ]
+    }
+  ],
+  "notes": []
+}

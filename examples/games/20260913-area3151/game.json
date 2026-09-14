@@ -1,0 +1,46 @@
+{
+  "roomCode": "area3151",
+  "url": "https://colonist.io/#area3151",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-13T00:14:48.639Z",
+  "finishedAt": "2026-09-13T00:17:42.506Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-001504.png",
+      "takenAt": "2026-09-13T00:15:08.311Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "green"
+      ]
+    },
+    {
+      "file": "02-001738.png",
+      "takenAt": "2026-09-13T00:17:42.506Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "red",
+        "blue",
+        "orange",
+        "green"
+      ]
+    }
+  ],
+  "notes": []
+}

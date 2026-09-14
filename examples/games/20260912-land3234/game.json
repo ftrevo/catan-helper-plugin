@@ -1,0 +1,44 @@
+{
+  "roomCode": "land3234",
+  "url": "https://colonist.io/#land3234",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T11:54:54.302Z",
+  "finishedAt": "2026-09-12T11:57:47.691Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-115510.png",
+      "takenAt": "2026-09-12T11:55:13.905Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 8,
+      "colours": [
+        "green",
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-115743.png",
+      "takenAt": "2026-09-12T11:57:47.691Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "green",
+        "red",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

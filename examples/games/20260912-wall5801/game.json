@@ -1,0 +1,44 @@
+{
+  "roomCode": "wall5801",
+  "url": "https://colonist.io/#wall5801",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:05:14.791Z",
+  "finishedAt": "2026-09-12T12:08:08.319Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-120530.png",
+      "takenAt": "2026-09-12T12:05:34.433Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 20,
+      "colours": [
+        "orange",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-120804.png",
+      "takenAt": "2026-09-12T12:08:08.318Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 20,
+      "colours": [
+        "orange",
+        "black",
+        "blue"
+      ]
+    }
+  ],
+  "notes": []
+}

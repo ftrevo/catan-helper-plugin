@@ -1,0 +1,101 @@
+{
+  "roomCode": "card7322",
+  "url": "https://colonist.io/#card7322",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T06:48:26.275Z",
+  "seats": [
+    "silver",
+    "black"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-064843.png",
+      "takenAt": "2026-09-14T06:48:48.429Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 9,
+      "roads": 8,
+      "colours": [
+        "black",
+        "silver"
+      ]
+    },
+    {
+      "file": "02-065108.png",
+      "takenAt": "2026-09-14T06:51:13.780Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 9,
+      "colours": [
+        "black",
+        "silver"
+      ]
+    },
+    {
+      "file": "03-065340.png",
+      "takenAt": "2026-09-14T06:53:45.542Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "black",
+        "silver"
+      ]
+    },
+    {
+      "file": "04-065604.png",
+      "takenAt": "2026-09-14T06:56:09.845Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "black",
+        "silver"
+      ]
+    },
+    {
+      "file": "05-065830.png",
+      "takenAt": "2026-09-14T06:58:36.046Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 12,
+      "colours": [
+        "black",
+        "silver",
+        "white"
+      ]
+    },
+    {
+      "file": "06-070100.png",
+      "takenAt": "2026-09-14T07:01:05.962Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 13,
+      "colours": [
+        "black",
+        "silver",
+        "white"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 6 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T07:03:32.554Z"
+}

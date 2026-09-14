@@ -1,0 +1,44 @@
+{
+  "roomCode": "pact3344",
+  "url": "https://colonist.io/#pact3344",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "15s",
+  "agent": "w1",
+  "claimedAt": "2026-09-12T12:10:56.866Z",
+  "finishedAt": "2026-09-12T12:13:50.371Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-121112.png",
+      "takenAt": "2026-09-12T12:11:16.551Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 28,
+      "roads": 29,
+      "colours": [
+        "red",
+        "orange",
+        "black"
+      ]
+    },
+    {
+      "file": "02-121346.png",
+      "takenAt": "2026-09-12T12:13:50.371Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 30,
+      "roads": 32,
+      "colours": [
+        "red",
+        "orange",
+        "black"
+      ]
+    }
+  ],
+  "notes": []
+}
