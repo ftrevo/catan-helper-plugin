@@ -1,0 +1,170 @@
+{
+  "roomCode": "grid5833",
+  "url": "https://colonist.io/#grid5833",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T22:20:20.248Z",
+  "seats": [
+    "purple",
+    "red",
+    "orange",
+    "blue"
+  ],
+  "wanted": [
+    "purple"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-222037.png",
+      "takenAt": "2026-09-13T22:20:42.457Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 8,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "02-222318.png",
+      "takenAt": "2026-09-13T22:23:23.846Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple",
+        "bronze"
+      ]
+    },
+    {
+      "file": "03-222555.png",
+      "takenAt": "2026-09-13T22:26:00.711Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 12,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "04-222834.png",
+      "takenAt": "2026-09-13T22:28:39.652Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 10,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "05-223058.png",
+      "takenAt": "2026-09-13T22:31:03.254Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 11,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "06-223417.png",
+      "takenAt": "2026-09-13T22:34:22.211Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 15,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "07-223733.png",
+      "takenAt": "2026-09-13T22:37:38.709Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 15,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "08-224049.png",
+      "takenAt": "2026-09-13T22:40:54.585Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 17,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "09-224354.png",
+      "takenAt": "2026-09-13T22:44:00.193Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 22,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    },
+    {
+      "file": "10-224712.png",
+      "takenAt": "2026-09-13T22:47:17.779Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 22,
+      "colours": [
+        "blue",
+        "orange",
+        "red",
+        "purple"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 10 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T22:51:03.601Z"
+}

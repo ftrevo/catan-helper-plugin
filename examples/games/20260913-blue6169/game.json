@@ -1,0 +1,142 @@
+{
+  "roomCode": "blue6169",
+  "url": "https://colonist.io/#blue6169",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "120s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T23:50:49.319Z",
+  "seats": [
+    "white",
+    "green",
+    "mysticblue",
+    "blue"
+  ],
+  "wanted": [
+    "white",
+    "mysticblue"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-235106.png",
+      "takenAt": "2026-09-13T23:51:11.813Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 2,
+      "roads": 2,
+      "colours": [
+        "blue",
+        "green"
+      ]
+    },
+    {
+      "file": "02-235337.png",
+      "takenAt": "2026-09-13T23:53:42.880Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 4,
+      "roads": 4,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "white",
+        "green"
+      ]
+    },
+    {
+      "file": "03-235618.png",
+      "takenAt": "2026-09-13T23:56:23.867Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 10,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "white",
+        "green",
+        "bronze"
+      ]
+    },
+    {
+      "file": "04-235844.png",
+      "takenAt": "2026-09-13T23:58:49.326Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 11,
+      "roads": 11,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "white",
+        "green"
+      ]
+    },
+    {
+      "file": "05-000108.png",
+      "takenAt": "2026-09-14T00:01:13.931Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 13,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "white",
+        "green"
+      ]
+    },
+    {
+      "file": "06-000438.png",
+      "takenAt": "2026-09-14T00:04:44.042Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 15,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "white",
+        "green"
+      ]
+    },
+    {
+      "file": "07-000824.png",
+      "takenAt": "2026-09-14T00:08:30.153Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 14,
+      "roads": 16,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "white",
+        "green"
+      ]
+    },
+    {
+      "file": "08-001102.png",
+      "takenAt": "2026-09-14T00:11:07.638Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 18,
+      "colours": [
+        "mysticblue",
+        "blue",
+        "white",
+        "green"
+      ]
+    }
+  ],
+  "notes": [
+    "game over overlay without a Map button",
+    "game over after 8 visits"
+  ],
+  "finishedAt": "2026-09-14T00:13:37.756Z"
+}

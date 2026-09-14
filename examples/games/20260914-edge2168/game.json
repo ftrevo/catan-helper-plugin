@@ -1,0 +1,68 @@
+{
+  "roomCode": "edge2168",
+  "url": "https://colonist.io/#edge2168",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T00:43:38.303Z",
+  "seats": [
+    "blue",
+    "red",
+    "black",
+    "bronze"
+  ],
+  "wanted": [
+    "bronze"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-004355.png",
+      "takenAt": "2026-09-14T00:44:00.563Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 14,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "bronze"
+      ]
+    },
+    {
+      "file": "02-004626.png",
+      "takenAt": "2026-09-14T00:46:31.348Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 16,
+      "roads": 16,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "bronze"
+      ]
+    },
+    {
+      "file": "03-004855.png",
+      "takenAt": "2026-09-14T00:49:01.170Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 17,
+      "roads": 15,
+      "colours": [
+        "red",
+        "blue",
+        "black",
+        "bronze"
+      ]
+    }
+  ],
+  "notes": []
+}

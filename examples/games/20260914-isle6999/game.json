@@ -1,0 +1,89 @@
+{
+  "roomCode": "isle6999",
+  "url": "https://colonist.io/#isle6999",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "30s",
+  "agent": "f1",
+  "claimedAt": "2026-09-14T00:12:00.841Z",
+  "seats": [
+    "silver",
+    "blue"
+  ],
+  "wanted": [
+    "silver"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-001220.png",
+      "takenAt": "2026-09-14T00:12:25.134Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 4,
+      "roads": 4,
+      "colours": [
+        "silver",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "02-001517.png",
+      "takenAt": "2026-09-14T00:15:23.049Z",
+      "ok": true,
+      "tokens": 16,
+      "buildings": 7,
+      "roads": 8,
+      "colours": [
+        "silver",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "03-001742.png",
+      "takenAt": "2026-09-14T00:17:47.712Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 8,
+      "roads": 7,
+      "colours": [
+        "silver",
+        "blue"
+      ]
+    },
+    {
+      "file": "04-002007.png",
+      "takenAt": "2026-09-14T00:20:12.466Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 12,
+      "colours": [
+        "silver",
+        "blue"
+      ]
+    },
+    {
+      "file": "05-002246.png",
+      "takenAt": "2026-09-14T00:22:51.698Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 10,
+      "roads": 12,
+      "colours": [
+        "silver",
+        "blue"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 5 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-14T00:25:12.176Z"
+}

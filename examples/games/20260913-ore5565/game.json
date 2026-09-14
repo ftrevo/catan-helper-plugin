@@ -1,0 +1,127 @@
+{
+  "roomCode": "ore5565",
+  "url": "https://colonist.io/#ore5565",
+  "mode": "Cities & Knights",
+  "map": "Base",
+  "turnTimer": "60s",
+  "agent": "f1",
+  "claimedAt": "2026-09-13T23:17:46.584Z",
+  "seats": [
+    "red",
+    "blue",
+    "white",
+    "black"
+  ],
+  "wanted": [
+    "white"
+  ],
+  "viewport": {
+    "width": 1600,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "captures": [
+    {
+      "file": "01-231803.png",
+      "takenAt": "2026-09-13T23:18:08.775Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 13,
+      "roads": 11,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "02-232035.png",
+      "takenAt": "2026-09-13T23:20:40.589Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 15,
+      "roads": 11,
+      "colours": [
+        "red",
+        "white",
+        "black",
+        "blue"
+      ]
+    },
+    {
+      "file": "03-232350.png",
+      "takenAt": "2026-09-13T23:23:55.643Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "04-232707.png",
+      "takenAt": "2026-09-13T23:27:12.292Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 16,
+      "colours": [
+        "red",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "05-233021.png",
+      "takenAt": "2026-09-13T23:30:27.158Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 19,
+      "colours": [
+        "red",
+        "blue",
+        "white",
+        "black"
+      ]
+    },
+    {
+      "file": "06-233411.png",
+      "takenAt": "2026-09-13T23:34:16.366Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 19,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "file": "07-233807.png",
+      "takenAt": "2026-09-13T23:38:12.416Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 23,
+      "colours": [
+        "red",
+        "black",
+        "blue",
+        "white"
+      ]
+    }
+  ],
+  "notes": [
+    "game over after 7 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T23:40:30.255Z"
+}

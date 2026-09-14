@@ -118,7 +118,122 @@
         "orange",
         "green"
       ]
+    },
+    {
+      "file": "08-202944.png",
+      "takenAt": "2026-09-13T20:29:50.093Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 18,
+      "roads": 12,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "09-203214.png",
+      "takenAt": "2026-09-13T20:32:19.786Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 14,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "10-203446.png",
+      "takenAt": "2026-09-13T20:34:51.785Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 19,
+      "roads": 14,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "11-203716.png",
+      "takenAt": "2026-09-13T20:37:22.188Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 15,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "12-203947.png",
+      "takenAt": "2026-09-13T20:39:53.208Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 21,
+      "roads": 17,
+      "colours": [
+        "red",
+        "white",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "13-204217.png",
+      "takenAt": "2026-09-13T20:42:22.906Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 23,
+      "roads": 20,
+      "colours": [
+        "white",
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "14-204447.png",
+      "takenAt": "2026-09-13T20:44:52.701Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 25,
+      "roads": 20,
+      "colours": [
+        "white",
+        "red",
+        "blue",
+        "orange"
+      ]
+    },
+    {
+      "file": "15-204740.png",
+      "takenAt": "2026-09-13T20:47:46.290Z",
+      "ok": true,
+      "tokens": 18,
+      "buildings": 26,
+      "roads": 23,
+      "colours": [
+        "white",
+        "red",
+        "blue",
+        "orange"
+      ]
     }
   ],
-  "notes": []
+  "notes": [
+    "game over after 15 visits (room code recycled)"
+  ],
+  "finishedAt": "2026-09-13T20:50:18.384Z"
 }
