@@ -396,6 +396,7 @@ Temporary Items
 /back/output
 examples/games/**/*.png
 examples/kept/**/*.png
+examples/curated/**/*.png
 examples/classification-v2/**/*.png
 examples/classification-v3/**/*.png
 examples/.registry.lock
